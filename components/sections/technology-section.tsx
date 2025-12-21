@@ -23,6 +23,8 @@ export function TechnologySection() {
   useEffect(() => {
     async function loadModels() {
       try {
+        setIsLoading(true)
+
         const res = await fetch(`${API_BASE}/api/models`, { cache: "no-store" })
         const data = await res.json()
 
@@ -31,16 +33,18 @@ export function TechnologySection() {
           setCurrentIndex(0)
         } else {
           console.warn("No se encontraron modelos 3D en /api/models")
+          setModels([])
         }
       } catch (error) {
         console.error("Error cargando modelos 3D:", error)
+        setModels([])
       } finally {
         setIsLoading(false)
       }
     }
 
     loadModels()
-  }, [])
+  }, [API_BASE])
 
   const currentModel = models[currentIndex]
 
@@ -96,14 +100,12 @@ export function TechnologySection() {
                       {
                         // @ts-ignore
                         <model-viewer
+                          key={currentModel.url} // ✅ FIX: fuerza re-render en Next/Vercel
                           src={currentModel.url}
                           alt={currentModel.filename}
                           camera-controls
                           auto-rotate
-                          shadow-intensity="1"
-                          exposure="1"
-                          reveal="auto"
-                          loading="eager"
+                          crossorigin="anonymous"
                           style={{
                             width: "100%",
                             height: "100%",
@@ -165,3 +167,4 @@ export function TechnologySection() {
     </section>
   )
 }
+
