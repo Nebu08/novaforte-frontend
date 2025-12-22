@@ -75,7 +75,7 @@ export function QuotesSection() {
         body.append("files", file)
       })
 
-      const res = await fetch("http://localhost:4000/api/quote", {
+      const res = await fetch("https://novaforte-backend-1.onrender.com/api/quote", {
         method: "POST",
         body,
       })
@@ -335,3 +335,4 @@ export function QuotesSection() {
     </section>
   )
 }
+
