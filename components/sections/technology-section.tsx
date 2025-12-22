@@ -1,18 +1,25 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useMemo, useState } from "react"
 
 type Model3D = {
   filename: string
   url: string
 }
 
-const API_BASE = process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:4000"
-
 export function TechnologySection() {
   const [models, setModels] = useState<Model3D[]>([])
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isLoading, setIsLoading] = useState(true)
+
+  // ✅ Usa variable de entorno (Vercel) y fallback
+  const API_BASE = useMemo(() => {
+    return (
+      process.env.NEXT_PUBLIC_API_BASE_URL ||
+      "https://novaforte-backend-1.onrender.com" ||
+      "http://localhost:4000"
+    )
+  }, [])
 
   const features = [
     "Aplicaciones clínicas y de entrenamiento: modelos anatómicos y guías quirúrgicas para planeación y simulación.",
@@ -20,30 +27,60 @@ export function TechnologySection() {
     "Componentes y adaptadores para equipamiento médico, diseñados a medida para optimizar el uso de la tecnología en clínica.",
   ]
 
+  // ✅ Cargar model-viewer (si tu layout no lo está cargando)
   useEffect(() => {
+    if (customElements.get("model-viewer")) return
+
+    const id = "model-viewer-script"
+    if (document.getElementById(id)) return
+
+    const script = document.createElement("script")
+    script.id = id
+    script.type = "module"
+    script.src = "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    document.head.appendChild(script)
+  }, [])
+
+  // ✅ Cargar modelos desde el backend
+  useEffect(() => {
+    let cancelled = false
+
     async function loadModels() {
       try {
         setIsLoading(true)
 
-        const res = await fetch(`${API_BASE}/api/models`, { cache: "no-store" })
+        const res = await fetch(`${API_BASE}/api/models`, {
+          cache: "no-store",
+        })
+
+        if (!res.ok) {
+          throw new Error(`API /api/models respondió ${res.status}`)
+        }
+
         const data = await res.json()
 
-        if (data.success && Array.isArray(data.models)) {
-          setModels(data.models)
-          setCurrentIndex(0)
-        } else {
-          console.warn("No se encontraron modelos 3D en /api/models")
-          setModels([])
+        if (!cancelled) {
+          if (data?.success && Array.isArray(data.models)) {
+            setModels(data.models)
+            setCurrentIndex(0)
+          } else {
+            console.warn("No se encontraron modelos 3D en /api/models:", data)
+            setModels([])
+          }
         }
       } catch (error) {
         console.error("Error cargando modelos 3D:", error)
-        setModels([])
+        if (!cancelled) setModels([])
       } finally {
-        setIsLoading(false)
+        if (!cancelled) setIsLoading(false)
       }
     }
 
     loadModels()
+
+    return () => {
+      cancelled = true
+    }
   }, [API_BASE])
 
   const currentModel = models[currentIndex]
@@ -73,19 +110,15 @@ export function TechnologySection() {
           {/* 3D Viewer */}
           <div className="flex items-center justify-center">
             <div className="w-full aspect-square bg-card border border-border rounded-lg overflow-hidden relative">
-              {/* Overlay visual (NO debe tapar el visor) */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 pointer-events-none z-0" />
 
-              {/* Contenido encima del overlay */}
               <div className="relative z-10 w-full h-full">
-                {/* Estado: cargando */}
                 {isLoading && (
                   <div className="absolute inset-0 flex items-center justify-center text-sm text-muted-foreground">
                     Cargando modelos 3D…
                   </div>
                 )}
 
-                {/* Si no hay modelos */}
                 {!isLoading && models.length === 0 && (
                   <div className="w-full h-full flex items-center justify-center p-6 text-center text-sm text-muted-foreground">
                     No se encontraron modelos 3D. Agrega archivos <strong>.glb</strong> o <strong>.gltf</strong> a la
@@ -93,14 +126,13 @@ export function TechnologySection() {
                   </div>
                 )}
 
-                {/* Si hay modelos */}
                 {!isLoading && models.length > 0 && currentModel && (
                   <>
                     <div className="w-full h-full">
                       {
                         // @ts-ignore
                         <model-viewer
-                          key={currentModel.url} // ✅ FIX: fuerza re-render en Next/Vercel
+                          key={currentModel.url} // ✅ fuerza recarga cuando cambia
                           src={currentModel.url}
                           alt={currentModel.filename}
                           camera-controls
@@ -115,7 +147,6 @@ export function TechnologySection() {
                       }
                     </div>
 
-                    {/* Controles */}
                     {models.length > 1 && (
                       <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-2 text-xs md:text-sm">
                         <button
@@ -167,4 +198,3 @@ export function TechnologySection() {
     </section>
   )
 }
-
