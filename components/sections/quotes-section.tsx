@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useMemo, useState } from "react"
 
 export function QuotesSection() {
   const [formData, setFormData] = useState({
@@ -18,6 +18,11 @@ export function QuotesSection() {
   const [selectedFiles, setSelectedFiles] = useState<File[]>([])
   const [loading, setLoading] = useState(false)
   const [errorMessage, setErrorMessage] = useState("")
+
+  // ✅ Mensaje SEO extra (sin afectar el diseño)
+  const seoExtra = useMemo(() => {
+    return "Solicita una cotización de impresión 3D médica, prótesis u órtesis personalizadas y desarrollo de dispositivos a medida para el sector salud en Colombia."
+  }, [])
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -60,7 +65,7 @@ export function QuotesSection() {
     try {
       const body = new FormData()
 
-      // 🔹 Aquí mapeamos los nombres del front a los nombres que espera el backend
+      // 🔹 Mapeo a lo que espera el backend
       body.append("name", formData.fullName)
       body.append("email", formData.email)
       body.append("phone", formData.phone)
@@ -70,7 +75,7 @@ export function QuotesSection() {
       body.append("urgency", formData.deliveryDate)
       body.append("privacyAccepted", String(formData.privacyAccepted))
 
-      // 🔹 Adjuntamos los archivos .obj / .stl
+      // 🔹 Adjuntamos archivos
       selectedFiles.forEach((file) => {
         body.append("files", file)
       })
@@ -84,7 +89,6 @@ export function QuotesSection() {
 
       if (res.ok && data.success) {
         setSubmitted(true)
-        // limpiamos formulario
         setFormData({
           fullName: "",
           email: "",
@@ -97,11 +101,11 @@ export function QuotesSection() {
         })
         setSelectedFiles([])
       } else {
-        setErrorMessage(data.message || "There was a problem sending your request.")
+        setErrorMessage(data.message || "Hubo un problema enviando tu solicitud. Intenta de nuevo.")
       }
     } catch (error) {
       console.error(error)
-      setErrorMessage("Server error. Please try again later.")
+      setErrorMessage("Error del servidor. Por favor intenta más tarde.")
     } finally {
       setLoading(false)
     }
@@ -116,10 +120,15 @@ export function QuotesSection() {
               <span className="text-4xl">✓</span>
             </div>
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              ¡Cotización Recibida!
+              ¡Solicitud de cotización recibida!
             </h2>
             <p className="text-lg text-muted-foreground">
-              Gracias por tu envío. Nuestro equipo revisará tu proyecto y se pondrá en contacto contigo lo antes posible.
+              Gracias por tu envío. Revisaremos tu proyecto y te contactaremos lo antes posible con los siguientes pasos.
+            </p>
+
+            {/* Refuerzo confianza */}
+            <p className="mt-4 text-sm text-muted-foreground">
+              Nota: La información y archivos compartidos se gestionan bajo criterios de confidencialidad y control de calidad.
             </p>
           </div>
         </div>
@@ -133,8 +142,14 @@ export function QuotesSection() {
         <div className="mb-16">
           <h2 className="section-title">Solicitar cotización</h2>
           <p className="section-subtitle">
-            Describe tu proyecto y sube tus archivos 3D. Te enviaremos una cotización personalizada de impresión 3D.
-            Si no tienes archivo, tranquilo. Te ayudaremos a crear el diseño que necesitas.
+            Describe tu proyecto y, si tienes, sube tus archivos 3D. Te enviaremos una cotización personalizada para{" "}
+            <strong>impresión 3D médica</strong>, <strong>prótesis y órtesis a medida</strong> o desarrollo de soluciones
+            biomédicas. Si no tienes archivo, tranquilo: te ayudamos con el diseño.
+          </p>
+
+          {/* ✅ SEO extra */}
+          <p className="mt-4 text-sm md:text-base text-muted-foreground">
+            {seoExtra}
           </p>
         </div>
 
@@ -143,28 +158,35 @@ export function QuotesSection() {
             {/* Name and Email */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Nombre Completo*
+                <label htmlFor="fullName" className="block text-sm font-medium text-foreground mb-2">
+                  Nombre completo <span className="text-red-500">*</span>
                 </label>
                 <input
+                  id="fullName"
                   type="text"
                   name="fullName"
                   value={formData.fullName}
                   onChange={handleInputChange}
                   required
+                  autoComplete="name"
+                  placeholder="Ej: Juan Pérez"
                   className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
+
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Correo *
+                <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
+                  Correo <span className="text-red-500">*</span>
                 </label>
                 <input
+                  id="email"
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
                   required
+                  autoComplete="email"
+                  placeholder="Ej: correo@empresa.com"
                   className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
@@ -173,33 +195,41 @@ export function QuotesSection() {
             {/* Phone and Client Type */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Telefono / WhatsApp
+                <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
+                  Teléfono / WhatsApp
                 </label>
                 <input
+                  id="phone"
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
+                  autoComplete="tel"
+                  placeholder="Ej: +57 300 000 0000"
                   className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 />
+                <p className="mt-1 text-xs text-muted-foreground">
+                  Recomendado para responder más rápido.
+                </p>
               </div>
+
               <div>
-                <label className="block text-sm font-medium text-foreground mb-2">
-                  Tipo de Cliente *
+                <label htmlFor="clientType" className="block text-sm font-medium text-foreground mb-2">
+                  Tipo de cliente <span className="text-red-500">*</span>
                 </label>
                 <select
+                  id="clientType"
                   name="clientType"
                   value={formData.clientType}
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary"
                 >
-                  <option value="">Select...</option>
+                  <option value="">Selecciona…</option>
                   <option value="healthcare-professional">Profesional de la salud</option>
-                  <option value="clinic-hospital">Clinica / Hospital</option>
-                  <option value="company">Compañia</option>
-                  <option value="individual">Independiente</option>
+                  <option value="clinic-hospital">Clínica / Hospital</option>
+                  <option value="company">Compañía</option>
+                  <option value="individual">Particular</option>
                   <option value="other">Otro</option>
                 </select>
               </div>
@@ -212,10 +242,10 @@ export function QuotesSection() {
               </label>
               <div className="space-y-2">
                 {[
-                  { value: "3d-printing", label: "Impresión 3D" },
-                  { value: "prostheses-orthoses", label: "Prostesis / Ortesis" },
-                  { value: "spare-parts", label: "Pieza de repuesto o accesorio específico" },
-                  { value: "custom-development", label: "Desarrollo personalizado" },
+                  { value: "3d-printing", label: "Impresión 3D (biomédica / técnica)" },
+                  { value: "prostheses-orthoses", label: "Prótesis / Órtesis personalizadas" },
+                  { value: "spare-parts", label: "Repuesto o accesorio específico" },
+                  { value: "custom-development", label: "Desarrollo personalizado (dispositivo / prototipo)" },
                 ].map((option) => (
                   <label key={option.value} className="flex items-center gap-3 cursor-pointer">
                     <input
@@ -228,29 +258,38 @@ export function QuotesSection() {
                   </label>
                 ))}
               </div>
+              <p className="mt-2 text-xs text-muted-foreground">
+                Puedes seleccionar más de una opción.
+              </p>
             </div>
 
             {/* Project Description */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
-                Descripción del producto *
+              <label htmlFor="projectDescription" className="block text-sm font-medium text-foreground mb-2">
+                Descripción del proyecto <span className="text-red-500">*</span>
               </label>
               <textarea
+                id="projectDescription"
                 name="projectDescription"
                 value={formData.projectDescription}
                 onChange={handleInputChange}
                 required
                 rows={5}
+                placeholder="Incluye: objetivo, medidas aproximadas, material deseado, uso (clínico/rehabilitación), y cualquier referencia."
                 className="w-full px-4 py-2 border border-border rounded-lg bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none"
               />
+              <p className="mt-2 text-xs text-muted-foreground">
+                Entre más detalles, más precisa será la cotización.
+              </p>
             </div>
 
             {/* Delivery Date */}
             <div>
-              <label className="block text-sm font-medium text-foreground mb-2">
-                Fecha
+              <label htmlFor="deliveryDate" className="block text-sm font-medium text-foreground mb-2">
+                Fecha límite / urgencia (opcional)
               </label>
               <input
+                id="deliveryDate"
                 type="date"
                 name="deliveryDate"
                 value={formData.deliveryDate}
@@ -262,31 +301,32 @@ export function QuotesSection() {
             {/* File Upload */}
             <div>
               <label className="block text-sm font-medium text-foreground mb-2">
-                Sube tus archivos (.obj, .stl) (opcional)
+                Sube tus archivos 3D (opcional)
               </label>
               <div className="border-2 border-dashed border-border rounded-lg p-6 text-center hover:border-primary transition-colors">
                 <input
                   type="file"
-                  name="files"                // 🔹 importante para Multer
+                  name="files"
                   multiple
-                  accept=".obj,.stl"
+                  accept=".obj,.stl,.glb,.gltf"
                   onChange={handleFileChange}
                   className="hidden"
                   id="file-upload"
                 />
                 <label htmlFor="file-upload" className="cursor-pointer">
                   <p className="text-sm text-muted-foreground mb-1">
-                    Click para subrir o arrastra y suelta tus archivos aquí
+                    Haz clic para subir o arrastra y suelta tus archivos aquí
                   </p>
                   <p className="text-xs text-muted-foreground">
-                    .obj, .stl files (Tamaño maximo del archivo: 50MB)
+                    Formatos: .obj, .stl, .glb, .gltf (tamaño máximo recomendado: 50MB por archivo)
                   </p>
                 </label>
               </div>
+
               {selectedFiles.length > 0 && (
                 <div className="mt-4">
                   <p className="text-sm font-medium text-foreground mb-2">
-                    Seleciona Archivos:
+                    Archivos seleccionados:
                   </p>
                   <ul className="space-y-1">
                     {selectedFiles.map((file, i) => (
@@ -310,16 +350,16 @@ export function QuotesSection() {
                 className="w-4 h-4 rounded border-border mt-1"
               />
               <label className="text-sm text-muted-foreground">
-                I accept the privacy policy and data processing terms *
+                Acepto la política de privacidad y el tratamiento de datos{" "}
+                <span className="text-red-500">*</span>
+                <span className="block mt-1 text-xs">
+                  La información enviada se usa únicamente para responder tu solicitud y gestionar la cotización.
+                </span>
               </label>
             </div>
 
             {/* Error message */}
-            {errorMessage && (
-              <p className="text-sm text-red-500">
-                {errorMessage}
-              </p>
-            )}
+            {errorMessage && <p className="text-sm text-red-500">{errorMessage}</p>}
 
             {/* Submit Button */}
             <button
@@ -329,10 +369,14 @@ export function QuotesSection() {
             >
               {loading ? "Enviando..." : "Solicitar cotización"}
             </button>
+
+            {/* Confianza / ética */}
+            <p className="text-xs text-muted-foreground text-center">
+              Nota: No envíes información sensible o identificable de pacientes a través de este formulario.
+            </p>
           </form>
         </div>
       </div>
     </section>
   )
 }
-
