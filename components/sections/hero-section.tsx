@@ -15,43 +15,41 @@ export function HeroSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
           <div className="space-y-6">
-            {/* Eyebrow */}
+            {/* Eyebrow (SEO local + servicio) */}
             <p className="inline-flex items-center gap-2 rounded-full bg-primary/5 border border-primary/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-              NOVAFORTE · Impresión 3D para el sector salud
+              NOVAFORTE · Impresión 3D médica en Bogotá · Colombia
             </p>
 
-            {/* Main Heading */}
+            {/* Main Heading (H1 SEO) */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-foreground leading-tight text-balance">
-              <span className="block">Ingeniería Biomédica</span>
+              <span className="block">Ingeniería biomédica e</span>
               <span className="block bg-gradient-to-r from-primary to-red-500 bg-clip-text text-transparent">
-                en 3D para Soluciones Reales
+                impresión 3D médica a medida
               </span>
             </h1>
 
-            {/* Subtitle */}
+            {/* Subtitle (claridad + keywords) */}
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-              Diseñamos y fabricamos prótesis, órtesis y dispositivos médicos a medida 
-              utilizando impresión 3D, optimizando costos, tiempos y adaptación anatómica.
-
-              Servicio especializado en Bogotá y atención a nivel nacional.
-
+              Diseñamos y fabricamos <strong>prótesis</strong>, <strong>órtesis</strong> y{" "}
+              <strong>dispositivos personalizados</strong> mediante impresión 3D, optimizando{" "}
+              tiempos, costos y adaptación anatómica. Atención en <strong>Bogotá</strong> y
+              soporte a nivel nacional.
             </p>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button
-                onClick={() => scrollToSection("quotes")}
-                className="btn-primary"
-              >
-                Solicita una cotización médica en 3D
+              <button onClick={() => scrollToSection("quotes")} className="btn-primary">
+                Solicitar cotización
               </button>
-              <button
-                onClick={() => scrollToSection("technology")}
-                className="btn-secondary"
-              >
-                Ver lo que hacemos
+              <button onClick={() => scrollToSection("services")} className="btn-secondary">
+                Ver servicios
               </button>
             </div>
+
+            {/* Trust microcopy (sube conversion sin ruido) */}
+            <p className="text-xs text-muted-foreground">
+              Enfoque clínico, trazabilidad y confidencialidad en el manejo de diseños y archivos 3D.
+            </p>
           </div>
 
           {/* Right Column - Image */}
@@ -60,8 +58,10 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/15 to-accent/10" />
               <img
                 src="/3d-biomedical-prosthesis-model.jpg"
-                alt="Modelo 3D biomédico NOVAFORTE"
+                alt="Prótesis y dispositivos biomédicos desarrollados con impresión 3D por NOVAFORTE en Bogotá"
                 className="w-full h-full object-cover transform transition-transform duration-700 hover:scale-105"
+                loading="eager"
+                fetchPriority="high"
               />
             </div>
           </div>
@@ -70,3 +70,4 @@ export function HeroSection() {
     </section>
   )
 }
+
