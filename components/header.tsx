@@ -64,7 +64,7 @@ export function Header() {
           onClick={() => scrollToSection("quotes")}
           className="btn-primary text-sm"
         >
-          ¡Cotiza!
+          Solicitar Cotización
         </button>
       </div>
     </header>
