@@ -4,22 +4,22 @@ export function ServicesSection() {
   const services = [
     {
       title: "Impresión 3D biomédica a medida",
-      description: "Soluciones de impresión 3D de alta precisión para aplicaciones médicas, utilizando materiales certificados y procesos validados.",
+      description: "Ofrecemos servicios de impresión 3D biomédica a medida para aplicaciones médicas y de rehabilitación, utilizando materiales técnicos y procesos controlados. Nuestra tecnología permite fabricar dispositivos personalizados con alta precisión dimensional, reduciendo tiempos de entrega y optimizando costos en comparación con métodos tradicionales.",
       badge: "Alta precisión",
     },
     {
       title: "Diseño de prótesis y órtesis",
-      description: "Diseño especializado de prótesis y órtesis estáticas y funcionales, optimizadas para el confort, el ajuste anatómico y el uso diario del paciente.",
+      description: "Diseñamos prótesis y órtesis personalizadas, tanto estáticas como funcionales, adaptadas a la anatomía y necesidades de cada paciente. Nuestro enfoque combina diseño digital, criterios biomecánicos y fabricación mediante impresión 3D para lograr mayor confort, ajuste preciso y funcionalidad en el uso diario.",
       badge: "Enfoque en el paciente",
     },
     {
       title: "Fabricación de repuestos y accesorios",
-      description: "abricación bajo demanda de repuestos difíciles de conseguir y accesorios personalizados para equipos médicos y de rehabilitación, con trazabilidad completa.",
+      description: "Fabricación bajo demanda de repuestos difíciles de conseguir y accesorios personalizados para equipos médicos y de rehabilitación. Utilizamos impresión 3D para extender la vida útil de dispositivos, garantizar compatibilidad funcional y asegurar trazabilidad en cada componente fabricado.",
       badge: "Trazabilidad total",
     },
     {
       title: "Prototipado rápido y desarrollo",
-      description: "Desarrollo ágil de prototipos biomédicos y soluciones experimentales para validación clínica y pruebas de concepto.",
+      description: "Desarrollamos prototipos biomédicos mediante prototipado rápido en impresión 3D, facilitando procesos de validación clínica, pruebas de concepto y desarrollo de nuevas soluciones médicas. Este enfoque permite iteraciones ágiles, reducción de costos y aceleración del desarrollo tecnológico.",
       badge: "Entrega rápida",
     },
   ]
@@ -29,7 +29,7 @@ export function ServicesSection() {
       <div className="section-container">
         <div className="mb-16">
           <h2 className="section-title">Nuestros Servicios</h2>
-          <p className="section-subtitle">Soluciones integrales de ingeniería biomédica e impresión 3D para el sector salud.</p>
+          <p className="section-subtitle">Nuestros servicios combinan ingeniería biomédica, diseño personalizado e impresión 3D médica para ofrecer soluciones eficientes, accesibles y adaptadas a las necesidades del sector salud.</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
