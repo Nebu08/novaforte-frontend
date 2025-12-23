@@ -30,8 +30,11 @@ export function HeroSection() {
 
             {/* Subtitle */}
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-              Prótesis, órtesis, repuestos biomédicos y accesorios personalizados con precisión
-              de ingeniería y compromiso con la calidad ISO 9001.
+              Diseñamos y fabricamos prótesis, órtesis y dispositivos médicos a medida 
+              utilizando impresión 3D, optimizando costos, tiempos y adaptación anatómica.
+
+              Servicio especializado en Bogotá y atención a nivel nacional.
+
             </p>
 
             {/* Buttons */}
@@ -40,7 +43,7 @@ export function HeroSection() {
                 onClick={() => scrollToSection("quotes")}
                 className="btn-primary"
               >
-                Solicitar cotización
+                Solicita una cotización médica en 3D
               </button>
               <button
                 onClick={() => scrollToSection("technology")}
