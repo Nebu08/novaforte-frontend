@@ -22,9 +22,9 @@ export function TechnologySection() {
   }, [])
 
   const features = [
-    "Aplicaciones clínicas y de entrenamiento: modelos anatómicos y guías quirúrgicas para planeación y simulación.",
-    "Prótesis y órtesis personalizadas, adaptadas a la anatomía y necesidades funcionales de cada paciente.",
-    "Componentes y adaptadores para equipamiento médico, diseñados a medida para optimizar el uso de la tecnología en clínica.",
+    "Aplicaciones clínicas y de entrenamiento: modelos anatómicos y guías quirúrgicas impresas en 3D para planeación, simulación y entrenamiento médico.",
+    "Prótesis y órtesis personalizadas, diseñadas a medida y adaptadas a la anatomía y necesidades funcionales específicas de cada paciente.",
+    "Componentes, adaptadores y accesorios para equipamiento médico, diseñados e impresos en 3D para optimizar el funcionamiento, la ergonomía y el uso de la tecnología en entornos clínicos.",
   ]
 
   // ✅ Cargar model-viewer (si tu layout no lo está cargando)
@@ -98,11 +98,23 @@ export function TechnologySection() {
   return (
     <section id="technology" className="py-20 md:py-28 bg-muted/30">
       <div className="section-container">
-        <div className="mb-16">
-          <h2 className="section-title">Nuestro trabajo en 3D para el sector salud</h2>
+        <div className="mb-10 md:mb-12">
+          <h2 className="section-title">
+            Nuestro trabajo en impresión 3D para el sector salud
+          </h2>
+
+          {/* Intro (SEO + claridad) */}
           <p className="section-subtitle">
-            Mostramos ejemplos de modelos biomédicos personalizados desarrollados por NOVAFORTE mediante impresión 3D,
-            combinando ingeniería biomédica, materiales certificados y diseño orientado al paciente.
+            Mostramos ejemplos de trabajos desarrollados por NOVAFORTE mediante impresión 3D médica y biomédica,
+            aplicados al sector salud. Estos modelos incluyen soluciones personalizadas diseñadas a partir de criterios
+            de ingeniería biomédica, materiales técnicos certificados y un enfoque centrado en el paciente y el uso
+            clínico.
+          </p>
+
+          {/* ✅ SEO extra (frase adicional) */}
+          <p className="mt-4 text-sm md:text-base text-muted-foreground">
+            Cada proyecto refleja nuestro compromiso con el desarrollo de soluciones médicas personalizadas mediante
+            impresión 3D aplicada a la salud.
           </p>
         </div>
 
@@ -185,11 +197,12 @@ export function TechnologySection() {
               </div>
             ))}
 
+            {/* Nota legal / ética */}
             <div className="pt-4">
               <p className="text-sm text-muted-foreground italic">
-                Nota: los modelos 3D mostrados son ejemplos de trabajo desarrollados por NOVAFORTE. No contienen datos
-                identificables de pacientes y se gestionan bajo criterios de confidencialidad y calidad conforme a
-                nuestras normas internas e ISO 9001.
+                Nota: Los modelos 3D mostrados corresponden a ejemplos de trabajos desarrollados por NOVAFORTE. No
+                contienen datos personales ni información identificable de pacientes y se gestionan bajo criterios de
+                confidencialidad, calidad y control de procesos, conforme a nuestras normas internas.
               </p>
             </div>
           </div>
@@ -198,3 +211,4 @@ export function TechnologySection() {
     </section>
   )
 }
+
