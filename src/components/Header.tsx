@@ -37,14 +37,15 @@ export default function Header({ currentLocale }: HeaderProps) {
         <Link href="/" className="flex items-center focus:outline-none group">
           <div
             className="relative overflow-hidden transition-opacity duration-200 group-hover:opacity-80"
-            style={{ width: 260, height: 60 }}
+            style={{ width: 340, height: 72 }}
           >
             <Image
               src="/images/logo.svg"
               alt="Novaforte Biomedical Engineering"
               fill
-              className="object-contain dark:invert"
-              sizes="260px"
+              className="object-cover dark:invert"
+              style={{ objectPosition: "center 48%" }}
+              sizes="340px"
               priority
             />
           </div>

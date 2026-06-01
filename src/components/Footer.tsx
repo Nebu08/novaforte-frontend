@@ -12,13 +12,16 @@ export default function Footer() {
         {/* Brand Section */}
         <div className="col-span-1 md:col-span-6 flex flex-col gap-space-sm">
           <Link href="/" className="inline-block focus:outline-none">
-            <Image
-              src="/images/logo.svg"
-              alt="Novaforte sas logo"
-              width={140}
-              height={36}
-              className="object-contain h-9 w-auto invert"
-            />
+            <div className="relative overflow-hidden" style={{ width: 170, height: 45 }}>
+              <Image
+                src="/images/logo.svg"
+                alt="Novaforte sas logo"
+                fill
+                className="object-cover invert"
+                style={{ objectPosition: "center 48%" }}
+                sizes="170px"
+              />
+            </div>
           </Link>
           <p className="text-text-sm max-w-sm text-gray-400 mt-space-2xs">
             {t("motto")}
