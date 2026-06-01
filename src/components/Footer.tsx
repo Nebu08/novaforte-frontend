@@ -12,14 +12,14 @@ export default function Footer() {
         {/* Brand Section */}
         <div className="col-span-1 md:col-span-6 flex flex-col gap-space-sm">
           <Link href="/" className="inline-block focus:outline-none">
-            <div className="relative overflow-hidden" style={{ width: 170, height: 45 }}>
+            <div className="relative overflow-hidden" style={{ width: 340, height: 90 }}>
               <Image
                 src="/images/logo.svg"
                 alt="Novaforte sas logo"
                 fill
                 className="object-cover invert"
                 style={{ objectPosition: "center 48%" }}
-                sizes="170px"
+                sizes="340px"
               />
             </div>
           </Link>

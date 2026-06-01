@@ -32,12 +32,11 @@ export default function Header({ currentLocale }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-800/50 bg-white/90 dark:bg-dark-900/90 backdrop-blur-md transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-space-md sm:px-space-lg h-[80px] flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-space-md sm:px-space-lg h-[80px] md:h-[100px] lg:h-[110px] xl:h-[130px] flex items-center justify-between transition-all duration-300">
         {/* Brand Logo — cropped to show only artwork region from the square image */}
         <Link href="/" className="flex items-center focus:outline-none group">
           <div
-            className="relative overflow-hidden transition-opacity duration-200 group-hover:opacity-80"
-            style={{ width: 340, height: 72 }}
+            className="relative overflow-hidden transition-opacity duration-200 group-hover:opacity-80 w-[240px] h-[50px] md:w-[320px] md:h-[68px] lg:w-[420px] lg:h-[88px] xl:w-[520px] xl:h-[110px]"
           >
             <Image
               src="/images/logo.svg"
@@ -45,7 +44,7 @@ export default function Header({ currentLocale }: HeaderProps) {
               fill
               className="object-cover dark:invert"
               style={{ objectPosition: "center 48%" }}
-              sizes="340px"
+              sizes="(max-width: 768px) 240px, (max-width: 1024px) 320px, (max-width: 1280px) 420px, 520px"
               priority
             />
           </div>
