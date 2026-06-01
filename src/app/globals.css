@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  /* ================================================
+   * SPACING SCALE TOKENS
+   * ================================================ */
+  --spacing-space-3xs: 2px;
+  --spacing-space-2xs: 4px;
+  --spacing-space-xs: 8px;
+  --spacing-space-sm: 12px;
+  --spacing-space-md: 16px;
+  --spacing-space-lg: 24px;
+  --spacing-space-xl: 32px;
+  --spacing-space-2xl: 48px;
+  --spacing-space-3xl: 64px;
+
+  /* ================================================
+   * TYPOGRAPHY
+   * ================================================ */
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  /* Body sizes */
+  --text-text-3xs: 0.65rem;
+  --text-text-2xs: 0.75rem;
+  --text-text-xs: 0.8rem;
+  --text-text-sm: 0.875rem;
+  --text-text-md: 1rem;
+  --text-text-lg: 1.125rem;
+  --text-text-xl: 1.25rem;
+  --text-text-2xl: 1.5rem;
+  --text-text-3xl: 2rem;
+
+  /* Heading sizes */
+  --text-heading-xs: 1.25rem;
+  --text-heading-sm: 1.5rem;
+  --text-heading-lg: 2rem;
+  --text-heading-xl: 2.5rem;
+  --text-heading-2xl: 3rem;
+  --text-heading-3xl: 3.5rem;
+  --text-heading-4xl: 4.5rem;
+
+  /* ================================================
+   * BRAND COLORS — NOVAFORTE SAS
+   * Palette: Burdeos / Vino Oscuro + Gris Carbón + Acentos Metálicos
+   * ================================================ */
+
+  /* PRIMARY — Burdeos / Vino Oscuro */
+  --color-primary-50:  #f9eeef;
+  --color-primary-100: #f1d4d7;
+  --color-primary-200: #e4aaaf;
+  --color-primary-300: #d07f87;
+  --color-primary-400: #bc5b66;
+  --color-primary-500: #7e192a;   /* Burdeos principal */
+  --color-primary-600: #6b1220;   /* Hover / Active */
+  --color-primary-700: #540e18;
+  --color-primary-800: #3d0a12;
+  --color-primary-900: #2a0308;   /* Texto ultra oscuro */
+
+  /* ACCENT — Oro Champagne / Bronce Metalizado */
+  --color-accent-300: #e4d0a0;
+  --color-accent-400: #d4b878;
+  --color-accent-500: #c5a059;   /* Oro metalizado */
+  --color-accent-600: #a88444;   /* Hover */
+  --color-accent-700: #8b6930;
+
+  /* DARK — Gris Carbón (sin tinte azul) */
+  --color-dark-50:  #f4f3f2;
+  --color-dark-100: #e8e6e4;
+  --color-dark-200: #d1cecc;
+  --color-dark-300: #b0aba8;
+  --color-dark-400: #8f8a86;
+  --color-dark-500: #6e6a66;
+  --color-dark-600: #524f4b;
+  --color-dark-700: #3a3734;
+  --color-dark-800: #1c1b1a;   /* Gris Carbón oscuro */
+  --color-dark-900: #0e0d0c;   /* Fondo dark mode */
+
+  /* WARM GRAY — Sobreescribe los grises fríos de Tailwind */
+  --color-gray-50:  #f7f5f4;
+  --color-gray-100: #eeebea;
+  --color-gray-200: #dedad8;
+  --color-gray-300: #c4bfbc;
+  --color-gray-400: #9e9894;
+  --color-gray-500: #7a7470;
+  --color-gray-600: #5e5855;
+  --color-gray-700: #433f3c;
+  --color-gray-800: #2d2a28;
+  --color-gray-900: #1a1816;
+  --color-gray-950: #0d0c0b;
+}
+
+/* ================================================
+ * GLOBAL BASE STYLES
+ * ================================================ */
+:root {
+  --background: #f7f5f4;      /* Warm off-white */
+  --foreground: #1a1816;      /* Warm charcoal — NOT navy blue */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0e0d0c;    /* Warm deep charcoal — NOT navy blue */
+    --foreground: #eeebea;    /* Warm near-white */
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+}

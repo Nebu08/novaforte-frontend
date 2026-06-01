@@ -1,0 +1,560 @@
+{
+  "Header": {
+    "home": "Home",
+    "humans": "Humans",
+    "biomedical": "Spares",
+    "vet": "Animals",
+    "academy": "Academy",
+    "about": "About Us",
+    "contact": "Contact",
+    "cta": "Text Us",
+    "ariaMenu": "Open navigation menu",
+    "ariaLang": "Change language"
+  },
+  "Footer": {
+    "rights": "© 2026 Novaforte sas. All rights reserved.",
+    "colombia": "Bogota, Colombia",
+    "address": "Carrera 16A # 78-75, Edificio Profesional Tempo, Chapinero, Bogota",
+    "email": "novafortesas@gmail.com",
+    "legal": "Privacy Policies & Habeas Data",
+    "linksTitle": "Quick Links",
+    "contactTitle": "Corporate Contact",
+    "motto": "High-precision reverse engineering and clinical & educational 3D printing with dedicated local support in Colombia."
+  },
+  "Home": {
+    "hero": {
+      "title": "Medical-Grade Additive Manufacturing",
+      "subtitle": "We combine advanced 3D design rigor with clinical EXPERTISE to manufacture custom-made prostheses not only for humans (we also think about animals), discontinued or hard-to-access medical spare parts, and prepare future makers in school environments.",
+      "ctaPrimary": "Explore Divisions",
+      "ctaSecondary": "Direct Contact"
+    },
+    "divisions": {
+      "title": "Our Specialized Divisions",
+      "subtitle": "Click on the corresponding division to view our technical capabilities and quote your specific requirement in less than 72 hours.",
+      "humans": {
+        "title": "Humans (Prosthetics & Orthotics)",
+        "desc": "Customized prosthetics and aesthetic orthotics in certified high-strength biocompatible polymers.",
+        "cta": "Explore Humans"
+      },
+      "biomedica": {
+        "title": "Spares",
+        "desc": "Reverse engineering and 3D reconstruction of gears and plastic parts resistant to chemicals and disinfection in medical devices.",
+        "cta": "Explore Spares"
+      },
+      "vet": {
+        "title": "Animals",
+        "desc": "Digital design and custom fabrication of lightweight orthotics and functional prosthetics in comfortable and flexible materials.",
+        "cta": "Explore Animals"
+      },
+      "academy": {
+        "title": "Maker Training (Academy)",
+        "desc": "Sequential courses structured by levels in 3D design and printing (Tinkercad and Fusion 360) for schools in Colombia.",
+        "cta": "Explore Courses"
+      }
+    },
+    "trust": {
+      "title": "Why Choose Novaforte?",
+      "subtitle": "We guarantee professional reliability and operational continuity throughout Colombia.",
+      "pillar1": {
+        "title": "Rigor & Local Engineering",
+        "desc": "Direct, on-site after-sales support in clinics and healthcare facilities. No import delays."
+      },
+      "pillar2": {
+        "title": "Medical-Grade Manufacturing",
+        "desc": "From patient scanning to the finished device, we use materials compatible with the body and the environments we work in. Guaranteed warranty and support."
+      },
+      "pillar3": {
+        "title": "Operational Continuity",
+        "desc": "Local stock of materials and machinery to respond to medical urgencies or critical spare parts in 72 hours."
+      }
+    }
+  },
+  "Humans": {
+    "hero": {
+      "title": "Custom Orthopedic Devices & Orthoses",
+      "subtitle": "Digital design and manufacturing of personalized prostheses and orthoses in approved biocompatible materials in Colombia. We assist orthopedic surgeons and patients with lightweight orthoses and high-resistance prosthetics.",
+      "ctaQuote": "Quote Device",
+      "ctaDownload": "Download Portfolio PDF"
+    },
+    "capabilities": {
+      "title": "3D Design & Manufacturing Capabilities",
+      "subtitle": "Certified biomedical workflows for patient well-being.",
+      "pillar1": {
+        "title": "Custom Anatomical Modeling",
+        "desc": "Millimetric anatomical adaptation for prosthetics and orthotics based on 3D scanning and clinical specifications."
+      },
+      "pillar2": {
+        "title": "Ergonomic & Adaptable Design",
+        "desc": "We develop orthoses and prostheses that guarantee comfort, breathability, and an optimal fit to the body."
+      },
+      "pillar3": {
+        "title": "High-Strength Polymers",
+        "desc": "3D printing using biocompatible and highly resistant polymers like carbon fiber, polypropylene, nylon, and PETG."
+      }
+    },
+    "cases": {
+      "title": "Real Clinical Cases in Colombia",
+      "subtitle": "Evidence of patients who recovered mobility and optimized their quality of life.",
+      "item1": {
+        "title": "Partial Hand Prosthesis",
+        "desc": "Restoration of functional grip for an adult patient in Bogota. Printed in biocompatible Nylon."
+      },
+      "item2": {
+        "title": "Custom Sports Face Guard",
+        "desc": "High-resistance facial guard custom-made for an athlete in Bogota for post-fracture protection."
+      },
+      "item3": {
+        "title": "Cranial Corrective Orthosis",
+        "desc": "Lightweight and ventilated asymmetric correction helmet for a pediatric patient in Bogota."
+      }
+    },
+    "form": {
+      "title": "Quote Humans Clinical Device",
+      "subtitle": "Complete the following fields so a specialist can review the requirements for your prosthesis or orthosis.",
+      "fieldName": "Specialist's Full Name",
+      "fieldEmail": "Professional Email",
+      "fieldInstitution": "Clinic or Institution",
+      "fieldType": "Clinical Device Type",
+      "fieldMessage": "Message / Tolerance Requirements",
+      "submit": "Send Quote Request",
+      "success": "Request sent successfully. We will review your specifications.",
+      "placeholderName": "e.g., Dr. Camila Restrepo",
+      "placeholderEmail": "camila.restrepo@hospital.com",
+      "placeholderInstitution": "e.g., Fundacion Santa Fe de Bogota",
+      "placeholderMessage": "Describe the clinical case and material specifications...",
+      "typeOptions": {
+        "guide": "Surgical Guide / Template",
+        "prosthesis": "Custom Prosthesis",
+        "orthosis": "Aesthetic / Protective Orthosis",
+        "model": "Anatomical Model",
+        "other": "Other requirement"
+      }
+    },
+    "modal": {
+      "title": "Download Technical Portfolio",
+      "subtitle": "Complete your professional details to immediately receive the PDF dossier with certified materials and data sheets.",
+      "fieldName": "Professional Name",
+      "fieldEmail": "Contact Email",
+      "fieldInstitution": "Hospital / Organization",
+      "fieldRole": "Your Specialty / Role",
+      "fieldPhone": "Phone Number",
+      "submit": "Register & Download PDF",
+      "placeholderName": "e.g., Dr. Camila Restrepo",
+      "placeholderEmail": "camila.restrepo@clinic.com",
+      "placeholderInstitution": "Clinic, Hospital, or IPS",
+      "placeholderRole": "e.g., Orthopedic Surgeon / Biomed",
+      "placeholderPhone": "e.g., +57 300 123 4567"
+    },
+    "extra": {
+      "eyebrow": "Humans Division",
+      "specLabel1": "Clinical tolerance",
+      "specLabel2": "Certified materials",
+      "specLabel3": "Delivery time",
+      "specLabel4": "Anatomical adjustment",
+      "specValue2": "Carbon / PP / Nylon / PETG",
+      "specValue3": "5–10 days",
+      "specValue4": "Customized",
+      "status": "Available · Bogota CO",
+      "caseEyebrow": "Clinical Case · Colombia",
+      "viewSheet": "View data sheet",
+      "viewAll": "View full portfolio →",
+      "specsTitle": "— Technical specifications"
+    }
+  },
+  "Biomed": {
+    "hero": {
+      "title": "Reverse Engineering & 3D Reconstruction of Critical Medical Spare Parts",
+      "subtitle": "We replace broken plastic or metal parts of discontinued hospital equipment. Local high-precision manufacturing under clinical specifications.",
+      "ctaQuote": "Quote Discontinued Spare Part",
+      "ctaPortfolio": "View Success Stories"
+    },
+    "capabilities": {
+      "title": "Materials & Technical Capabilities",
+      "subtitle": "Industrial-grade additive manufacturing quality assurance for clinical equipment.",
+      "pillar1": {
+        "title": "Chemical Resistance",
+        "desc": "Plastic materials like PETG and ABS with high resistance to chemical disinfectants and hospital cold disinfection. (Not suitable for autoclave)."
+      },
+      "pillar2": {
+        "title": "3D Scanning Precision",
+        "desc": "High-resolution optical digital scanning capable of capturing complex geometric tolerances up to 20 microns."
+      },
+      "pillar3": {
+        "title": "Plastics Engineering",
+        "desc": "Use of technical-grade polymers like PETG and ABS of high durability to withstand continuous physical stress."
+      }
+    },
+    "workflow": {
+      "title": "Reverse Engineering & Quality Process",
+      "subtitle": "4 logical steps to duplicate parts without dimensional errors.",
+      "step1": {
+        "title": "Sample Collection",
+        "desc": "Physical delivery of the broken part or initial technical drawings."
+      },
+      "step2": {
+        "title": "3D Digitalization",
+        "desc": "Scanning and parametric CAD modeling of the part to correct wear and tear."
+      },
+      "step3": {
+        "title": "3D Fabrication",
+        "desc": "Printing in resins or technical polymers with strict tolerance controls."
+      },
+      "step4": {
+        "title": "Calibration & Delivery",
+        "desc": "Delivery of the final dimensional report ready for mounting and calibration."
+      }
+    },
+    "form": {
+      "title": "Quote Discontinued Biomedical Spare Part",
+      "subtitle": "Complete the spare part and medical equipment model details to quote the reverse engineering and duplication.",
+      "fieldName": "Biomedical Engineer Name",
+      "fieldEmail": "Corporate Email",
+      "fieldInstitution": "Hospital / IPS",
+      "fieldType": "Medical Equipment Name / Model",
+      "fieldMessage": "Description of spare part and state of the broken component",
+      "submit": "Send Quote Request",
+      "placeholderName": "e.g., Eng. Andres Valencia",
+      "placeholderEmail": "andres.valencia@clinic.com",
+      "placeholderInstitution": "e.g., Fundacion Santa Fe de Bogota",
+      "placeholderType": "e.g., Dräger Savina 300 ICU Gas Ventilator",
+      "placeholderMessage": "Describe the size of the broken part, gear, or dial and if you have the physical component available for scanning..."
+    }
+  },
+  "Vet": {
+    "hero": {
+      "title": "3D Orthotics & Prosthetics to Restore Animal Mobility",
+      "subtitle": "Personalized design of lightweight, durable, and adaptable orthotics for dogs and cats in Colombia. Digital fabrication tailored to your pet's body.",
+      "ctaQuote": "Quote Veterinary Device",
+      "ctaPortfolio": "View Vet Cases"
+    },
+    "capabilities": {
+      "title": "Anatomical Design & Comfort",
+      "subtitle": "Orthotics and prosthetics designed by biomedical engineers with veterinary guidance.",
+      "pillar1": {
+        "title": "Flexible & Comfortable Materials",
+        "desc": "3D printed structures using special flexible polymers (TPU) that ensure comfort and ventilation, preventing skin dermatitis in pets."
+      },
+      "pillar2": {
+        "title": "Adaptive Wheelchairs",
+        "desc": "Rolling structures with all-terrain rubber wheels and adjustable neoprene harnesses for rear mobility."
+      },
+      "pillar3": {
+        "title": "Veterinary Guidance",
+        "desc": "Each device is supervised and validated by a specialist veterinarian on our team to ensure proper anatomical adaptation."
+      }
+    },
+    "form": {
+      "title": "Quote Veterinary Orthotic or Prosthetic",
+      "subtitle": "Provide your pet's details and the affected limb to design a custom-made device.",
+      "fieldName": "Owner / Veterinarian Name",
+      "fieldEmail": "Email Address",
+      "fieldInstitution": "Pet Species / Breed",
+      "fieldType": "Requested Device Type",
+      "fieldMessage": "Clinical details of the pet (Weight, age, and diagnosis)",
+      "submit": "Send Quote Request",
+      "placeholderName": "e.g., Mateo Restrepo",
+      "placeholderEmail": "mateo.veterinario@clinic.com",
+      "placeholderInstitution": "e.g., Dog / German Shepherd",
+      "placeholderMessage": "Indicate if you require an elbow orthosis, rear support splint, wheelchair, or prosthetic limb, along with the pet's approximate weight...",
+      "typeOptions": {
+        "wheelchair": "Adaptive Wheelchair",
+        "orthosis": "Elbow Orthosis / Support Splint",
+        "prosthesis": "Prosthetic Limb",
+        "other": "Other requirement"
+      }
+    },
+    "extra": {
+      "eyebrow": "Animals",
+      "tag1": "Flexible Materials",
+      "tag2": "TPU Comfort",
+      "tag3": "Veterinary Support",
+      "tag4": "Lightweight & Ventilated",
+      "sidebarTitle": "Every pet, a unique design",
+      "canineTitle": "Canine",
+      "canineDesc": "Elbow and wrist orthotics, adaptive wheelchairs",
+      "felineTitle": "Feline",
+      "felineDesc": "Rear limb prosthetics, spinal support",
+      "exoticTitle": "Exotics",
+      "exoticDesc": "Mobility devices upon consultation",
+      "ctaTitle": "Does your pet need mobility?",
+      "ctaSubtitle": "Tell us about your pet's case. We respond in less than 72 business hours.",
+      "ctaButton": "Quote veterinary device →"
+    }
+  },
+  "Academy": {
+    "hero": {
+      "title": "Train the Creators of Tomorrow with Novaforte's Maker Program",
+      "subtitle": "We offer sequential, level-structured courses in 3D design and modeling (Tinkercad and Fusion 360) for schools in Colombia, training teachers and students.",
+      "ctaDemo": "Request Academic Proposal",
+      "ctaLevels": "View Curriculum Structure"
+    },
+    "levels": {
+      "title": "Curriculum Structure: 4 Growth Levels",
+      "subtitle": "Sequential advancement adapted for primary and high school students.",
+      "card1": {
+        "title": "Level 1: Basic – Introduction and Shapes",
+        "desc": "Introduction to basic 3D design with Tinkercad, developing spatial skills through gamified activities."
+      },
+      "card2": {
+        "title": "Level 2: Intermediate – Initial Technical & Parametric Design",
+        "desc": "The goal of this level is to move from intuitive design (LEGO-like blocks) to design with mathematical and functional precision, ideal for solving real-world problems or creating interlocking parts."
+      },
+      "card3": {
+        "title": "Level 3: Advanced – Organic Modeling, Digital Sculpting & Real Applications",
+        "desc": "Here we break away from rigid structures and right angles to enter free, anatomical, and creative design, connecting technology with fields like art, biology, or medicine."
+      },
+      "card4": {
+        "title": "Level 4: Expert – Project Engineering, Manufacturing & Portfolio",
+        "desc": "The capstone level simulates a real development environment. Students now have the software tools; they must use them to solve an integrated challenge, managing the project from paper to the final product."
+      }
+    },
+    "ent": {
+      "title": "Digital Entrepreneurship Model: From Idea to Sale",
+      "desc": "We teach youth that technology is a means of creation, not just consumption. Through Level 4, students design keychains, custom figures, and accessories, learning to calculate material costs, packaging, and school marketing strategies."
+    },
+    "support": {
+      "title": "Local Technical & Pedagogical Support",
+      "subtitle": "We prevent idle technology classrooms due to lack of support or knowledge.",
+      "pillar1": {
+        "title": "Teacher Training",
+        "desc": "We train and certify school teachers to lead the subject autonomously."
+      },
+      "pillar2": {
+        "title": "Mentors' Support",
+        "desc": "Local engineers in Colombia ready to provide pedagogical support, maintenance, and immediate spare parts."
+      },
+      "pillar3": {
+        "title": "Safe Infrastructure",
+        "desc": "Use of printers and digital tools optimized safely for school educational environments."
+      }
+    },
+    "form": {
+      "title": "Schedule a Program Presentation at Your School",
+      "subtitle": "Complete the details below and a local mentor will contact you within 72 business hours to coordinate the visit and present our academic proposal.",
+      "fieldName": "Coordinator Name",
+      "fieldEmail": "School Email",
+      "fieldInstitution": "Educational Institution",
+      "fieldRole": "Your Role at the School",
+      "fieldStudents": "Number of Students (Total)",
+      "submit": "Request Proposal Now",
+      "placeholderName": "e.g., Alejandro Gomez",
+      "placeholderEmail": "alejandro.gomez@school.edu.co",
+      "placeholderInstitution": "e.g., San Ignacio de Loyola School",
+      "roleOptions": {
+        "director": "Principal / Director",
+        "coordinator": "Academic Coordinator",
+        "teacher": "Technology Teacher",
+        "other": "Other role"
+      },
+      "studentOptions": {
+        "low": "Less than 200",
+        "mid": "200 to 500",
+        "high": "More than 500"
+      }
+    },
+    "curriculum": {
+      "title": "Detailed Curriculum Details",
+      "subtitle": "Click on each level to explore the technical focus, software tools, and suggested practical projects.",
+      "level1": {
+        "title": "Level 1: Basic – Introduction and Shapes",
+        "software": "Tinkercad / Tinkercad Classrooms (Intuitive, secure, and free web tool)",
+        "learn1": "Spatial logic: Working plane comprehension, X, Y, Z axes, and basic shape alignment.",
+        "learn2": "Boolean operations: Grouping shapes to add volumes and create hollows (subtraction).",
+        "learn3": "Manufacturing concepts: What a 3D printer is, how plastic (PLA) melts, and the importance of gravity (overhangs).",
+        "learn4": "Basic preparation (Slicing): Introduction to Cura or PrusaSlicer to see how designs turn into layers.",
+        "project": "Design a nameplate with raised text, a custom keychain, or a geometric cookie cutter.",
+        "focus": "Basic geometry and printing plane logic."
+      },
+      "level2": {
+        "title": "Level 2: Intermediate – Initial Technical & Parametric Design",
+        "software": "Onshape (free web tool for education, powerful and compatible with any computer or tablet) or Autodesk Fusion 360 (if school computers have good performance).",
+        "learn1": "2D to 3D thinking: Sketch concepts, use of dimensions (exact measurements), and geometric constraints.",
+        "learn2": "Mechanical operations: Extrusion, revolution, shell, and fillets.",
+        "learn3": "Simple assembly design: Creating two separate parts that must fit together perfectly (print tolerances).",
+        "learn4": "Advanced slicing: Optimization of supports, infill patterns based on part use (aesthetic vs. functional), and layer heights.",
+        "project": "Design a mechanical articulated keychain, a phone stand with adjustable angle, or a box with a sliding lid.",
+        "focus": "Use of measurements, assemblies, and mechanical tolerances."
+      },
+      "level3": {
+        "title": "Level 3: Advanced – Organic Modeling, Digital Sculpting & Real Applications",
+        "software": "Nomad Sculpt (fantastic if the school has iPads/tablets and styluses) or Blender (free for PC, with a steeper but professional learning curve).",
+        "learn1": "Digital sculpting: Using virtual brushes to stretch, inflate, flatten, and detail complex shapes.",
+        "learn2": "Organic geometry: Modeling fluid shapes, curves, and textures (animals, characters, prosthetics).",
+        "learn3": "Digitization & References: Working from outlines, plans, or scaled photographs to trace or adapt designs to reality.",
+        "learn4": "Maintenance & materials: Introduction to different types of filaments (PLA, PETG, flexible TPU) and troubleshooting common printer issues (clogs, bed calibration).",
+        "project": "Design an articulated fantasy creature, an ergonomic tool housing, or a simplified anatomical/medical model (like a splint or conceptual prosthesis for a pet or human).",
+        "focus": "Digital sculpting, anatomy/ergonomics, and materials."
+      },
+      "level4": {
+        "title": "Level 4: Expert – Project Engineering, Manufacturing & Portfolio",
+        "software": "Combination of the above (Onshape/Fusion 360 + advanced slicers like Bambu Studio or PrusaSlicer to learn advanced slicing functions).",
+        "learn1": "Reverse engineering: Taking a broken or existing object, measuring it with calipers/rulers, and replicating or improving it in 3D.",
+        "learn2": "Manufacturing optimization: Designing for 3D printing (avoiding unnecessary supports, orienting parts for strength).",
+        "learn3": "Post-processing: Sanding, painting, joining large parts, and assembly with external elements (screws, magnets, LED lights).",
+        "learn4": "Project presentation: How to document the technical process, render designs, and pitch ideas.",
+        "project": "A free project with a social or technological basis. For example: automating a simple mechanism, designing safety solutions/shields for school labs, or creating a functional prototype for a school enterprise.",
+        "focus": "Reverse engineering, post-processing, and final project."
+      },
+      "table": {
+        "title": "Curriculum Summary by Levels",
+        "headers": ["Level", "Main Focus", "Key Software", "Technical Competency"],
+        "rows": [
+          {
+            "col1": "Level 1: Basic",
+            "col2": "Introduction & Shapes",
+            "col3": "Tinkercad / Cura",
+            "col4": "Basic geometry and printing plane logic."
+          },
+          {
+            "col1": "Level 2: Intermediate",
+            "col2": "Technical Design & Precision",
+            "col3": "Onshape or Fusion 360",
+            "col4": "Use of measurements, assemblies, and mechanical tolerances."
+          },
+          {
+            "col1": "Level 3: Advanced",
+            "col2": "Organic & Fluid Modeling",
+            "col3": "Nomad Sculpt or Blender",
+            "col4": "Digital sculpting, anatomy/ergonomics and materials."
+          },
+          {
+            "col1": "Level 4: Expert",
+            "col2": "Problem Solving & Prototyping",
+            "col3": "Complete Suite + Slicers",
+            "col4": "Reverse engineering, post-processing and final project."
+          }
+        ]
+      }
+    },
+    "extra": {
+      "levelLabel1": "Basic",
+      "levelLabel2": "Intermediate",
+      "levelLabel3": "Advanced",
+      "levelLabel4": "Entrepreneur",
+      "ctaTitle": "Ready to implement the maker training program at your school?",
+      "ctaSubtitle": "A local mentor will present our curriculum and course proposal for your institution. Explore our methodology at no cost.",
+      "ctaButton": "Schedule program presentation →"
+    }
+  },
+  "About": {
+    "hero": {
+      "title": "Precision Biomedical Engineering & Local Additive Manufacturing",
+      "subtitle": "Novaforte sas is a Colombian company that combines advanced geometric design rigor and high-precision 3D printing to provide immediate solutions to clinical, veterinary, and educational sectors in the country."
+    },
+    "purpose": {
+      "title": "Purpose & Work Philosophy",
+      "subtitle": "We aim to balance engineering rigor and clinical empathy in every delivered component.",
+      "pillar1": {
+        "title": "Mission: Rigor & Innovation",
+        "desc": "We convert technical drawings and biomedical files into tangible products with high geometric tolerance through local 3D scanning and manufacturing."
+      },
+      "pillar2": {
+        "title": "Vision: Clinical Empathy",
+        "desc": "We work closely with physicians and surgeons to ensure each orthosis, prosthesis, or spare part directly improves people's quality of life."
+      }
+    },
+    "team": {
+      "title": "Engineering & Support Specialists",
+      "subtitle": "Meet the local team responsible for modeling, manufacturing, and after-sales technical support in Colombia."
+    },
+    "infra": {
+      "title": "Support & Infrastructure in Colombia",
+      "desc": "Strategically located in Bogota, Colombia, we feature industrial filament (FDM) printers, high-precision resin (SLA/DLP) systems, and metrology-grade optical 3D scanners. We guarantee fast delivery times nationwide and on-site after-sales support in clinics and healthcare facilities, preventing any downtime due to lack of local assistance.",
+      "cta": "Text Us on WhatsApp",
+      "ctaForm": "View Contact Channels"
+    }
+  },
+  "Contact": {
+    "title": "General Contact",
+    "subtitle": "Official communication channels for Novaforte sas. Contact our headquarters for business partnerships, invoicing, or support requests.",
+    "supportLocal": "Local Support · Bogota, Colombia",
+    "info": {
+      "title": "Communication Channels",
+      "address": "Headquarters: Carrera 16A # 78-75, Edificio Profesional Tempo, Chapinero, Bogota, Colombia",
+      "email": "Corporate Email: novafortesas@gmail.com",
+      "whatsapp": "Chat on Corporate WhatsApp"
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "fieldName": "Full Name",
+      "fieldEmail": "Email Address",
+      "fieldPhone": "Contact Number (Mobile)",
+      "fieldSubject": "Inquiry Subject",
+      "fieldMessage": "Message / Description",
+      "submit": "Send Message",
+      "placeholderName": "e.g., Dr. Camila Restrepo",
+      "placeholderEmail": "camila.restrepo@hospital.com",
+      "placeholderPhone": "e.g., 300 123 4567",
+      "placeholderSubject": "-- Select --",
+      "placeholderMessage": "Describe your request or corporate inquiry...",
+      "subjectOptions": {
+        "support": "Technical Support / Engineering",
+        "sales": "Business Partnerships",
+        "admin": "Administrative / Invoicing",
+        "other": "Other inquiry"
+      },
+      "errors": {
+        "nameRequired": "Full name is required.",
+        "emailInvalid": "Enter a valid email address.",
+        "phoneInvalid": "Minimum 7 numeric characters.",
+        "subjectRequired": "Please select a subject for your inquiry.",
+        "messageInvalid": "Enter at least 10 explanatory characters.",
+        "submitting": "Sending request..."
+      }
+    }
+  },
+  "Portfolio": {
+    "title": "Success Stories & Real Projects",
+    "subtitle": "Visual and technical demonstration of our 3D printed solutions in Colombia.",
+    "all": "All",
+    "category": "Filter Category",
+    "readMore": "View Data Sheet",
+    "categories": {
+      "humans": "Humans",
+      "biomedica": "Spares",
+      "vet": "Animals",
+      "academy": "Academy"
+    }
+  },
+  "Gracias": {
+    "title": "Thank You for Your Registration!",
+    "subtitle": "A Novaforte engineering specialist will contact you in less than 72 business hours.",
+    "subtext": "Do you have a medical emergency or require immediate support?",
+    "ctaWhatsapp": "Contact via Direct WhatsApp",
+    "ctaHome": "Back to Home"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Novaforte sas | Biomedical & 3D Engineering",
+      "description": "Biomedical engineering and additive manufacturing local company in Colombia. High-precision 3D printing solutions."
+    },
+    "about": {
+      "title": "About Us | Novaforte sas",
+      "description": "Meet the Novaforte sas team, our mission, vision, and infrastructure for digital manufacturing and 3D scanning in Bogota."
+    },
+    "contact": {
+      "title": "Contact | Novaforte sas",
+      "description": "Get in touch with Novaforte sas. Request quotes for prosthetics, orthotics, biomedical spares, or maker training."
+    },
+    "humans": {
+      "title": "Humans - Prosthetics & Orthotics | Novaforte sas",
+      "description": "Digital design and manufacturing of personalized prostheses and orthoses with high-strength biocompatible polymers in Colombia."
+    },
+    "vet": {
+      "title": "Vet - Animal Orthotics & Prosthetics | Novaforte sas",
+      "description": "Customized orthotics, prosthetics, and wheelchairs for dogs and cats. Designed to restore mobility to your pets."
+    },
+    "biomedica": {
+      "title": "Spares - Reverse Engineering & Spare Parts | Novaforte sas",
+      "description": "3D reconstruction and reverse engineering of critical spare parts for discontinued medical equipment in Colombia."
+    },
+    "academy": {
+      "title": "Academy - Maker Training | Novaforte sas",
+      "description": "Teacher training and 3D design courses in Tinkercad and Fusion 360 for schools in Colombia."
+    },
+    "portafolio": {
+      "title": "Portfolio - Success Stories | Novaforte sas",
+      "description": "Explore our catalog of real clinical cases, manufactured spare parts, and maker laboratories implemented in Colombia."
+    }
+  }
+}

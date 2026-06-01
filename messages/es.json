@@ -1,0 +1,560 @@
+{
+  "Header": {
+    "home": "Inicio",
+    "humans": "Humans",
+    "biomedical": "Repuestos",
+    "vet": "Animals",
+    "academy": "Academy",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "cta": "Escríbenos",
+    "ariaMenu": "Abrir menú de navegación",
+    "ariaLang": "Cambiar idioma"
+  },
+  "Footer": {
+    "rights": "© 2026 Novaforte sas. Todos los derechos reservados.",
+    "colombia": "Bogotá, Colombia",
+    "address": "Carrera 16A # 78-75, Edificio Profesional Tempo, Chapinero, Bogotá",
+    "email": "novafortesas@gmail.com",
+    "legal": "Políticas de Privacidad & Habeas Data",
+    "linksTitle": "Enlaces Rápidos",
+    "contactTitle": "Contacto Corporativo",
+    "motto": "Ingeniería inversa de alta precisión e impresión 3D clínica y educativa con soporte local dedicado en Colombia."
+  },
+  "Home": {
+    "hero": {
+      "title": "Fabricación Aditiva de Nivel Médico",
+      "subtitle": "Unimos el rigor del diseño 3D avanzado con la EXPERTICIA clínica para fabricar prótesis a medida no solo para humanos (también pensamos en los animales), repuestos de equipos médicos descontinuados o de difícil acceso, y preparamos a los futuros makers en ambientes escolares.",
+      "ctaPrimary": "Explorar Divisiones",
+      "ctaSecondary": "Contacto Directo"
+    },
+    "divisions": {
+      "title": "Nuestras Divisiones de Especialidad",
+      "subtitle": "Haz clic en la división correspondiente para ver nuestras capacidades técnicas y cotizar tu requerimiento específico en menos de 72 horas.",
+      "humans": {
+        "title": "Humans (Prótesis & Órtesis)",
+        "desc": "Prótesis personalizadas y órtesis estéticas en polímeros biocompatibles de alta resistencia mecánica certificados.",
+        "cta": "Explorar Humans"
+      },
+      "biomedica": {
+        "title": "Repuestos",
+        "desc": "Ingeniería inversa y reconstrucción 3D de engranajes y piezas plásticas resistentes a químicos y desinfección en equipos médicos.",
+        "cta": "Explorar Repuestos"
+      },
+      "vet": {
+        "title": "Animals",
+        "desc": "Diseño digital y fabricación a medida de órtesis ligeras y prótesis funcionales en materiales cómodos y flexibles.",
+        "cta": "Explorar Animals"
+      },
+      "academy": {
+        "title": "Formación Maker (Academy)",
+        "desc": "Cursos secuenciales estructurados por niveles en diseño e impresión 3D (Tinkercad y Fusion 360) para colegios en Colombia.",
+        "cta": "Explorar Cursos"
+      }
+    },
+    "trust": {
+      "title": "¿Por qué elegir a Novaforte?",
+      "subtitle": "Garantizamos seriedad profesional y continuidad operativa en todo el territorio colombiano.",
+      "pillar1": {
+        "title": "Rigor e Ingeniería Local",
+        "desc": "Soporte posventa directo presencial en clínicas e instituciones. Sin demoras de importación."
+      },
+      "pillar2": {
+        "title": "Fabricación de Nivel Médico",
+        "desc": "Desde el escaneo de los pacientes hasta el dispositivo terminado, usamos materiales compatibles con el cuerpo y con los entornos en que trabajamos. Garantía y soporte garantizados."
+      },
+      "pillar3": {
+        "title": "Continuidad Operativa",
+        "desc": "Stock local de materiales y equipos para responder a urgencias médicas o repuestos críticos en 72h."
+      }
+    }
+  },
+  "Humans": {
+    "hero": {
+      "title": "Dispositivos Ortopédicos y Órtesis a la Medida",
+      "subtitle": "Diseño y fabricación digital de prótesis y órtesis personalizadas en materiales biocompatibles homologados. Ayudamos a cirujanos y pacientes con órtesis estéticas y prótesis de alta resistencia mecánica.",
+      "ctaQuote": "Cotizar Dispositivo",
+      "ctaDownload": "Descargar Portafolio PDF"
+    },
+    "capabilities": {
+      "title": "Capacidades de Diseño y Fabricación 3D",
+      "subtitle": "Procesos biomédicos certificados para el bienestar del paciente.",
+      "pillar1": {
+        "title": "Modelado Anatómico Personalizado",
+        "desc": "Adaptación anatómica milimétrica para prótesis y órtesis a partir del escaneo 3D y especificaciones clínicas."
+      },
+      "pillar2": {
+        "title": "Diseño Ergonómico y Adaptable",
+        "desc": "Desarrollamos órtesis y prótesis que garantizan confort, transpiración y un ajuste óptimo al cuerpo."
+      },
+      "pillar3": {
+        "title": "Polímeros de Alta Resistencia",
+        "desc": "Impresión 3D utilizando polímeros biocompatibles como fibra de carbono, polipropileno, nylon y PETG."
+      }
+    },
+    "cases": {
+      "title": "Casos Clínicos Reales en Colombia",
+      "subtitle": "Evidencia de pacientes que recuperaron su movilidad y optimizaron su calidad de vida.",
+      "item1": {
+        "title": "Prótesis Parcial de Mano",
+        "desc": "Restauración de agarre funcional para un paciente adulto en Bogotá. Impreso en Nylon biocompatible."
+      },
+      "item2": {
+        "title": "Protector Facial Deportivo",
+        "desc": "Protector facial de alta resistencia fabricado a la medida de un deportista en Bogotá para protección post-fractura."
+      },
+      "item3": {
+        "title": "Órtesis Correctora Craneal",
+        "desc": "Casco de corrección asimétrica ligera y ventilada para paciente pediátrico en Bogotá."
+      }
+    },
+    "form": {
+      "title": "Cotizar Dispositivo Clínico Humans",
+      "subtitle": "Complete los siguientes campos para que un especialista revise los requerimientos de su prótesis u órtesis.",
+      "fieldName": "Nombre Completo del Especialista",
+      "fieldEmail": "Correo Profesional",
+      "fieldInstitution": "Clínica o Institución",
+      "fieldType": "Tipo de Dispositivo Clínico",
+      "fieldMessage": "Mensaje / Requerimientos de Tolerancia",
+      "submit": "Enviar Solicitud de Cotización",
+      "success": "Solicitud enviada con éxito. Revisaremos sus requerimientos.",
+      "placeholderName": "Ej: Dra. Camila Restrepo",
+      "placeholderEmail": "camila.restrepo@hospital.com",
+      "placeholderInstitution": "Ej: Fundación Santa Fe de Bogotá",
+      "placeholderMessage": "Detalle el caso clínico y especificaciones de material...",
+      "typeOptions": {
+        "guide": "Guía Quirúrgica / Plantilla",
+        "prosthesis": "Prótesis Personalizada",
+        "orthosis": "Órtesis Estética / Protectora",
+        "model": "Modelo Anatómico",
+        "other": "Otro requerimiento"
+      }
+    },
+    "modal": {
+      "title": "Descargar Portafolio Técnico",
+      "subtitle": "Complete los datos profesionales para recibir de inmediato el dossier PDF con materiales certificados y fichas técnicas.",
+      "fieldName": "Nombre Profesional",
+      "fieldEmail": "Correo de Contacto",
+      "fieldInstitution": "Hospital / Organización",
+      "fieldRole": "Su Especialidad / Cargo",
+      "fieldPhone": "Teléfono de Contacto",
+      "submit": "Registrar y Descargar PDF",
+      "placeholderName": "Ej: Dra. Camila Restrepo",
+      "placeholderEmail": "camila.restrepo@clinica.com",
+      "placeholderInstitution": "Clínica, Hospital o IPS",
+      "placeholderRole": "Ej: Cirujana Ortopedista / Biomédica",
+      "placeholderPhone": "Ej: 300 123 4567"
+    },
+    "extra": {
+      "eyebrow": "División Humans",
+      "specLabel1": "Tolerancia clínica",
+      "specLabel2": "Materiales certificados",
+      "specLabel3": "Tiempo de entrega",
+      "specLabel4": "Ajuste anatómico",
+      "specValue2": "Carbono / PP / Nylon / PETG",
+      "specValue3": "5–10 días",
+      "specValue4": "Personalizado",
+      "status": "Disponible · Bogotá CO",
+      "caseEyebrow": "Caso Clínico · Colombia",
+      "viewSheet": "Ver ficha técnica",
+      "viewAll": "Ver portafolio completo →",
+      "specsTitle": "— Especificaciones técnicas"
+    }
+  },
+  "Biomed": {
+    "hero": {
+      "title": "Ingeniería Inversa y Reconstrucción 3D de Repuestos Médicos Críticos",
+      "subtitle": "Reemplazamos piezas plásticas o metálicas rotas de equipos hospitalarios descontinuados. Fabricación local de precisión milimétrica bajo especificaciones clínicas.",
+      "ctaQuote": "Cotizar Repuesto Descontinuado",
+      "ctaPortfolio": "Ver Casos de Éxito"
+    },
+    "capabilities": {
+      "title": "Materiales y Capacidades Técnicas",
+      "subtitle": "Garantía de calidad de manufactura aditiva industrial para equipos clínicos.",
+      "pillar1": {
+        "title": "Resistencia Química",
+        "desc": "Materiales plásticos como PETG y ABS con alta resistencia a desinfectantes químicos y desinfección fría hospitalaria. (No aptos para autoclave)."
+      },
+      "pillar2": {
+        "title": "Precisión de Escaneo 3D",
+        "desc": "Digitalización óptica de alta resolución capaz de capturar tolerancias geométricas complejas de hasta 20 micras."
+      },
+      "pillar3": {
+        "title": "Ingeniería de Plásticos",
+        "desc": "Uso de polímeros de grado técnico como PETG y ABS de alta durabilidad para soportar esfuerzos físicos continuos."
+      }
+    },
+    "workflow": {
+      "title": "Proceso de Ingeniería Inversa y Calidad",
+      "subtitle": "4 pasos lógicos para duplicar piezas sin cometer errores dimensionales.",
+      "step1": {
+        "title": "Recepción de Muestra",
+        "desc": "Envío físico de la pieza rota o planos técnicos iniciales."
+      },
+      "step2": {
+        "title": "Digitalización 3D",
+        "desc": "Escaneo y modelado CAD paramétrico de la pieza para corregir desgastes."
+      },
+      "step3": {
+        "title": "Fabricación 3D",
+        "desc": "Impresión en resinas o polímeros técnicos con control de tolerancias."
+      },
+      "step4": {
+        "title": "Calibración y Entrega",
+        "desc": "Reporte dimensional final listo para montaje y calibración en clínica."
+      }
+    },
+    "form": {
+      "title": "Cotizar Repuesto Biomédico Descontinuado",
+      "subtitle": "Complete los datos del repuesto y el modelo del equipo médico para cotizar la ingeniería inversa y duplicado.",
+      "fieldName": "Nombre del Ingeniero Biomédico",
+      "fieldEmail": "Correo Corporativo",
+      "fieldInstitution": "Hospital / IPS",
+      "fieldType": "Nombre / Modelo del Equipo Médico",
+      "fieldMessage": "Descripción del repuesto y estado de la pieza rota",
+      "submit": "Enviar Solicitud de Cotización",
+      "placeholderName": "Ej: Ing. Andrés Valencia",
+      "placeholderEmail": "andres.valencia@clinica.com",
+      "placeholderInstitution": "Ej: Fundación Santa Fe de Bogotá",
+      "placeholderType": "Ej: Ventilador de Gases UCI Dräger Savina 300",
+      "placeholderMessage": "Describa el tamaño de la pieza, engranaje o perilla rota y si dispone del componente físico para escanear..."
+    }
+  },
+  "Vet": {
+    "hero": {
+      "title": "Órtesis y Prótesis 3D para Devolver la Movilidad Animal",
+      "subtitle": "Diseño personalizado de órtesis ligeras, resistentes y adaptables para perros y gatos en Colombia. Fabricación digital a la medida del cuerpo de tu mascota.",
+      "ctaQuote": "Cotizar Dispositivo Veterinario",
+      "ctaPortfolio": "Ver Casos Veterinarios"
+    },
+    "capabilities": {
+      "title": "Diseño Anatómico y Confort",
+      "subtitle": "Órtesis y prótesis diseñadas por ingenieros biomédicos con acompañamiento veterinario.",
+      "pillar1": {
+        "title": "Materiales Flexibles y Cómodos",
+        "desc": "Estructuras impresas en 3D utilizando polímeros flexibles especiales (TPU) que aseguran confort y ventilación, evitando dermatitis en mascotas."
+      },
+      "pillar2": {
+        "title": "Sillas de Ruedas Adaptativas",
+        "desc": "Estructuras rodantes con ruedas de goma todoterreno y arneses de neopreno ajustables para movilidad trasera."
+      },
+      "pillar3": {
+        "title": "Acompañamiento Veterinario",
+        "desc": "Cada dispositivo es supervisado y validado por un veterinario especialista de nuestro equipo para asegurar una correcta adaptación anatómica."
+      }
+    },
+    "form": {
+      "title": "Cotizar Órtesis o Prótesis Veterinaria",
+      "subtitle": "Indíquenos los datos de su mascota y la extremidad afectada para diseñar un dispositivo a medida.",
+      "fieldName": "Nombre Propietario / Veterinario",
+      "fieldEmail": "Correo Electrónico",
+      "fieldInstitution": "Especie / Raza de Mascota",
+      "fieldType": "Tipo de Dispositivo Solicitado",
+      "fieldMessage": "Detalles clínicos de la mascota (Peso, edad y diagnóstico)",
+      "submit": "Enviar Solicitud de Cotización",
+      "placeholderName": "Ej: Mateo Restrepo",
+      "placeholderEmail": "mateo.veterinario@clinica.com",
+      "placeholderInstitution": "Ej: Perro / Pastor Alemán",
+      "placeholderMessage": "Indique si requiere órtesis de codo, férula de pata trasera, silla de ruedas o prótesis, y el peso aproximado de la mascota...",
+      "typeOptions": {
+        "wheelchair": "Silla de Ruedas Adaptativa",
+        "orthosis": "Órtesis de Codo / Férula de Soporte",
+        "prosthesis": "Prótesis de Extremidad",
+        "other": "Otro requerimiento"
+      }
+    },
+    "extra": {
+      "eyebrow": "Animals",
+      "tag1": "Materiales Flexibles",
+      "tag2": "TPU Confort",
+      "tag3": "Acompañamiento Veterinario",
+      "tag4": "Ligero y ventilado",
+      "sidebarTitle": "Cada mascota, un diseño único",
+      "canineTitle": "Canino",
+      "canineDesc": "Órtesis de codo y carpo, sillas de ruedas adaptativas",
+      "felineTitle": "Felino",
+      "felineDesc": "Prótesis de extremidades posteriores, soporte espinal",
+      "exoticTitle": "Exóticos",
+      "exoticDesc": "Dispositivos de movilidad a consultar",
+      "ctaTitle": "¿Tu mascota necesita movilidad?",
+      "ctaSubtitle": "Cuéntanos el caso de tu mascota. Respondemos en menos de 72 horas.",
+      "ctaButton": "Cotizar dispositivo veterinario →"
+    }
+  },
+  "Academy": {
+    "hero": {
+      "title": "Forme a los Creadores del Mañana con el Programa Maker de Novaforte",
+      "subtitle": "Ofrecemos cursos secuenciales y estructurados por niveles en diseño y modelado 3D (Tinkercad y Fusion 360) para colegios en Colombia, capacitando a docentes y estudiantes.",
+      "ctaDemo": "Solicitar Propuesta Académica",
+      "ctaLevels": "Ver Estructura Curricular"
+    },
+    "levels": {
+      "title": "Estructura Curricular: 4 Niveles de Crecimiento",
+      "subtitle": "Un avance secuencial adaptado a estudiantes de primaria y bachillerato.",
+      "card1": {
+        "title": "Nivel 1: Básico – Introducción y Formas",
+        "desc": "Introducción al diseño 3D básico con Tinkercad, desarrollando habilidades espaciales mediante dinámicas lúdicas."
+      },
+      "card2": {
+        "title": "Nivel 2: Intermedio – Diseño Técnico y Paramétrico Inicial",
+        "desc": "El objetivo de este nivel es pasar del diseño intuitivo (bloques tipo LEGO) al diseño con precisión matemática y funcional, ideal para resolver problemas del mundo real o crear piezas encajables."
+      },
+      "card3": {
+        "title": "Nivel 3: Avanzado – Modelado Orgánico, Escultura Digital y Aplicaciones Reales",
+        "desc": "Aquí rompemos las estructuras rígidas y los ángulos rectos para entrar en el diseño libre, anatómico y creativo, conectando la tecnología con áreas como el arte, la biología o la medicina."
+      },
+      "card4": {
+        "title": "Nivel 4: Experto – Ingeniería de Proyectos, Manufactura y Portafolio",
+        "desc": "El nivel de cierre debe simular un entorno de desarrollo real. Los estudiantes ya tienen las herramientas de software; ahora deben usarlas para resolver un reto integral, gestionando el proyecto desde el papel hasta el producto final."
+      }
+    },
+    "ent": {
+      "title": "Modelo de Emprendimiento Digital: De la Idea a la Venta",
+      "desc": "Enseñamos a los jóvenes que la tecnología es un medio de creación y no solo de consumo. A través del Nivel 4, los estudiantes diseñan llaveros, figuras personalizadas y accesorios, aprendiendo a calcular costos de material, empaque y estrategias de comercialización escolar."
+    },
+    "support": {
+      "title": "Acompañamiento Técnico y Pedagógico Local",
+      "subtitle": "Evitamos aulas de tecnología inactivas por falta de repuestos o conocimientos.",
+      "pillar1": {
+        "title": "Capacitación Docente",
+        "desc": "Formamos y certificamos a los profesores del colegio para que lideren la materia de forma autónoma."
+      },
+      "pillar2": {
+        "title": "Soporte de Mentores",
+        "desc": "Ingenieros locales en Colombia listos para brindar soporte pedagógico, mantenimiento y repuestos inmediatos."
+      },
+      "pillar3": {
+        "title": "Infraestructura Segura",
+        "desc": "Uso de impresoras y herramientas digitales optimizadas de forma segura para entornos educativos."
+      }
+    },
+    "form": {
+      "title": "Agende una Presentación del Programa en su Colegio",
+      "subtitle": "Complete los datos y un mentor local lo contactará en menos de 72 horas hábiles para coordinar la visita y presentar nuestra propuesta académica.",
+      "fieldName": "Nombre del Coordinador",
+      "fieldEmail": "Correo Institucional",
+      "fieldInstitution": "Institución Educativa",
+      "fieldRole": "Su Cargo en la Institución",
+      "fieldStudents": "Número de Estudiantes (Total)",
+      "submit": "Solicitar Propuesta Ahora",
+      "placeholderName": "Ej: Alejandro Gómez",
+      "placeholderEmail": "alejandro.gomez@colegio.edu.co",
+      "placeholderInstitution": "Ej: Colegio San Ignacio de Loyola",
+      "roleOptions": {
+        "director": "Rector / Director",
+        "coordinator": "Coordinador Académico",
+        "teacher": "Docente de Tecnología",
+        "other": "Otro cargo"
+      },
+      "studentOptions": {
+        "low": "Menos de 200",
+        "mid": "200 a 500",
+        "high": "Más de 500"
+      }
+    },
+    "curriculum": {
+      "title": "Plan de Estudios Detallado",
+      "subtitle": "Haga clic en cada nivel para conocer el enfoque técnico, herramientas de software y proyectos prácticos sugeridos.",
+      "level1": {
+        "title": "Nivel 1: Básico – Introducción y Formas",
+        "software": "Tinkercad / Tinkercad Classrooms (Herramienta web intuitiva, segura y gratuita)",
+        "learn1": "Lógica espacial: Comprensión del plano de trabajo, ejes X, Y, Z y alineación de formas básicas.",
+        "learn2": "Operaciones booleanas: Agrupar figuras para sumar volúmenes y crear huecos (sustracción).",
+        "learn3": "Conceptos de manufactura: Qué es una impresora 3D, cómo se derrite el plástico (PLA) y la importancia de la gravedad (voladizos).",
+        "learn4": "Preparación básica (Slicing): Introducción a Cura o PrusaSlicer para ver cómo el diseño se convierte en rodajas.",
+        "project": "Diseñar una placa con su nombre en relieve, un llavero personalizado o un cortador de galletas geométrico.",
+        "focus": "Geometría básica y lógica de planos de impresión."
+      },
+      "level2": {
+        "title": "Nivel 2: Intermedio – Diseño Técnico y Paramétrico Inicial",
+        "software": "Onshape (herramienta web gratuita para educación, potente y compatible con cualquier computador o tableta) o Autodesk Fusion 360 (si las computadoras del colegio tienen buena potencia).",
+        "learn1": "Pensamiento en 2D a 3D: El concepto de boceto (sketch), uso de cotas (medidas exactas) y restricciones geométricas.",
+        "learn2": "Operaciones mecánicas: Extrusión, revolución, vaciado (shell) y redondeos (fillets).",
+        "learn3": "Diseño de ensambles simples: Crear dos piezas separadas que deban encajar a la perfección (tolerancias de impresión).",
+        "learn4": "Slicing avanzado: Optimización de soportes, patrones de relleno (infill) según el uso de la pieza (estético vs. funcional) y alturas de capa.",
+        "project": "Diseñar un llavero mecánico articulado, un soporte para el celular con ángulo ajustable o una caja con tapa deslizable.",
+        "focus": "Uso de medidas, ensambles y tolerancias mecánicas."
+      },
+      "level3": {
+        "title": "Nivel 3: Avanzado – Modelado Orgánico, Escultura Digital y Aplicaciones Reales",
+        "software": "Nomad Sculpt (fantástico si el colegio cuenta con iPads/tabletas y lápices ópticos) o Blender (gratuito, para PC, con una curva de aprendizaje más empinada pero profesional).",
+        "learn1": "Escultura digital: Uso de pinceles virtuales para estirar, inflar, aplanar y detallar formas complejas.",
+        "learn2": "Geometría orgánica: Cómo modelar texturas, curvas y formas fluidas (animales, personajes, prótesis).",
+        "learn3": "Digitalización y Referencias: Cómo trabajar a partir de siluetas, planos o fotografías a escala para calcar o adaptar diseños a la realidad.",
+        "learn4": "Mantenimiento y materiales: Introducción a diferentes tipos de filamentos (PLA, PETG, TPU flexible) y solución de problemas comunes de la impresora (atascos, calibración de la cama).",
+        "project": "Diseñar una criatura fantástica articulada, una carcasa ergonómica para una herramienta o un modelo anatómico/médico simplificado (como una férula o prótesis conceptual para una mascota o un humano).",
+        "focus": "Escultura digital, anatomía/ergonomía y materiales."
+      },
+      "level4": {
+        "title": "Nivel 4: Experto – Ingeniería de Proyectos, Manufactura y Portafolio",
+        "software": "Combinación de los anteriores (Onshape/Fusion 360 + Slicers avanzados como Bambu Studio o PrusaSlicer para aprender funciones de segmentación avanzada).",
+        "learn1": "Ingeniería inversa: Tomar un objeto roto o existente, medirlo con calibrador/regla y replicarlo o mejorarlo en 3D.",
+        "learn2": "Optimización de manufactura: Diseñar pensando en la impresión (evitar soportes innecesarios, orientar la pieza para mayor resistencia).",
+        "learn3": "Post-procesado: Técnicas de lijado, pintado, unión de piezas grandes y ensamble con elementos externos (tornillos, imanes, luces LED).",
+        "learn4": "Presentación de proyectos: Cómo documentar el proceso técnico, renderizar el diseño y vender la idea.",
+        "project": "Un proyecto libre con base social o tecnológica. Por ejemplo: automatizar un mecanismo simple, diseñar soluciones de seguridad/protectores para los laboratorios del colegio, o crear un prototipo funcional para un emprendimiento escolar.",
+        "focus": "Ingeniería inversa, post-procesado y proyecto final."
+      },
+      "table": {
+        "title": "Resumen del Plan de Estudios por Niveles",
+        "headers": ["Nivel", "Enfoque Principal", "Software Clave", "Competencia Técnica"],
+        "rows": [
+          {
+            "col1": "Nivel 1: Básico",
+            "col2": "Introducción y Formas",
+            "col3": "Tinkercad / Cura",
+            "col4": "Geometría básica y lógica de planos de impresión."
+          },
+          {
+            "col1": "Nivel 2: Intermedio",
+            "col2": "Diseño Técnico y Precisión",
+            "col3": "Onshape o Fusion 360",
+            "col4": "Uso de medidas, ensambles y tolerancias mecánicas."
+          },
+          {
+            "col1": "Nivel 3: Avanzado",
+            "col2": "Modelado Orgánico y Fluido",
+            "col3": "Nomad Sculpt o Blender",
+            "col4": "Escultura digital, anatomía/ergonomía y materiales."
+          },
+          {
+            "col1": "Nivel 4: Experto",
+            "col2": "Solución de Problemas y Prototipado",
+            "col3": "Suite completa + Slicers",
+            "col4": "Ingeniería inversa, post-procesado y proyecto final."
+          }
+        ]
+      }
+    },
+    "extra": {
+      "levelLabel1": "Básico",
+      "levelLabel2": "Intermedio",
+      "levelLabel3": "Avanzado",
+      "levelLabel4": "Emprendedor",
+      "ctaTitle": "¿Listo para implementar el programa de formación maker en tu colegio?",
+      "ctaSubtitle": "Un mentor local presenta nuestra propuesta de cursos y currículos para su institución. Conozca nuestra metodología sin costo.",
+      "ctaButton": "Agendar demostración del programa →"
+    }
+  },
+  "About": {
+    "hero": {
+      "title": "Ingeniería Biomédica de Precisión y Manufactura Aditiva Local",
+      "subtitle": "Novaforte sas es una empresa colombiana que une el rigor del diseño geométrico avanzado y la impresión 3D de alta precisión para dar soluciones inmediatas a sectores clínicos, veterinarios y educativos en el país."
+    },
+    "purpose": {
+      "title": "Propósito y Filosofía de Trabajo",
+      "subtitle": "Buscamos equilibrar el rigor técnico y la empatía clínica en cada pieza entregada.",
+      "pillar1": {
+        "title": "Misión: Rigor e Innovación",
+        "desc": "Convertimos planos y archivos biomédicos en productos tangibles de alta tolerancia geométrica mediante escaneo y fabricación 3D local."
+      },
+      "pillar2": {
+        "title": "Visión: Empatía Clínica",
+        "desc": "Trabajamos de la mano con médicos y cirujanos para asegurar que cada órtesis, prótesis o repuesto mejore directamente la calidad de vida de las personas."
+      }
+    },
+    "team": {
+      "title": "Ingenieros y Especialistas de Soporte",
+      "subtitle": "Conozca los rostros locales encargados del modelado, fabricación y soporte técnico posventa en Colombia."
+    },
+    "infra": {
+      "title": "Soporte e Infraestructura en Colombia",
+      "desc": "Ubicados estratégicamente en Bogotá, Colombia, contamos con impresoras industriales de filamento (FDM), resina de alta precisión (SLA/DLP) y escáneres ópticos 3D de grado metrológico. Garantizamos tiempos de entrega cortos en el país y soporte posventa presencial en clínicas e IPS, disipando cualquier parálisis por falta de asistencia local.",
+      "cta": "Escríbenos a WhatsApp",
+      "ctaForm": "Ver Canales de Contacto"
+    }
+  },
+  "Contact": {
+    "title": "Contacto General",
+    "subtitle": "Canales oficiales de atención de Novaforte sas. Póngase en contacto con nuestra sede central para alianzas comerciales, facturación o soporte.",
+    "supportLocal": "Soporte Local · Bogotá, Colombia",
+    "info": {
+      "title": "Canales de Atención",
+      "address": "Sede Principal: Carrera 16A # 78-75, Edificio Profesional Tempo, Chapinero, Bogotá, Colombia",
+      "email": "Correo Corporativo: novafortesas@gmail.com",
+      "whatsapp": "Chatear por WhatsApp Corporativo"
+    },
+    "form": {
+      "title": "Envíenos un Mensaje",
+      "fieldName": "Nombre Completo",
+      "fieldEmail": "Correo Electrónico",
+      "fieldPhone": "Número de Contacto (Celular)",
+      "fieldSubject": "Asunto de la Consulta",
+      "fieldMessage": "Mensaje / Descripción",
+      "submit": "Enviar Mensaje",
+      "placeholderName": "Ej: Dra. Camila Restrepo",
+      "placeholderEmail": "camila.restrepo@hospital.com",
+      "placeholderPhone": "Ej: 300 123 4567",
+      "placeholderSubject": "-- Seleccionar --",
+      "placeholderMessage": "Detalle su requerimiento o consulta corporativa...",
+      "subjectOptions": {
+        "support": "Soporte Técnico / Ingeniería",
+        "sales": "Alianzas Comerciales",
+        "admin": "Dudas Administrativas / Facturación",
+        "other": "Otro asunto"
+      },
+      "errors": {
+        "nameRequired": "El nombre completo es obligatorio.",
+        "emailInvalid": "Ingrese un correo electrónico válido.",
+        "phoneInvalid": "Mínimo 7 caracteres numéricos.",
+        "subjectRequired": "Seleccione un asunto para su consulta.",
+        "messageInvalid": "Ingrese al menos 10 caracteres explicativos.",
+        "submitting": "Enviando requerimiento..."
+      }
+    }
+  },
+  "Portfolio": {
+    "title": "Casos de Éxito y Prototipos Reales",
+    "subtitle": "Demostración visual y técnica de nuestras soluciones impresas en 3D en Colombia.",
+    "all": "Todos",
+    "category": "Filtrar Categoría",
+    "readMore": "Ver Ficha Técnica",
+    "categories": {
+      "humans": "Humans",
+      "biomedica": "Repuestos",
+      "vet": "Animals",
+      "academy": "Academy"
+    }
+  },
+  "Gracias": {
+    "title": "¡Muchas Gracias por su Registro!",
+    "subtitle": "Un especialista en ingeniería de Novaforte se pondrá en contacto con usted en menos de 72 horas hábiles.",
+    "subtext": "¿Tiene una urgencia médica o requiere soporte de inmediato?",
+    "ctaWhatsapp": "Contactar por WhatsApp Directo",
+    "ctaHome": "Volver al Inicio"
+  },
+  "Metadata": {
+    "home": {
+      "title": "Novaforte sas | Ingeniería Biomédica y 3D",
+      "description": "Empresa de ingeniería biomédica y manufactura aditiva local en Colombia. Soluciones de impresión 3D de alta precisión."
+    },
+    "about": {
+      "title": "Sobre Nosotros | Novaforte sas",
+      "description": "Conoce al equipo de Novaforte sas, nuestra misión, visión e infraestructura para la fabricación digital y escaneo 3D en Bogotá."
+    },
+    "contact": {
+      "title": "Contacto | Novaforte sas",
+      "description": "Ponte en contacto con Novaforte sas. Solicita cotizaciones para prótesis, órtesis, repuestos biomédicos o capacitación maker."
+    },
+    "humans": {
+      "title": "Humans - Prótesis y Órtesis | Novaforte sas",
+      "description": "Diseño y fabricación digital de prótesis y órtesis personalizadas con polímeros biocompatibles de alta resistencia en Colombia."
+    },
+    "vet": {
+      "title": "Vet - Órtesis y Prótesis Animales | Novaforte sas",
+      "description": "Órtesis, prótesis y sillas de ruedas personalizadas para perros y gatos. Diseñadas para devolver la movilidad a tus mascotas."
+    },
+    "biomedica": {
+      "title": "Spares - Ingeniería Inversa y Repuestos | Novaforte sas",
+      "description": "Reconstrucción 3D e ingeniería inversa de repuestos críticos para equipos médicos descontinuados en Colombia."
+    },
+    "academy": {
+      "title": "Academy - Capacitación Maker | Novaforte sas",
+      "description": "Capacitación docente y cursos de diseño 3D en Tinkercad y Fusion 360 para colegios en Colombia."
+    },
+    "portafolio": {
+      "title": "Portafolio - Casos de Éxito | Novaforte sas",
+      "description": "Explora nuestro catálogo de casos clínicos reales, repuestos fabricados y laboratorios maker implementados en Colombia."
+    }
+  }
+}
