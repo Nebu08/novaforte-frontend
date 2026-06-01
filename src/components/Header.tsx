@@ -40,11 +40,10 @@ export default function Header({ currentLocale }: HeaderProps) {
             style={{ width: 260, height: 60 }}
           >
             <Image
-              src="/images/logo-transparent.png"
+              src="/images/logo.svg"
               alt="Novaforte Biomedical Engineering"
               fill
-              className="object-cover"
-              style={{ objectPosition: "center 48%" }}
+              className="object-contain dark:invert"
               sizes="260px"
               priority
             />

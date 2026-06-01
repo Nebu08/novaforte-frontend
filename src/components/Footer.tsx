@@ -13,7 +13,7 @@ export default function Footer() {
         <div className="col-span-1 md:col-span-6 flex flex-col gap-space-sm">
           <Link href="/" className="inline-block focus:outline-none">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt="Novaforte sas logo"
               width={140}
               height={36}
