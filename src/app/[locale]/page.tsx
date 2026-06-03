@@ -143,7 +143,7 @@ export default function Home() {
               </p>
 
               {/* CTAs */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 items-center">
                 <a
                   href="#divisions"
                   className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-full shadow-lg hover:shadow-primary-600/30 transition-all duration-300 text-sm"
@@ -154,10 +154,16 @@ export default function Home() {
                   </svg>
                 </a>
                 <Link
-                  href="/contacto"
+                  href="/portafolio"
                   className="inline-flex items-center gap-2 px-7 py-3.5 border border-gray-300 dark:border-gray-700 text-dark-800 dark:text-gray-200 hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-semibold rounded-full transition-all duration-300 text-sm"
                 >
-                  {t("hero.ctaSecondary")}
+                  {t("hero.ctaPortfolio")}
+                </Link>
+                <Link
+                  href="/contacto"
+                  className="inline-flex items-center gap-1.5 px-4 py-3 text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                >
+                  {t("hero.ctaSecondary")} →
                 </Link>
               </div>
 
