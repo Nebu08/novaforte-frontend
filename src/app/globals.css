@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;900&display=swap');
 @import "tailwindcss";
 
+@custom-variant dark (&:not(*));
+
 @theme {
   /* ================================================
    * SPACING SCALE TOKENS
@@ -97,13 +99,6 @@
 :root {
   --background: #f7f5f4;      /* Warm off-white */
   --foreground: #1a1816;      /* Warm charcoal — NOT navy blue */
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0e0d0c;    /* Warm deep charcoal — NOT navy blue */
-    --foreground: #eeebea;    /* Warm near-white */
-  }
 }
 
 body {
