@@ -10,8 +10,8 @@ test.describe('Pruebas E2E de Navegación, Internacionalización (i18n) y Academ
     await expect(page.locator('h1')).toContainText('Forme a los Creadores del Mañana');
     await expect(page.locator('h2 >> nth=0')).toContainText('Estructura Curricular: 4 Niveles de Crecimiento');
     
-    // 3. Verificar descripción detallada en la grilla 2x2 del Nivel 2
-    const level2Desc = page.locator('text=El objetivo de este nivel es pasar del diseño intuitivo (bloques tipo LEGO) al diseño con precisión matemática').first();
+    // 3. Verificar descripción detallada del Nivel 2
+    const level2Desc = page.locator('text=Transición del modelado intuitivo al diseño técnico. El estudiante aprende a utilizar restricciones matemáticas').first();
     await expect(level2Desc).toBeVisible();
 
     // 4. Verificar la tabla de resumen de currículo
@@ -23,8 +23,8 @@ test.describe('Pruebas E2E de Navegación, Internacionalización (i18n) y Academ
     await expect(tableHeaderSoftware).toBeVisible();
 
     // 5. Verificar contenido de la tabla resumen (Nivel 2)
-    const row2 = page.locator('tr:has-text("Nivel 2: Intermedio")');
-    await expect(row2.locator('td >> nth=1')).toContainText('Diseño Técnico y Precisión');
+    const row2 = page.locator('tr:has-text("Nivel 2: Diseño Paramétrico")');
+    await expect(row2.locator('td >> nth=1')).toContainText('Mecánica Funcional');
     await expect(row2.locator('td >> nth=2')).toContainText('Onshape o Fusion 360');
   });
 
@@ -36,8 +36,8 @@ test.describe('Pruebas E2E de Navegación, Internacionalización (i18n) y Academ
     await expect(page.locator('h1')).toContainText('Train the Creators of Tomorrow');
     await expect(page.locator('h2 >> nth=0')).toContainText('Curriculum Structure: 4 Growth Levels');
     
-    // 3. Verificar descripción detallada del Nivel 2 en la grilla
-    const level2DescEn = page.locator('text=The goal of this level is to move from intuitive design (LEGO-like blocks) to design with mathematical and functional precision').first();
+    // 3. Verificar descripción detallada del Nivel 2
+    const level2DescEn = page.locator('text=Transition from intuitive modeling to technical design. The student learns to use mathematical constraints').first();
     await expect(level2DescEn).toBeVisible();
 
     // 4. Verificar tabla traducida
@@ -49,8 +49,8 @@ test.describe('Pruebas E2E de Navegación, Internacionalización (i18n) y Academ
     await expect(tableHeaderSoftwareEn).toBeVisible();
 
     // 5. Verificar contenido traducido de la tabla (Nivel 2)
-    const row2En = page.locator('tr:has-text("Level 2: Intermediate")');
-    await expect(row2En.locator('td >> nth=1')).toContainText('Technical Design & Precision');
+    const row2En = page.locator('tr:has-text("Level 2: Parametric Design")');
+    await expect(row2En.locator('td >> nth=1')).toContainText('Functional Mechanics');
     await expect(row2En.locator('td >> nth=2')).toContainText('Onshape or Fusion 360');
   });
 

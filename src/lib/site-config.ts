@@ -39,10 +39,10 @@ export const COMPANY_INFO = {
 // ============================================================
 export const SOCIAL_LINKS = {
   instagram: "https://www.instagram.com/novaforte.sas",  // ← Editar
-  linkedin:  "https://www.linkedin.com/company/novaforte", // ← Editar
-  youtube:   "",    // Dejar vacío si no tienen canal
-  facebook:  "",    // Dejar vacío si no tienen página
-  twitter:   "",    // Dejar vacío si no tienen cuenta
+  linkedin: "https://www.linkedin.com/company/novaforte", // ← Editar
+  youtube: "",    // Dejar vacío si no tienen canal
+  facebook: "",    // Dejar vacío si no tienen página
+  twitter: "",    // Dejar vacío si no tienen cuenta
 };
 
 // ============================================================
@@ -320,7 +320,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     descEs: "Director general.",
     descEn: "General Director.",
     initials: "CG",
-    photo: "", // Sube tu foto a public/images/equipo/cristian.jpg y pon la ruta aquí
+    photo: "/images/equipo/cristian.jpeg", // Sube tu foto a public/images/equipo/cristian.jpg y pon la ruta aquí
     linkedIn: "",
   },
   {

@@ -1,4 +1,7 @@
-import { useTranslations } from "next-intl";
+"use client";
+
+import { useState } from "react";
+import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/navigation";
 
 const LEVEL_COLORS = [
@@ -25,6 +28,8 @@ const SUPPORT_ICONS = [
 
 export default function AcademyPage() {
   const t = useTranslations("Academy");
+  const locale = useLocale();
+  const [activeLevel, setActiveLevel] = useState(1);
 
   return (
     <div className="flex-1 flex flex-col">
@@ -184,8 +189,6 @@ export default function AcademyPage() {
               );
             })}
           </div>
-
-          {/* Detalle Curricular por Niveles */}
           <div className="mt-20 flex flex-col gap-12">
             <div>
               <h3 className="text-2xl font-black text-dark-900 dark:text-white mb-2" style={{ fontFamily: "Outfit, sans-serif" }}>
@@ -196,75 +199,242 @@ export default function AcademyPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Selector de Niveles (Tabs) */}
+            <div className="flex flex-wrap gap-2 md:gap-4 mb-2">
               {[1, 2, 3, 4].map((num) => {
                 const color = LEVEL_COLORS[num - 1];
+                const isActive = activeLevel === num;
                 return (
-                  <div
+                  <button
                     key={num}
-                    className="relative rounded-3xl p-6 sm:p-8 bg-[#f7f5f4] dark:bg-dark-800 border border-gray-200 dark:border-gray-700/60 overflow-hidden flex flex-col gap-6"
+                    onClick={() => setActiveLevel(num)}
+                    className={`flex-1 min-w-[140px] px-6 py-4 rounded-2xl border text-left transition-all duration-300 cursor-pointer ${
+                      isActive
+                        ? "shadow-lg scale-[1.02] border-transparent text-white"
+                        : "bg-[#f7f5f4] dark:bg-dark-800 border-gray-200 dark:border-gray-700/60 text-dark-900 dark:text-gray-250 hover:border-[#a88444]/40"
+                    }`}
+                    style={{
+                      backgroundColor: isActive ? color.bg : undefined,
+                    }}
                   >
-                    {/* Decorativo de fondo: número grande */}
-                    <div
-                      aria-hidden="true"
-                      className="absolute top-2 right-4 text-[6rem] font-black opacity-5 select-none leading-none"
-                      style={{ color: color.bg, fontFamily: "Outfit, sans-serif" }}
-                    >
-                      0{num}
-                    </div>
-
-                    <div className="flex flex-col gap-2">
-                      <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: color.bg }}>
-                        Nivel 0{num}
-                      </span>
-                      <h4 className="text-xl font-black text-dark-900 dark:text-white" style={{ fontFamily: "Outfit, sans-serif" }}>
-                        {t(`curriculum.level${num}.title`)}
-                      </h4>
-                      <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mt-1">
-                        {t(`levels.card${num}.desc`)}
-                      </p>
-                    </div>
-
-                    {/* Software Recomendado */}
-                    <div className="flex flex-col gap-1">
-                      <span className="text-xs font-bold text-gray-400 uppercase tracking-wide">
-                        Software Recomendado
-                      </span>
-                      <p className="text-sm font-semibold text-dark-800 dark:text-gray-200">
-                        {t(`curriculum.level${num}.software`)}
-                      </p>
-                    </div>
-
-                    {/* Qué enseñar */}
-                    <div className="flex flex-col gap-2">
-                      <span className="text-xs font-bold text-gray-400 uppercase tracking-wide">
-                        Ejes Temáticos (Qué enseñar)
-                      </span>
-                      <ul className="flex flex-col gap-2">
-                        {[1, 2, 3, 4].map((pt) => (
-                          <li key={pt} className="flex gap-2.5 items-start text-xs text-gray-600 dark:text-gray-300">
-                            <span className="h-4 w-4 shrink-0 rounded-full flex items-center justify-center text-[10px] mt-0.5" style={{ backgroundColor: `${color.bg}15`, color: color.bg }}>
-                              ✓
-                            </span>
-                            <span>{t(`curriculum.level${num}.learn${pt}`)}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Proyecto sugerido */}
-                    <div className="mt-auto p-4 rounded-xl border flex flex-col gap-1 bg-white dark:bg-dark-900/60" style={{ borderColor: `${color.bg}20` }}>
-                      <span className="text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5" style={{ color: color.bg }}>
-                        <span>💡</span> Proyecto Sugerido
-                      </span>
-                      <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
-                        {t(`curriculum.level${num}.project`)}
-                      </p>
-                    </div>
-
-                  </div>
+                    <span className={`text-[10px] font-bold uppercase tracking-widest ${isActive ? "text-white/80" : "text-gray-450 dark:text-gray-400"}`}>
+                      Nivel 0{num}
+                    </span>
+                    <p className="text-sm font-black mt-1 leading-tight" style={{ fontFamily: "Outfit, sans-serif" }}>
+                      {t(`extra.levelLabel${num}`)}
+                    </p>
+                  </button>
                 );
               })}
+            </div>
+
+            {/* Contenedor del Detalle del Nivel Activo */}
+            {(() => {
+              const num = activeLevel;
+              const color = LEVEL_COLORS[num - 1];
+              const isLevel1 = num === 1;
+              const numItems = isLevel1 ? 5 : 4;
+              return (
+                <div className="relative rounded-3xl p-6 sm:p-10 bg-[#f7f5f4] dark:bg-dark-800 border border-gray-200 dark:border-gray-700/60 overflow-hidden flex flex-col gap-8 shadow-sm">
+                  {/* Decorativo de fondo: número grande */}
+                  <div
+                    aria-hidden="true"
+                    className="absolute top-2 right-4 text-[10rem] sm:text-[14rem] font-black opacity-5 select-none leading-none pointer-events-none"
+                    style={{ color: color.bg, fontFamily: "Outfit, sans-serif" }}
+                  >
+                    0{num}
+                  </div>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-8 items-start relative z-10">
+                    {/* Columna Izquierda: Ejes Temáticos */}
+                    <div className="flex flex-col gap-6">
+                      <div className="flex flex-col gap-2">
+                        <span className="text-[10px] font-bold uppercase tracking-widest" style={{ color: color.bg }}>
+                          Nivel 0{num}
+                        </span>
+                        <h4 className="text-2xl font-black text-dark-900 dark:text-white" style={{ fontFamily: "Outfit, sans-serif" }}>
+                          {t(`curriculum.level${num}.title`)}
+                        </h4>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mt-1">
+                          {t(`levels.card${num}.desc`)}
+                        </p>
+                      </div>
+
+                      <div className="flex flex-col gap-3 mt-2">
+                        <span className="text-xs font-bold text-gray-400 uppercase tracking-wide">
+                          {num === 1 ? "Módulos de Formación" : "Ejes Temáticos"}
+                        </span>
+                        <ul className="flex flex-col gap-4 pl-1 border-l-2 border-gray-200 dark:border-gray-700">
+                          {Array.from({ length: numItems }).map((_, idx) => {
+                            const itemIndex = idx + 1;
+                            const itemText = t(`curriculum.level${num}.learn${itemIndex}`);
+                            
+                            // Analizar si viene con título estructurado antes de los dos puntos
+                            const colonIndex = itemText.indexOf(":");
+                            let title = "";
+                            let description = itemText;
+                            if (colonIndex !== -1) {
+                              title = itemText.substring(0, colonIndex + 1);
+                              description = itemText.substring(colonIndex + 1);
+                            }
+
+                            return (
+                              <li key={itemIndex} className="relative pl-6 flex flex-col gap-0.5 group">
+                                {/* Punto de la línea temporal */}
+                                <span
+                                  className="absolute left-[-7px] top-1.5 h-3 w-3 rounded-full border-2 border-[#f7f5f4] dark:border-dark-800 transition-transform duration-300 group-hover:scale-125"
+                                  style={{ backgroundColor: color.bg }}
+                                />
+                                <p className="text-xs text-gray-650 dark:text-gray-300 leading-relaxed">
+                                  {title && (
+                                    <strong className="font-bold text-dark-900 dark:text-white mr-1">
+                                      {title}
+                                    </strong>
+                                  )}
+                                  <span>{description}</span>
+                                </p>
+                              </li>
+                            );
+                          })}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* Columna Derecha: Software y Proyecto */}
+                    <div className="flex flex-col gap-6 lg:sticky lg:top-4">
+                      {/* Software Recomendado */}
+                      <div className="p-6 rounded-2xl border flex flex-col gap-2 bg-white dark:bg-dark-900/60" style={{ borderColor: `${color.bg}20` }}>
+                        <span className="text-[10px] font-bold text-gray-400 uppercase tracking-wide">
+                          Software Recomendado
+                        </span>
+                        <p className="text-sm font-semibold text-dark-805 dark:text-gray-205 leading-snug">
+                          {t(`curriculum.level${num}.software`)}
+                        </p>
+                      </div>
+
+                      {/* Proyecto sugerido */}
+                      <div className="p-6 rounded-2xl border flex flex-col gap-2 bg-white dark:bg-dark-900/60" style={{ borderColor: `${color.bg}20` }}>
+                        <span className="text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5" style={{ color: color.bg }}>
+                          <span>💡</span> Proyecto Sugerido
+                        </span>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
+                          {t(`curriculum.level${num}.project`)}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
+          </div>
+
+          {/* Rúbricas de Evaluación Híbridas */}
+          <div className="mt-24 border-t border-gray-200 dark:border-gray-800 pt-16">
+            <div className="text-center max-w-3xl mx-auto mb-14 flex flex-col gap-2">
+              <span className="text-xs font-bold tracking-widest uppercase" style={{ color: "#a88444" }}>
+                ─── Certificación Oficial
+              </span>
+              <h3 className="text-2xl lg:text-3xl font-black text-dark-900 dark:text-white" style={{ fontFamily: "Outfit, sans-serif" }}>
+                {t("rubric.title")}
+              </h3>
+              <p className="text-gray-550 dark:text-gray-400 text-sm leading-relaxed max-w-2xl mx-auto">
+                {t("rubric.subtitle")}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Componente Digital */}
+              <div className="rounded-3xl p-6 sm:p-8 bg-[#f7f5f4] dark:bg-dark-800 border border-gray-200 dark:border-gray-700/60 flex flex-col sm:flex-row gap-6 items-start">
+                <div className="flex-shrink-0 flex items-center justify-center h-20 w-20 rounded-full border-4 border-[#a88444] bg-white dark:bg-dark-900 relative shadow-inner">
+                  <span className="text-xl font-black text-dark-900 dark:text-white font-mono">50%</span>
+                  <div aria-hidden="true" className="absolute inset-0 rounded-full border-2 border-dashed border-[#a88444]/30 animate-[spin_20s_linear_infinite]" />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h4 className="text-lg font-black text-dark-900 dark:text-white" style={{ fontFamily: "Outfit, sans-serif" }}>
+                    {t("rubric.digitalTitle")}
+                  </h4>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                    {t("rubric.digitalDesc")}
+                  </p>
+                  <ul className="flex flex-col gap-2 mt-2">
+                    {(locale === "es"
+                      ? [
+                          "Bocetos completamente definidos (restricciones de tangencia, paralelismo, etc.)",
+                          "Uso lógico del árbol de operaciones (extrusiones, revoluciones ordenadas)",
+                          "Limpieza dimensional y geometría sin auto-intersecciones en mallas",
+                          "Laminación optimizada (soportes mínimos, orientación eficiente)"
+                        ]
+                      : [
+                          "Fully defined sketches (tangency, parallelism, and geometric constraints)",
+                          "Logical operation tree structure (organized extrusions and revolutions)",
+                          "Dimensional accuracy and mesh geometry free of self-intersections",
+                          "Optimized slicing settings (minimal supports, efficient orientation)"
+                        ]
+                    ).map((item, idx) => (
+                      <li key={idx} className="flex gap-2.5 items-start text-xs text-gray-600 dark:text-gray-300">
+                        <span className="h-4 w-4 shrink-0 rounded-full flex items-center justify-center text-[10px] mt-0.5 bg-[#a88444]/15 text-[#a88444]">
+                          ✓
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Componente Físico */}
+              <div className="rounded-3xl p-6 sm:p-8 bg-white dark:bg-dark-800 border border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row gap-6 items-start shadow-sm">
+                <div className="flex-shrink-0 flex items-center justify-center h-20 w-20 rounded-full border-4 border-[#7e192a] bg-white dark:bg-dark-900 relative shadow-inner">
+                  <span className="text-xl font-black text-dark-900 dark:text-white font-mono">50%</span>
+                  <div aria-hidden="true" className="absolute inset-0 rounded-full border-2 border-dashed border-[#7e192a]/30 animate-[spin_20s_linear_infinite]" />
+                </div>
+                <div className="flex flex-col gap-3">
+                  <h4 className="text-lg font-black text-dark-900 dark:text-white" style={{ fontFamily: "Outfit, sans-serif" }}>
+                    {t("rubric.physicalTitle")}
+                  </h4>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">
+                    {t("rubric.physicalDesc")}
+                  </p>
+                  <ul className="flex flex-col gap-2 mt-2">
+                    {(locale === "es"
+                      ? [
+                          "Cumplimiento de tolerancias mecánicas (holgura funcional de 0.2 a 0.4 mm)",
+                          "Resistencia estructural (comportamiento del relleno y adherencia entre capas)",
+                          "Funcionalidad y ensamble físico con hardware real si aplica",
+                          "Calidad del acabado superficial tras post-procesado"
+                        ]
+                      : [
+                          "Compliance with mechanical tolerances (0.2 mm to 0.4 mm functional clearances)",
+                          "Structural strength (infill performance and interlayer adhesion)",
+                          "Physical functionality and assembly with real hardware if applicable",
+                          "Surface finish quality after post-processing"
+                        ]
+                    ).map((item, idx) => (
+                      <li key={idx} className="flex gap-2.5 items-start text-xs text-gray-600 dark:text-gray-300">
+                        <span className="h-4 w-4 shrink-0 rounded-full flex items-center justify-center text-[10px] mt-0.5 bg-[#7e192a]/15 text-[#7e192a]">
+                          ✓
+                        </span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Criterio de Aprobación Callout */}
+            <div className="mt-8 p-5 rounded-2xl border border-[#a88444]/20 bg-[#a88444]/5 flex flex-col sm:flex-row gap-4 items-center justify-center text-center sm:text-left max-w-3xl mx-auto">
+              <div className="h-10 w-10 rounded-full bg-[#a88444]/15 flex items-center justify-center text-[#a88444] text-lg flex-shrink-0">
+                🏆
+              </div>
+              <div className="flex flex-col gap-0.5">
+                <h5 className="text-xs font-bold text-dark-900 dark:text-white uppercase tracking-wider">
+                  {t("rubric.badgeTitle")}
+                </h5>
+                <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                  {t("rubric.badgeDesc")}
+                </p>
+              </div>
             </div>
           </div>
 

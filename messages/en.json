@@ -293,20 +293,20 @@
       "title": "Curriculum Structure: 4 Growth Levels",
       "subtitle": "Sequential advancement adapted for primary and high school students.",
       "card1": {
-        "title": "Level 1: Basic – Introduction and Shapes",
-        "desc": "Introduction to basic 3D design with Tinkercad, developing spatial skills through gamified activities."
+        "title": "Level 1: Spatial Fundamentals and Addition Logic (10 Hours)",
+        "desc": "Format: 5 modules of 2 hours. The student breaks the barrier between digital and physical, understanding machine logic and the basics of three-dimensional design."
       },
       "card2": {
-        "title": "Level 2: Intermediate – Initial Technical & Parametric Design",
-        "desc": "The goal of this level is to move from intuitive design (LEGO-like blocks) to design with mathematical and functional precision, ideal for solving real-world problems or creating interlocking parts."
+        "title": "Level 2: Parametric Design and Functional Mechanics (15 Hours)",
+        "desc": "Transition from intuitive modeling to technical design. The student learns to use mathematical constraints to create functional parts and mechanisms that interact with each other."
       },
       "card3": {
-        "title": "Level 3: Advanced – Organic Modeling, Digital Sculpting & Real Applications",
-        "desc": "Here we break away from rigid structures and right angles to enter free, anatomical, and creative design, connecting technology with fields like art, biology, or medicine."
+        "title": "Level 3: Organic Geometry and Ergonomics (15 Hours)",
+        "desc": "Breaking with right angles. The student learns to model fluid curves, sculpt digitally, and adapt technology to anatomy and nature."
       },
       "card4": {
-        "title": "Level 4: Expert – Project Engineering, Manufacturing & Portfolio",
-        "desc": "The capstone level simulates a real development environment. Students now have the software tools; they must use them to solve an integrated challenge, managing the project from paper to the final product."
+        "title": "Level 4: Reverse Engineering and Optimization for Manufacturing (10 Hours)",
+        "desc": "The consolidation level. The student faces real-world problems, measuring, analyzing, and optimizing parts under Design for Additive Manufacturing (DfAM) standards."
       }
     },
     "ent": {
@@ -353,76 +353,88 @@
         "high": "More than 500"
       }
     },
+    "rubric": {
+      "title": "Hybrid Evaluation & Certification System",
+      "subtitle": "To obtain Novaforte's official certification at any level, we evaluate both software digital mastery and the physical functionality of the manufactured object.",
+      "digitalTitle": "1. Technical Mastery & Digital Precision (50%)",
+      "digitalDesc": "Assessment of CAD design: fully constrained sketches, efficient parametric operations, clean 3D meshes, and optimized slicing parameters.",
+      "physicalTitle": "2. Physical Functionality & Integrity (50%)",
+      "physicalDesc": "Assessment of the printed part: verification of physical tolerances and clearances (functional assemblies), mechanical strength of layers/infill under impact or traction stress, and surface finish quality.",
+      "badgeTitle": "Approval Criterion",
+      "badgeDesc": "The student must achieve a minimum score of 80% in both components (digital and physical) to receive their official Novaforte Maker Competencies certificate."
+    },
     "curriculum": {
       "title": "Detailed Curriculum Details",
       "subtitle": "Click on each level to explore the technical focus, software tools, and suggested practical projects.",
       "level1": {
-        "title": "Level 1: Basic – Introduction and Shapes",
-        "software": "Tinkercad / Tinkercad Classrooms (Intuitive, secure, and free web tool)",
-        "learn1": "Spatial logic: Working plane comprehension, X, Y, Z axes, and basic shape alignment.",
-        "learn2": "Boolean operations: Grouping shapes to add volumes and create hollows (subtraction).",
-        "learn3": "Manufacturing concepts: What a 3D printer is, how plastic (PLA) melts, and the importance of gravity (overhangs).",
-        "learn4": "Basic preparation (Slicing): Introduction to Cura or PrusaSlicer to see how designs turn into layers.",
+        "title": "Level 1: Spatial Fundamentals and Addition Logic (10 Hours)",
+        "software": "Tinkercad / Tinkercad Classrooms (Intuitive, secure, and free web tool) and introduction to Cura/PrusaSlicer",
         "project": "Design a nameplate with raised text, a custom keychain, or a geometric cookie cutter.",
-        "focus": "Basic geometry and printing plane logic."
+        "learn1": "Module 1: The Revolution of Creation. Introduction to additive manufacturing as the art of building by stacking material layer by layer, creating objects without generating waste. Understanding the fundamental workflow: 3D Model, Slicer, and Machine.",
+        "learn2": "Module 2: The Machine's Brain. Mastery of Slicing software to translate geometries into executable coordinates. Configuration of structural parameters: layer height for resolution, perimeter walls for impact resistance, and gyroid infill patterns to optimize material.",
+        "learn3": "Module 3: Boolean Logic and Precision. Immersion in the CAD environment (Tinkercad). Use of the Ruler for dimension-guided design and mastery of volumetric subtraction (grouping solids and holes) to sculpt complex geometries.",
+        "learn4": "Module 4: Digital Architecture. Application of spatial efficiency tools: smart duplication to create repeating patterns (like stairs or basic gears) and manipulation of workplanes to design on inclined surfaces.",
+        "learn5": "Module 5: Open Ecosystem and Fabrication. Ethical and smart use of open-source repositories and model generation using Artificial Intelligence. Execution of a rigorous digital audit (dimensions, anchors) before exporting the STL file for printing the final project."
       },
       "level2": {
-        "title": "Level 2: Intermediate – Initial Technical & Parametric Design",
-        "software": "Onshape (free web tool for education, powerful and compatible with any computer or tablet) or Autodesk Fusion 360 (if school computers have good performance).",
-        "learn1": "2D to 3D thinking: Sketch concepts, use of dimensions (exact measurements), and geometric constraints.",
-        "learn2": "Mechanical operations: Extrusion, revolution, shell, and fillets.",
-        "learn3": "Simple assembly design: Creating two separate parts that must fit together perfectly (print tolerances).",
-        "learn4": "Advanced slicing: Optimization of supports, infill patterns based on part use (aesthetic vs. functional), and layer heights.",
+        "title": "Level 2: Parametric Design and Functional Mechanics (15 Hours)",
+        "software": "Onshape (Free industrial-grade CAD web tool for education) or Autodesk Fusion 360",
         "project": "Design a mechanical articulated keychain, a phone stand with adjustable angle, or a box with a sliding lid.",
-        "focus": "Use of measurements, assemblies, and mechanical tolerances."
+        "learn1": "Parametric Sketching: Fundamentals of technical 2D drawing using industrial-grade tools (e.g., Fusion 360 or Onshape). Application of dimensions (exact measurements) and geometric constraints (tangency, parallelism, concentricity) to create stable profiles.",
+        "learn2": "Volumetric Engineering Operations: Profile extrusion, revolutions for cylindrical parts, and application of technical finishes to dissipate structural stress (chamfers and fillets).",
+        "learn3": "Tolerance and Mechanism Design: Creation of components with precise clearances (0.2 mm to 0.4 mm) specifically designed to physically fit after thermal contraction of the plastic. Design of simple transmission systems (spur gears, threads).",
+        "learn4": "Assemblies and Kinematic Simulation: Virtual connection of multiple components using rigid and revolute joints. Verification of movement and collision detection on screen before sending to production."
       },
       "level3": {
-        "title": "Level 3: Advanced – Organic Modeling, Digital Sculpting & Real Applications",
-        "software": "Nomad Sculpt (fantastic if the school has iPads/tablets and styluses) or Blender (free for PC, with a steeper but professional learning curve).",
-        "learn1": "Digital sculpting: Using virtual brushes to stretch, inflate, flatten, and detail complex shapes.",
-        "learn2": "Organic geometry: Modeling fluid shapes, curves, and textures (animals, characters, prosthetics).",
-        "learn3": "Digitization & References: Working from outlines, plans, or scaled photographs to trace or adapt designs to reality.",
-        "learn4": "Maintenance & materials: Introduction to different types of filaments (PLA, PETG, flexible TPU) and troubleshooting common printer issues (clogs, bed calibration).",
+        "title": "Level 3: Organic Geometry and Ergonomics (15 Hours)",
+        "software": "Nomad Sculpt (for tablets with stylus) or Blender (professional PC software)",
         "project": "Design an articulated fantasy creature, an ergonomic tool housing, or a simplified anatomical/medical model (like a splint or conceptual prosthesis for a pet or human).",
-        "focus": "Digital sculpting, anatomy/ergonomics, and materials."
+        "learn1": "Digital Sculpting and Freeforms: Introduction to subdivision surface modeling (T-Splines or meshes). Using the digital canvas like clay to stretch, flatten, and detail anatomical and fluid geometries.",
+        "learn2": "Surface Modeling: Advanced modeling techniques (lofts and sweeps) to build ergonomic casings, grips adapted to the human hand, or anatomical supports.",
+        "learn3": "Reference-Based Design: Importing 2D sketches or X-ray/silhouette photographs into the digital environment to trace and generate 3D models perfectly scaled to real-world proportions.",
+        "learn4": "Advanced Slicing for Complex Shapes: Configuration of organic supports (tree-type) to protect the surface finish of curved parts, and printing strategies for technical and flexible filaments (TPU, PETG)."
       },
       "level4": {
-        "title": "Level 4: Expert – Project Engineering, Manufacturing & Portfolio",
-        "software": "Combination of the above (Onshape/Fusion 360 + advanced slicers like Bambu Studio or PrusaSlicer to learn advanced slicing functions).",
-        "learn1": "Reverse engineering: Taking a broken or existing object, measuring it with calipers/rulers, and replicating or improving it in 3D.",
-        "learn2": "Manufacturing optimization: Designing for 3D printing (avoiding unnecessary supports, orienting parts for strength).",
-        "learn3": "Post-processing: Sanding, painting, joining large parts, and assembly with external elements (screws, magnets, LED lights).",
-        "learn4": "Project presentation: How to document the technical process, render designs, and pitch ideas.",
-        "project": "A free project with a social or technological basis. For example: automating a simple mechanism, designing safety solutions/shields for school labs, or creating a functional prototype for a school enterprise.",
-        "focus": "Reverse engineering, post-processing, and final project."
+        "title": "Level 4: Reverse Engineering and Optimization for Manufacturing (10 Hours)",
+        "software": "Onshape / Fusion 360 + Advanced Slicers (Bambu Studio / PrusaSlicer)",
+        "project": "A free project with a social or technological basis, such as automating a simple mechanism or creating a functional prototype for a school enterprise.",
+        "learn1": "Applied Metrology and Reverse Engineering: Use of the vernier caliper to take exact measurements of damaged commercial parts or physical components. Digital redesign and improvement of the original part.",
+        "learn2": "Structural Optimization (DfAM): Design rules for 3D printing: elimination of unnecessary supports using self-supporting angles (45-degree rule), bridge design, and model layer orientation to resist maximum mechanical stress.",
+        "learn3": "Prototype Validation: Basic static stress simulations to identify critical breaking points in the design before fabrication.",
+        "learn4": "Hybrid Assembly and Post-Processing: Housing design to integrate real hardware and brass heat-set inserts. Finishing the part and presenting the final functional project."
       },
       "table": {
         "title": "Curriculum Summary by Levels",
-        "headers": ["Level", "Main Focus", "Key Software", "Technical Competency"],
+        "headers": [
+          "Level",
+          "Main Focus",
+          "Key Software",
+          "Technical Competency"
+        ],
         "rows": [
           {
-            "col1": "Level 1: Basic",
-            "col2": "Introduction & Shapes",
-            "col3": "Tinkercad / Cura",
-            "col4": "Basic geometry and printing plane logic."
+            "col1": "Level 1: Spatial Fundamentals",
+            "col2": "Addition Logic",
+            "col3": "Tinkercad / Cura / PrusaSlicer",
+            "col4": "Spatial understanding, basic modeling, and initial slicing."
           },
           {
-            "col1": "Level 2: Intermediate",
-            "col2": "Technical Design & Precision",
+            "col1": "Level 2: Parametric Design",
+            "col2": "Functional Mechanics",
             "col3": "Onshape or Fusion 360",
-            "col4": "Use of measurements, assemblies, and mechanical tolerances."
+            "col4": "2D technical drawing, dimensions, constraints, tolerances, and gears."
           },
           {
-            "col1": "Level 3: Advanced",
-            "col2": "Organic & Fluid Modeling",
+            "col1": "Level 3: Organic Geometry",
+            "col2": "Anatomy & Ergonomics",
             "col3": "Nomad Sculpt or Blender",
-            "col4": "Digital sculpting, anatomy/ergonomics and materials."
+            "col4": "Digital sculpting, surface modeling, and organic supports."
           },
           {
-            "col1": "Level 4: Expert",
-            "col2": "Problem Solving & Prototyping",
+            "col1": "Level 4: Reverse Engineering",
+            "col2": "Manufacturing Optimization (DfAM)",
             "col3": "Complete Suite + Slicers",
-            "col4": "Reverse engineering, post-processing and final project."
+            "col4": "Caliper usage, DfAM, static validation, and hybrid assembly."
           }
         ]
       }
