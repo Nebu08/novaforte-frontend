@@ -314,8 +314,8 @@ export interface TeamMember {
 
 export const TEAM_MEMBERS: TeamMember[] = [
   {
-    name: "Ing. Cristian David Gonzalez Peñarete",
-    roleEs: "CEO",
+    name: "Ing. Cristian David González Peñarete",
+    roleEs: "FUNDADOR/CEO",
     roleEn: "CEO",
     descEs: "Gerente General.",
     descEn: "General Director.",
@@ -347,8 +347,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
     name: "Ing. Andres Jacob Rodríguez Orjuela",
     roleEs: "Director Academy",
     roleEn: "Head of Design",
-    descEs: "Líder de desarrollo y modelado paramétrico.",
-    descEn: "Development and parametric modeling leader.",
+    descEs: "Líder de la formación de nuevos talentos en diseño y manufactura 3D.",
+    descEn: "Leader of new talent training.",
     initials: "JR",
     photo: "/images/equipo/jacob.jpeg",
     linkedIn: "",
