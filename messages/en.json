@@ -290,7 +290,7 @@
       "ctaLevels": "View Curriculum Structure"
     },
     "levels": {
-      "title": "Curriculum Structure: 4 Growth Levels",
+      "title": "Curriculum Structure: 3 Growth Levels",
       "subtitle": "Sequential advancement adapted for primary and high school students.",
       "card1": {
         "title": "Level 1: Spatial Fundamentals and Addition Logic (10 Hours)",
@@ -303,10 +303,6 @@
       "card3": {
         "title": "Level 3: Organic Geometry and Ergonomics (15 Hours)",
         "desc": "Breaking with right angles. The student learns to model fluid curves, sculpt digitally, and adapt technology to anatomy and nature."
-      },
-      "card4": {
-        "title": "Level 4: Reverse Engineering and Optimization for Manufacturing (10 Hours)",
-        "desc": "The consolidation level. The student faces real-world problems, measuring, analyzing, and optimizing parts under Design for Additive Manufacturing (DfAM) standards."
       }
     },
     "ent": {
@@ -388,22 +384,18 @@
       },
       "level3": {
         "title": "Level 3: Product Engineering and Collective Co-Creation Lab (15 Hours)",
-        "software": "Onshape / Advanced Slicers and introduction to Blender / Nomad Sculpt",
-        "project": "Design a 'Co-Creation Route' (e.g. interactive STEAM educational kit for schools or creation of custom sculpture with complex volume).",
-        "learn1": "Class 1: Prototyping Studio Setup (Kick-Off). Agile/Scrum methodologies for hardware. Routes: Technical (Onshape) and Artistic (Blender). Practice: STEAM Kit vs Sandbox sculpture challenge.",
-        "learn2": "Class 2: Cloud-Based Collaborative Concurrent Modeling. Multibody modeling in Onshape with shared variables vs Digital Sculpting (Blender). Practice: real-time merging and silhouette blockout.",
-        "learn3": "Class 3: Structural Optimization and Preventive Error Mitigation. Mechanical stress analysis and ribs. Topology, remesh, and decimation. Practice: Peer-Review audit (eliminate stress concentrators or thicken fine details).",
-        "learn4": "Class 4: Technical Certification and G-Code Strategies (File Freeze). G-code analysis, critical perimeters, and tree supports. Control: final assembly validation, repository lock, and transfer to production.",
-        "learn5": "Class 5: Complex Systems Integration and Engineering Pitch. Systems integration, tension calibration, and finishing. Graduation: final assembly of STEAM Kit or support removal, and 5-minute engineering pitch."
-      },
-      "level4": {
-        "title": "Level 4: Entrepreneurship and Commercialization of Maker Projects (10 Hours)",
-        "software": "Onshape / Fusion 360 + Advanced slicing suites and costing spreadsheet",
-        "project": "Conceive, cost, and commercialize a technological or social product designed and manufactured in the school workshop.",
-        "learn1": "Class 1: Identification & Design. School product conceptualization, optimized digital modeling, and market analysis for the prototype.",
-        "learn2": "Class 2: Planning & Production. Commercial materials selection, rapid manufacturing parameters, and initial batch production.",
-        "learn3": "Class 3: Costing & Pricing. Calculation of energy cost, machine depreciation, material weight, and commercial profit margin.",
-        "learn4": "Class 4: Launch & Sales. Pitch strategies (B2B Pitch), product packaging, and sales execution at institutional events."
+        "software": "Onshape (Technical Route) and Blender (Artistic Route)",
+        "project": "Design a 'Co-Creation Route' (Technical: interactive STEAM educational kit for school labs; Artistic: custom author sculpture with complex volume).",
+        "tech1": "Class 1: Project Methodology (Agile/Scrum) & Roles. Engineering group roles assignment. Challenge technical requirements audit and Onshape workspace configuration.",
+        "tech2": "Class 2: Cloud Collaborative Concurrent Modeling. Multibody modeling strategies in Onshape and design based on shared global variables. Real-time digital version merging practice.",
+        "tech3": "Class 3: Structural Optimization. Empirical mechanical stress analysis and weight optimization using ribs. Technical Peer-Review session.",
+        "tech4": "Class 4: Technical Certification and G-Code (File Freeze). G-code deep analysis, critical perimeter manual configuration, and thermal control. Final assembly validation.",
+        "tech5": "Class 5: Systems Integration & Graduation. Complex sociomaterial systems integration (STEAM). Final assembly and dynamic system integration. 5-minute pitch.",
+        "art1": "Class 1: Polygonal Modeling Fundamentals. Introduction to Blender interface, keyboard shortcuts, 3D navigation, and geometry manipulation. 'Sandbox' modeling exercise.",
+        "art2": "Class 2: Transition to Digital Sculpting. Dynamic brush usage (Draw, Clay, Smooth, Grab) and symmetry. Silhouette blockout and proportions definition.",
+        "art3": "Class 3: Topology and Print Preparation. Extreme overhang analysis on organic meshes, decimation, and remesh in Blender. Thicken fragile limbs for bed adhesion.",
+        "art4": "Class 4: Organic Supports and G-Code (File Freeze). Tree supports configuration and mastery to protect fine textures without marking visible surfaces.",
+        "art5": "Class 5: Aesthetic Finish & Graduation. Meticulous organic supports removal and aesthetic finish techniques for piece exhibition. Close: Art show presentation."
       },
       "table": {
         "title": "Curriculum Summary by Levels",
@@ -429,14 +421,8 @@
           {
             "col1": "Level 3: Product Engineering",
             "col2": "Co-Creation Laboratory",
-            "col3": "Complete Suite + Nomad / Blender",
-            "col4": "Agile/Scrum hardware methodology, cloud collaborative concurrent design, DfAM optimization, and pitch."
-          },
-          {
-            "col1": "Level 4: Entrepreneurship",
-            "col2": "Maker Commercialization",
-            "col3": "Advanced slicers and costing",
-            "col4": "Real-world costing of materials and energy, sales price estimation, packaging, and product marketing."
+            "col3": "Onshape / Blender",
+            "col4": "Agile/Scrum hardware methodology, cloud collaborative concurrent design, DfAM optimization, digital sculpting, and pitch."
           }
         ]
       }
@@ -445,7 +431,6 @@
       "levelLabel1": "Basic",
       "levelLabel2": "Intermediate",
       "levelLabel3": "Advanced",
-      "levelLabel4": "Entrepreneur",
       "ctaTitle": "Ready to implement the maker training program at your school?",
       "ctaSubtitle": "A local mentor will present our curriculum and course proposal for your institution. Explore our methodology at no cost.",
       "ctaButton": "Schedule program presentation →"

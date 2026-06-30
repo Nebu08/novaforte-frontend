@@ -290,7 +290,7 @@
       "ctaLevels": "Ver Estructura Curricular"
     },
     "levels": {
-      "title": "Estructura Curricular: 4 Niveles de Crecimiento",
+      "title": "Estructura Curricular: 3 Niveles de Crecimiento",
       "subtitle": "Un avance secuencial adaptado a estudiantes de primaria y bachillerato.",
       "card1": {
         "title": "Nivel 1: Fundamentos Espaciales y Lógica de Adición (10 Horas)",
@@ -303,10 +303,6 @@
       "card3": {
         "title": "Nivel 3: Ingeniería de Producto y Laboratorio de Co-Creación Colectiva (15 Horas)",
         "desc": "Un entorno de co-creación dividido en ingeniería paramétrica (Onshape) y arte digital (Blender) que converge en proyectos reales de alto impacto."
-      },
-      "card4": {
-        "title": "Nivel 4: Emprendimiento y Comercialización de Proyectos Maker (10 Horas)",
-        "desc": "El nivel de consolidación. El estudiante se enfrenta a problemas del mundo real, costeando, empaquetando y comercializando sus diseños en eventos escolares."
       }
     },
     "ent": {
@@ -388,22 +384,18 @@
       },
       "level3": {
         "title": "Nivel 3: Ingeniería de Producto y Laboratorio de Co-Creación Colectiva (15 Horas)",
-        "software": "Onshape / Slicers avanzados e introducción a Blender / Nomad Sculpt",
-        "project": "Diseñar una 'Ruta de Co-Creación' (ej. Kit STEAM didáctico interactivo para laboratorios o creación de escultura de autor con volumen complejo).",
-        "learn1": "Clase 1: Configuración del Estudio de Prototipado (Kick-Off). Gestión Agile/Scrum de hardware. Rutas: Técnica (Onshape) y Artística (Blender). Práctica: reto de Kit STEAM vs escultura Caja de Arena.",
-        "learn2": "Clase 2: Modelado Colaborativo Concurrente en la Nube. Modelado multicuerpo en Onshape con variables compartidas vs Escultura Digital (Blender). Práctica: fusiones en tiempo real y blockout de silueta.",
-        "learn3": "Clase 3: Optimización Estructural y Mitigación Preventiva de Errores. Esfuerzos mecánicos y ribs. Topología, remesh y decimation. Práctica: Peer-Review (eliminar esfuerzos o engrosar detalles finos).",
-        "learn4": "Clase 4: Certificación Técnica y Estrategias G-Code (File Freeze). G-code, perímetros y soportes tipo árbol. Control: validación final de ensambles, bloqueo de repositorios y transferencia para producción.",
-        "learn5": "Clase 5: Integración de Sistemas Complejos y Pitch de Ingeniería. Integración sociomaterial, calibración y acabado. Clausura: ensamble final de Kit STEAM o remoción de soportes y Pitch de ingeniería de 5 minutos."
-      },
-      "level4": {
-        "title": "Nivel 4: Emprendimiento y Comercialización de Proyectos Maker (10 Horas)",
-        "software": "Onshape / Fusion 360 + Laminadores avanzados y costeo",
-        "project": "Concepción, costeo real y comercialización de un producto tecnológico o social diseñado y fabricado en el taller escolar.",
-        "learn1": "Clase 1: Identificación y Diseño. Concepción del producto escolar, modelado digital optimizado y análisis de mercado para el prototipo.",
-        "learn2": "Clase 2: Planificación y Producción. Selección de materiales comerciales, parámetros de fabricación rápida y producción del lote inicial.",
-        "learn3": "Clase 3: Costeo y Pricing. Cálculo del costo de energía, depreciación de máquinas, peso del material y margen de utilidad comercial.",
-        "learn4": "Clase 4: Lanzamiento y Ventas. Estrategias de presentación (Pitch B2B), empaque del producto y comercialización en eventos institucionales."
+        "software": "Onshape (Ruta Técnica) y Blender (Ruta Artística)",
+        "project": "Diseñar una 'Ruta de Co-Creación' (Técnica: Kit STEAM didáctico interactivo para laboratorios; Artística: escultura de autor con volumen complejo).",
+        "tech1": "Clase 1: Metodología de Proyectos (Agile/Scrum) & Roles. Asignación de roles del grupo de ingeniería. Auditoría de requerimientos técnicos del reto y configuración del espacio de trabajo en Onshape.",
+        "tech2": "Clase 2: Modelado Colaborativo Concurrente en la Nube. Estrategias de modelado multicuerpo en Onshape y diseño basado en variables globales. Práctica de fusiones en tiempo real.",
+        "tech3": "Clase 3: Optimización Estructural. Análisis de esfuerzos mecánicos empíricos y técnicas de optimización de peso mediante vaciados (ribs). Sesión de Peer-Review técnico.",
+        "tech4": "Clase 4: Certificación Técnica y G-Code (File Freeze). Análisis profundo de G-code, configuración manual de perímetros críticos y control térmico. Validación final de ensambles.",
+        "tech5": "Clase 5: Integración de Sistemas & Clausura. Integración de sistemas sociomateriales complejos (STEAM). Ensamblaje final e integración del sistema dinámico del Kit STEAM. Pitch de 5 minutos.",
+        "art1": "Clase 1: Fundamentos de Modelado Poligonal. Introducción a la interfaz de Blender, atajos de teclado, navegación 3D y manipulación de geometría. Ejercicio de modelado 'Caja de Arena'.",
+        "art2": "Clase 2: Transición a la Escultura Digital. Uso de pinceles dinámicos (Draw, Clay, Smooth, Grab) y simetría. Bloqueo (Blockout) de la silueta principal y definición de proporciones.",
+        "art3": "Clase 3: Topología y Preparación para Impresión. Análisis de voladizos extremos en mallas orgánicas, decimation y remesh en Blender. Engrosamiento de extremidades frágiles para asegurar adherencia.",
+        "art4": "Clase 4: Soportes Orgánicos y G-Code (File Freeze). Configuración y maestría en soportes orgánicos tipo árbol (Tree Supports) para proteger texturas sin marcar la superficie visible.",
+        "art5": "Clase 5: Acabado Estético & Clausura. Remoción minuciosa de soportes orgánicos y técnicas de acabado estético para exhibición de la pieza. Cierre: Sustentación de Obra ante el salón."
       },
       "table": {
         "title": "Resumen del Plan de Estudios por Niveles",
@@ -415,7 +407,7 @@
         ],
         "rows": [
           {
-            "col1": "Nivel 1: Iniciación CAD e Impresión 3D",
+            "col1": "Nivel 1: Iniciación al Pensamiento Espacial",
             "col2": "Pensamiento Espacial e Impresión 3D",
             "col3": "Tinkercad / Orca Slicer / Creality Print",
             "col4": "Bocetado básico, lógica booleana, parámetros estructurales de laminación y post-procesado físico."
@@ -429,14 +421,8 @@
           {
             "col1": "Nivel 3: Ingeniería de Producto",
             "col2": "Laboratorio de Co-Creación",
-            "col3": "Suite completa + Nomad / Blender",
-            "col4": "Metodología Agile/Scrum de hardware, diseño colaborativo concurrente en la nube, optimización estructural (DfAM) y pitch."
-          },
-          {
-            "col1": "Nivel 4: Emprendimiento",
-            "col2": "Comercialización Maker",
-            "col3": "Laminadores avanzados y costeo",
-            "col4": "Costeo real de materiales y energía, estimación de precios de venta, empaque y comercialización de productos."
+            "col3": "Onshape / Blender",
+            "col4": "Metodología Agile/Scrum de hardware, diseño colaborativo concurrente en la nube, optimización estructural (DfAM), escultura digital y pitch."
           }
         ]
       }
@@ -445,7 +431,6 @@
       "levelLabel1": "Básico",
       "levelLabel2": "Intermedio",
       "levelLabel3": "Avanzado",
-      "levelLabel4": "Emprendedor",
       "ctaTitle": "¿Listo para implementar el programa de formación maker en tu colegio?",
       "ctaSubtitle": "Un mentor local presenta nuestra propuesta de cursos y currículos para su institución. Conozca nuestra metodología sin costo.",
       "ctaButton": "Agendar demostración del programa →"

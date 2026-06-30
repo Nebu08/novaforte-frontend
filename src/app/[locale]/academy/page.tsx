@@ -161,8 +161,8 @@ export default function AcademyPage() {
 
           {/* Escalera visual — cada nivel más alto que el anterior */}
           {/* Estructura Curricular - Tarjetas de Niveles Uniformes */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[1, 2, 3, 4].map((num) => {
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {[1, 2, 3].map((num) => {
               const level = LEVEL_COLORS[num - 1];
               return (
                 <div
@@ -209,7 +209,7 @@ export default function AcademyPage() {
 
             {/* Selector de Niveles (Tabs) */}
             <div className="flex flex-wrap gap-2 md:gap-4 mb-2">
-              {[1, 2, 3, 4].map((num) => {
+              {[1, 2, 3].map((num) => {
                 const color = LEVEL_COLORS[num - 1];
                 const isActive = activeLevel === num;
                 return (
@@ -241,7 +241,7 @@ export default function AcademyPage() {
               const num = activeLevel;
               const color = LEVEL_COLORS[num - 1];
               const isLevel1 = num === 1;
-              const numItems = num === 4 ? 4 : 5;
+              const numItems = 5;
               return (
                 <div className="relative rounded-3xl p-6 sm:p-10 bg-[#f7f5f4] dark:bg-dark-800 border border-gray-200 dark:border-gray-700/60 overflow-hidden flex flex-col gap-8 shadow-sm">
                   {/* Decorativo de fondo: número grande */}
@@ -268,43 +268,84 @@ export default function AcademyPage() {
                         </p>
                       </div>
 
-                      <div className="flex flex-col gap-3 mt-2">
+                      <div className="flex flex-col gap-4 mt-2">
                         <span className="text-xs font-bold text-gray-400 uppercase tracking-wide">
-                          {num === 1 ? "Módulos de Formación" : "Ejes Temáticos"}
+                          Módulos y Ejes Temáticos
                         </span>
-                        <ul className="flex flex-col gap-4 pl-1 border-l-2 border-gray-200 dark:border-gray-700">
-                          {Array.from({ length: numItems }).map((_, idx) => {
-                            const itemIndex = idx + 1;
-                            const itemText = t(`curriculum.level${num}.learn${itemIndex}`);
-                            
-                            // Analizar si viene con título estructurado antes de los dos puntos
-                            const colonIndex = itemText.indexOf(":");
-                            let title = "";
-                            let description = itemText;
-                            if (colonIndex !== -1) {
-                              title = itemText.substring(0, colonIndex + 1);
-                              description = itemText.substring(colonIndex + 1);
-                            }
 
-                            return (
-                              <li key={itemIndex} className="relative pl-6 flex flex-col gap-0.5 group">
-                                {/* Punto de la línea temporal */}
-                                <span
-                                  className="absolute left-[-7px] top-1.5 h-3 w-3 rounded-full border-2 border-[#f7f5f4] dark:border-dark-800 transition-transform duration-300 group-hover:scale-125"
-                                  style={{ backgroundColor: color.bg }}
-                                />
-                                <p className="text-xs text-gray-650 dark:text-gray-300 leading-relaxed">
-                                  {title && (
-                                    <strong className="font-bold text-dark-900 dark:text-white mr-1">
-                                      {title}
-                                    </strong>
-                                  )}
-                                  <span>{description}</span>
-                                </p>
-                              </li>
-                            );
-                          })}
-                        </ul>
+                        {num === 3 ? (
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-2">
+                            {/* Columna Ruta Técnica */}
+                            <div className="flex flex-col gap-4">
+                              <div className="px-3 py-1.5 rounded-lg bg-primary-600/10 border border-primary-500/20 text-[11px] font-bold uppercase tracking-wider text-primary-600 dark:text-primary-400 inline-block w-fit">
+                                Ruta Técnica: Ingeniería CAD (Onshape)
+                              </div>
+                              <ul className="flex flex-col gap-4 pl-1 border-l-2 border-primary-800/40">
+                                {[1, 2, 3, 4, 5].map((idx) => {
+                                  const itemText = t(`curriculum.level3.tech${idx}`);
+                                  const colonIndex = itemText.indexOf(":");
+                                  const title = colonIndex !== -1 ? itemText.substring(0, colonIndex + 1) : "";
+                                  const description = colonIndex !== -1 ? itemText.substring(colonIndex + 1) : itemText;
+                                  return (
+                                    <li key={idx} className="relative pl-6 flex flex-col gap-0.5 group">
+                                      <span className="absolute left-[-7px] top-1.5 h-3 w-3 rounded-full border-2 border-[#f7f5f4] dark:border-dark-800 bg-primary-600" />
+                                      <p className="text-xs text-gray-650 dark:text-gray-300 leading-relaxed">
+                                        {title && <strong className="font-bold text-dark-900 dark:text-white mr-1">{title}</strong>}
+                                        <span>{description}</span>
+                                      </p>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+
+                            {/* Columna Ruta Artística */}
+                            <div className="flex flex-col gap-4">
+                              <div className="px-3 py-1.5 rounded-lg bg-accent-600/10 border border-[#a88444]/25 text-[11px] font-bold uppercase tracking-wider text-[#a88444] inline-block w-fit">
+                                Ruta Artística: Escultura Digital (Blender)
+                              </div>
+                              <ul className="flex flex-col gap-4 pl-1 border-l-2 border-[#a88444]/30">
+                                {[1, 2, 3, 4, 5].map((idx) => {
+                                  const itemText = t(`curriculum.level3.art${idx}`);
+                                  const colonIndex = itemText.indexOf(":");
+                                  const title = colonIndex !== -1 ? itemText.substring(0, colonIndex + 1) : "";
+                                  const description = colonIndex !== -1 ? itemText.substring(colonIndex + 1) : itemText;
+                                  return (
+                                    <li key={idx} className="relative pl-6 flex flex-col gap-0.5 group">
+                                      <span className="absolute left-[-7px] top-1.5 h-3 w-3 rounded-full border-2 border-[#f7f5f4] dark:border-dark-800 bg-[#a88444]" />
+                                      <p className="text-xs text-gray-650 dark:text-gray-300 leading-relaxed">
+                                        {title && <strong className="font-bold text-dark-900 dark:text-white mr-1">{title}</strong>}
+                                        <span>{description}</span>
+                                      </p>
+                                    </li>
+                                  );
+                                })}
+                              </ul>
+                            </div>
+                          </div>
+                        ) : (
+                          <ul className="flex flex-col gap-4 pl-1 border-l-2 border-gray-200 dark:border-gray-700">
+                            {Array.from({ length: numItems }).map((_, idx) => {
+                              const itemIndex = idx + 1;
+                              const itemText = t(`curriculum.level${num}.learn${itemIndex}`);
+                              const colonIndex = itemText.indexOf(":");
+                              const title = colonIndex !== -1 ? itemText.substring(0, colonIndex + 1) : "";
+                              const description = colonIndex !== -1 ? itemText.substring(colonIndex + 1) : itemText;
+                              return (
+                                <li key={itemIndex} className="relative pl-6 flex flex-col gap-0.5 group">
+                                  <span
+                                    className="absolute left-[-7px] top-1.5 h-3 w-3 rounded-full border-2 border-[#f7f5f4] dark:border-dark-800 transition-transform duration-300 group-hover:scale-125"
+                                    style={{ backgroundColor: color.bg }}
+                                  />
+                                  <p className="text-xs text-gray-650 dark:text-gray-300 leading-relaxed">
+                                    {title && <strong className="font-bold text-dark-900 dark:text-white mr-1">{title}</strong>}
+                                    <span>{description}</span>
+                                  </p>
+                                </li>
+                              );
+                            })}
+                          </ul>
+                        )}
                       </div>
                     </div>
 
@@ -475,7 +516,7 @@ export default function AcademyPage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 dark:divide-gray-800/60">
-                  {[1, 2, 3, 4].map((rowIdx) => (
+                  {[1, 2, 3].map((rowIdx) => (
                     <tr key={rowIdx} className="hover:bg-gray-50/50 dark:hover:bg-dark-800/20 transition-colors">
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-bold text-dark-900 dark:text-white">
                         {t(`curriculum.table.rows.${rowIdx - 1}.col1`)}
