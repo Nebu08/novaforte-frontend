@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/navigation";
+import Image from "next/image";
+import { PAST_COURSES } from "@/lib/site-config";
 
 const LEVEL_COLORS = [
   { bg: "#7e192a", light: "#f9eeef", label: "Básico" },
@@ -233,7 +235,7 @@ export default function AcademyPage() {
               const num = activeLevel;
               const color = LEVEL_COLORS[num - 1];
               const isLevel1 = num === 1;
-              const numItems = isLevel1 ? 5 : 4;
+              const numItems = num === 4 ? 4 : 5;
               return (
                 <div className="relative rounded-3xl p-6 sm:p-10 bg-[#f7f5f4] dark:bg-dark-800 border border-gray-200 dark:border-gray-700/60 overflow-hidden flex flex-col gap-8 shadow-sm">
                   {/* Decorativo de fondo: número grande */}
@@ -561,6 +563,76 @@ export default function AcademyPage() {
                   <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
                     {t(`support.pillar${num}.desc`)}
                   </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          CURSOS DICTADOS — Galería de Experiencias y Certificaciones
+          ══════════════════════════════════════════ */}
+      <section className="py-20 bg-white dark:bg-dark-900 border-t border-gray-100 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
+            <div>
+              <p className="text-xs font-bold tracking-widest uppercase mb-2" style={{ color: "#a88444" }}>
+                ─── Galería de Experiencias
+              </p>
+              <h2 className="text-3xl lg:text-4xl font-black text-dark-900 dark:text-white" style={{ fontFamily: "Outfit, sans-serif" }}>
+                Cursos Dictados y Casos Escolares
+              </h2>
+            </div>
+            <p className="text-gray-400 text-sm max-w-xs">
+              Evidencia del impacto de nuestra metodología en prestigiosas instituciones educativas en Colombia.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {PAST_COURSES.map((course) => (
+              <div
+                key={course.id}
+                className="group flex flex-col overflow-hidden rounded-3xl border border-gray-250/50 dark:border-gray-800 bg-[#f7f5f4] dark:bg-dark-800 hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              >
+                {/* Contenedor de la Imagen */}
+                <div className="relative h-56 w-full overflow-hidden">
+                  <Image
+                    src={course.image}
+                    alt={locale === "es" ? course.schoolEs : course.schoolEn}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                  />
+                  {/* Badge de Colegio */}
+                  <div className="absolute top-4 left-4 px-3 py-1 text-xs font-bold text-white bg-black/60 backdrop-blur-sm rounded-full border border-white/10">
+                    {locale === "es" ? course.schoolEs : course.schoolEn}
+                  </div>
+                </div>
+
+                {/* Contenido */}
+                <div className="p-6 flex flex-col gap-4 flex-1 justify-between">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400">
+                      Programa Escolar
+                    </span>
+                    <h3 className="text-base font-black text-dark-900 dark:text-white leading-tight mt-1" style={{ fontFamily: "Outfit, sans-serif" }}>
+                      {locale === "es" ? course.courseEs : course.courseEn}
+                    </h3>
+                  </div>
+
+                  {/* Certificado Badge */}
+                  <div className="p-4 rounded-2xl bg-white/70 dark:bg-dark-900/60 border border-[#a88444]/20 flex items-center gap-3">
+                    <span className="text-xl">🏆</span>
+                    <div>
+                      <p className="text-[9px] font-black uppercase tracking-widest text-[#a88444]">
+                        Certificación Otorgada
+                      </p>
+                      <p className="text-[11px] font-semibold text-gray-700 dark:text-gray-300 leading-snug">
+                        {locale === "es" ? course.certificateEs : course.certificateEn}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

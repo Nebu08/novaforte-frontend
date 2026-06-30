@@ -1,11 +1,11 @@
 {
   "Header": {
     "home": "Home",
-    "humans": "Humans",
-    "biomedical": "Spares",
-    "vet": "Animals",
+    "humans": "Human Medicine",
+    "biomedical": "Components & Supplies",
+    "vet": "Veterinary Medicine",
     "academy": "Academy",
-    "about": "About Us",
+    "about": "The Company",
     "contact": "Contact",
     "cta": "Text Us",
     "ariaMenu": "Open navigation menu",
@@ -24,7 +24,7 @@
   "Home": {
     "hero": {
       "title": "Medical-Grade Additive Manufacturing",
-      "subtitle": "We combine advanced 3D design rigor with clinical EXPERTISE to manufacture custom-made prostheses not only for humans (we also think about animals), discontinued or hard-to-access medical spare parts, and prepare future makers in school environments.",
+      "subtitle": "We combine advanced 3D design rigor with clinical EXPERTISE to manufacture custom-made prostheses not only for humans (we also think about animals), discontinued or hard-to-access medical components & supplies, and prepare future makers in school environments.",
       "ctaPrimary": "Explore Divisions",
       "ctaPortfolio": "View Works Portfolio",
       "ctaSecondary": "Direct Contact"
@@ -33,22 +33,22 @@
       "title": "Our Specialized Divisions",
       "subtitle": "Click on the corresponding division to view our technical capabilities and quote your specific requirement in less than 72 hours.",
       "humans": {
-        "title": "Humans (Prosthetics & Orthotics)",
+        "title": "Human Medicine (Prosthetics & Orthotics)",
         "desc": "Customized prosthetics and aesthetic orthotics in certified high-strength biocompatible polymers.",
-        "cta": "Explore Humans"
+        "cta": "Explore Human Medicine"
       },
       "biomedica": {
-        "title": "Spares",
+        "title": "Components & Supplies",
         "desc": "Reverse engineering and 3D reconstruction of gears and plastic parts resistant to chemicals and disinfection in medical devices.",
-        "cta": "Explore Spares"
+        "cta": "Explore Components"
       },
       "vet": {
-        "title": "Animals",
+        "title": "Veterinary Medicine",
         "desc": "Digital design and custom fabrication of lightweight orthotics and functional prosthetics in comfortable and flexible materials.",
-        "cta": "Explore Animals"
+        "cta": "Explore Veterinary Medicine"
       },
       "academy": {
-        "title": "Maker Training (Academy)",
+        "title": "Academy (Maker Training)",
         "desc": "Sequential courses structured by levels in 3D design and printing (Tinkercad and Fusion 360) for schools in Colombia.",
         "cta": "Explore Courses"
       }
@@ -354,54 +354,56 @@
       }
     },
     "rubric": {
-      "title": "Hybrid Evaluation & Certification System",
-      "subtitle": "To obtain Novaforte's official certification at any level, we evaluate both software digital mastery and the physical functionality of the manufactured object.",
+      "title": "Hybrid Assessment & Certification System",
+      "subtitle": "To obtain the official Novaforte certification at any level, we evaluate both digital mastery in software and the physical functionality of the manufactured object.",
       "digitalTitle": "1. Technical Mastery & Digital Precision (50%)",
-      "digitalDesc": "Assessment of CAD design: fully constrained sketches, efficient parametric operations, clean 3D meshes, and optimized slicing parameters.",
+      "digitalDesc": "Evaluation of software design: fully constrained sketches, efficient use of parametric operations, clean three-dimensional meshes, and optimized slicing settings.",
       "physicalTitle": "2. Physical Functionality & Integrity (50%)",
-      "physicalDesc": "Assessment of the printed part: verification of physical tolerances and clearances (functional assemblies), mechanical strength of layers/infill under impact or traction stress, and surface finish quality.",
-      "badgeTitle": "Approval Criterion",
-      "badgeDesc": "The student must achieve a minimum score of 80% in both components (digital and physical) to receive their official Novaforte Maker Competencies certificate."
+      "physicalDesc": "Evaluation of the printed part: verification of physical tolerances and clearances (functional assemblies), mechanical resistance of layers/infill under impact or tensile stress, and final surface quality.",
+      "badgeTitle": "Approval Criteria",
+      "badgeDesc": "The student must achieve a minimum score of 80% in both components (digital and physical) to receive their official Novaforte Maker skills certificate."
     },
     "curriculum": {
-      "title": "Detailed Curriculum Details",
-      "subtitle": "Click on each level to explore the technical focus, software tools, and suggested practical projects.",
+      "title": "Detailed Study Plan",
+      "subtitle": "Click on each level to learn about the technical focus, software tools, and suggested practical projects.",
       "level1": {
-        "title": "Level 1: Spatial Fundamentals and Addition Logic (10 Hours)",
-        "software": "Tinkercad / Tinkercad Classrooms (Intuitive, secure, and free web tool) and introduction to Cura/PrusaSlicer",
-        "project": "Design a nameplate with raised text, a custom keychain, or a geometric cookie cutter.",
-        "learn1": "Module 1: The Revolution of Creation. Introduction to additive manufacturing as the art of building by stacking material layer by layer, creating objects without generating waste. Understanding the fundamental workflow: 3D Model, Slicer, and Machine.",
-        "learn2": "Module 2: The Machine's Brain. Mastery of Slicing software to translate geometries into executable coordinates. Configuration of structural parameters: layer height for resolution, perimeter walls for impact resistance, and gyroid infill patterns to optimize material.",
-        "learn3": "Module 3: Boolean Logic and Precision. Immersion in the CAD environment (Tinkercad). Use of the Ruler for dimension-guided design and mastery of volumetric subtraction (grouping solids and holes) to sculpt complex geometries.",
-        "learn4": "Module 4: Digital Architecture. Application of spatial efficiency tools: smart duplication to create repeating patterns (like stairs or basic gears) and manipulation of workplanes to design on inclined surfaces.",
-        "learn5": "Module 5: Open Ecosystem and Fabrication. Ethical and smart use of open-source repositories and model generation using Artificial Intelligence. Execution of a rigorous digital audit (dimensions, anchors) before exporting the STL file for printing the final project."
+        "title": "Level 1: Introduction to Spatial Thinking and Intuitive CAD Modeling (10 Hours)",
+        "software": "Tinkercad / Tinkercad Classrooms (Intuitive, secure, and free web tool) and introduction to Orca Slicer / Creality Print",
+        "project": "Design a 'Personalized Pocket Object' (e.g. modular key organizer, ergonomic tag, or a mini functional utility accessory).",
+        "learn1": "Class 1: The Jump into Three Dimensions. 3D printer anatomy and calibration, Cartesian operation (X, Y, Z axes), PLA filament properties, and extrusion physics.",
+        "learn2": "Class 2: Addition, Subtraction, and Creative Modification. Geometric algebra and boolean operations. Control of proportions, grouping, and millimetric hollows in Tinkercad.",
+        "learn3": "Class 3: Material Limits and Custom Design. Physical rules of Design for Additive Manufacturing (DFAM), bridges, overhangs, and critical angles > 45 degrees.",
+        "learn4": "Class 4: Basic Slicing and Technical Closure (File Freeze). Slicing parameters (layer height, infill, and patterns), Orca Slicer workflow, and STL export.",
+        "learn5": "Class 5: Physical Phase, Post-Processing, and Certification. Materialization, safe removal of minimal supports, dimensional tolerance audits, and graduation."
       },
       "level2": {
-        "title": "Level 2: Parametric Design and Functional Mechanics (15 Hours)",
+        "title": "Level 2: Parametric Design and Functional Mechanical Assemblies (15 Hours)",
         "software": "Onshape (Free industrial-grade CAD web tool for education) or Autodesk Fusion 360",
-        "project": "Design a mechanical articulated keychain, a phone stand with adjustable angle, or a box with a sliding lid.",
-        "learn1": "Parametric Sketching: Fundamentals of technical 2D drawing using industrial-grade tools (e.g., Fusion 360 or Onshape). Application of dimensions (exact measurements) and geometric constraints (tangency, parallelism, concentricity) to create stable profiles.",
-        "learn2": "Volumetric Engineering Operations: Profile extrusion, revolutions for cylindrical parts, and application of technical finishes to dissipate structural stress (chamfers and fillets).",
-        "learn3": "Tolerance and Mechanism Design: Creation of components with precise clearances (0.2 mm to 0.4 mm) specifically designed to physically fit after thermal contraction of the plastic. Design of simple transmission systems (spur gears, threads).",
-        "learn4": "Assemblies and Kinematic Simulation: Virtual connection of multiple components using rigid and revolute joints. Verification of movement and collision detection on screen before sending to production."
+        "project": "Design a 'Rubber Band-Powered Impeller Car' (modeling chasis, functional wheels, transmission shafts, and brackets with precise clearances).",
+        "learn1": "Class 1: From 2D Sketch to Parametric Solid. 2D technical drawing in Onshape, standard orthographic views (front, top, side), and clean extrusion operations.",
+        "learn2": "Class 2: Geometric Constraints and Design Intent. Mastery of the 'fully defined sketch' using logical rules (tangency, symmetry) for stable parametric updates.",
+        "learn3": "Class 3: Simple Mechanics, Fits, and Real Tolerances. Thermal contraction of polymers, functional clearances (0.2 to 0.4 mm), press-fits, and concentric joints.",
+        "learn4": "Class 4: Assembly Verification and Advanced Slicing (File Freeze). Virtual component mating in Onshape, collision analysis, tree support tuning, and torsional strength.",
+        "learn5": "Class 5: Factory Assembly Line and Performance Testing. Physical assembly with screws and inserts, tolerance troubleshooting, track tests, and diplomas."
       },
       "level3": {
-        "title": "Level 3: Organic Geometry and Ergonomics (15 Hours)",
-        "software": "Nomad Sculpt (for tablets with stylus) or Blender (professional PC software)",
-        "project": "Design an articulated fantasy creature, an ergonomic tool housing, or a simplified anatomical/medical model (like a splint or conceptual prosthesis for a pet or human).",
-        "learn1": "Digital Sculpting and Freeforms: Introduction to subdivision surface modeling (T-Splines or meshes). Using the digital canvas like clay to stretch, flatten, and detail anatomical and fluid geometries.",
-        "learn2": "Surface Modeling: Advanced modeling techniques (lofts and sweeps) to build ergonomic casings, grips adapted to the human hand, or anatomical supports.",
-        "learn3": "Reference-Based Design: Importing 2D sketches or X-ray/silhouette photographs into the digital environment to trace and generate 3D models perfectly scaled to real-world proportions.",
-        "learn4": "Advanced Slicing for Complex Shapes: Configuration of organic supports (tree-type) to protect the surface finish of curved parts, and printing strategies for technical and flexible filaments (TPU, PETG)."
+        "title": "Level 3: Product Engineering and Collective Co-Creation Lab (15 Hours)",
+        "software": "Onshape CAD / Advanced Slicers (Bambu Studio / Orca Slicer / PrusaSlicer) and introduction to Nomad Sculpt / Blender",
+        "project": "Design a 'Co-Creation Route' (e.g. open-source mechanical prosthetic hand, interactive STEAM educational kit, or modular ergonomic adapter).",
+        "learn1": "Class 1: Prototyping Studio Setup (Kick-Off). Agile/Scrum methodologies for hardware, role distribution in the engineering cell, and technical requirements audit.",
+        "learn2": "Class 2: Cloud-Based Collaborative Concurrent Modeling. Shared global variables in Onshape, version control, branching, and merging design branches.",
+        "learn3": "Class 3: Structural Optimization and Preventive Error Mitigation. Empirical mechanical stress analysis, structural reinforcement ribs (ribs), and peer-review sessions.",
+        "learn4": "Class 4: Technical Certification and G-Code Strategies (File Freeze). Slicing path optimization, geometry-specific thermal control, critical perimeters, and G-code validation.",
+        "learn5": "Class 5: Complex Systems Integration and Engineering Pitch. Mating mechanical and electronic components, hardware resilience test, 5-minute pitch presentation, and certificates."
       },
       "level4": {
-        "title": "Level 4: Reverse Engineering and Optimization for Manufacturing (10 Hours)",
-        "software": "Onshape / Fusion 360 + Advanced Slicers (Bambu Studio / PrusaSlicer)",
-        "project": "A free project with a social or technological basis, such as automating a simple mechanism or creating a functional prototype for a school enterprise.",
-        "learn1": "Applied Metrology and Reverse Engineering: Use of the vernier caliper to take exact measurements of damaged commercial parts or physical components. Digital redesign and improvement of the original part.",
-        "learn2": "Structural Optimization (DfAM): Design rules for 3D printing: elimination of unnecessary supports using self-supporting angles (45-degree rule), bridge design, and model layer orientation to resist maximum mechanical stress.",
-        "learn3": "Prototype Validation: Basic static stress simulations to identify critical breaking points in the design before fabrication.",
-        "learn4": "Hybrid Assembly and Post-Processing: Housing design to integrate real hardware and brass heat-set inserts. Finishing the part and presenting the final functional project."
+        "title": "Level 4: Entrepreneurship and Commercialization of Maker Projects (10 Hours)",
+        "software": "Onshape / Fusion 360 + Advanced slicing suites and costing spreadsheet",
+        "project": "Conceive, cost, and commercialize a technological or social product designed and manufactured in the school workshop.",
+        "learn1": "Module 1: Identification & Design. School product conceptualization, optimized digital modeling, and market analysis for the prototype.",
+        "learn2": "Module 2: Planning & Production. Commercial materials selection, rapid manufacturing parameters, and initial batch production.",
+        "learn3": "Module 3: Costing & Pricing. Calculation of energy cost, machine depreciation, material weight, and commercial profit margin.",
+        "learn4": "Module 4: Launch & Sales. Pitch strategies (B2B Pitch), product packaging, and sales execution at institutional events."
       },
       "table": {
         "title": "Curriculum Summary by Levels",
@@ -413,28 +415,28 @@
         ],
         "rows": [
           {
-            "col1": "Level 1: Spatial Fundamentals",
-            "col2": "Addition Logic",
-            "col3": "Tinkercad / Cura / PrusaSlicer",
-            "col4": "Spatial understanding, basic modeling, and initial slicing."
+            "col1": "Level 1: Basic CAD & 3D Printing",
+            "col2": "Spatial Thinking & 3D Printing",
+            "col3": "Tinkercad / Orca Slicer / Creality Print",
+            "col4": "Basic sketching, boolean logic, structural slicing parameters, and physical post-processing."
           },
           {
             "col1": "Level 2: Parametric Design",
-            "col2": "Functional Mechanics",
+            "col2": "Functional Mechanical Assemblies",
             "col3": "Onshape or Fusion 360",
             "col4": "2D technical drawing, dimensions, constraints, tolerances, and gears."
           },
           {
-            "col1": "Level 3: Organic Geometry",
-            "col2": "Anatomy & Ergonomics",
-            "col3": "Nomad Sculpt or Blender",
-            "col4": "Digital sculpting, surface modeling, and organic supports."
+            "col1": "Level 3: Product Engineering",
+            "col2": "Co-Creation Laboratory",
+            "col3": "Complete Suite + Nomad / Blender",
+            "col4": "Agile/Scrum hardware methodology, cloud collaborative concurrent design, DfAM optimization, and pitch."
           },
           {
-            "col1": "Level 4: Reverse Engineering",
-            "col2": "Manufacturing Optimization (DfAM)",
-            "col3": "Complete Suite + Slicers",
-            "col4": "Caliper usage, DfAM, static validation, and hybrid assembly."
+            "col1": "Level 4: Entrepreneurship",
+            "col2": "Maker Commercialization",
+            "col3": "Advanced slicers and costing",
+            "col4": "Real-world costing of materials and energy, sales price estimation, packaging, and product marketing."
           }
         ]
       }
@@ -523,9 +525,9 @@
     "category": "Filter Category",
     "readMore": "View Data Sheet",
     "categories": {
-      "humans": "Humans",
-      "biomedica": "Spares",
-      "vet": "Animals",
+      "humans": "Human Medicine",
+      "biomedica": "Components & Supplies",
+      "vet": "Veterinary Medicine",
       "academy": "Academy"
     }
   },
@@ -547,19 +549,19 @@
     },
     "contact": {
       "title": "Contact | Novaforte sas",
-      "description": "Get in touch with Novaforte sas. Request quotes for prosthetics, orthotics, biomedical spares, or maker training."
+      "description": "Get in touch with Novaforte sas. Request quotes for prosthetics, orthotics, biomedical components, or maker training."
     },
     "humans": {
-      "title": "Humans - Prosthetics & Orthotics | Novaforte sas",
+      "title": "Human Medicine - Prosthetics & Orthotics | Novaforte sas",
       "description": "Digital design and manufacturing of personalized prostheses and orthoses with high-strength biocompatible polymers in Colombia."
     },
     "vet": {
-      "title": "Vet - Animal Orthotics & Prosthetics | Novaforte sas",
+      "title": "Veterinary Medicine - Animal Orthotics & Prosthetics | Novaforte sas",
       "description": "Customized orthotics, prosthetics, and wheelchairs for dogs and cats. Designed to restore mobility to your pets."
     },
     "biomedica": {
-      "title": "Spares - Reverse Engineering & Spare Parts | Novaforte sas",
-      "description": "3D reconstruction and reverse engineering of critical spare parts for discontinued medical equipment in Colombia."
+      "title": "Components - Reverse Engineering & Insumos | Novaforte sas",
+      "description": "3D reconstruction and reverse engineering of critical components and supplies for discontinued medical equipment in Colombia."
     },
     "academy": {
       "title": "Academy - Maker Training | Novaforte sas",
@@ -567,7 +569,7 @@
     },
     "portafolio": {
       "title": "Portfolio - Success Stories | Novaforte sas",
-      "description": "Explore our catalog of real clinical cases, manufactured spare parts, and maker laboratories implemented in Colombia."
+      "description": "Explore our catalog of real clinical cases, manufactured components & supplies, and maker laboratories implemented in Colombia."
     }
   }
 }

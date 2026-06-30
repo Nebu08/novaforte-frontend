@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
+import ModelViewer3D from "@/components/ModelViewer3D";
 
 const WORKFLOW_ICONS = ["📦", "🔬", "⚙️", "📋"];
 
@@ -30,7 +31,7 @@ export default function BiomedicaPage() {
               <div className="flex items-center gap-3">
                 <div className="h-px w-10 bg-primary-500" />
                 <span className="text-xs font-bold tracking-[0.2em] uppercase text-primary-400">
-                  Repuestos
+                  Componentes e Insumos
                 </span>
               </div>
 
@@ -55,19 +56,13 @@ export default function BiomedicaPage() {
               </div>
             </div>
 
-            {/* Tarjeta de precision stats */}
-            <div className="hidden lg:flex flex-col gap-3">
-              {[
-                { val: "20 µm", label: "Resolución de escaneo 3D", accent: true },
-                { val: "PETG / ABS", label: "Desinfección química (no autoclave)", accent: false },
-                { val: "0 imports", label: "Todo fabricado en Colombia", accent: false },
-                { val: "< 72 h", label: "Presupuesto de urgencia", accent: true },
-              ].map((s) => (
-                <div key={s.label} className={`flex items-center gap-4 p-4 rounded-xl border ${s.accent ? "border-primary-800/60 bg-primary-900/20" : "border-gray-800 bg-white/5"}`}>
-                  <span className="text-xl font-black text-primary-400 w-24 flex-shrink-0" style={{ fontFamily: "Outfit, sans-serif" }}>{s.val}</span>
-                  <span className="text-sm text-gray-400 leading-tight">{s.label}</span>
-                </div>
-              ))}
+            {/* Columna Visor 3D Interactivo */}
+            <div className="w-full h-[420px] rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-800 shadow-lg bg-[#0e0d0c] mt-8 lg:mt-0">
+              <ModelViewer3D
+                src="/models/Engranajes.glb"
+                label="Engranaje Helicoidal (Interactive 3D)"
+                height={420}
+              />
             </div>
           </div>
         </div>

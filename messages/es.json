@@ -1,11 +1,11 @@
 {
   "Header": {
     "home": "Inicio",
-    "humans": "Humans",
-    "biomedical": "Repuestos",
-    "vet": "Animals",
-    "academy": "Academy",
-    "about": "Nosotros",
+    "humans": "Medicina Humana",
+    "biomedical": "Componentes e Insumos",
+    "vet": "Medicina Veterinaria",
+    "academy": "Academia",
+    "about": "La Empresa",
     "contact": "Contacto",
     "cta": "Escríbenos",
     "ariaMenu": "Abrir menú de navegación",
@@ -23,8 +23,8 @@
   },
   "Home": {
     "hero": {
-      "title": "Fabricación Aditiva de Nivel Médico",
-      "subtitle": "Unimos el rigor del diseño 3D avanzado con la EXPERTICIA clínica para fabricar prótesis a medida no solo para humanos (también pensamos en los animales), repuestos de equipos médicos descontinuados o de difícil acceso, y preparamos a los futuros makers en ambientes escolares.",
+      "title": "Manufactura Aditiva de Nivel Médico",
+      "subtitle": "Unimos el rigor del diseño 3D avanzado con la EXPERTICIA clínica para manufacturar prótesis a medida no solo para humanos (también pensamos en los animales), componentes e insumos de equipos médicos descontinuados o de difícil acceso, y preparamos a los futuros makers en ambientes escolares.",
       "ctaPrimary": "Explorar Divisiones",
       "ctaPortfolio": "Ver Portafolio de Trabajos",
       "ctaSecondary": "Contacto Directo"
@@ -33,22 +33,22 @@
       "title": "Nuestras Divisiones de Especialidad",
       "subtitle": "Haz clic en la división correspondiente para ver nuestras capacidades técnicas y cotizar tu requerimiento específico en menos de 72 horas.",
       "humans": {
-        "title": "Humans (Prótesis & Órtesis)",
+        "title": "Medicina Humana (Prótesis & Órtesis)",
         "desc": "Prótesis personalizadas y órtesis estéticas en polímeros biocompatibles de alta resistencia mecánica certificados.",
-        "cta": "Explorar Humans"
+        "cta": "Explorar Medicina Humana"
       },
       "biomedica": {
-        "title": "Repuestos",
+        "title": "Componentes e Insumos",
         "desc": "Ingeniería inversa y reconstrucción 3D de engranajes y piezas plásticas resistentes a químicos y desinfección en equipos médicos.",
-        "cta": "Explorar Repuestos"
+        "cta": "Explorar Componentes"
       },
       "vet": {
-        "title": "Animals",
-        "desc": "Diseño digital y fabricación a medida de órtesis ligeras y prótesis funcionales en materiales cómodos y flexibles.",
-        "cta": "Explorar Animals"
+        "title": "Medicina Veterinaria",
+        "desc": "Diseño digital y manufactura a medida de órtesis ligeras y prótesis funcionales en materiales cómodos y flexibles.",
+        "cta": "Explorar Medicina Veterinaria"
       },
       "academy": {
-        "title": "Formación Maker (Academy)",
+        "title": "Academia (Formación Maker)",
         "desc": "Cursos secuenciales estructurados por niveles en diseño e impresión 3D (Tinkercad y Fusion 360) para colegios en Colombia.",
         "cta": "Explorar Cursos"
       }
@@ -61,7 +61,7 @@
         "desc": "Soporte posventa directo presencial en clínicas e instituciones. Sin demoras de importación."
       },
       "pillar2": {
-        "title": "Fabricación de Nivel Médico",
+        "title": "Manufactura de Nivel Médico",
         "desc": "Desde el escaneo de los pacientes hasta el dispositivo terminado, usamos materiales compatibles con el cuerpo y con los entornos en que trabajamos. Garantía y soporte garantizados."
       },
       "pillar3": {
@@ -73,12 +73,12 @@
   "Humans": {
     "hero": {
       "title": "Dispositivos Ortopédicos y Órtesis a la Medida",
-      "subtitle": "Diseño y fabricación digital de prótesis y órtesis personalizadas en materiales biocompatibles homologados. Ayudamos a cirujanos y pacientes con órtesis estéticas y prótesis de alta resistencia mecánica.",
+      "subtitle": "Diseño y manufactura digital de prótesis y órtesis personalizadas en materiales biocompatibles homologados. Ayudamos a cirujanos y pacientes con órtesis estéticas y prótesis de alta resistencia mecánica.",
       "ctaQuote": "Cotizar Dispositivo",
       "ctaDownload": "Descargar Portafolio PDF"
     },
     "capabilities": {
-      "title": "Capacidades de Diseño y Fabricación 3D",
+      "title": "Capacidades de Diseño y Manufactura 3D",
       "subtitle": "Procesos biomédicos certificados para el bienestar del paciente.",
       "pillar1": {
         "title": "Modelado Anatómico Personalizado",
@@ -102,7 +102,7 @@
       },
       "item2": {
         "title": "Protector Facial Deportivo",
-        "desc": "Protector facial de alta resistencia fabricado a la medida de un deportista en Bogotá para protección post-fractura."
+        "desc": "Protector facial de alta resistencia manufacturado a la medida de un deportista en Bogotá para protección post-fractura."
       },
       "item3": {
         "title": "Órtesis Correctora Craneal",
@@ -165,7 +165,7 @@
   "Biomed": {
     "hero": {
       "title": "Ingeniería Inversa y Reconstrucción 3D de Repuestos Médicos Críticos",
-      "subtitle": "Reemplazamos piezas plásticas o metálicas rotas de equipos hospitalarios descontinuados. Fabricación local de precisión milimétrica bajo especificaciones clínicas.",
+      "subtitle": "Reemplazamos piezas plásticas o metálicas rotas de equipos hospitalarios descontinuados. Manufactura local de precisión milimétrica bajo especificaciones clínicas.",
       "ctaQuote": "Cotizar Repuesto Descontinuado",
       "ctaPortfolio": "Ver Casos de Éxito"
     },
@@ -197,7 +197,7 @@
         "desc": "Escaneo y modelado CAD paramétrico de la pieza para corregir desgastes."
       },
       "step3": {
-        "title": "Fabricación 3D",
+        "title": "Manufactura 3D",
         "desc": "Impresión en resinas o polímeros técnicos con control de tolerancias."
       },
       "step4": {
@@ -224,7 +224,7 @@
   "Vet": {
     "hero": {
       "title": "Órtesis y Prótesis 3D para Devolver la Movilidad Animal",
-      "subtitle": "Diseño personalizado de órtesis ligeras, resistentes y adaptables para perros y gatos en Colombia. Fabricación digital a la medida del cuerpo de tu mascota.",
+      "subtitle": "Diseño personalizado de órtesis ligeras, resistentes y adaptables para perros y gatos en Colombia. Manufactura digital a la medida del cuerpo de tu mascota.",
       "ctaQuote": "Cotizar Dispositivo Veterinario",
       "ctaPortfolio": "Ver Casos Veterinarios"
     },
@@ -355,7 +355,7 @@
     },
     "rubric": {
       "title": "Sistema de Evaluación y Certificación Híbrido",
-      "subtitle": "Para obtener la certificación oficial de Novaforte en cualquier nivel, evaluamos tanto la maestría digital en software como la funcionalidad física del objeto fabricado.",
+      "subtitle": "Para obtener la certificación oficial de Novaforte en cualquier nivel, evaluamos tanto la maestría digital en software como la funcionalidad física del objeto manufacturado.",
       "digitalTitle": "1. Dominio Técnico y Precisión Digital (50%)",
       "digitalDesc": "Evaluación del diseño en software: bocetos completamente restringidos (fully constrained), uso eficiente de operaciones paramétricas, limpieza de mallas tridimensionales y optimización de parámetros de laminación (Slicing).",
       "physicalTitle": "2. Funcionalidad Física e Integridad (50%)",
@@ -367,41 +367,43 @@
       "title": "Plan de Estudios Detallado",
       "subtitle": "Haga clic en cada nivel para conocer el enfoque técnico, herramientas de software y proyectos prácticos sugeridos.",
       "level1": {
-        "title": "Nivel 1: Fundamentos Espaciales y Lógica de Adición (10 Horas)",
-        "software": "Tinkercad / Tinkercad Classrooms (Herramienta web intuitiva, segura y gratuita) e introducción a Cura/PrusaSlicer",
-        "project": "Diseñar una placa con su nombre en relieve, un llavero personalizado o un cortador de galletas geométrico.",
-        "learn1": "Módulo 1: La Revolución de la Creación. Introducción a la manufactura aditiva como el arte de construir apilando material capa por capa, creando objetos sin generar desperdicios. Comprensión del flujo de trabajo fundamental: Modelo 3D, Slicer y Máquina.",
-        "learn2": "Módulo 2: El Cerebro de la Máquina. Dominio del software de Slicing para traducir geometrías en coordenadas ejecutables. Configuración de parámetros estructurales: altura de capa para resolución, paredes perimetrales para resistencia a impactos, y patrones de relleno giroide para optimizar material.",
-        "learn3": "Módulo 3: Lógica Booleana y Precisión. Inmersión en el entorno CAD (Tinkercad). Uso de la Regla para diseño guiado por dimensiones exactas y dominio de la sustracción volumétrica (agrupación de sólidos y huecos) para esculpir geometrías complejas.",
-        "learn4": "Módulo 4: Arquitectura Digital. Aplicación de herramientas de eficiencia espacial: duplicación inteligente para crear patrones de repetición (como escaleras o engranajes básicos) y manipulación de planos de trabajo para diseñar sobre superficies inclinadas.",
-        "learn5": "Módulo 5: Ecosistema Abierto y Fabricación. Uso ético e inteligente de repositorios de código abierto y generación de modelos mediante Inteligencia Artificial. Ejecución de una auditoría digital rigurosa (dimensiones, anclajes) antes de exportar el archivo STL para la impresión del proyecto final."
+        "title": "Nivel 1: Iniciación al Pensamiento Espacial y Modelado CAD Intuitivo (10 Horas)",
+        "software": "Tinkercad / Tinkercad Classrooms (Herramienta web intuitiva, segura y gratuita) e introducción a Orca Slicer / Creality Print",
+        "project": "Diseñar un 'Objeto Personalizable de Pocket' (ej. organizador modular de llaves, identificador ergonómico o mini accesorio utilitario funcional de bolsillo).",
+        "learn1": "Clase 1: El Salto a las Tres Dimensiones. Fundamentos de la manufactura aditiva frente a la remoción tradicional, anatomía cartesiana de impresoras 3D y extrusión física de filamento PLA.",
+        "learn2": "Clase 2: Suma, Resta y Modificación Creativa. Álgebra geométrica y operaciones booleanas. Control de proporciones, agrupamientos y vaciados milimétricos en el lienzo digital de Tinkercad.",
+        "learn3": "Clase 3: Límites del Material y Diseño de Autor. Reglas físicas de diseño para manufactura aditiva (DFAM), el dilema de la gravedad en el aire, ángulos críticos > 45° y puentes.",
+        "learn4": "Clase 4: Slicing Básico y Cierre Técnico (File Freeze). Parámetros clave de laminación (altura de capa, infill y patrones), Orca Slicer y exportación de archivos a formato STL.",
+        "learn5": "Clase 5: Fase Física, Post-Procesado y Certificación. Materialización física, remoción segura de soportes mínimos, control de tolerancia y ceremonia de clausura con certificado oficial."
       },
       "level2": {
-        "title": "Nivel 2: Diseño Paramétrico y Mecánica Funcional (15 Horas)",
-        "software": "Onshape (Herramienta web CAD industrial de acceso libre para educación) o Autodesk Fusion 360",
-        "project": "Diseñar un llavero mecánico articulado, un soporte para el celular con ángulo ajustable o una caja con tapa deslizable.",
-        "learn1": "Bocetado Paramétrico (Sketching): Fundamentos del dibujo técnico en 2D utilizando herramientas de nivel industrial (ej. Fusion 360 u Onshape). Aplicación de cotas (medidas exactas) y restricciones geométricas (tangencia, paralelismo, concentricidad) para crear perfiles estables.",
-        "learn2": "Operaciones Volumétricas de Ingeniería: Extrusión de perfiles, revoluciones para piezas cilíndricas, y aplicación de acabados técnicos para disipar la tensión estructural (chaflanes y redondeos).",
-        "learn3": "Diseño de Tolerancias y Mecanismos: Creación de componentes con holguras precisas (0.2 mm a 0.4 mm) diseñados específicamente para encajar físicamente tras la contracción térmica del plástico. Diseño de sistemas de transmisión simples (engranajes rectos, roscas).",
-        "learn4": "Ensambles y Simulación Cinemática: Conexión virtual de múltiples componentes mediante uniones rígidas y de revolución. Verificación del movimiento y detección de colisiones en pantalla antes de enviar a producción."
+        "title": "Nivel 2: Diseño Paramétrico y Ensambles Mecánicos Funcionales (15 Horas)",
+        "software": "Onshape (Herramienta web CAD industrial de acceso libre educativo) o Autodesk Fusion 360",
+        "project": "Diseñar un 'Carrito de Impulso por Caucho' (modelar chasis, ruedas funcionales, ejes de transmisión y anclajes con holguras precisas).",
+        "learn1": "Clase 1: Del Croquis 2D al Sólido Paramétrico. Introducción al dibujo técnico 2D en Onshape, lectura de vistas normalizadas (alzado, planta, perfil) y operaciones de extrusión volumétrica limpia.",
+        "learn2": "Clase 2: Restricciones Geométricas e Inteligencia de Diseño. Dominio del 'croquis completamente definido' usando reglas lógicas (tangencia, simetría) para admitir cambios paramétricos estables.",
+        "learn3": "Clase 3: Mecánica Simple, Ajustes y Tolerancias Reales. Factor de contracción térmica de polímeros, holguras de tolerancia (0.2 a 0.4 mm), ajustes por fricción (press-fit) y uniones concéntricas.",
+        "learn4": "Clase 4: Verificación de Ensambles y Slicing Avanzado (File Freeze). Conexión virtual de componentes en Onshape, análisis de colisiones, configuración de Tree supports y resistencia torsional.",
+        "learn5": "Clase 5: Línea de Ensamble de Fábrica y Pruebas de Rendimiento. Ensamblaje físico con tornillería y herrajes, diagnóstico de tolerancias, pruebas dinámicas en pista y diplomas institucionales."
       },
       "level3": {
-        "title": "Nivel 3: Geometría Orgánica y Ergonomía (15 Horas)",
-        "software": "Nomad Sculpt (para tabletas con lápiz óptico) o Blender (entorno profesional para PC)",
-        "project": "Diseñar una criatura fantástica articulada, una carcasa ergonómica para una herramienta o un modelo anatómico/médico simplificado (como una férula o prótesis conceptual para una mascota o humano).",
-        "learn1": "Escultura Digital y Formas Libres: Introducción al modelado por subdivisión de superficies (T-Splines o mallas). Uso del lienzo digital como arcilla para estirar, aplanar y detallar geometrías anatómicas y fluidas.",
-        "learn2": "Ingeniería de Superficies (Surface Modeling): Técnicas de modelado avanzado (solevaciones y barridos) para construir carcasas ergonómicas, empuñaduras adaptadas a la mano humana o soportes anatómicos.",
-        "learn3": "Diseño Basado en Referencias: Importación de bocetos 2D o fotografías de rayos X/siluetas al entorno digital para trazar y generar modelos 3D perfectamente escalados a proporciones del mundo real.",
-        "learn4": "Slicing Avanzado para Formas Complejas: Configuración de soportes orgánicos (tipo árbol) para cuidar el acabado superficial de piezas curvas, y estrategias de impresión para filamentos técnicos y flexibles (TPU, PETG)."
+        "title": "Nivel 3: Ingeniería de Producto y Laboratorio de Co-Creación Colectiva (15 Horas)",
+        "software": "Onshape CAD / Slicers avanzados (Bambu Studio / Orca Slicer / PrusaSlicer) e introducción a Nomad Sculpt / Blender",
+        "project": "Diseñar una 'Ruta de Co-Creación' (ej. prótesis de mano mecánica de código abierto, kit STEAM didáctico interactivo o adaptador modular ergonómico).",
+        "learn1": "Clase 1: Configuración del Estudio de Prototipado (Kick-Off). Metodologías Agile/Scrum de hardware, distribución de roles en la célula de ingeniería y auditoría de requerimientos técnicos.",
+        "learn2": "Clase 2: Modelado Colaborativo Concurrente en la Nube. Variables globales compartidas en Onshape, gestión de versiones, ramas de diseño (branching) y fusión de modificaciones (merging).",
+        "learn3": "Clase 3: Optimización Estructural y Mitigación Preventiva de Errores. Análisis de esfuerzos mecánicos empíricos, nervios de refuerzo (ribs) y sesiones de auditoría cruzada (peer-review).",
+        "learn4": "Clase 4: Certificación Técnica y Estrategias G-Code (File Freeze). Optimización de trayectorias, control térmico según geometría, perímetros críticos y validación de G-code final.",
+        "learn5": "Clase 5: Integración de Sistemas Complejos y Pitch de Ingeniería. Ensamble de componentes, pruebas de resiliencia del hardware, sustentación de pitch de 5 minutos y diplomas de superación."
       },
       "level4": {
-        "title": "Nivel 4: Ingeniería Inversa y Optimización para Manufactura (10 Horas)",
-        "software": "Onshape / Fusion 360 + Slicers avanzados (Bambu Studio / PrusaSlicer)",
-        "project": "Un proyecto libre con base social o tecnológica, como automatizar un mecanismo simple o diseñar un prototipo funcional para un emprendimiento escolar.",
-        "learn1": "Metrología Aplicada e Ingeniería Inversa: Uso del calibrador pie de rey (Vernier) para levantar medidas exactas de piezas comerciales dañadas o componentes físicos. Rediseño y mejora digital de la pieza original.",
-        "learn2": "Optimización Estructural (DfAM): Reglas de diseño para la impresión 3D: eliminación de soportes innecesarios mediante ángulos de auto-soporte (regla de los 45 grados), diseño de puentes, y orientación de las capas del modelo para resistir la máxima tensión mecánica.",
-        "learn3": "Validación de Prototipos: Simulaciones básicas de esfuerzo estático para identificar puntos críticos de ruptura en el diseño antes de la fabricación.",
-        "learn4": "Ensamblaje Híbrido y Post-Procesado: Diseño de alojamientos para integrar tornillería real e inserciones de latón por calor. Acabado de la pieza y presentación del proyecto funcional de cierre."
+        "title": "Nivel 4: Emprendimiento y Comercialización de Proyectos Maker (10 Horas)",
+        "software": "Onshape / Fusion 360 + Suite completa de laminación avanzada y costeo",
+        "project": "Concepción, costeo real y comercialización de un producto tecnológico o social diseñado y fabricado en el taller escolar.",
+        "learn1": "Módulo 1: Identificación y Diseño. Concepción del producto escolar, modelado digital optimizado y análisis de mercado para el prototipo.",
+        "learn2": "Módulo 2: Planificación y Producción. Selección de materiales comerciales, parámetros de fabricación rápida y producción del lote inicial.",
+        "learn3": "Módulo 3: Costeo y Pricing. Cálculo del costo de energía, depreciación de máquinas, peso del material y margen de utilidad comercial.",
+        "learn4": "Módulo 4: Lanzamiento y Ventas. Estrategias de presentación (Pitch B2B), empaque del producto y comercialización en eventos institucionales."
       },
       "table": {
         "title": "Resumen del Plan de Estudios por Niveles",
@@ -413,28 +415,28 @@
         ],
         "rows": [
           {
-            "col1": "Nivel 1: Fundamentos Espaciales",
-            "col2": "Lógica de Adición",
-            "col3": "Tinkercad / Cura / PrusaSlicer",
-            "col4": "Comprensión espacial, modelado básico y segmentación inicial."
+            "col1": "Nivel 1: Iniciación CAD e Impresión 3D",
+            "col2": "Pensamiento Espacial e Impresión 3D",
+            "col3": "Tinkercad / Orca Slicer / Creality Print",
+            "col4": "Bocetado básico, lógica booleana, parámetros estructurales de laminación y post-procesado físico."
           },
           {
             "col1": "Nivel 2: Diseño Paramétrico",
-            "col2": "Mecánica Funcional",
+            "col2": "Ensambles Mecánicos Funcionales",
             "col3": "Onshape o Fusion 360",
-            "col4": "Dibujo técnico 2D, cotas, restricciones, tolerancias y engranajes."
+            "col4": "Croquis restringidos 2D, modelado paramétrico 3D, holguras, tolerancias mecánicas y simulación cinemática."
           },
           {
-            "col1": "Nivel 3: Geometría Orgánica",
-            "col2": "Anatomía y Ergonomía",
-            "col3": "Nomad Sculpt o Blender",
-            "col4": "Escultura digital, modelado de superficies y soportes orgánicos."
+            "col1": "Nivel 3: Ingeniería de Producto",
+            "col2": "Laboratorio de Co-Creación",
+            "col3": "Suite completa + Nomad / Blender",
+            "col4": "Metodología Agile/Scrum de hardware, diseño colaborativo concurrente en la nube, optimización estructural (DfAM) y pitch."
           },
           {
-            "col1": "Nivel 4: Ingeniería Inversa",
-            "col2": "Optimización de Manufactura (DfAM)",
-            "col3": "Suite completa + Slicers",
-            "col4": "Uso de calibrador, DfAM, validación estática y ensamble híbrido."
+            "col1": "Nivel 4: Emprendimiento",
+            "col2": "Comercialización Maker",
+            "col3": "Laminadores avanzados y costeo",
+            "col4": "Costeo real de materiales y energía, estimación de precios de venta, empaque y comercialización de productos."
           }
         ]
       }
@@ -459,7 +461,7 @@
       "subtitle": "Buscamos equilibrar el rigor técnico y la empatía clínica en cada pieza entregada.",
       "pillar1": {
         "title": "Misión: Rigor e Innovación",
-        "desc": "Convertimos planos y archivos biomédicos en productos tangibles de alta tolerancia geométrica mediante escaneo y fabricación 3D local."
+        "desc": "Convertimos planos y archivos biomédicos en productos tangibles de alta tolerancia geométrica mediante escaneo y manufactura 3D local."
       },
       "pillar2": {
         "title": "Visión: Empatía Clínica",
@@ -468,7 +470,7 @@
     },
     "team": {
       "title": "Ingenieros y Especialistas de Soporte",
-      "subtitle": "Conozca los rostros locales encargados del modelado, fabricación y soporte técnico posventa en Colombia."
+      "subtitle": "Conozca los rostros locales encargados del modelado, manufactura y soporte técnico posventa en Colombia."
     },
     "infra": {
       "title": "Soporte e Infraestructura en Colombia",
@@ -523,10 +525,10 @@
     "category": "Filtrar Categoría",
     "readMore": "Ver Ficha Técnica",
     "categories": {
-      "humans": "Humans",
-      "biomedica": "Repuestos",
-      "vet": "Animals",
-      "academy": "Academy"
+      "humans": "Medicina Humana",
+      "biomedica": "Componentes e Insumos",
+      "vet": "Medicina Veterinaria",
+      "academy": "Academia"
     }
   },
   "Gracias": {
@@ -543,31 +545,31 @@
     },
     "about": {
       "title": "Sobre Nosotros | Novaforte sas",
-      "description": "Conoce al equipo de Novaforte sas, nuestra misión, visión e infraestructura para la fabricación digital y escaneo 3D en Bogotá."
+      "description": "Conoce al equipo de Novaforte sas, nuestra misión, visión e infraestructura para la manufactura digital y escaneo 3D en Bogotá."
     },
     "contact": {
       "title": "Contacto | Novaforte sas",
       "description": "Ponte en contacto con Novaforte sas. Solicita cotizaciones para prótesis, órtesis, repuestos biomédicos o capacitación maker."
     },
     "humans": {
-      "title": "Humans - Prótesis y Órtesis | Novaforte sas",
-      "description": "Diseño y fabricación digital de prótesis y órtesis personalizadas con polímeros biocompatibles de alta resistencia en Colombia."
+      "title": "Medicina Humana - Prótesis y Órtesis | Novaforte sas",
+      "description": "Diseño y manufactura digital de prótesis y órtesis personalizadas con polímeros biocompatibles de alta resistencia en Colombia."
     },
     "vet": {
-      "title": "Vet - Órtesis y Prótesis Animales | Novaforte sas",
+      "title": "Medicina Veterinaria - Órtesis y Prótesis Animales | Novaforte sas",
       "description": "Órtesis, prótesis y sillas de ruedas personalizadas para perros y gatos. Diseñadas para devolver la movilidad a tus mascotas."
     },
     "biomedica": {
-      "title": "Spares - Ingeniería Inversa y Repuestos | Novaforte sas",
-      "description": "Reconstrucción 3D e ingeniería inversa de repuestos críticos para equipos médicos descontinuados en Colombia."
+      "title": "Componentes - Ingeniería Inversa y Repuestos | Novaforte sas",
+      "description": "Reconstrucción 3D e ingeniería inversa de componentes e insumos críticos para equipos médicos descontinuados en Colombia."
     },
     "academy": {
-      "title": "Academy - Capacitación Maker | Novaforte sas",
+      "title": "Academia - Capacitación Maker | Novaforte sas",
       "description": "Capacitación docente y cursos de diseño 3D en Tinkercad y Fusion 360 para colegios en Colombia."
     },
     "portafolio": {
       "title": "Portafolio - Casos de Éxito | Novaforte sas",
-      "description": "Explora nuestro catálogo de casos clínicos reales, repuestos fabricados y laboratorios maker implementados en Colombia."
+      "description": "Explora nuestro catálogo de casos clínicos reales, componentes manufacturados y laboratorios maker implementados en Colombia."
     }
   }
 }

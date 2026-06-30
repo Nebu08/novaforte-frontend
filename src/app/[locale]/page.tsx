@@ -62,10 +62,26 @@ const METRICS = [
 
 // ─── Process steps ────────────────────────────────────────────────────────────
 const PROCESS = [
-  { step: "01", title: "Muestra o Archivo 3D", desc: "Recepción física o planos digitales" },
-  { step: "02", title: "Escaneo 3D / CAD", desc: "Digitalización y modelado paramétrico" },
-  { step: "03", title: "Fabricación", desc: "Impresión con materiales certificados" },
-  { step: "04", title: "Entrega y Soporte", desc: "Calibración + reporte dimensional" },
+  {
+    step: "01",
+    title: "Recepción & Digitalización",
+    desc: "Recepción de muestras físicas, planos bidimensionales o archivos CAD 3D. Analizamos la viabilidad técnica y geométrica de inmediato."
+  },
+  {
+    step: "02",
+    title: "Modelado y Simulación",
+    desc: "Escaneo óptico tridimensional de alta resolución o reconstrucción paramétrica digital. Validamos tolerancias, espesores de pared y encaje virtual."
+  },
+  {
+    step: "03",
+    title: "Manufactura Aditiva",
+    desc: "Impresión 3D de alta precisión utilizando polímeros biocompatibles, materiales compuestos (fibra de carbono) o filamentos técnicos según la aplicación."
+  },
+  {
+    step: "04",
+    title: "Post-Procesado & Entrega",
+    desc: "Remoción técnica de soportes, curado térmico/químico y control de calidad dimensional. Entrega final en menos de 72 horas para requerimientos urgentes."
+  }
 ];
 
 export default function Home() {
@@ -233,7 +249,7 @@ export default function Home() {
 
                     <div>
                       <p className="text-accent-400 text-xs font-bold tracking-widest uppercase mb-1">
-                        Fabricación Aditiva Clínica
+                        Manufactura Aditiva Clínica
                       </p>
                       <p className="text-white/80 text-sm leading-relaxed">
                         Del escaneo 3D o diseño digital al dispositivo terminado.
@@ -453,40 +469,37 @@ export default function Home() {
           </div>
 
           {/* Timeline horizontal */}
-          <div className="relative">
-            {/* Línea conectora */}
-            <div className="absolute top-8 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary-800 to-transparent hidden lg:block" />
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {PROCESS.map((step, i) => (
-                <div key={step.step} className="relative flex flex-col gap-4">
-                  {/* Número con círculo */}
-                  <div className="flex items-center gap-3 lg:flex-col lg:items-start lg:gap-4">
-                    <div className="relative z-10 flex-shrink-0">
-                      <div className="h-16 w-16 rounded-full border border-primary-800 bg-dark-900 flex items-center justify-center">
-                        <span
-                          className="text-xl font-black text-primary-500"
-                          style={{ fontFamily: "Outfit, sans-serif" }}
-                        >
-                          {step.step}
-                        </span>
-                      </div>
-                    </div>
-
-                    <div className="lg:mt-4">
-                      <h3 className="text-white font-bold text-base mb-1">{step.title}</h3>
-                      <p className="text-gray-500 text-sm leading-relaxed">{step.desc}</p>
-                    </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {PROCESS.map((step, i) => (
+              <div
+                key={step.step}
+                className="relative group overflow-hidden bg-white/5 border border-gray-800 rounded-2xl p-6 hover:border-primary-500/50 hover:bg-white/10 transition-all duration-300 flex flex-col justify-between"
+              >
+                {/* Fondo sutil degradado al pasar el cursor */}
+                <div aria-hidden="true" className="absolute -top-10 -left-10 w-24 h-24 bg-primary-600/5 rounded-full blur-2xl group-hover:bg-primary-600/10 transition-colors" />
+                
+                <div>
+                  {/* Número con caja destacada */}
+                  <div className="h-12 w-12 rounded-xl bg-primary-600/10 border border-primary-500/30 flex items-center justify-center text-primary-400 font-bold text-lg font-mono">
+                    {step.step}
                   </div>
 
-                  {/* Acento burdeos inferior */}
-                  <div
-                    className="h-0.5 w-12 bg-primary-600 rounded-full mt-auto hidden lg:block"
-                    style={{ opacity: 1 - i * 0.15 }}
-                  />
+                  {/* Título y descripción */}
+                  <h3
+                    className="text-white font-black text-lg mt-6 leading-tight"
+                    style={{ fontFamily: "Outfit, sans-serif" }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-300 text-sm leading-relaxed mt-3">
+                    {step.desc}
+                  </p>
                 </div>
-              ))}
-            </div>
+
+                {/* Línea decorativa inferior activa con hover */}
+                <div className="h-1 w-10 bg-primary-600 rounded-full mt-6 group-hover:w-20 transition-all duration-300" />
+              </div>
+            ))}
           </div>
 
           {/* Pilares de confianza */}

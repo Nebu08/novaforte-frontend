@@ -286,15 +286,90 @@ export interface Model3D {
 }
 
 export const MODELS_3D: Model3D[] = [
-  // ← Agrega aquí tus modelos 3D
-  // {
-  //   id: 1,
-  //   nameEs: "Prótesis de Mano",
-  //   nameEn: "Hand Prosthesis",
-  //   file: "/models/protesis-mano.glb",
-  //   thumbnail: "/images/models/protesis-mano-thumb.jpg",
-  //   category: "humans",
-  // },
+  {
+    id: 1,
+    nameEs: "Socket de Pierna para Prótesis",
+    nameEn: "Prosthesis Leg Socket",
+    file: "/models/2Socket Pierna.glb",
+    thumbnail: "/images/models/socket-thumb.jpg",
+    category: "humans",
+  },
+  {
+    id: 2,
+    nameEs: "Prótesis de Carpo Anatómica",
+    nameEn: "Anatomical Carpal Prosthesis",
+    file: "/models/Carpo.glb",
+    thumbnail: "/images/models/carpo-thumb.jpg",
+    category: "humans",
+  },
+  {
+    id: 3,
+    nameEs: "Engranaje Helicoidal Técnico",
+    nameEn: "Technical Helical Gear",
+    file: "/models/Engranajes.glb",
+    thumbnail: "/images/models/engranajes-thumb.jpg",
+    category: "biomedica",
+  },
+  {
+    id: 4,
+    nameEs: "Soporte Ajustable de Fronto-Luz",
+    nameEn: "Adjustable Headlight Mount",
+    file: "/models/Frontoluz.glb",
+    thumbnail: "/images/models/frontoluz-thumb.jpg",
+    category: "biomedica",
+  },
+  {
+    id: 5,
+    nameEs: "Acople Técnico de Resonador",
+    nameEn: "Technical Resonator Coupler",
+    file: "/models/Resonador.glb",
+    thumbnail: "/images/models/resonador-thumb.jpg",
+    category: "biomedica",
+  }
+];
+
+export interface PastCourse {
+  id: number;
+  schoolEs: string;
+  schoolEn: string;
+  courseEs: string;
+  courseEn: string;
+  certificateEs: string;
+  certificateEn: string;
+  image: string;
+}
+
+export const PAST_COURSES: PastCourse[] = [
+  {
+    id: 1,
+    schoolEs: "Colegio Anglo Colombiano",
+    schoolEn: "Anglo Colombiano School",
+    courseEs: "Iniciación al Pensamiento Espacial y Modelado CAD Intuitivo",
+    courseEn: "Introduction to Spatial Thinking and Intuitive CAD Modeling",
+    certificateEs: "Certificado en: Pensamiento Espacial y Lógica de Adición (Nivel 1)",
+    certificateEn: "Certified in: Spatial Thinking and Addition Logic (Level 1)",
+    image: "/images/courses/curso_basico_tinkercad.png",
+  },
+  {
+    id: 2,
+    schoolEs: "Colegio Marymount Bogotá",
+    schoolEn: "Marymount School Bogota",
+    courseEs: "Diseño Paramétrico y Ensambles Mecánicos Funcionales",
+    courseEn: "Parametric Design and Functional Mechanical Assemblies",
+    certificateEs: "Certificado en: Ensambles Mecánicos y Tolerancias Reales (Nivel 2)",
+    certificateEn: "Certified in: Mechanical Assemblies and Real Tolerances (Level 2)",
+    image: "/images/courses/curso_medio_onshape.png",
+  },
+  {
+    id: 3,
+    schoolEs: "Colegio Gimnasio Campestre",
+    schoolEn: "Gimnasio Campestre School",
+    courseEs: "Ingeniería de Producto y Co-Creación Colectiva",
+    courseEn: "Product Engineering and Collective Co-Creation",
+    certificateEs: "Certificado en: Laboratorio de Co-Creación y Prototipado 3D (Nivel 3)",
+    certificateEn: "Certified in: Co-Creation Lab and 3D Prototyping (Level 3)",
+    image: "/images/courses/curso_avanzado_protesis.png",
+  }
 ];
 
 // ============================================================

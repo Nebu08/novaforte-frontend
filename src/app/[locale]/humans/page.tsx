@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
 import DownloadModal from "@/components/DownloadModal";
+import ModelViewer3D from "@/components/ModelViewer3D";
 
 // SPECS shifted to local component state to support next-intl dynamic translations
 
@@ -102,30 +103,13 @@ export default function HumansPage() {
               </div>
             </div>
 
-            {/* Columna métricas — tarjeta oscura */}
-            <div className="hidden lg:block">
-              <div className="rounded-2xl p-6 border border-primary-900/20 dark:border-primary-800/40 bg-dark-900" style={{ background: "linear-gradient(145deg, #1c0d10 0%, #0e0d0c 100%)" }}>
-                <p className="text-xs font-bold tracking-widest uppercase text-primary-400 mb-5">
-                  {t("extra.specsTitle")}
-                </p>
-                <div className="grid grid-cols-2 gap-5">
-                  {specs.map((s) => (
-                    <div key={s.label} className="flex flex-col gap-1 p-3 rounded-xl bg-white/5">
-                      <span className="text-xl font-black text-primary-400 leading-none" style={{ fontFamily: "Outfit, sans-serif" }}>
-                        {s.value}
-                      </span>
-                      <span className="text-xs text-gray-500 leading-tight">{s.label}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="mt-5 pt-4 border-t border-white/10 flex items-center gap-2">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500" />
-                  </span>
-                  <span className="text-xs text-gray-500 font-mono">{t("extra.status")}</span>
-                </div>
-              </div>
+            {/* Columna Visor 3D Interactivo */}
+            <div className="w-full h-[420px] rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-800 shadow-lg bg-[#0e0d0c] mt-8 lg:mt-0">
+              <ModelViewer3D
+                src="/models/2Socket Pierna.glb"
+                label="Socket de Pierna (Interactive 3D)"
+                height={420}
+              />
             </div>
 
           </div>

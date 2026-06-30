@@ -7,7 +7,7 @@ export default function Footer() {
   const tHeader = useTranslations("Header");
 
   return (
-    <footer className="w-full bg-dark-900 text-gray-300 border-t border-gray-800 transition-colors duration-300">
+    <footer className="w-full bg-white dark:bg-dark-900 text-gray-800 dark:text-gray-300 border-t border-gray-200 dark:border-gray-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-space-md sm:px-space-lg py-space-xl grid grid-cols-1 md:grid-cols-12 gap-space-xl">
         {/* Brand Section */}
         <div className="col-span-1 md:col-span-6 flex flex-col gap-space-sm">
@@ -17,23 +17,23 @@ export default function Footer() {
                 src="/images/logo.svg"
                 alt="Novaforte sas logo"
                 fill
-                className="object-cover invert"
+                className="object-cover dark:invert"
                 style={{ objectPosition: "center 48%" }}
                 sizes="340px"
               />
             </div>
           </Link>
-          <p className="text-text-sm max-w-sm text-gray-400 mt-space-2xs">
+          <p className="text-text-sm max-w-sm text-gray-500 dark:text-gray-400 mt-space-2xs">
             {t("motto")}
           </p>
         </div>
 
         {/* Quick Links Column */}
         <div className="col-span-1 md:col-span-3 flex flex-col gap-space-sm">
-          <h3 className="text-text-md font-bold text-white tracking-wide">
+          <h3 className="text-text-md font-bold text-dark-900 dark:text-white tracking-wide">
             {t("linksTitle")}
           </h3>
-          <nav className="flex flex-col gap-space-2xs text-text-sm">
+          <nav className="flex flex-col gap-space-2xs text-text-sm text-gray-600 dark:text-gray-400">
             <Link href="/" className="hover:text-primary-500 transition-colors duration-200">
               {tHeader("home")}
             </Link>
@@ -57,11 +57,11 @@ export default function Footer() {
 
         {/* Contact Info Column */}
         <div className="col-span-1 md:col-span-3 flex flex-col gap-space-sm">
-          <h3 className="text-text-md font-bold text-white tracking-wide">
+          <h3 className="text-text-md font-bold text-dark-900 dark:text-white tracking-wide">
             {t("contactTitle")}
           </h3>
-          <div className="flex flex-col gap-space-2xs text-text-sm text-gray-400">
-            <p className="text-white font-semibold">{t("colombia")}</p>
+          <div className="flex flex-col gap-space-2xs text-text-sm text-gray-600 dark:text-gray-400">
+            <p className="text-dark-800 dark:text-white font-semibold">{t("colombia")}</p>
             <p>{t("address")}</p>
             <a
               href={`mailto:${t("email")}`}
@@ -74,13 +74,13 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="w-full bg-black/40 py-space-md border-t border-gray-800/40">
-        <div className="max-w-7xl mx-auto px-space-md sm:px-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-text-xs text-gray-200">
+      <div className="w-full bg-gray-50/50 dark:bg-black/40 py-space-md border-t border-gray-200/50 dark:border-gray-800/40">
+        <div className="max-w-7xl mx-auto px-space-md sm:px-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-text-xs text-gray-600 dark:text-gray-200">
           <p>{t("rights")}</p>
           <div className="flex items-center gap-space-md">
             <a
               href="#"
-              className="text-gray-300 hover:text-primary-500 transition-colors duration-200"
+              className="text-gray-500 dark:text-gray-300 hover:text-primary-500 transition-colors duration-200"
             >
               {t("legal")}
             </a>
