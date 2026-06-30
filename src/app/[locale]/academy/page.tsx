@@ -160,30 +160,36 @@ export default function AcademyPage() {
           </div>
 
           {/* Escalera visual — cada nivel más alto que el anterior */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {/* Estructura Curricular - Tarjetas de Niveles Uniformes */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[1, 2, 3, 4].map((num) => {
               const level = LEVEL_COLORS[num - 1];
-              const heights = ["h-32", "h-40", "h-52", "h-64"];
               return (
                 <div
                   key={num}
-                  className={`group relative flex flex-col justify-end rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${heights[num - 1]}`}
-                  style={{ background: `linear-gradient(160deg, ${level.bg}dd 0%, ${level.bg} 100%)` }}
+                  className="group relative flex flex-col justify-between rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl p-6 min-h-[260px] sm:min-h-[280px]"
+                  style={{ background: `linear-gradient(135deg, ${level.bg} 0%, ${level.bg}e5 100%)` }}
                 >
-                  {/* Patrón puntitos */}
+                  {/* Patrón decorativo de puntos */}
                   <div
                     aria-hidden="true"
                     className="absolute inset-0 opacity-10"
                     style={{ backgroundImage: "radial-gradient(circle, #fff 1px, transparent 1px)", backgroundSize: "16px 16px" }}
                   />
-                  <div className="relative p-5 flex flex-col gap-2">
-                    <span className="text-4xl font-black text-white/20 leading-none" style={{ fontFamily: "Outfit, sans-serif" }}>
-                      {num}
+                  
+                  {/* Contenido Superior: Número y Título */}
+                  <div className="relative z-10">
+                    <span className="text-5xl font-black text-white/20 leading-none" style={{ fontFamily: "Outfit, sans-serif" }}>
+                      0{num}
                     </span>
-                    <h3 className="text-sm font-bold text-white leading-tight">
+                    <h3 className="text-base font-black text-white leading-snug mt-3" style={{ fontFamily: "Outfit, sans-serif" }}>
                       {t(`levels.card${num}.title`)}
                     </h3>
-                    <p className="text-xs text-white/70 leading-relaxed">
+                  </div>
+
+                  {/* Contenido Inferior: Descripción */}
+                  <div className="relative z-10 mt-4">
+                    <p className="text-xs text-white/90 leading-relaxed">
                       {t(`levels.card${num}.desc`)}
                     </p>
                   </div>
