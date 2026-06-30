@@ -368,42 +368,42 @@
       "subtitle": "Click on each level to learn about the technical focus, software tools, and suggested practical projects.",
       "level1": {
         "title": "Level 1: Introduction to Spatial Thinking and Intuitive CAD Modeling (10 Hours)",
-        "software": "Tinkercad / Tinkercad Classrooms (Intuitive, secure, and free web tool) and introduction to Orca Slicer / Creality Print",
-        "project": "Design a 'Personalized Pocket Object' (e.g. modular key organizer, ergonomic tag, or a mini functional utility accessory).",
-        "learn1": "Class 1: The Jump into Three Dimensions. 3D printer anatomy and calibration, Cartesian operation (X, Y, Z axes), PLA filament properties, and extrusion physics.",
-        "learn2": "Class 2: Addition, Subtraction, and Creative Modification. Geometric algebra and boolean operations. Control of proportions, grouping, and millimetric hollows in Tinkercad.",
-        "learn3": "Class 3: Material Limits and Custom Design. Physical rules of Design for Additive Manufacturing (DFAM), bridges, overhangs, and critical angles > 45 degrees.",
-        "learn4": "Class 4: Basic Slicing and Technical Closure (File Freeze). Slicing parameters (layer height, infill, and patterns), Orca Slicer workflow, and STL export.",
-        "learn5": "Class 5: Physical Phase, Post-Processing, and Certification. Materialization, safe removal of minimal supports, dimensional tolerance audits, and graduation."
+        "software": "Tinkercad / Tinkercad Classrooms and introduction to Orca Slicer / Creality Print",
+        "project": "Design a 'Personalized Pocket Object' (e.g. modular key organizer, ergonomic tag, or a mini functional utility accessory) with geometric addition and subtraction.",
+        "learn1": "Class 1: The Jump into Three Dimensions. Fundamentals of Additive Manufacturing. Cartesian operation of 3D printers (X, Y, Z axes), PLA filament properties. Practice: Tinkercad profile configuration and basic primitive shapes.",
+        "learn2": "Class 2: Addition, Subtraction, and Creative Modification. Geometric algebra and boolean operations. Solids vs holes and alignment. Practice: guided design of a mug with handle and millimetric hollows.",
+        "learn3": "Class 3: Material Limits and Custom Design. Design rules for additive manufacturing (DFAM), bridges and critical angles > 45°. Practice: sketching and digital modeling of the pocket object.",
+        "learn4": "Class 4: Slicing Basic and Technical Closure (File Freeze). Introduction to Orca Slicer / Creality Print. Layer height, infill, and STL export. Control: dimensions technical validation and platform upload.",
+        "learn5": "Class 5: Physical Phase, Post-Processing, and Certification. Physical materialization. Safe post-processing: removal of strings/supports. Graduation: showcase, aesthetic evaluation, and certificate delivery."
       },
       "level2": {
         "title": "Level 2: Parametric Design and Functional Mechanical Assemblies (15 Hours)",
-        "software": "Onshape (Free industrial-grade CAD web tool for education) or Autodesk Fusion 360",
+        "software": "Onshape (Cloud industrial CAD) or Autodesk Fusion 360",
         "project": "Design a 'Rubber Band-Powered Impeller Car' (modeling chasis, functional wheels, transmission shafts, and brackets with precise clearances).",
-        "learn1": "Class 1: From 2D Sketch to Parametric Solid. 2D technical drawing in Onshape, standard orthographic views (front, top, side), and clean extrusion operations.",
-        "learn2": "Class 2: Geometric Constraints and Design Intent. Mastery of the 'fully defined sketch' using logical rules (tangency, symmetry) for stable parametric updates.",
-        "learn3": "Class 3: Simple Mechanics, Fits, and Real Tolerances. Thermal contraction of polymers, functional clearances (0.2 to 0.4 mm), press-fits, and concentric joints.",
-        "learn4": "Class 4: Assembly Verification and Advanced Slicing (File Freeze). Virtual component mating in Onshape, collision analysis, tree support tuning, and torsional strength.",
-        "learn5": "Class 5: Factory Assembly Line and Performance Testing. Physical assembly with screws and inserts, tolerance troubleshooting, track tests, and diplomas."
+        "learn1": "Class 1: From 2D Sketch to Parametric Solid. Parametric design fundamentals, technical drawing and views (front, top, side). Sketching and extruding. Practice: Onshape and sketches with dimensions and constraints.",
+        "learn2": "Class 2: Geometric Constraints and Design Intent. Sketch relations (coincidence, tangency, symmetry) and design intent. Practice: model a support plate with slots and change the master length dimension.",
+        "learn3": "Class 3: Simple Mechanics, Fits, and Real Tolerances. Thermal contraction of polymers. Functional clearances (0.2 to 0.4 mm) and press-fits. Practice: wheels and axles modeling for the Impeller Car.",
+        "learn4": "Class 4: Assembly Verification and Advanced Slicing (File Freeze). Advanced slicing, tree supports, and perimeters. Assemblies and collision detection in Onshape. Control: virtual assembly test and file freeze.",
+        "learn5": "Class 5: Factory Assembly Line and Performance Testing. Industrial assembly and fitting. Failure analysis on physical tolerances. Graduation: guided assembly, track tests, and diplomas."
       },
       "level3": {
         "title": "Level 3: Product Engineering and Collective Co-Creation Lab (15 Hours)",
-        "software": "Onshape CAD / Advanced Slicers (Bambu Studio / Orca Slicer / PrusaSlicer) and introduction to Nomad Sculpt / Blender",
-        "project": "Design a 'Co-Creation Route' (e.g. open-source mechanical prosthetic hand, interactive STEAM educational kit, or modular ergonomic adapter).",
-        "learn1": "Class 1: Prototyping Studio Setup (Kick-Off). Agile/Scrum methodologies for hardware, role distribution in the engineering cell, and technical requirements audit.",
-        "learn2": "Class 2: Cloud-Based Collaborative Concurrent Modeling. Shared global variables in Onshape, version control, branching, and merging design branches.",
-        "learn3": "Class 3: Structural Optimization and Preventive Error Mitigation. Empirical mechanical stress analysis, structural reinforcement ribs (ribs), and peer-review sessions.",
-        "learn4": "Class 4: Technical Certification and G-Code Strategies (File Freeze). Slicing path optimization, geometry-specific thermal control, critical perimeters, and G-code validation.",
-        "learn5": "Class 5: Complex Systems Integration and Engineering Pitch. Mating mechanical and electronic components, hardware resilience test, 5-minute pitch presentation, and certificates."
+        "software": "Onshape / Advanced Slicers and introduction to Blender / Nomad Sculpt",
+        "project": "Design a 'Co-Creation Route' (e.g. interactive STEAM educational kit for schools or creation of custom sculpture with complex volume).",
+        "learn1": "Class 1: Prototyping Studio Setup (Kick-Off). Agile/Scrum methodologies for hardware. Routes: Technical (Onshape) and Artistic (Blender). Practice: STEAM Kit vs Sandbox sculpture challenge.",
+        "learn2": "Class 2: Cloud-Based Collaborative Concurrent Modeling. Multibody modeling in Onshape with shared variables vs Digital Sculpting (Blender). Practice: real-time merging and silhouette blockout.",
+        "learn3": "Class 3: Structural Optimization and Preventive Error Mitigation. Mechanical stress analysis and ribs. Topology, remesh, and decimation. Practice: Peer-Review audit (eliminate stress concentrators or thicken fine details).",
+        "learn4": "Class 4: Technical Certification and G-Code Strategies (File Freeze). G-code analysis, critical perimeters, and tree supports. Control: final assembly validation, repository lock, and transfer to production.",
+        "learn5": "Class 5: Complex Systems Integration and Engineering Pitch. Systems integration, tension calibration, and finishing. Graduation: final assembly of STEAM Kit or support removal, and 5-minute engineering pitch."
       },
       "level4": {
         "title": "Level 4: Entrepreneurship and Commercialization of Maker Projects (10 Hours)",
         "software": "Onshape / Fusion 360 + Advanced slicing suites and costing spreadsheet",
         "project": "Conceive, cost, and commercialize a technological or social product designed and manufactured in the school workshop.",
-        "learn1": "Module 1: Identification & Design. School product conceptualization, optimized digital modeling, and market analysis for the prototype.",
-        "learn2": "Module 2: Planning & Production. Commercial materials selection, rapid manufacturing parameters, and initial batch production.",
-        "learn3": "Module 3: Costing & Pricing. Calculation of energy cost, machine depreciation, material weight, and commercial profit margin.",
-        "learn4": "Module 4: Launch & Sales. Pitch strategies (B2B Pitch), product packaging, and sales execution at institutional events."
+        "learn1": "Class 1: Identification & Design. School product conceptualization, optimized digital modeling, and market analysis for the prototype.",
+        "learn2": "Class 2: Planning & Production. Commercial materials selection, rapid manufacturing parameters, and initial batch production.",
+        "learn3": "Class 3: Costing & Pricing. Calculation of energy cost, machine depreciation, material weight, and commercial profit margin.",
+        "learn4": "Class 4: Launch & Sales. Pitch strategies (B2B Pitch), product packaging, and sales execution at institutional events."
       },
       "table": {
         "title": "Curriculum Summary by Levels",

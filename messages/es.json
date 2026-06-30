@@ -297,16 +297,16 @@
         "desc": "Formato: 5 módulos de 2 horas. El estudiante rompe la barrera entre lo digital y lo físico, comprendiendo la lógica de la máquina y las bases del diseño tridimensional."
       },
       "card2": {
-        "title": "Nivel 2: Diseño Paramétrico y Mecánica Funcional (15 Horas)",
-        "desc": "Transición del modelado intuitivo al diseño técnico. El estudiante aprende a utilizar restricciones matemáticas para crear piezas funcionales y mecanismos que interactúan entre sí."
+        "title": "Nivel 2: Diseño Paramétrico y Ensambles Mecánicos Funcionales (15 Horas)",
+        "desc": "La transición formal hacia la rigurosidad de la ingeniería de precisión usando Onshape, enfocado en restricciones, parametrización y ensambles de componentes acoplados."
       },
       "card3": {
-        "title": "Nivel 3: Geometría Orgánica y Ergonomía (15 Horas)",
-        "desc": "Ruptura con los ángulos rectos. El estudiante aprende a modelar curvas fluidas, esculpir digitalmente y adaptar la tecnología a la anatomía y la naturaleza."
+        "title": "Nivel 3: Ingeniería de Producto y Laboratorio de Co-Creación Colectiva (15 Horas)",
+        "desc": "Un entorno de co-creación dividido en ingeniería paramétrica (Onshape) y arte digital (Blender) que converge en proyectos reales de alto impacto."
       },
       "card4": {
-        "title": "Nivel 4: Ingeniería Inversa y Optimización para Manufactura (10 Horas)",
-        "desc": "El nivel de consolidación. El estudiante se enfrenta a problemas del mundo real, midiendo, analizando y optimizando piezas bajo los estándares del Diseño para Manufactura Aditiva (DfAM)."
+        "title": "Nivel 4: Emprendimiento y Comercialización de Proyectos Maker (10 Horas)",
+        "desc": "El nivel de consolidación. El estudiante se enfrenta a problemas del mundo real, costeando, empaquetando y comercializando sus diseños en eventos escolares."
       }
     },
     "ent": {
@@ -368,42 +368,42 @@
       "subtitle": "Haga clic en cada nivel para conocer el enfoque técnico, herramientas de software y proyectos prácticos sugeridos.",
       "level1": {
         "title": "Nivel 1: Iniciación al Pensamiento Espacial y Modelado CAD Intuitivo (10 Horas)",
-        "software": "Tinkercad / Tinkercad Classrooms (Herramienta web intuitiva, segura y gratuita) e introducción a Orca Slicer / Creality Print",
-        "project": "Diseñar un 'Objeto Personalizable de Pocket' (ej. organizador modular de llaves, identificador ergonómico o mini accesorio utilitario funcional de bolsillo).",
-        "learn1": "Clase 1: El Salto a las Tres Dimensiones. Fundamentos de la manufactura aditiva frente a la remoción tradicional, anatomía cartesiana de impresoras 3D y extrusión física de filamento PLA.",
-        "learn2": "Clase 2: Suma, Resta y Modificación Creativa. Álgebra geométrica y operaciones booleanas. Control de proporciones, agrupamientos y vaciados milimétricos en el lienzo digital de Tinkercad.",
-        "learn3": "Clase 3: Límites del Material y Diseño de Autor. Reglas físicas de diseño para manufactura aditiva (DFAM), el dilema de la gravedad en el aire, ángulos críticos > 45° y puentes.",
-        "learn4": "Clase 4: Slicing Básico y Cierre Técnico (File Freeze). Parámetros clave de laminación (altura de capa, infill y patrones), Orca Slicer y exportación de archivos a formato STL.",
-        "learn5": "Clase 5: Fase Física, Post-Procesado y Certificación. Materialización física, remoción segura de soportes mínimos, control de tolerancia y ceremonia de clausura con certificado oficial."
+        "software": "Tinkercad / Tinkercad Classrooms e introducción a Orca Slicer / Creality Print",
+        "project": "Diseñar un 'Objeto Personalizable de Pocket' (ej. organizador modular de llaves, identificador ergonómico o mini accesorio funcional de bolsillo) con adición y sustracción geométrica.",
+        "learn1": "Clase 1: El Salto a las Tres Dimensiones. Fundamentos de Manufactura Aditiva. Anatomía cartesiana de impresoras 3D (ejes X, Y, Z), fusión de filamento PLA. Práctica: configuración de Tinkercad y arrastre de formas primitivas básicas.",
+        "learn2": "Clase 2: Suma, Resta y Modificación Creativa. Álgebra geométrica y operaciones booleanas. Sólidos vs formas huecas y alineación. Práctica: diseño guiado de taza con asa y vaciados milimétricos.",
+        "learn3": "Clase 3: Límites del Material y Diseño de Autor. Reglas de diseño para manufactura aditiva (DFAM), voladizos (bridges) y ángulos críticos > 45°. Práctica: bocetación y modelado digital del Objeto de Bolsillo.",
+        "learn4": "Clase 4: Slicing Básico y Cierre Técnico (File Freeze). Introducción a Orca Slicer / Creality Print. Altura de capa, infill y exportación STL. Control: validación de medidas y carga obligatoria en plataforma.",
+        "learn5": "Clase 5: Fase Física, Post-Procesado y Certificación. Materialización física. Post-procesamiento seguro: remoción de hilos/soportes. Clausura: socialización, evaluación estética y entrega de certificado Novaforte."
       },
       "level2": {
         "title": "Nivel 2: Diseño Paramétrico y Ensambles Mecánicos Funcionales (15 Horas)",
-        "software": "Onshape (Herramienta web CAD industrial de acceso libre educativo) o Autodesk Fusion 360",
-        "project": "Diseñar un 'Carrito de Impulso por Caucho' (modelar chasis, ruedas funcionales, ejes de transmisión y anclajes con holguras precisas).",
-        "learn1": "Clase 1: Del Croquis 2D al Sólido Paramétrico. Introducción al dibujo técnico 2D en Onshape, lectura de vistas normalizadas (alzado, planta, perfil) y operaciones de extrusión volumétrica limpia.",
-        "learn2": "Clase 2: Restricciones Geométricas e Inteligencia de Diseño. Dominio del 'croquis completamente definido' usando reglas lógicas (tangencia, simetría) para admitir cambios paramétricos estables.",
-        "learn3": "Clase 3: Mecánica Simple, Ajustes y Tolerancias Reales. Factor de contracción térmica de polímeros, holguras de tolerancia (0.2 a 0.4 mm), ajustes por fricción (press-fit) y uniones concéntricas.",
-        "learn4": "Clase 4: Verificación de Ensambles y Slicing Avanzado (File Freeze). Conexión virtual de componentes en Onshape, análisis de colisiones, configuración de Tree supports y resistencia torsional.",
-        "learn5": "Clase 5: Línea de Ensamble de Fábrica y Pruebas de Rendimiento. Ensamblaje físico con tornillería y herrajes, diagnóstico de tolerancias, pruebas dinámicas en pista y diplomas institucionales."
+        "software": "Onshape (Cloud CAD industrial) o Autodesk Fusion 360",
+        "project": "Diseñar un 'Carrito de Impulso por Caucho' (chasis, ruedas funcionales, ejes de transmisión y anclajes con holguras precisas).",
+        "learn1": "Clase 1: Del Croquis 2D al Sólido Paramétrico. Fundamentos de diseño paramétrico, dibujo técnico y vistas (alzado, planta, perfil). Croquis y extrusión. Práctica: Onshape y bocetos con cotas y dimensiones métricas.",
+        "learn2": "Clase 2: Restricciones Geométricas e Inteligencia de Diseño. Relaciones de croquis (coincidencia, tangencia, simetría) e intención de diseño. Práctica: soporte con ranuras y cambio de cota maestra.",
+        "learn3": "Clase 3: Mecánica Simple, Ajustes y Tolerancias Reales. Factor de contracción térmica de polímeros. Holguras de 0.2 a 0.4 mm y press-fit. Práctica: modelado de ruedas y ejes del Carrito de Impulso.",
+        "learn4": "Clase 4: Verificación de Ensambles y Slicing Avanzado (File Freeze). Slicing avanzado, soportes tipo árbol y perímetros. Ensambles y colisiones en Onshape. Control: prueba virtual y congelamiento de archivos.",
+        "learn5": "Clase 5: Línea de Ensamble de Fábrica y Pruebas de Rendimiento. Ensamblaje industrial y ajuste. Diagnóstico de fallas en tolerancias. Clausura: ensamble guiado, pruebas dinámicas en pista y diplomas."
       },
       "level3": {
         "title": "Nivel 3: Ingeniería de Producto y Laboratorio de Co-Creación Colectiva (15 Horas)",
-        "software": "Onshape CAD / Slicers avanzados (Bambu Studio / Orca Slicer / PrusaSlicer) e introducción a Nomad Sculpt / Blender",
-        "project": "Diseñar una 'Ruta de Co-Creación' (ej. prótesis de mano mecánica de código abierto, kit STEAM didáctico interactivo o adaptador modular ergonómico).",
-        "learn1": "Clase 1: Configuración del Estudio de Prototipado (Kick-Off). Metodologías Agile/Scrum de hardware, distribución de roles en la célula de ingeniería y auditoría de requerimientos técnicos.",
-        "learn2": "Clase 2: Modelado Colaborativo Concurrente en la Nube. Variables globales compartidas en Onshape, gestión de versiones, ramas de diseño (branching) y fusión de modificaciones (merging).",
-        "learn3": "Clase 3: Optimización Estructural y Mitigación Preventiva de Errores. Análisis de esfuerzos mecánicos empíricos, nervios de refuerzo (ribs) y sesiones de auditoría cruzada (peer-review).",
-        "learn4": "Clase 4: Certificación Técnica y Estrategias G-Code (File Freeze). Optimización de trayectorias, control térmico según geometría, perímetros críticos y validación de G-code final.",
-        "learn5": "Clase 5: Integración de Sistemas Complejos y Pitch de Ingeniería. Ensamble de componentes, pruebas de resiliencia del hardware, sustentación de pitch de 5 minutos y diplomas de superación."
+        "software": "Onshape / Slicers avanzados e introducción a Blender / Nomad Sculpt",
+        "project": "Diseñar una 'Ruta de Co-Creación' (ej. Kit STEAM didáctico interactivo para laboratorios o creación de escultura de autor con volumen complejo).",
+        "learn1": "Clase 1: Configuración del Estudio de Prototipado (Kick-Off). Gestión Agile/Scrum de hardware. Rutas: Técnica (Onshape) y Artística (Blender). Práctica: reto de Kit STEAM vs escultura Caja de Arena.",
+        "learn2": "Clase 2: Modelado Colaborativo Concurrente en la Nube. Modelado multicuerpo en Onshape con variables compartidas vs Escultura Digital (Blender). Práctica: fusiones en tiempo real y blockout de silueta.",
+        "learn3": "Clase 3: Optimización Estructural y Mitigación Preventiva de Errores. Esfuerzos mecánicos y ribs. Topología, remesh y decimation. Práctica: Peer-Review (eliminar esfuerzos o engrosar detalles finos).",
+        "learn4": "Clase 4: Certificación Técnica y Estrategias G-Code (File Freeze). G-code, perímetros y soportes tipo árbol. Control: validación final de ensambles, bloqueo de repositorios y transferencia para producción.",
+        "learn5": "Clase 5: Integración de Sistemas Complejos y Pitch de Ingeniería. Integración sociomaterial, calibración y acabado. Clausura: ensamble final de Kit STEAM o remoción de soportes y Pitch de ingeniería de 5 minutos."
       },
       "level4": {
         "title": "Nivel 4: Emprendimiento y Comercialización de Proyectos Maker (10 Horas)",
-        "software": "Onshape / Fusion 360 + Suite completa de laminación avanzada y costeo",
+        "software": "Onshape / Fusion 360 + Laminadores avanzados y costeo",
         "project": "Concepción, costeo real y comercialización de un producto tecnológico o social diseñado y fabricado en el taller escolar.",
-        "learn1": "Módulo 1: Identificación y Diseño. Concepción del producto escolar, modelado digital optimizado y análisis de mercado para el prototipo.",
-        "learn2": "Módulo 2: Planificación y Producción. Selección de materiales comerciales, parámetros de fabricación rápida y producción del lote inicial.",
-        "learn3": "Módulo 3: Costeo y Pricing. Cálculo del costo de energía, depreciación de máquinas, peso del material y margen de utilidad comercial.",
-        "learn4": "Módulo 4: Lanzamiento y Ventas. Estrategias de presentación (Pitch B2B), empaque del producto y comercialización en eventos institucionales."
+        "learn1": "Clase 1: Identificación y Diseño. Concepción del producto escolar, modelado digital optimizado y análisis de mercado para el prototipo.",
+        "learn2": "Clase 2: Planificación y Producción. Selección de materiales comerciales, parámetros de fabricación rápida y producción del lote inicial.",
+        "learn3": "Clase 3: Costeo y Pricing. Cálculo del costo de energía, depreciación de máquinas, peso del material y margen de utilidad comercial.",
+        "learn4": "Clase 4: Lanzamiento y Ventas. Estrategias de presentación (Pitch B2B), empaque del producto y comercialización en eventos institucionales."
       },
       "table": {
         "title": "Resumen del Plan de Estudios por Niveles",
