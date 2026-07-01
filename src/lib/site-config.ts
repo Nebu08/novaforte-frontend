@@ -342,8 +342,8 @@ export interface PastCourse {
 export const PAST_COURSES: PastCourse[] = [
   {
     id: 1,
-    schoolEs: "Colegio Anglo Colombiano",
-    schoolEn: "Anglo Colombiano School",
+    schoolEs: "Gimnasio Campus Pampuri",
+    schoolEn: "Gimnasio Campus Pampuri",
     courseEs: "Iniciación al Pensamiento Espacial y Modelado CAD Intuitivo",
     courseEn: "Introduction to Spatial Thinking and Intuitive CAD Modeling",
     certificateEs: "Certificado en: Pensamiento Espacial y Lógica de Adición (Nivel 1)",
@@ -352,23 +352,23 @@ export const PAST_COURSES: PastCourse[] = [
   },
   {
     id: 2,
-    schoolEs: "Colegio Marymount Bogotá",
-    schoolEn: "Marymount School Bogota",
-    courseEs: "Diseño Paramétrico y Ensambles Mecánicos Funcionales",
-    courseEn: "Parametric Design and Functional Mechanical Assemblies",
-    certificateEs: "Certificado en: Ensambles Mecánicos y Tolerancias Reales (Nivel 2)",
-    certificateEn: "Certified in: Mechanical Assemblies and Real Tolerances (Level 2)",
-    image: "/images/courses/curso_medio_onshape.png",
+    schoolEs: "Colegio Glenn Doman",
+    schoolEn: "Glenn Doman School",
+    courseEs: "Iniciación al Pensamiento Espacial y Modelado CAD Intuitivo",
+    courseEn: "Introduction to Spatial Thinking and Intuitive CAD Modeling",
+    certificateEs: "Certificado en: Pensamiento Espacial y Lógica de Adición (Nivel 1)",
+    certificateEn: "Certified in:Spatial Thinking and Addition Logic (Level 1)",
+    image: "/images/courses/curso_basico_tinkercad.png",
   },
   {
     id: 3,
-    schoolEs: "Colegio Gimnasio Campestre",
-    schoolEn: "Gimnasio Campestre School",
-    courseEs: "Ingeniería de Producto y Co-Creación Colectiva",
-    courseEn: "Product Engineering and Collective Co-Creation",
-    certificateEs: "Certificado en: Laboratorio de Co-Creación y Prototipado 3D (Nivel 3)",
-    certificateEn: "Certified in: Co-Creation Lab and 3D Prototyping (Level 3)",
-    image: "/images/courses/curso_avanzado_protesis.png",
+    schoolEs: "Colegio Calandaima IED",
+    schoolEn: "Colegio Calandaima IED",
+    courseEs: "Iniciación al Pensamiento Espacial y Modelado CAD Intuitivo",
+    courseEn: "Introduction to Spatial Thinking and Intuitive CAD Modeling",
+    certificateEs: "Certificado en: Pensamiento Espacial y Lógica de Adición (Nivel 1)",
+    certificateEn: "Certified in:Spatial Thinking and Addition Logic (Level 1)",
+    image: "/images/courses/curso_basico_tinkercad.png",
   }
 ];
 
