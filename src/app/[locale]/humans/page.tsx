@@ -4,7 +4,8 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
 import DownloadModal from "@/components/DownloadModal";
-import ModelViewer3D from "@/components/ModelViewer3D";
+import CategoryModelViewer from "@/components/CategoryModelViewer";
+import CategoryCasesCarousel from "@/components/CategoryCasesCarousel";
 
 // SPECS shifted to local component state to support next-intl dynamic translations
 
@@ -39,13 +40,6 @@ export default function HumansPage() {
   const t = useTranslations("Humans");
   const [modalOpen, setModalOpen] = useState(false);
 
-  const specs = [
-    { value: "±0.1mm", label: t("extra.specLabel1") },
-    { value: t("extra.specValue2"), label: t("extra.specLabel2") },
-    { value: t("extra.specValue3"), label: t("extra.specLabel3") },
-    { value: t("extra.specValue4"), label: t("extra.specLabel4") },
-  ];
-
   return (
     <div className="flex-1 flex flex-col">
 
@@ -65,7 +59,7 @@ export default function HumansPage() {
         <div aria-hidden="true" className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-primary-600 to-transparent opacity-40" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-12 items-center">
 
             {/* Columna texto */}
             <div className="flex flex-col gap-7">
@@ -103,13 +97,9 @@ export default function HumansPage() {
               </div>
             </div>
 
-            {/* Columna Visor 3D Interactivo */}
-            <div className="w-full h-[420px] rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-800 shadow-lg bg-[#0e0d0c] mt-8 lg:mt-0">
-              <ModelViewer3D
-                src="/models/2Socket Pierna.glb"
-                label="Socket de Pierna (Interactive 3D)"
-                height={420}
-              />
+            {/* Columna Visor 3D Interactivo de la Categoría Humans */}
+            <div className="w-full mt-8 lg:mt-0">
+              <CategoryModelViewer category="humans" height={420} />
             </div>
 
           </div>
@@ -154,50 +144,15 @@ export default function HumansPage() {
       </section>
 
       {/* ══════════════════════════════════════════════════════
-          CASOS CLÍNICOS — Numerados, no cards genéricas
+          CASOS DE ÉXITO HUMANS — Carrusel de navegación con flechas
           ══════════════════════════════════════════════════════ */}
-      <section className="py-20 bg-dark-900 relative overflow-hidden">
-        <div aria-hidden="true" className="absolute inset-0 opacity-5" style={{ backgroundImage: "radial-gradient(circle at 80% 20%, #7e192a 0%, transparent 50%)" }} />
-
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-14">
-            <div>
-              <p className="text-primary-400 text-xs font-bold tracking-widest uppercase mb-2">─── Evidencia clínica</p>
-              <h2 className="text-3xl lg:text-4xl font-black text-white" style={{ fontFamily: "Outfit, sans-serif" }}>
-                {t("cases.title")}
-              </h2>
-            </div>
-            <p className="text-gray-500 text-sm max-w-xs">{t("cases.subtitle")}</p>
-          </div>
-
-          <div className="flex flex-col divide-y divide-gray-800">
-            {[1, 2, 3].map((num) => (
-              <div key={num} className="group flex flex-col sm:flex-row sm:items-center gap-6 py-8 hover:pl-3 transition-all duration-300">
-                <span className="text-[4rem] font-black leading-none text-primary-900/60 dark:text-primary-900/40 group-hover:text-primary-800/60 transition-colors select-none flex-shrink-0 w-24" style={{ fontFamily: "Outfit, sans-serif" }}>
-                  0{num}
-                </span>
-                <div className="flex-1">
-                  <span className="text-xs font-bold tracking-widest uppercase text-primary-500 block mb-1">
-                    {t("extra.caseEyebrow")}
-                  </span>
-                  <h3 className="text-xl font-bold text-white mb-2">{t(`cases.item${num}.title`)}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed max-w-xl">{t(`cases.item${num}.desc`)}</p>
-                </div>
-                <Link href="/portafolio" className="flex-shrink-0 inline-flex items-center gap-2 text-sm font-semibold text-primary-400 hover:text-primary-300 transition-colors">
-                  {t("extra.viewSheet")}
-                  <svg className="h-4 w-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-10 text-center">
-            <Link href="/portafolio" className="inline-flex items-center gap-2 px-8 py-4 border border-gray-700 hover:border-primary-600 text-gray-300 hover:text-primary-400 font-semibold rounded-full transition-all duration-300 text-sm">
-              {t("extra.viewAll")}
-            </Link>
-          </div>
+      <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <CategoryCasesCarousel
+            category="humans"
+            title="Casos Clínicos y Proyectos Humans"
+            subtitle="Órtesis, prótesis y dispositivos biomecánicos entregados a pacientes en Colombia"
+          />
         </div>
       </section>
 

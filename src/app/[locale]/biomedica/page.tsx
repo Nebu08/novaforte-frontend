@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
-import ModelViewer3D from "@/components/ModelViewer3D";
+import CategoryModelViewer from "@/components/CategoryModelViewer";
+import CategoryCasesCarousel from "@/components/CategoryCasesCarousel";
 
 const WORKFLOW_ICONS = ["📦", "🔬", "⚙️", "📋"];
 
@@ -26,7 +27,7 @@ export default function BiomedicaPage() {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-12 items-center">
             <div className="flex flex-col gap-7">
               <div className="flex items-center gap-3">
                 <div className="h-px w-10 bg-primary-500" />
@@ -56,13 +57,9 @@ export default function BiomedicaPage() {
               </div>
             </div>
 
-            {/* Columna Visor 3D Interactivo */}
-            <div className="w-full h-[420px] rounded-2xl overflow-hidden border border-gray-300 dark:border-gray-800 shadow-lg bg-[#0e0d0c] mt-8 lg:mt-0">
-              <ModelViewer3D
-                src="/models/Engranajes.glb"
-                label="Engranaje Helicoidal (Interactive 3D)"
-                height={420}
-              />
+            {/* Columna Visor 3D Interactivo de Biomédica */}
+            <div className="w-full mt-8 lg:mt-0">
+              <CategoryModelViewer category="biomedica" height={420} />
             </div>
           </div>
         </div>
@@ -138,6 +135,19 @@ export default function BiomedicaPage() {
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          CASOS DE ÉXITO BIOMÉDICA — Carrusel con flechas
+          ══════════════════════════════════════ */}
+      <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <CategoryCasesCarousel
+            category="biomedica"
+            title="Casos y Repuestos Biomédicos"
+            subtitle="Ingeniería inversa, componentes y partes para equipos médicos en Colombia"
+          />
         </div>
       </section>
 

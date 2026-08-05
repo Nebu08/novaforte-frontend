@@ -5,6 +5,8 @@ import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/navigation";
 import Image from "next/image";
 import { PAST_COURSES } from "@/lib/site-config";
+import CategoryModelViewer from "@/components/CategoryModelViewer";
+import CategoryCasesCarousel from "@/components/CategoryCasesCarousel";
 
 const LEVEL_COLORS = [
   { bg: "#7e192a", light: "#f9eeef", label: "Básico" },
@@ -54,7 +56,7 @@ export default function AcademyPage() {
         <div aria-hidden="true" className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-[#a88444] to-transparent opacity-50" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-12 items-center">
 
             {/* Texto */}
             <div className="flex flex-col gap-7">
@@ -112,29 +114,9 @@ export default function AcademyPage() {
               </div>
             </div>
 
-            {/* Tarjeta de niveles mini-preview */}
-            <div className="hidden lg:flex flex-col gap-2">
-              {LEVEL_COLORS.map((level, i) => (
-                <div
-                  key={i}
-                  className="flex items-center gap-4 p-3 rounded-xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-dark-800 hover:shadow-sm transition-shadow"
-                >
-                  <div
-                    className="h-10 w-10 rounded-lg flex items-center justify-center text-white font-black text-sm flex-shrink-0"
-                    style={{ backgroundColor: level.bg }}
-                  >
-                    {i + 1}
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider" style={{ color: level.bg }}>
-                      Nivel {i + 1} · {t(`extra.levelLabel${i + 1}`)}
-                    </span>
-                    <p className="text-xs text-gray-500 dark:text-gray-400 leading-snug">
-                      {t(`levels.card${i + 1}.title`).replace(`Nivel ${i + 1}: `, "")}
-                    </p>
-                  </div>
-                </div>
-              ))}
+            {/* Columna Visor 3D Interactivo de la Categoría Academy */}
+            <div className="w-full mt-8 lg:mt-0">
+              <CategoryModelViewer category="academy" height={420} />
             </div>
 
           </div>
@@ -684,6 +666,19 @@ export default function AcademyPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          CASOS DE ÉXITO ACADEMY — Carrusel con flechas
+          ══════════════════════════════════════════ */}
+      <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <CategoryCasesCarousel
+            category="academy"
+            title="Casos de Éxito en Colegios e Instituciones"
+            subtitle="Proyectos estudiantiles y emprendimientos Maker desarrollados con el programa Novaforte Academy"
+          />
         </div>
       </section>
 
