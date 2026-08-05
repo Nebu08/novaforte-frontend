@@ -120,8 +120,8 @@ export default function ModelViewer3D({
       )}
 
       {/* Controls hint */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-3 bg-black/50 backdrop-blur-sm rounded-full px-4 py-1.5">
-        <span className="text-[10px] text-gray-500 font-mono">🖱 Arrastrar · Scroll para zoom</span>
+      <div className="absolute bottom-3 left-3 z-10 hidden sm:flex items-center gap-2 bg-black/60 backdrop-blur-sm rounded-xl px-3 py-1.5 border border-gray-800 pointer-events-none">
+        <span className="text-[10px] text-gray-400 font-mono">🖱️ Arrastra · Scroll o botones + / -</span>
       </div>
     </div>
   );
