@@ -5,18 +5,23 @@ import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Environment, Center, Resize } from "@react-three/drei";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
 
-function GLTFModel({ src }: { src: string }) {
+interface ModelCanvasProps {
+  src: string;
+  initialRotation?: [number, number, number];
+}
+
+function GLTFModel({ src, rotation }: { src: string; rotation: [number, number, number] }) {
   const { scene } = useGLTF(src);
   return (
     <Resize scale={1.8}>
       <Center>
-        <primitive object={scene} />
+        <primitive object={scene} rotation={rotation} />
       </Center>
     </Resize>
   );
 }
 
-function STLModel({ src }: { src: string }) {
+function STLModel({ src, rotation }: { src: string; rotation: [number, number, number] }) {
   const geometry = useLoader(STLLoader, src);
 
   useMemo(() => {
@@ -30,7 +35,7 @@ function STLModel({ src }: { src: string }) {
   return (
     <Resize scale={1.8}>
       <Center>
-        <mesh geometry={geometry} castShadow receiveShadow>
+        <mesh geometry={geometry} rotation={rotation} castShadow receiveShadow>
           <meshStandardMaterial
             color="#9c2535"
             roughness={0.25}
@@ -43,14 +48,34 @@ function STLModel({ src }: { src: string }) {
   );
 }
 
-function ModelSelector({ src }: { src: string }) {
+function ModelSelector({
+  src,
+  extraRotation,
+  configRotation = [0, 0, 0],
+}: {
+  src: string;
+  extraRotation: [number, number, number];
+  configRotation?: [number, number, number];
+}) {
   const isStl = src.toLowerCase().endsWith(".stl");
-  return isStl ? <STLModel src={src} /> : <GLTFModel src={src} />;
+
+  const combinedRotation: [number, number, number] = [
+    configRotation[0] + extraRotation[0],
+    configRotation[1] + extraRotation[1],
+    configRotation[2] + extraRotation[2],
+  ];
+
+  return isStl ? (
+    <STLModel src={src} rotation={combinedRotation} />
+  ) : (
+    <GLTFModel src={src} rotation={combinedRotation} />
+  );
 }
 
-export default function ModelCanvas({ src }: { src: string }) {
+export default function ModelCanvas({ src, initialRotation = [0, 0, 0] }: ModelCanvasProps) {
   const controlsRef = useRef<any>(null);
   const [autoRotate, setAutoRotate] = useState<boolean>(true);
+  const [interactiveRotation, setInteractiveRotation] = useState<[number, number, number]>([0, 0, 0]);
 
   const handleZoomIn = () => {
     if (controlsRef.current) {
@@ -67,9 +92,19 @@ export default function ModelCanvas({ src }: { src: string }) {
   };
 
   const handleReset = () => {
+    setInteractiveRotation([0, 0, 0]);
     if (controlsRef.current) {
       controlsRef.current.reset();
     }
+  };
+
+  const handleFlipAxis = () => {
+    // Rotates the model 90 degrees around X-axis (useful for flipping Z-up CAD models)
+    setInteractiveRotation((prev) => [
+      (prev[0] + Math.PI / 2) % (Math.PI * 2),
+      prev[1],
+      prev[2],
+    ]);
   };
 
   return (
@@ -87,7 +122,11 @@ export default function ModelCanvas({ src }: { src: string }) {
         <Environment preset="city" />
 
         <Suspense fallback={null}>
-          <ModelSelector src={src} />
+          <ModelSelector
+            src={src}
+            configRotation={initialRotation}
+            extraRotation={interactiveRotation}
+          />
         </Suspense>
 
         <OrbitControls
@@ -118,8 +157,15 @@ export default function ModelCanvas({ src }: { src: string }) {
           −
         </button>
         <button
+          onClick={handleFlipAxis}
+          title="Girar orientación de la pieza 90°"
+          className="h-8 w-8 rounded-lg bg-gray-800/80 hover:bg-primary-600 text-gray-200 hover:text-white flex items-center justify-center transition-colors text-xs font-mono font-bold select-none active:scale-95"
+        >
+          📐
+        </button>
+        <button
           onClick={handleReset}
-          title="Centrar / Restablecer vista"
+          title="Centrar / Restablecer vista inicial"
           className="h-8 w-8 rounded-lg bg-gray-800/80 hover:bg-primary-600 text-gray-200 hover:text-white flex items-center justify-center transition-colors text-xs font-mono font-bold select-none active:scale-95"
         >
           🎯

@@ -48,6 +48,7 @@ export default function CategoryModelViewer({
         <div className="relative group overflow-hidden rounded-2xl border border-gray-300 dark:border-gray-800 bg-[#0e0d0c] shadow-lg">
           <ModelViewer3D
             src={activeModel?.file}
+            rotation={activeModel?.rotation}
             label={
               activeModel
                 ? locale === "es"

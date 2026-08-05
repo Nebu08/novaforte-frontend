@@ -52,7 +52,7 @@ function ModelPlaceholder({ label }: { label: string }) {
 }
 
 interface ModelViewerProps {
-  /** Path to .glb model file, e.g. "/models/protesis-mano.glb" */
+  /** Path to .glb/.stl model file */
   src?: string;
   /** Display name shown in the UI */
   label?: string;
@@ -60,6 +60,8 @@ interface ModelViewerProps {
   height?: number;
   /** Background color */
   bgColor?: string;
+  /** Optional initial rotation [X, Y, Z] in radians */
+  rotation?: [number, number, number];
 }
 
 export default function ModelViewer3D({
@@ -67,6 +69,7 @@ export default function ModelViewer3D({
   label = "Modelo 3D",
   height = 420,
   bgColor = "#0e0d0c",
+  rotation = [0, 0, 0],
 }: ModelViewerProps) {
   const renderFallback = (
     <div className="w-full h-full flex flex-col items-center justify-center gap-4">
@@ -82,7 +85,7 @@ export default function ModelViewer3D({
       <div className="text-center px-4">
         <p className="text-gray-400 text-sm font-semibold mb-1">Visor 3D Listo</p>
         <p className="text-gray-600 text-xs font-mono max-w-[240px] leading-relaxed">
-          Sube tus archivos .glb a <code className="text-primary-400 bg-primary-950/40 px-1 rounded">public/models/</code>
+          Sube tus archivos .stl/.glb a <code className="text-primary-400 bg-primary-950/40 px-1 rounded">public/models/</code>
         </p>
       </div>
     </div>
@@ -113,7 +116,7 @@ export default function ModelViewer3D({
       {/* Viewer wrapped in ErrorBoundary */}
       {src ? (
         <ModelErrorBoundary key={src} fallback={renderFallback}>
-          <ModelCanvas src={src} />
+          <ModelCanvas src={src} initialRotation={rotation} />
         </ModelErrorBoundary>
       ) : (
         renderFallback

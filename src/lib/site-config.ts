@@ -283,6 +283,8 @@ export interface Model3D {
   thumbnail: string;
   /** Categoría a la que pertenece */
   category: CaseCategory;
+  /** Rotación inicial personalizada [X, Y, Z] en radianes — ej. [-Math.PI / 2, 0, 0] */
+  rotation?: [number, number, number];
 }
 
 export const MODELS_3D: Model3D[] = [
