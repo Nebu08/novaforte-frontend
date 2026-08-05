@@ -33,11 +33,11 @@ export default function Header({ currentLocale }: HeaderProps) {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/70 dark:border-gray-800/80 bg-white/95 dark:bg-dark-900/95 backdrop-blur-md transition-colors duration-300 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] lg:h-[80px] flex items-center justify-between gap-4">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-[80px] lg:h-[88px] flex items-center justify-between gap-4">
         
-        {/* Brand Logo — Proporcionado y perfectamente alineado */}
+        {/* Brand Logo — Agrandado con elegancia sin desordenar */}
         <Link href="/" className="flex items-center focus:outline-none group flex-shrink-0">
-          <div className="relative overflow-hidden transition-opacity duration-200 group-hover:opacity-90 w-[180px] h-[40px] sm:w-[210px] sm:h-[46px] lg:w-[240px] lg:h-[52px]">
+          <div className="relative overflow-hidden transition-opacity duration-200 group-hover:opacity-90 w-[200px] h-[45px] sm:w-[240px] sm:h-[54px] lg:w-[280px] lg:h-[62px] xl:w-[310px] xl:h-[68px]">
             <Image
               src="/images/logo.svg"
               alt="Novaforte Biomedical Engineering"
