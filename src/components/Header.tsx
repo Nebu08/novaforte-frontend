@@ -26,82 +26,87 @@ export default function Header({ currentLocale }: HeaderProps) {
     { href: "/biomedica", label: t("biomedical") },
     { href: "/vet", label: t("vet") },
     { href: "/academy", label: t("academy") },
+    { href: "/portafolio", label: t("portfolio") },
     { href: "/nosotros", label: t("about") },
     { href: "/contacto", label: t("contact") },
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 dark:border-gray-800/50 bg-white/90 dark:bg-dark-900/90 backdrop-blur-md transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-space-md sm:px-space-lg h-[80px] md:h-[100px] lg:h-[110px] xl:h-[130px] flex items-center justify-between transition-all duration-300">
-        {/* Brand Logo — cropped to show only artwork region from the square image */}
-        <Link href="/" className="flex items-center focus:outline-none group">
-          <div
-            className="relative overflow-hidden transition-opacity duration-200 group-hover:opacity-80 w-[240px] h-[50px] md:w-[320px] md:h-[68px] lg:w-[420px] lg:h-[88px] xl:w-[520px] xl:h-[110px]"
-          >
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200/70 dark:border-gray-800/80 bg-white/95 dark:bg-dark-900/95 backdrop-blur-md transition-colors duration-300 shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[72px] lg:h-[80px] flex items-center justify-between gap-4">
+        
+        {/* Brand Logo — Proporcionado y perfectamente alineado */}
+        <Link href="/" className="flex items-center focus:outline-none group flex-shrink-0">
+          <div className="relative overflow-hidden transition-opacity duration-200 group-hover:opacity-90 w-[180px] h-[40px] sm:w-[210px] sm:h-[46px] lg:w-[240px] lg:h-[52px]">
             <Image
               src="/images/logo.svg"
               alt="Novaforte Biomedical Engineering"
               fill
-              className="object-cover dark:invert"
-              style={{ objectPosition: "center 48%" }}
-              sizes="(max-width: 768px) 240px, (max-width: 1024px) 320px, (max-width: 1280px) 420px, 520px"
+              className="object-contain dark:invert"
+              style={{ objectPosition: "left center" }}
               priority
             />
           </div>
         </Link>
-        {/* Desktop Navigation Links */}
-        <nav className="hidden lg:flex items-center gap-space-md">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`text-text-sm font-semibold transition-colors duration-200 hover:text-primary-500 py-space-2xs border-b-2 ${
-                pathname === link.href
-                  ? "border-primary-500 text-primary-500"
-                  : "border-transparent text-dark-800 dark:text-gray-300"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+
+        {/* Desktop Navigation Links — 1 sola línea limpia, sin saltos de texto */}
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`px-3 py-2 text-xs xl:text-sm font-semibold rounded-lg whitespace-nowrap transition-all duration-200 ${
+                  isActive
+                    ? "bg-primary-50 dark:bg-primary-950/40 text-primary-600 dark:text-primary-400 font-bold"
+                    : "text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100/60 dark:hover:bg-dark-800/50"
+                }`}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Desktop Right Actions */}
-        <div className="hidden lg:flex items-center gap-space-sm">
-          {/* Language Toggle Button */}
+        <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+          {/* Language Selector Pill */}
           <button
             onClick={toggleLocale}
-            className="flex items-center gap-space-3xs px-space-xs py-space-2xs text-text-sm font-bold uppercase text-dark-800 dark:text-gray-300 border border-gray-300 dark:border-gray-700 rounded-md hover:bg-gray-100 dark:hover:bg-dark-800 transition-all duration-200"
+            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold uppercase text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-700 rounded-full hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 shadow-2xs"
             aria-label={t("ariaLang")}
           >
+            <span className="text-sm">🌐</span>
             <span>{currentLocale}</span>
-            <span className="text-text-2xs text-gray-400">▼</span>
+            <span className="text-[10px] text-gray-400">▼</span>
           </button>
 
           {/* CTA Contact Button */}
           <Link
             href="/contacto"
-            className="px-space-md py-space-2xs bg-primary-600 hover:bg-primary-500 text-white text-text-sm font-semibold rounded-md transition-colors duration-200 shadow-sm"
+            className="px-5 py-2 bg-primary-700 hover:bg-primary-600 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 whitespace-nowrap"
           >
             {t("cta")}
           </Link>
         </div>
 
-        {/* Mobile Actions Menu Trigger */}
-        <div className="flex items-center lg:hidden gap-space-xs">
+        {/* Mobile Menu Trigger */}
+        <div className="flex items-center lg:hidden gap-2">
           {/* Language Toggle for Mobile */}
           <button
             onClick={toggleLocale}
-            className="flex items-center px-space-2xs py-space-3xs text-text-xs font-bold uppercase text-dark-800 dark:text-gray-300 border border-gray-300 dark:border-gray-700 rounded-md"
+            className="flex items-center gap-1 px-2.5 py-1 text-xs font-bold uppercase text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-700 rounded-full"
             aria-label={t("ariaLang")}
           >
-            {currentLocale}
+            <span>🌐</span>
+            <span>{currentLocale}</span>
           </button>
 
-          {/* Menu Hamburger */}
+          {/* Menu Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-space-2xs text-dark-800 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-800 rounded-md transition-colors"
+            className="p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-800 rounded-lg transition-colors"
             aria-label={t("ariaMenu")}
           >
             <svg
@@ -132,26 +137,29 @@ export default function Header({ currentLocale }: HeaderProps) {
 
       {/* Mobile Navigation Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-200/50 dark:border-gray-800/50 bg-white dark:bg-dark-900 transition-all duration-300">
-          <nav className="flex flex-col p-space-md gap-space-sm">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileMenuOpen(false)}
-                className={`text-text-md font-semibold py-space-2xs px-space-xs rounded-md transition-colors ${
-                  pathname === link.href
-                    ? "bg-primary-50 dark:bg-primary-900/20 text-primary-600 dark:text-primary-500"
-                    : "text-dark-800 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-800/50"
-                }`}
-              >
-                {link.label}
-              </Link>
-            ))}
+        <div className="lg:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-dark-900 shadow-xl transition-all duration-300">
+          <nav className="flex flex-col p-4 gap-1.5">
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`text-sm font-semibold py-2.5 px-3 rounded-lg transition-colors ${
+                    isActive
+                      ? "bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 font-bold"
+                      : "text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-800"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <Link
               href="/contacto"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-space-xs w-full text-center py-space-xs bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-md transition-colors duration-200 shadow-sm"
+              className="mt-2 w-full text-center py-2.5 bg-primary-700 hover:bg-primary-600 text-white font-bold text-xs uppercase tracking-wider rounded-full shadow-md transition-all"
             >
               {t("cta")}
             </Link>

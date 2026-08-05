@@ -1,11 +1,12 @@
 {
   "Header": {
     "home": "Inicio",
-    "humans": "Medicina Humana",
-    "biomedical": "Componentes e Insumos",
-    "vet": "Medicina Veterinaria",
-    "academy": "Academia",
-    "about": "La Empresa",
+    "humans": "Humans",
+    "biomedical": "Biomédica",
+    "vet": "Veterinaria",
+    "academy": "Academy",
+    "about": "Nosotros",
+    "portfolio": "Portafolio",
     "contact": "Contacto",
     "cta": "Escríbenos",
     "ariaMenu": "Abrir menú de navegación",

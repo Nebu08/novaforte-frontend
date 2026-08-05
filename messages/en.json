@@ -1,13 +1,14 @@
 {
   "Header": {
     "home": "Home",
-    "humans": "Human Medicine",
-    "biomedical": "Components & Supplies",
-    "vet": "Veterinary Medicine",
+    "humans": "Humans",
+    "biomedical": "Biomedical",
+    "vet": "Veterinary",
     "academy": "Academy",
-    "about": "The Company",
+    "about": "About Us",
+    "portfolio": "Portfolio",
     "contact": "Contact",
-    "cta": "Text Us",
+    "cta": "Contact Us",
     "ariaMenu": "Open navigation menu",
     "ariaLang": "Change language"
   },
