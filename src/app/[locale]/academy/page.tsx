@@ -116,7 +116,12 @@ export default function AcademyPage() {
 
             {/* Columna Visor 3D Interactivo de la Categoría Academy */}
             <div className="w-full mt-8 lg:mt-0">
-              <CategoryModelViewer category="academy" height={420} />
+              <CategoryModelViewer
+                category="academy"
+                title="Diseños 3D de Nuestros Estudiantes"
+                subtitle="Proyectos reales desarrollados por alumnos de Nivel 1 aplicando pensamiento espacial y modelado CAD"
+                height={440}
+              />
             </div>
 
           </div>

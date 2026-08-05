@@ -29,6 +29,12 @@ export default function CategoryModelViewer({
 
   return (
     <div className="w-full flex flex-col gap-4">
+      {category === "academy" && (
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#a88444]/15 border border-[#a88444]/30 text-[#a88444] text-xs font-bold w-fit mb-1 shadow-sm">
+          <span className="animate-pulse">✨</span>
+          <span>Nivel 1 · Diseños Realizados por Nuestros Estudiantes</span>
+        </div>
+      )}
       {title && (
         <div className="flex flex-col gap-1 mb-2">
           <p className="text-primary-500 text-xs font-bold tracking-widest uppercase">
