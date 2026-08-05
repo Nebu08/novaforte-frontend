@@ -104,7 +104,11 @@ export default function CategoryModelViewer({
                         {modelName}
                       </p>
                       <p className="text-[10px] text-gray-500 font-mono">
-                        {locale === "es" ? "Modelo 3D GLB" : "3D GLB Model"}
+                        {model.file.toLowerCase().endsWith(".stl")
+                          ? "Modelo 3D STL"
+                          : locale === "es"
+                          ? "Modelo 3D GLB"
+                          : "3D GLB Model"}
                       </p>
                     </div>
                   </button>
