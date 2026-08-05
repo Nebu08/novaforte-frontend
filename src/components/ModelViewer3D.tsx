@@ -93,23 +93,25 @@ export default function ModelViewer3D({
 
   return (
     <div
-      className="relative w-full rounded-xl overflow-hidden border border-gray-800"
+      className="relative w-full rounded-2xl overflow-hidden border border-gray-800 shadow-xl"
       style={{ height, background: bgColor }}
     >
-      {/* Header bar */}
-      <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-4 py-2 bg-black/40 backdrop-blur-sm">
-        <div className="flex items-center gap-2">
-          <svg className="h-4 w-4 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      {/* Header bar — Sin superposiciones, con truncado dinámico */}
+      <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-4 py-2.5 bg-black/60 backdrop-blur-md border-b border-white/5 gap-2">
+        <div className="flex items-center gap-2 min-w-0 max-w-[70%]">
+          <svg className="h-4 w-4 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
           </svg>
-          <span className="text-xs font-mono font-semibold text-gray-300">{label}</span>
-        </div>
-        <div className="flex items-center gap-1">
-          <span className="relative flex h-1.5 w-1.5">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75" />
-            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary-500" />
+          <span className="text-xs font-mono font-semibold text-gray-200 truncate" title={label}>
+            {label}
           </span>
-          <span className="text-[10px] text-gray-500 font-mono ml-1">INTERACTIVO</span>
+        </div>
+        <div className="flex items-center gap-1.5 flex-shrink-0">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75" />
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500" />
+          </span>
+          <span className="text-[10px] text-gray-400 font-mono font-bold tracking-wider uppercase">INTERACTIVO</span>
         </div>
       </div>
 
@@ -121,11 +123,6 @@ export default function ModelViewer3D({
       ) : (
         renderFallback
       )}
-
-      {/* Controls hint */}
-      <div className="absolute bottom-3 left-3 z-10 hidden sm:flex items-center gap-2 bg-black/60 backdrop-blur-sm rounded-xl px-3 py-1.5 border border-gray-800 pointer-events-none">
-        <span className="text-[10px] text-gray-400 font-mono">🖱️ Arrastra · Scroll o botones + / -</span>
-      </div>
     </div>
   );
 }
