@@ -10,7 +10,7 @@ export default function VetPage() {
     <div className="flex-1 flex flex-col">
 
       {/* ══════════════════════════════════════
-          HERO — Emocional, cálido
+          HERO — Emocional, cálido con tarjeta de especies
           ══════════════════════════════════════ */}
       <section className="relative min-h-[70vh] flex items-center overflow-hidden bg-[#f7f5f4] dark:bg-dark-900">
         {/* Texto decorativo */}
@@ -24,7 +24,7 @@ export default function VetPage() {
         <div aria-hidden="true" className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-[#962d4e] to-transparent opacity-50" />
 
         <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12 items-center">
             <div className="flex flex-col gap-7">
               <div className="flex items-center gap-3">
                 <div className="h-px w-10 bg-[#962d4e]" />
@@ -69,11 +69,46 @@ export default function VetPage() {
               </div>
             </div>
 
-            {/* Visor 3D de la Categoría Veterinaria */}
-            <div className="w-full mt-8 lg:mt-0">
-              <CategoryModelViewer category="vet" height={420} />
+            {/* Tarjeta emocional de especies */}
+            <div className="hidden lg:block">
+              <div className="rounded-2xl overflow-hidden border border-[#962d4e]/20 bg-white dark:bg-dark-800 shadow-xl">
+                <div className="p-1 bg-gradient-to-r from-[#962d4e] to-[#591428]">
+                  <p className="text-center text-xs font-bold tracking-widest uppercase text-white/80 py-1">
+                    {t("extra.sidebarTitle")}
+                  </p>
+                </div>
+                <div className="p-6 flex flex-col gap-5">
+                  {[
+                    { emoji: "🐕", animal: t("extra.canineTitle"), spec: t("extra.canineDesc") },
+                    { emoji: "🐈", animal: t("extra.felineTitle"), spec: t("extra.felineDesc") },
+                    { emoji: "🐇", animal: t("extra.exoticTitle"), spec: t("extra.exoticDesc") },
+                  ].map((item) => (
+                    <div key={item.animal} className="flex items-start gap-3 pb-4 border-b border-gray-100 dark:border-gray-700 last:border-0 last:pb-0">
+                      <span className="text-2xl">{item.emoji}</span>
+                      <div>
+                        <p className="font-bold text-sm text-dark-900 dark:text-white">{item.animal}</p>
+                        <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed mt-0.5">{item.spec}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
+          VISOR 3D VETERINARIA — Sección dedicada
+          ══════════════════════════════════════ */}
+      <section className="py-16 bg-[#0f0e0d] text-white border-t border-gray-800">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <CategoryModelViewer
+            category="vet"
+            title="Visor 3D Interactivo — Veterinaria"
+            subtitle="Modelos y soluciones de órtesis/prótesis veterinarias impresas en 3D"
+            height={420}
+          />
         </div>
       </section>
 

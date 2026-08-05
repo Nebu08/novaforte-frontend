@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useRef } from "react";
+import React, { Component, ReactNode } from "react";
 import dynamic from "next/dynamic";
 
 // Dynamic import to avoid SSR issues with Three.js
@@ -8,6 +8,37 @@ const ModelCanvas = dynamic(() => import("./ModelCanvas"), {
   ssr: false,
   loading: () => <ModelPlaceholder label="Cargando modelo 3D..." />,
 });
+
+interface ErrorBoundaryProps {
+  children: ReactNode;
+  fallback: ReactNode;
+}
+
+interface ErrorBoundaryState {
+  hasError: boolean;
+}
+
+class ModelErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error: Error) {
+    console.warn("ModelViewer3D Error caught:", error.message);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback;
+    }
+    return this.props.children;
+  }
+}
 
 function ModelPlaceholder({ label }: { label: string }) {
   return (
@@ -37,6 +68,26 @@ export default function ModelViewer3D({
   height = 420,
   bgColor = "#0e0d0c",
 }: ModelViewerProps) {
+  const renderFallback = (
+    <div className="w-full h-full flex flex-col items-center justify-center gap-4">
+      {/* 3D box wireframe placeholder */}
+      <svg viewBox="0 0 120 120" className="h-24 w-24 text-primary-800" fill="none" stroke="currentColor" strokeWidth="1">
+        <polygon points="30,80 90,80 90,40 30,40" />
+        <polygon points="30,40 90,40 70,20 10,20" strokeDasharray="4,3" />
+        <polygon points="90,80 90,40 70,20 70,60" />
+        <line x1="30" y1="80" x2="10" y2="60" strokeDasharray="4,3" />
+        <line x1="10" y1="60" x2="10" y2="20" strokeDasharray="4,3" />
+        <line x1="10" y1="60" x2="70" y2="60" strokeDasharray="4,3" />
+      </svg>
+      <div className="text-center px-4">
+        <p className="text-gray-400 text-sm font-semibold mb-1">Visor 3D Listo</p>
+        <p className="text-gray-600 text-xs font-mono max-w-[240px] leading-relaxed">
+          Sube tus archivos .glb a <code className="text-primary-400 bg-primary-950/40 px-1 rounded">public/models/</code>
+        </p>
+      </div>
+    </div>
+  );
+
   return (
     <div
       className="relative w-full rounded-xl overflow-hidden border border-gray-800"
@@ -59,34 +110,13 @@ export default function ModelViewer3D({
         </div>
       </div>
 
-      {/* Viewer or placeholder */}
+      {/* Viewer wrapped in ErrorBoundary */}
       {src ? (
-        <ModelCanvas src={src} />
+        <ModelErrorBoundary key={src} fallback={renderFallback}>
+          <ModelCanvas src={src} />
+        </ModelErrorBoundary>
       ) : (
-        <div className="w-full h-full flex flex-col items-center justify-center gap-4">
-          {/* 3D box wireframe placeholder */}
-          <svg viewBox="0 0 120 120" className="h-28 w-28 text-primary-800" fill="none" stroke="currentColor" strokeWidth="1">
-            {/* Front face */}
-            <polygon points="30,80 90,80 90,40 30,40" />
-            {/* Top face */}
-            <polygon points="30,40 90,40 70,20 10,20" strokeDasharray="4,3" />
-            {/* Right face */}
-            <polygon points="90,80 90,40 70,20 70,60" />
-            {/* Depth lines */}
-            <line x1="30" y1="80" x2="10" y2="60" strokeDasharray="4,3" />
-            <line x1="10" y1="60" x2="10" y2="20" strokeDasharray="4,3" />
-            <line x1="10" y1="60" x2="70" y2="60" strokeDasharray="4,3" />
-          </svg>
-          <div className="text-center">
-            <p className="text-gray-500 text-sm font-semibold mb-1">Visor 3D Listo</p>
-            <p className="text-gray-700 text-xs font-mono max-w-[200px] leading-relaxed">
-              Sube archivos .glb a{" "}
-              <code className="text-primary-600 bg-primary-900/20 px-1 rounded">public/models/</code>
-              {" "}y configura en{" "}
-              <code className="text-primary-600 bg-primary-900/20 px-1 rounded">site-config.ts</code>
-            </p>
-          </div>
-        </div>
+        renderFallback
       )}
 
       {/* Controls hint */}
