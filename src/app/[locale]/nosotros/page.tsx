@@ -351,7 +351,7 @@ export default function NosotrosPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
-                  href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hola,%20deseo%20hacer%20una%20consulta%20tecnica`}
+                  href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(COMPANY_INFO.whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold rounded-full shadow-lg transition-all duration-300 text-sm"

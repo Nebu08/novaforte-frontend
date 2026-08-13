@@ -68,7 +68,7 @@ export default function GraciasPage() {
             </div>
             
             <a
-              href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hola,%20acabo%20de%20completar%20mi%2520solicitud%20en%20el%20sitio%20web%20de%20Novaforte%20y%20requiero%20asistencia%20inmediata.`}
+              href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(COMPANY_INFO.whatsappMessage)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full py-4 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white font-bold rounded-xl shadow-lg shadow-green-500/10 hover:shadow-green-500/25 transition-all duration-300 text-center flex items-center justify-center gap-3 text-sm tracking-wide"

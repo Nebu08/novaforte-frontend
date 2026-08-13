@@ -225,7 +225,7 @@ export default function ContactoPage() {
                 </span>
               </div>
               <a
-                href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=Hola,%20tengo%20una%20consulta%20general%20sobre%20Novaforte`}
+                href={`https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(COMPANY_INFO.whatsappMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group relative w-full py-4 bg-gradient-to-r from-green-600 to-green-500 hover:from-green-500 hover:to-green-400 text-white font-bold rounded-xl shadow-lg shadow-green-500/10 hover:shadow-green-500/25 transition-all duration-300 text-center flex items-center justify-center gap-3 text-sm tracking-wide"

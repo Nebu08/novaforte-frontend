@@ -25,9 +25,10 @@ export const COMPANY_INFO = {
   address: "Carrera 16A # 78-75, Edificio Profesional Tempo",
   city: "Bogotá, Colombia",
   fullAddress: "Carrera 16A # 78-75, Edificio Profesional Tempo, Chapinero, Bogotá, D.C., Colombia",
-  phone: "+57 310 329 4869",
+  phone: "+57 323 869 8295",
   phone2: "+57 321 222 6926",
-  whatsapp: "573103294869",          // ← Formato: 57 + número sin espacios ni guiones
+  whatsapp: "573238698295",          // ← Formato: 57 + número sin espacios ni guiones
+  whatsappMessage: "¡Hola! Me interesan los servicios de Novaforte y quisiera saber los pasos para realizar una cotización o agendar una cita.",
   email: "novafortesas@gmail.com",
   website: "https://novaforte.com",
   nit: "900.000.000-0",             // ← Editar con el NIT real
