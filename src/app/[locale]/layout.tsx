@@ -3,6 +3,7 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import "../globals.css";
 
 import { getTranslations } from "next-intl/server";
@@ -49,6 +50,9 @@ export default async function RootLayout({
           
           {/* Global Footer Section */}
           <Footer />
+
+          {/* Botón flotante directo a WhatsApp */}
+          <FloatingWhatsApp />
         </NextIntlClientProvider>
       </body>
     </html>

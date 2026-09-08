@@ -64,6 +64,14 @@ export default function Footer() {
             <p className="text-dark-800 dark:text-white font-semibold">{t("colombia")}</p>
             <p>{t("address")}</p>
             <a
+              href="https://wa.me/573238698295?text=%C2%A1Hola!%20Me%20interesan%20los%20servicios%20de%20Novaforte"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-green-600 transition-colors duration-200 text-green-600 dark:text-green-400 font-medium flex items-center gap-1.5"
+            >
+              <span>💬</span> WhatsApp: +57 323 869 8295
+            </a>
+            <a
               href={`mailto:${t("email")}`}
               className="hover:text-primary-500 transition-colors duration-200 text-primary-500 font-medium"
             >
