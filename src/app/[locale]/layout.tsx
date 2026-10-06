@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { COMPANY_INFO, SOCIAL_LINKS, MAP_CONFIG } from "@/lib/site-config";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import "../globals.css";
 
 export async function generateMetadata({
@@ -140,6 +141,11 @@ export default async function RootLayout({
           {/* Botón flotante directo a WhatsApp */}
           <FloatingWhatsApp />
         </NextIntlClientProvider>
+
+        {/* Google Analytics 4 */}
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+        )}
       </body>
     </html>
   );

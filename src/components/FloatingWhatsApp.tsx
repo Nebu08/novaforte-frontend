@@ -3,6 +3,7 @@
 import { useLocale } from "next-intl";
 import { usePathname } from "@/navigation";
 import { COMPANY_INFO, WHATSAPP_MESSAGES, type WhatsAppContext } from "@/lib/site-config";
+import { trackWhatsAppClick } from "@/lib/analytics";
 
 function getContext(pathname: string): WhatsAppContext {
   const segment = pathname.split("/").filter(Boolean)[0];
@@ -16,7 +17,8 @@ export default function FloatingWhatsApp() {
   // usePathname de next-intl devuelve la ruta sin el prefijo de idioma (/es, /en)
   const pathname = usePathname();
   const locale = useLocale() === "en" ? "en" : "es";
-  const message = WHATSAPP_MESSAGES[getContext(pathname)][locale];
+  const context = getContext(pathname);
+  const message = WHATSAPP_MESSAGES[context][locale];
   const whatsappUrl = `https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(message)}`;
 
   return (
@@ -25,6 +27,7 @@ export default function FloatingWhatsApp() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
+      onClick={() => trackWhatsAppClick(`floating_${context}`)}
       className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-[#25D366] hover:bg-[#20bd5a] text-white px-4 py-3 rounded-full shadow-2xl hover:shadow-green-500/30 transition-all duration-300 hover:scale-105 active:scale-95 group font-medium text-sm"
     >
       <svg
