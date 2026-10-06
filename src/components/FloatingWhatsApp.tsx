@@ -1,9 +1,23 @@
 "use client";
 
-import { COMPANY_INFO } from "@/lib/site-config";
+import { useLocale } from "next-intl";
+import { usePathname } from "@/navigation";
+import { COMPANY_INFO, WHATSAPP_MESSAGES, type WhatsAppContext } from "@/lib/site-config";
+
+function getContext(pathname: string): WhatsAppContext {
+  const segment = pathname.split("/").filter(Boolean)[0];
+  if (segment === "humans" || segment === "biomedica" || segment === "vet" || segment === "academy") {
+    return segment;
+  }
+  return "default";
+}
 
 export default function FloatingWhatsApp() {
-  const whatsappUrl = `https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(COMPANY_INFO.whatsappMessage)}`;
+  // usePathname de next-intl devuelve la ruta sin el prefijo de idioma (/es, /en)
+  const pathname = usePathname();
+  const locale = useLocale() === "en" ? "en" : "es";
+  const message = WHATSAPP_MESSAGES[getContext(pathname)][locale];
+  const whatsappUrl = `https://wa.me/${COMPANY_INFO.whatsapp}?text=${encodeURIComponent(message)}`;
 
   return (
     <a

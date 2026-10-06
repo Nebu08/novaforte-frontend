@@ -16,7 +16,7 @@
     "rights": "© 2026 Novaforte sas. All rights reserved.",
     "colombia": "Bogota, Colombia",
     "address": "Carrera 16A # 78-75, Edificio Profesional Tempo, Chapinero, Bogota",
-    "email": "novafortesas@gmail.com",
+    "email": "contacto@novafortesas.com",
     "legal": "Privacy Policies & Habeas Data",
     "linksTitle": "Quick Links",
     "contactTitle": "Corporate Contact",
@@ -24,34 +24,60 @@
   },
   "Home": {
     "hero": {
-      "title": "Medical-Grade Additive Manufacturing",
-      "subtitle": "We combine advanced 3D design rigor with clinical EXPERTISE to manufacture custom-made prostheses not only for humans (we also think about animals), discontinued or hard-to-access medical components & supplies, and prepare future makers in school environments.",
-      "ctaPrimary": "Explore Divisions",
+      "title": "Discontinued medical spare parts and custom prostheses, made in Bogota",
+      "subtitle": "We combine 3D design rigor with clinical expertise to rebuild spare parts for discontinued medical equipment, manufacture custom prostheses and orthoses for people and pets, and train future makers in schools.",
+      "ctaPrimary": "Quote my case",
       "ctaPortfolio": "View Works Portfolio",
-      "ctaSecondary": "Direct Contact"
+      "ctaSecondary": "Direct Contact",
+      "ctaMicrocopy": "Pick your division and an engineer will reply within 72 business hours.",
+      "cardEyebrow": "Clinical Additive Manufacturing",
+      "cardText": "From 3D scan or digital design to the finished device. Biocompatible materials. Local support in Bogota.",
+      "cardStatus": "Available · Bogota CO",
+      "floatLabel": "Response time",
+      "floatValue": "72 h",
+      "floatSub": "business hours, all divisions"
+    },
+    "metrics": {
+      "tolerance": "Print tolerance",
+      "response": "Business-hour reply",
+      "sectors": "Sectors served",
+      "local": "Local support Colombia"
     },
     "divisions": {
       "title": "Our Specialized Divisions",
-      "subtitle": "Click on the corresponding division to view our technical capabilities and quote your specific requirement in less than 72 hours.",
+      "subtitle": "Pick your division to request a quote. An engineer reviews your case and replies within 72 business hours.",
+      "exploreLabel": "View division",
       "humans": {
         "title": "Human Medicine (Prosthetics & Orthotics)",
-        "desc": "Customized prosthetics and aesthetic orthotics in certified high-strength biocompatible polymers.",
-        "cta": "Explore Human Medicine"
+        "headline": "Devices tailored to each patient",
+        "desc": "Customized prosthetics and aesthetic orthotics in high-strength biocompatible polymers. Delivery in 5–10 days.",
+        "cta": "Explore Human Medicine",
+        "quote": "Quote device",
+        "specs": ["±0.1 mm precision", "PETG / PP / Nylon / Carbon", "5–10 day delivery"]
       },
       "biomedica": {
         "title": "Components & Supplies",
-        "desc": "Reverse engineering and 3D reconstruction of gears and plastic parts resistant to chemicals and disinfection in medical devices.",
-        "cta": "Explore Components"
+        "headline": "Your medical equipment, back in service",
+        "desc": "Reverse engineering and 3D reconstruction of gears and plastic parts resistant to chemicals and disinfection in medical devices. Delivery in 72 hours.",
+        "cta": "Explore Components",
+        "quote": "Quote spare part",
+        "specs": ["20 µm 3D scanning", "Disinfection-resistant PETG / ABS", "72 h delivery"]
       },
       "vet": {
         "title": "Veterinary Medicine",
+        "headline": "Mobility for dogs and cats",
         "desc": "Digital design and custom fabrication of lightweight orthotics and functional prosthetics in comfortable and flexible materials.",
-        "cta": "Explore Veterinary Medicine"
+        "cta": "Explore Veterinary Medicine",
+        "quote": "Quote veterinary device",
+        "specs": ["Flexible TPU", "Custom harnesses", "With attending vet"]
       },
       "academy": {
         "title": "Academy (Maker Training)",
-        "desc": "Sequential courses structured by levels in 3D design and printing (Tinkercad and Fusion 360) for schools in Colombia.",
-        "cta": "Explore Courses"
+        "headline": "Maker training for schools",
+        "desc": "Sequential courses structured by levels in 3D design and printing (Tinkercad and Onshape) for schools in Colombia.",
+        "cta": "Explore Courses",
+        "quote": "Request proposal",
+        "specs": ["3 curriculum levels", "Teacher training", "Local support"]
       }
     },
     "trust": {
@@ -63,24 +89,24 @@
       },
       "pillar2": {
         "title": "Medical-Grade Manufacturing",
-        "desc": "From patient scanning to the finished device, we use materials compatible with the body and the environments we work in. Guaranteed warranty and support."
+        "desc": "From patient scanning to the finished device, we use materials compatible with the body and with clinical environments. Direct after-sales support from Bogota."
       },
       "pillar3": {
         "title": "Operational Continuity",
-        "desc": "Local stock of materials and machinery to respond to medical urgencies or critical spare parts in 72 hours."
+        "desc": "We reply within 72 business hours and deliver biomedical spare parts in 72 hours. Idle equipment means ICU beds out of service; we shorten that wait."
       }
     }
   },
   "Humans": {
     "hero": {
       "title": "Custom Orthopedic Devices & Orthoses",
-      "subtitle": "Digital design and manufacturing of personalized prostheses and orthoses in approved biocompatible materials in Colombia. We assist orthopedic surgeons and patients with lightweight orthoses and high-resistance prosthetics.",
+      "subtitle": "Digital design and manufacturing of personalized prostheses and orthoses in biocompatible materials in Colombia. We assist orthopedic surgeons and patients with lightweight orthoses and high-resistance prosthetics.",
       "ctaQuote": "Quote Device",
       "ctaDownload": "Download Portfolio PDF"
     },
     "capabilities": {
       "title": "3D Design & Manufacturing Capabilities",
-      "subtitle": "Certified biomedical workflows for patient well-being.",
+      "subtitle": "A traceable digital workflow, from patient scan to finished device.",
       "pillar1": {
         "title": "Custom Anatomical Modeling",
         "desc": "Millimetric anatomical adaptation for prosthetics and orthotics based on 3D scanning and clinical specifications."
@@ -111,7 +137,7 @@
       }
     },
     "form": {
-      "title": "Quote Humans Clinical Device",
+      "title": "Quote Clinical Device",
       "subtitle": "Complete the following fields so a specialist can review the requirements for your prosthesis or orthosis.",
       "fieldName": "Specialist's Full Name",
       "fieldEmail": "Professional Email",
@@ -134,12 +160,15 @@
     },
     "modal": {
       "title": "Download Technical Portfolio",
-      "subtitle": "Complete your professional details to immediately receive the PDF dossier with certified materials and data sheets.",
+      "subtitle": "Leave three details and instantly receive the PDF portfolio with materials, workflows and clinical cases.",
       "fieldName": "Professional Name",
       "fieldEmail": "Contact Email",
       "fieldInstitution": "Hospital / Organization",
       "fieldRole": "Your Specialty / Role",
       "fieldPhone": "Phone Number",
+      "optional": "(optional)",
+      "moreFields": "+ Add role and phone (optional)",
+      "microcopy": "Instant download. We never share your data.",
       "submit": "Register & Download PDF",
       "placeholderName": "e.g., Dr. Camila Restrepo",
       "placeholderEmail": "camila.restrepo@clinic.com",
@@ -148,9 +177,9 @@
       "placeholderPhone": "e.g., +57 300 123 4567"
     },
     "extra": {
-      "eyebrow": "Humans Division",
-      "specLabel1": "Clinical tolerance",
-      "specLabel2": "Certified materials",
+      "eyebrow": "Human Division",
+      "specLabel1": "Print tolerance",
+      "specLabel2": "Materials",
       "specLabel3": "Delivery time",
       "specLabel4": "Anatomical adjustment",
       "specValue2": "Carbon / PP / Nylon / PETG",
@@ -166,20 +195,27 @@
   "Biomed": {
     "hero": {
       "title": "Reverse Engineering & 3D Reconstruction of Critical Medical Spare Parts",
-      "subtitle": "We replace broken plastic or metal parts of discontinued hospital equipment. Local high-precision manufacturing under clinical specifications.",
+      "subtitle": "Your ventilator or monitor gets back in service without waiting for imports or buying new equipment. We rebuild the discontinued part in Bogota from the broken sample.",
       "ctaQuote": "Quote Discontinued Spare Part",
-      "ctaPortfolio": "View Success Stories"
+      "ctaPortfolio": "View Success Stories",
+      "eyebrow": "Components & Supplies",
+      "anchorTitle": "How long until you get your part?",
+      "anchorImportLabel": "Importing the spare part",
+      "anchorImportValue": "8–12 weeks",
+      "anchorLocalLabel": "Novaforte, made in Bogota",
+      "anchorLocalValue": "72 hours",
+      "microcopy": "An engineer replies within 72 business hours."
     },
     "capabilities": {
       "title": "Materials & Technical Capabilities",
-      "subtitle": "Industrial-grade additive manufacturing quality assurance for clinical equipment.",
+      "subtitle": "Dimensional control at every stage, from broken sample to installed part.",
       "pillar1": {
         "title": "Chemical Resistance",
         "desc": "Plastic materials like PETG and ABS with high resistance to chemical disinfectants and hospital cold disinfection. (Not suitable for autoclave)."
       },
       "pillar2": {
         "title": "3D Scanning Precision",
-        "desc": "High-resolution optical digital scanning capable of capturing complex geometric tolerances up to 20 microns."
+        "desc": "High-resolution optical scanning (down to 20 microns at the scan stage) to capture complex geometries before modeling the part. Final tolerance depends on the printing technology."
       },
       "pillar3": {
         "title": "Plastics Engineering",
@@ -220,6 +256,18 @@
       "placeholderInstitution": "e.g., Fundacion Santa Fe de Bogota",
       "placeholderType": "e.g., Dräger Savina 300 ICU Gas Ventilator",
       "placeholderMessage": "Describe the size of the broken part, gear, or dial and if you have the physical component available for scanning..."
+    },
+    "faq": {
+      "eyebrow": "─── FAQ",
+      "title": "What biomedical engineers ask us",
+      "q1": "How long does spare part delivery take?",
+      "a1": "We reply to your request within 72 business hours and deliver the spare part in 72 hours. Importing the original part usually takes 8 to 12 weeks.",
+      "q2": "Do I need to send the broken part?",
+      "a2": "Ideally, yes: we scan the physical part to rebuild it and correct wear. If you don't have it, we can start from technical drawings.",
+      "q3": "Can the parts be autoclaved?",
+      "a3": "No. We work with PETG and ABS, which withstand chemical disinfectants and hospital cold disinfection, but are not suitable for autoclaving.",
+      "q4": "Which materials do you use?",
+      "a4": "Technical-grade polymers such as PETG and ABS, and resins for parts that need finer detail."
     }
   },
   "Vet": {
@@ -266,7 +314,7 @@
       }
     },
     "extra": {
-      "eyebrow": "Animals",
+      "eyebrow": "Veterinary Division",
       "tag1": "Flexible Materials",
       "tag2": "TPU Comfort",
       "tag3": "Veterinary Support",
@@ -472,7 +520,7 @@
     "info": {
       "title": "Communication Channels",
       "address": "Headquarters: Carrera 16A # 78-75, Edificio Profesional Tempo, Chapinero, Bogota, Colombia",
-      "email": "Corporate Email: novafortesas@gmail.com",
+      "email": "Corporate Email: contacto@novafortesas.com",
       "whatsapp": "Chat on Corporate WhatsApp"
     },
     "form": {
@@ -524,38 +572,61 @@
     "ctaWhatsapp": "Contact via Direct WhatsApp",
     "ctaHome": "Back to Home"
   },
+  "Forms": {
+    "sla": "An engineer replies within 72 business hours."
+  },
   "Metadata": {
     "home": {
-      "title": "Novaforte sas | Biomedical & 3D Engineering",
-      "description": "Biomedical engineering and additive manufacturing local company in Colombia. High-precision 3D printing solutions."
+      "title": "3D Prosthetics & Medical Spare Parts in Bogota | Novaforte",
+      "description": "We manufacture spare parts for discontinued medical equipment, custom prostheses and orthoses, and veterinary devices with 3D printing in Bogota. Reply within 72 business hours."
     },
     "about": {
-      "title": "About Us | Novaforte sas",
-      "description": "Meet the Novaforte sas team, our mission, vision, and infrastructure for digital manufacturing and 3D scanning in Bogota."
+      "title": "About Us | Novaforte",
+      "description": "Meet the Novaforte team, our mission, vision, and infrastructure for digital manufacturing and 3D scanning in Bogota."
     },
     "contact": {
-      "title": "Contact | Novaforte sas",
-      "description": "Get in touch with Novaforte sas. Request quotes for prosthetics, orthotics, biomedical components, or maker training."
+      "title": "Contact | Novaforte",
+      "description": "Get in touch with Novaforte in Chapinero, Bogota. Request quotes for prosthetics, orthotics, biomedical spare parts, or maker training."
     },
     "humans": {
-      "title": "Human Medicine - Prosthetics & Orthotics | Novaforte sas",
-      "description": "Digital design and manufacturing of personalized prostheses and orthoses with high-strength biocompatible polymers in Colombia."
+      "title": "Custom 3D Prosthetics & Orthotics in Bogota | Novaforte",
+      "description": "Digital design and manufacturing of personalized prostheses and orthoses in high-strength biocompatible polymers. Delivery in 5–10 days in Bogota."
     },
     "vet": {
-      "title": "Veterinary Medicine - Animal Orthotics & Prosthetics | Novaforte sas",
-      "description": "Customized orthotics, prosthetics, and wheelchairs for dogs and cats. Designed to restore mobility to your pets."
+      "title": "Orthotics & Prosthetics for Dogs and Cats | Novaforte",
+      "description": "3D-printed wheelchairs, splints and mobility devices for pets, designed with veterinary guidance in Bogota."
     },
     "biomedica": {
-      "title": "Components - Reverse Engineering & Insumos | Novaforte sas",
-      "description": "3D reconstruction and reverse engineering of critical components and supplies for discontinued medical equipment in Colombia."
+      "title": "Discontinued Medical Equipment Spare Parts | Novaforte",
+      "description": "Reverse engineering and 3D reconstruction of spare parts for discontinued medical equipment in Bogota. 72-hour delivery, no import wait."
     },
     "academy": {
-      "title": "Academy - Maker Training | Novaforte sas",
-      "description": "Teacher training and 3D design courses in Tinkercad and Fusion 360 for schools in Colombia."
+      "title": "3D Design & Printing Courses for Schools | Novaforte",
+      "description": "Level-based maker program for schools in Colombia: teacher training and 3D design courses in Tinkercad, Onshape and Blender."
     },
     "portafolio": {
-      "title": "Portfolio - Success Stories | Novaforte sas",
-      "description": "Explore our catalog of real clinical cases, manufactured components & supplies, and maker laboratories implemented in Colombia."
+      "title": "3D Printing Case Portfolio | Novaforte",
+      "description": "Explore real clinical cases, manufactured biomedical spare parts, and maker labs implemented by Novaforte in Colombia."
+    },
+    "humansQuote": {
+      "title": "Quote a Custom Prosthesis or Orthosis | Novaforte",
+      "description": "Send your prosthesis or orthosis requirements and a specialist replies within 72 business hours."
+    },
+    "biomedQuote": {
+      "title": "Quote a Discontinued Medical Spare Part | Novaforte",
+      "description": "Send the equipment model and part condition. A biomedical engineer replies within 72 business hours."
+    },
+    "vetQuote": {
+      "title": "Quote a Veterinary Orthosis or Prosthesis | Novaforte",
+      "description": "Tell us about your pet's case and we reply within 72 business hours with a custom proposal."
+    },
+    "academyContact": {
+      "title": "Request the Maker Program Proposal | Novaforte",
+      "description": "Schedule a maker program presentation at your school. A local mentor contacts you within 72 business hours."
+    },
+    "gracias": {
+      "title": "Thank You | Novaforte",
+      "description": "We have received your request."
     }
   }
 }

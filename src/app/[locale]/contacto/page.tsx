@@ -1,13 +1,14 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "@/navigation";
 import { COMPANY_INFO, MAP_CONFIG } from "@/lib/site-config";
 
 export default function ContactoPage() {
   const t = useTranslations("Contact");
   const router = useRouter();
+  const locale = useLocale();
 
   // Form states
   const [name, setName] = useState("");
@@ -453,6 +454,10 @@ export default function ContactoPage() {
                     </>
                   )}
                 </button>
+                <p className="text-center text-xs text-gray-500 dark:text-gray-400 mt-2 flex items-center justify-center gap-1.5">
+                  <span aria-hidden="true">⏱️</span>
+                  <span>{locale === "es" ? "Respuesta de nuestro equipo en menos de 72 horas hábiles." : "Our team replies within 72 business hours."}</span>
+                </p>
               </form>
             </div>
           </div>

@@ -310,6 +310,10 @@ export default function AcademyContactoPage() {
                 </>
               )}
             </button>
+            <p className="text-center text-xs text-gray-500 dark:text-gray-400 mt-2 flex items-center justify-center gap-1.5">
+              <span aria-hidden="true">⏱️</span>
+              <span>{locale === "es" ? "Un mentor local le contacta en menos de 72 horas hábiles." : "A local mentor will contact you within 72 business hours."}</span>
+            </p>
 
           </form>
         </div>

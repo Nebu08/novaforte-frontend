@@ -5,60 +5,61 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
 
 // ─── Division data ────────────────────────────────────────────────────────────
+// Textos (headline, desc, specs, CTAs) viven en messages/*.json → Home.divisions.<key>
 const DIVISIONS = [
   {
     key: "humans",
     href: "/humans",
+    quoteHref: "/humans/cotizar",
     color: "#7e192a",
     colorLight: "#f9eeef",
     number: "01",
     tag: "CLÍNICA",
-    specs: ["±0.1 mm precisión", "PETG / PP / Nylon / Carbono", "Entrega 5–10 días"],
     svgPath:
       "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z",
   },
   {
     key: "biomedica",
     href: "/biomedica",
+    quoteHref: "/biomedica/cotizar",
     color: "#3a3734",
     colorLight: "#f4f3f2",
     number: "02",
     tag: "INDUSTRIAL",
-    specs: ["20 µm escaneo 3D", "PEEK autoclavable", "Sin importaciones"],
     svgPath:
       "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z M15 12a3 3 0 11-6 0 3 3 0 016 0z",
   },
   {
     key: "vet",
     href: "/vet",
+    quoteHref: "/vet/cotizar",
     color: "#962d4e",
     colorLight: "#fdf0f3",
     number: "03",
     tag: "VETERINARIA",
-    specs: ["TPU flexible", "Arneses a medida", "Con vet. tratante"],
     svgPath:
       "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
   },
   {
     key: "academy",
     href: "/academy",
+    quoteHref: "/academy/contacto",
     color: "#a88444",
     colorLight: "#fdf8ef",
     number: "04",
     tag: "EDUCACIÓN",
-    specs: ["4 niveles curriculares", "Capacitación docente", "Soporte local"],
     svgPath:
       "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253",
   },
 ] as const;
 
-// ─── Metrics bar data ─────────────────────────────────────────────────────────
+// ─── Metrics bar data (labels en Home.metrics) ───────────────────────────────────
 const METRICS = [
-  { value: "±0.1mm", label: "Tolerancia clínica" },
-  { value: "72 h", label: "Respuesta urgente" },
-  { value: "4", label: "Sectores atendidos" },
-  { value: "100%", label: "Soporte local Colombia" },
-];
+  { value: "±0.1mm", labelKey: "tolerance" },
+  { value: "72 h", labelKey: "response" },
+  { value: "4", labelKey: "sectors" },
+  { value: "100%", labelKey: "local" },
+] as const;
 
 // ─── Process steps ────────────────────────────────────────────────────────────
 const PROCESS = [
@@ -86,13 +87,11 @@ const PROCESS = [
 
 export default function Home() {
   const t = useTranslations("Home");
-  const tHumans = useTranslations("Humans");
-  const tBiomed = useTranslations("Biomed");
-  const tVet = useTranslations("Vet");
-  const tAcademy = useTranslations("Academy");
+  const tHeader = useTranslations("Header");
   const [activeDiv, setActiveDiv] = useState(0);
 
   const current = DIVISIONS[activeDiv];
+  const currentSpecs = t.raw(`divisions.${current.key}.specs`) as string[];
 
   return (
     <div className="flex-1 flex flex-col overflow-hidden">
@@ -158,35 +157,37 @@ export default function Home() {
                 {t("hero.subtitle")}
               </p>
 
-              {/* CTAs */}
-              <div className="flex flex-wrap gap-4 items-center">
-                <a
-                  href="#divisions"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-full shadow-lg hover:shadow-primary-600/30 transition-all duration-300 text-sm"
-                >
-                  {t("hero.ctaPrimary")}
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
-                <Link
-                  href="/portafolio"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 border border-gray-300 dark:border-gray-700 text-dark-800 dark:text-gray-200 hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-semibold rounded-full transition-all duration-300 text-sm"
-                >
-                  {t("hero.ctaPortfolio")}
-                </Link>
-                <Link
-                  href="/contacto"
-                  className="inline-flex items-center gap-1.5 px-4 py-3 text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
-                >
-                  {t("hero.ctaSecondary")} →
-                </Link>
+              {/* CTAs — un CTA principal de cotización + uno secundario */}
+              <div className="flex flex-col gap-3">
+                <div className="flex flex-wrap gap-4 items-center">
+                  <a
+                    id="home-cta-quote"
+                    href="#divisions"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-full shadow-lg hover:shadow-primary-600/30 transition-all duration-300 text-sm"
+                  >
+                    {t("hero.ctaPrimary")}
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </a>
+                  <Link
+                    id="home-cta-portfolio"
+                    href="/portafolio"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 border border-gray-300 dark:border-gray-700 text-dark-800 dark:text-gray-200 hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 font-semibold rounded-full transition-all duration-300 text-sm"
+                  >
+                    {t("hero.ctaPortfolio")}
+                  </Link>
+                </div>
+                <p className="text-xs text-gray-500 dark:text-gray-400 flex items-center gap-2">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary-500" aria-hidden="true" />
+                  {t("hero.ctaMicrocopy")}
+                </p>
               </div>
 
               {/* ── Métricas en línea ── */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 border-t border-gray-200 dark:border-gray-800">
                 {METRICS.map((m) => (
-                  <div key={m.label} className="flex flex-col gap-1">
+                  <div key={m.labelKey} className="flex flex-col gap-1">
                     <span
                       className="text-2xl font-black text-primary-600 dark:text-primary-400 leading-none"
                       style={{ fontFamily: "Outfit, sans-serif" }}
@@ -194,7 +195,7 @@ export default function Home() {
                       {m.value}
                     </span>
                     <span className="text-xs text-gray-500 dark:text-gray-500 leading-tight">
-                      {m.label}
+                      {t(`metrics.${m.labelKey}`)}
                     </span>
                   </div>
                 ))}
@@ -249,11 +250,10 @@ export default function Home() {
 
                     <div>
                       <p className="text-accent-400 text-xs font-bold tracking-widest uppercase mb-1">
-                        Manufactura Aditiva Clínica
+                        {t("hero.cardEyebrow")}
                       </p>
                       <p className="text-white/80 text-sm leading-relaxed">
-                        Del escaneo 3D o diseño digital al dispositivo terminado.
-                        Materiales biocompatibles. Soporte local garantizado.
+                        {t("hero.cardText")}
                       </p>
                     </div>
 
@@ -263,18 +263,18 @@ export default function Home() {
                         <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-400 opacity-75" />
                         <span className="relative inline-flex rounded-full h-2 w-2 bg-accent-500" />
                       </span>
-                      <span className="text-xs text-white/60 font-mono">Disponible · Bogotá CO</span>
+                      <span className="text-xs text-white/60 font-mono">{t("hero.cardStatus")}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Tarjeta flotante inferior */}
                 <div className="absolute -bottom-6 -right-6 bg-white dark:bg-dark-800 rounded-xl p-4 shadow-xl border border-gray-100 dark:border-gray-700 w-48">
-                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">Tiempo de respuesta</p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mb-1">{t("hero.floatLabel")}</p>
                   <p className="text-2xl font-black text-primary-600 dark:text-primary-400" style={{ fontFamily: "Outfit, sans-serif" }}>
-                    &lt; 72 h
+                    {t("hero.floatValue")}
                   </p>
-                  <p className="text-xs text-gray-400 dark:text-gray-500">para urgencias clínicas</p>
+                  <p className="text-xs text-gray-400 dark:text-gray-500">{t("hero.floatSub")}</p>
                 </div>
               </div>
             </div>
@@ -287,14 +287,30 @@ export default function Home() {
       {/* ════════════════════════════════════════════════════════════════════
           DIVISIONES — Selector de tabs fullwidth (no grid de 4 cards)
           ════════════════════════════════════════════════════════════════════ */}
-      <section id="divisions" className="bg-white dark:bg-dark-900 border-t border-gray-100 dark:border-gray-800">
+      <section id="divisions" className="scroll-mt-20 bg-white dark:bg-dark-900 border-t border-gray-100 dark:border-gray-800">
+
+        {/* ── Encabezado del selector ── */}
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16">
+          <h2
+            className="text-2xl lg:text-3xl font-black text-dark-900 dark:text-white leading-tight"
+            style={{ fontFamily: "Outfit, sans-serif" }}
+          >
+            {t("divisions.title")}
+          </h2>
+          <p className="mt-2 text-gray-500 dark:text-gray-400 text-base max-w-2xl">
+            {t("divisions.subtitle")}
+          </p>
+        </div>
 
         {/* ── Tab navigation ── */}
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-16 pb-0">
-          <div className="flex items-end gap-0 border-b border-gray-200 dark:border-gray-800 overflow-x-auto">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8 pt-8 pb-0">
+          <div className="flex items-end gap-0 border-b border-gray-200 dark:border-gray-800 overflow-x-auto" role="tablist">
             {DIVISIONS.map((div, i) => (
               <button
                 key={div.key}
+                id={`home-tab-${div.key}`}
+                role="tab"
+                aria-selected={activeDiv === i}
                 onClick={() => setActiveDiv(i)}
                 className={`group relative flex-shrink-0 flex flex-col gap-1 px-6 py-4 text-left transition-all duration-200 border-b-2 ${
                   activeDiv === i
@@ -339,26 +355,21 @@ export default function Home() {
                 </div>
 
                 <div>
-                  <h2
+                  {/* H3: headline propio de la home (no reutiliza el H1 de cada división para evitar canibalización) */}
+                  <h3
                     className="text-3xl lg:text-4xl font-black mb-4 text-dark-900 dark:text-white leading-tight"
                     style={{ fontFamily: "Outfit, sans-serif" }}
                   >
-                    {current.key === "humans" ? tHumans("hero.title") :
-                     current.key === "biomedica" ? tBiomed("hero.title") :
-                     current.key === "vet" ? tVet("hero.title") :
-                     tAcademy("hero.title")}
-                  </h2>
+                    {t(`divisions.${current.key}.headline`)}
+                  </h3>
                   <p className="text-gray-500 dark:text-gray-400 text-lg leading-relaxed max-w-xl">
-                    {current.key === "humans" ? tHumans("hero.subtitle") :
-                     current.key === "biomedica" ? tBiomed("hero.subtitle") :
-                     current.key === "vet" ? tVet("hero.subtitle") :
-                     tAcademy("hero.subtitle")}
+                    {t(`divisions.${current.key}.desc`)}
                   </p>
                 </div>
 
                 {/* Specs técnicas como chips */}
                 <div className="flex flex-wrap gap-3">
-                  {current.specs.map((spec) => (
+                  {currentSpecs.map((spec) => (
                     <span
                       key={spec}
                       className="px-4 py-1.5 text-sm font-semibold rounded-full border"
@@ -373,17 +384,25 @@ export default function Home() {
                   ))}
                 </div>
 
-                {/* CTA */}
-                <div>
+                {/* CTAs: cotizar directo (principal) + ver división (secundario) */}
+                <div className="flex flex-wrap items-center gap-4">
                   <Link
-                    href={current.href}
+                    id={`home-quote-${current.key}`}
+                    href={current.quoteHref}
                     className="inline-flex items-center gap-3 px-8 py-4 text-white font-bold rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm"
                     style={{ backgroundColor: current.color }}
                   >
-                    {t(`divisions.${current.key}.cta`)}
+                    {t(`divisions.${current.key}.quote`)}
                     <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
+                  </Link>
+                  <Link
+                    id={`home-explore-${current.key}`}
+                    href={current.href}
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                  >
+                    {t("divisions.exploreLabel")} →
                   </Link>
                 </div>
               </div>
@@ -418,10 +437,7 @@ export default function Home() {
                         ? "text-dark-900 dark:text-white"
                         : "text-gray-400 dark:text-gray-500"
                     }`}>
-                      {div.key === "humans" ? "Humans" :
-                       div.key === "biomedica" ? t("divisions.biomedica.title") :
-                       div.key === "vet" ? t("divisions.vet.title") :
-                       "Academy"}
+                      {tHeader(div.key === "biomedica" ? "biomedical" : div.key)}
                     </span>
                   </button>
                 ))}

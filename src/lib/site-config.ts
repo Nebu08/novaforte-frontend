@@ -29,9 +29,38 @@ export const COMPANY_INFO = {
   phone2: "+57 321 222 6926",
   whatsapp: "573238698295",          // ← Formato: 57 + número sin espacios ni guiones
   whatsappMessage: "¡Hola! Me interesan los servicios de Novaforte y quisiera saber los pasos para realizar una cotización o agendar una cita.",
-  email: "novafortesas@gmail.com",
-  website: "https://novaforte.com",
+  email: "contacto@novafortesas.com",
+  website: "https://novafortesas.com", // ← Dominio de producción (sitemap, canonical, hreflang, schema)
   nit: "900.000.000-0",             // ← Editar con el NIT real
+};
+
+// ============================================================
+// 1b. MENSAJES PREDEFINIDOS DE WHATSAPP POR DIVISIÓN
+// El botón flotante elige el mensaje según la ruta actual.
+// ============================================================
+export type WhatsAppContext = "default" | "humans" | "biomedica" | "vet" | "academy";
+
+export const WHATSAPP_MESSAGES: Record<WhatsAppContext, { es: string; en: string }> = {
+  default: {
+    es: COMPANY_INFO.whatsappMessage,
+    en: "Hi! I'm interested in Novaforte's services and would like to know how to request a quote.",
+  },
+  humans: {
+    es: "Hola, necesito cotizar una prótesis u órtesis a medida para un paciente. Tipo de dispositivo: ",
+    en: "Hi, I need a quote for a custom prosthesis or orthosis for a patient. Device type: ",
+  },
+  biomedica: {
+    es: "Hola, necesito cotizar un repuesto descontinuado para el equipo médico (marca/modelo): ",
+    en: "Hi, I need a quote for a discontinued spare part for this medical device (brand/model): ",
+  },
+  vet: {
+    es: "Hola, necesito cotizar una órtesis, prótesis o silla de ruedas para mi mascota (especie/raza/peso): ",
+    en: "Hi, I need a quote for an orthosis, prosthesis or wheelchair for my pet (species/breed/weight): ",
+  },
+  academy: {
+    es: "Hola, quiero recibir la propuesta del programa maker para mi colegio (nombre del colegio): ",
+    en: "Hi, I'd like to receive the maker program proposal for my school (school name): ",
+  },
 };
 
 // ============================================================

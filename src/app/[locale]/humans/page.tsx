@@ -51,7 +51,7 @@ export default function HumansPage() {
         {/* Fondo tipográfico decorativo */}
         <div aria-hidden="true" className="pointer-events-none select-none absolute inset-0 flex items-center justify-end overflow-hidden">
           <span className="text-[clamp(5rem,15vw,14rem)] font-black leading-none tracking-tighter uppercase text-primary-900/[0.04] dark:text-white/[0.025] whitespace-nowrap pr-4" style={{ fontFamily: "Outfit, sans-serif" }}>
-            HUMANS
+            {t("extra.eyebrow")}
           </span>
         </div>
 

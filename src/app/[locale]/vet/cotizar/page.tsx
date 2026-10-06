@@ -115,7 +115,7 @@ export default function VetCotizarPage() {
             <svg className="h-4 w-4 transform transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
-            <span>{locale === "es" ? "Volver a División Vet" : "Back to Vet Division"}</span>
+            <span>{locale === "es" ? "Volver a División Veterinaria" : "Back to Veterinary Division"}</span>
           </Link>
           <h1
             className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight"
@@ -300,6 +300,10 @@ export default function VetCotizarPage() {
                 </>
               )}
             </button>
+            <p className="text-center text-xs text-gray-500 dark:text-gray-400 mt-1 flex items-center justify-center gap-1.5">
+              <span aria-hidden="true">⏱️</span>
+              <span>{locale === "es" ? "Respuesta de un especialista en menos de 72 horas hábiles." : "A specialist replies within 72 business hours."}</span>
+            </p>
 
           </form>
         </div>

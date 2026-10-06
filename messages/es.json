@@ -16,7 +16,7 @@
     "rights": "© 2026 Novaforte sas. Todos los derechos reservados.",
     "colombia": "Bogotá, Colombia",
     "address": "Carrera 16A # 78-75, Edificio Profesional Tempo, Chapinero, Bogotá",
-    "email": "novafortesas@gmail.com",
+    "email": "contacto@novafortesas.com",
     "legal": "Políticas de Privacidad & Habeas Data",
     "linksTitle": "Enlaces Rápidos",
     "contactTitle": "Contacto Corporativo",
@@ -24,34 +24,60 @@
   },
   "Home": {
     "hero": {
-      "title": "Manufactura Aditiva de Nivel Médico",
-      "subtitle": "Unimos el rigor del diseño 3D avanzado con la EXPERTICIA clínica para manufacturar prótesis a medida no solo para humanos (también pensamos en los animales), componentes e insumos de equipos médicos descontinuados o de difícil acceso, y preparamos a los futuros makers en ambientes escolares.",
-      "ctaPrimary": "Explorar Divisiones",
+      "title": "Repuestos médicos descontinuados y prótesis a medida, fabricados en Bogotá",
+      "subtitle": "Unimos el rigor del diseño 3D con la experticia clínica para reconstruir repuestos de equipos médicos descontinuados, fabricar prótesis y órtesis a medida para personas y mascotas, y formar a los futuros makers en colegios.",
+      "ctaPrimary": "Cotizar mi caso",
       "ctaPortfolio": "Ver Portafolio de Trabajos",
-      "ctaSecondary": "Contacto Directo"
+      "ctaSecondary": "Contacto Directo",
+      "ctaMicrocopy": "Elige tu división y un ingeniero te responde en menos de 72 horas hábiles.",
+      "cardEyebrow": "Manufactura Aditiva Clínica",
+      "cardText": "Del escaneo 3D o diseño digital al dispositivo terminado. Materiales biocompatibles. Soporte local en Bogotá.",
+      "cardStatus": "Disponible · Bogotá CO",
+      "floatLabel": "Tiempo de respuesta",
+      "floatValue": "72 h",
+      "floatSub": "hábiles, todas las divisiones"
+    },
+    "metrics": {
+      "tolerance": "Tolerancia de impresión",
+      "response": "Respuesta hábil",
+      "sectors": "Sectores atendidos",
+      "local": "Soporte local Colombia"
     },
     "divisions": {
       "title": "Nuestras Divisiones de Especialidad",
-      "subtitle": "Haz clic en la división correspondiente para ver nuestras capacidades técnicas y cotizar tu requerimiento específico en menos de 72 horas.",
+      "subtitle": "Elige tu división para cotizar. Un ingeniero revisa tu caso y te responde en menos de 72 horas hábiles.",
+      "exploreLabel": "Ver la división",
       "humans": {
         "title": "Medicina Humana (Prótesis & Órtesis)",
-        "desc": "Prótesis personalizadas y órtesis estéticas en polímeros biocompatibles de alta resistencia mecánica certificados.",
-        "cta": "Explorar Medicina Humana"
+        "headline": "Dispositivos a la medida de cada paciente",
+        "desc": "Prótesis personalizadas y órtesis estéticas en polímeros biocompatibles de alta resistencia mecánica. Entrega en 5–10 días.",
+        "cta": "Explorar Medicina Humana",
+        "quote": "Cotizar dispositivo",
+        "specs": ["±0.1 mm de precisión", "PETG / PP / Nylon / Carbono", "Entrega 5–10 días"]
       },
       "biomedica": {
         "title": "Componentes e Insumos",
-        "desc": "Ingeniería inversa y reconstrucción 3D de engranajes y piezas plásticas resistentes a químicos y desinfección en equipos médicos.",
-        "cta": "Explorar Componentes"
+        "headline": "Tu equipo médico, de vuelta en operación",
+        "desc": "Ingeniería inversa y reconstrucción 3D de engranajes y piezas plásticas resistentes a químicos y desinfección en equipos médicos. Entrega en 72 horas.",
+        "cta": "Explorar Componentes",
+        "quote": "Cotizar repuesto",
+        "specs": ["Escaneo 3D de 20 µm", "PETG / ABS resistentes a desinfección", "Entrega en 72 h"]
       },
       "vet": {
         "title": "Medicina Veterinaria",
+        "headline": "Movilidad para perros y gatos",
         "desc": "Diseño digital y manufactura a medida de órtesis ligeras y prótesis funcionales en materiales cómodos y flexibles.",
-        "cta": "Explorar Medicina Veterinaria"
+        "cta": "Explorar Medicina Veterinaria",
+        "quote": "Cotizar dispositivo veterinario",
+        "specs": ["TPU flexible", "Arneses a medida", "Con veterinario tratante"]
       },
       "academy": {
         "title": "Academia (Formación Maker)",
-        "desc": "Cursos secuenciales estructurados por niveles en diseño e impresión 3D (Tinkercad y Fusion 360) para colegios en Colombia.",
-        "cta": "Explorar Cursos"
+        "headline": "Formación maker para colegios",
+        "desc": "Cursos secuenciales estructurados por niveles en diseño e impresión 3D (Tinkercad y Onshape) para colegios en Colombia.",
+        "cta": "Explorar Cursos",
+        "quote": "Solicitar propuesta",
+        "specs": ["3 niveles curriculares", "Capacitación docente", "Soporte local"]
       }
     },
     "trust": {
@@ -63,24 +89,24 @@
       },
       "pillar2": {
         "title": "Manufactura de Nivel Médico",
-        "desc": "Desde el escaneo de los pacientes hasta el dispositivo terminado, usamos materiales compatibles con el cuerpo y con los entornos en que trabajamos. Garantía y soporte garantizados."
+        "desc": "Desde el escaneo del paciente hasta el dispositivo terminado, usamos materiales compatibles con el cuerpo y con los entornos clínicos. Soporte posventa directo desde Bogotá."
       },
       "pillar3": {
         "title": "Continuidad Operativa",
-        "desc": "Stock local de materiales y equipos para responder a urgencias médicas o repuestos críticos en 72h."
+        "desc": "Respondemos en 72 horas hábiles y entregamos repuestos biomédicos en 72 horas. Un equipo detenido son camas UCI fuera de servicio; reducimos esa espera."
       }
     }
   },
   "Humans": {
     "hero": {
       "title": "Dispositivos Ortopédicos y Órtesis a la Medida",
-      "subtitle": "Diseño y manufactura digital de prótesis y órtesis personalizadas en materiales biocompatibles homologados. Ayudamos a cirujanos y pacientes con órtesis estéticas y prótesis de alta resistencia mecánica.",
+      "subtitle": "Diseño y manufactura digital de prótesis y órtesis personalizadas en materiales biocompatibles. Ayudamos a cirujanos y pacientes con órtesis estéticas y prótesis de alta resistencia mecánica.",
       "ctaQuote": "Cotizar Dispositivo",
       "ctaDownload": "Descargar Portafolio PDF"
     },
     "capabilities": {
       "title": "Capacidades de Diseño y Manufactura 3D",
-      "subtitle": "Procesos biomédicos certificados para el bienestar del paciente.",
+      "subtitle": "Un proceso digital trazable, del escaneo del paciente al dispositivo terminado.",
       "pillar1": {
         "title": "Modelado Anatómico Personalizado",
         "desc": "Adaptación anatómica milimétrica para prótesis y órtesis a partir del escaneo 3D y especificaciones clínicas."
@@ -111,7 +137,7 @@
       }
     },
     "form": {
-      "title": "Cotizar Dispositivo Clínico Humans",
+      "title": "Cotizar Dispositivo Clínico",
       "subtitle": "Complete los siguientes campos para que un especialista revise los requerimientos de su prótesis u órtesis.",
       "fieldName": "Nombre Completo del Especialista",
       "fieldEmail": "Correo Profesional",
@@ -134,12 +160,15 @@
     },
     "modal": {
       "title": "Descargar Portafolio Técnico",
-      "subtitle": "Complete los datos profesionales para recibir de inmediato el dossier PDF con materiales certificados y fichas técnicas.",
+      "subtitle": "Déjenos tres datos y reciba de inmediato el portafolio PDF con materiales, procesos y casos clínicos.",
       "fieldName": "Nombre Profesional",
       "fieldEmail": "Correo de Contacto",
       "fieldInstitution": "Hospital / Organización",
       "fieldRole": "Su Especialidad / Cargo",
       "fieldPhone": "Teléfono de Contacto",
+      "optional": "(opcional)",
+      "moreFields": "+ Agregar cargo y teléfono (opcional)",
+      "microcopy": "Descarga inmediata. No compartimos sus datos.",
       "submit": "Registrar y Descargar PDF",
       "placeholderName": "Ej: Dra. Camila Restrepo",
       "placeholderEmail": "camila.restrepo@clinica.com",
@@ -148,9 +177,9 @@
       "placeholderPhone": "Ej: 300 123 4567"
     },
     "extra": {
-      "eyebrow": "División Humans",
-      "specLabel1": "Tolerancia clínica",
-      "specLabel2": "Materiales certificados",
+      "eyebrow": "División Humana",
+      "specLabel1": "Tolerancia de impresión",
+      "specLabel2": "Materiales",
       "specLabel3": "Tiempo de entrega",
       "specLabel4": "Ajuste anatómico",
       "specValue2": "Carbono / PP / Nylon / PETG",
@@ -166,20 +195,27 @@
   "Biomed": {
     "hero": {
       "title": "Ingeniería Inversa y Reconstrucción 3D de Repuestos Médicos Críticos",
-      "subtitle": "Reemplazamos piezas plásticas o metálicas rotas de equipos hospitalarios descontinuados. Manufactura local de precisión milimétrica bajo especificaciones clínicas.",
+      "subtitle": "Su ventilador o monitor vuelve a operar sin esperar importación ni comprar equipo nuevo. Reconstruimos en Bogotá la pieza descontinuada a partir de la muestra rota.",
       "ctaQuote": "Cotizar Repuesto Descontinuado",
-      "ctaPortfolio": "Ver Casos de Éxito"
+      "ctaPortfolio": "Ver Casos de Éxito",
+      "eyebrow": "Componentes e Insumos",
+      "anchorTitle": "¿Cuánto tarda su repuesto?",
+      "anchorImportLabel": "Importar el repuesto",
+      "anchorImportValue": "8–12 semanas",
+      "anchorLocalLabel": "Novaforte, fabricado en Bogotá",
+      "anchorLocalValue": "72 horas",
+      "microcopy": "Respuesta de un ingeniero en menos de 72 horas hábiles."
     },
     "capabilities": {
       "title": "Materiales y Capacidades Técnicas",
-      "subtitle": "Garantía de calidad de manufactura aditiva industrial para equipos clínicos.",
+      "subtitle": "Control dimensional en cada etapa, de la muestra rota a la pieza instalada.",
       "pillar1": {
         "title": "Resistencia Química",
         "desc": "Materiales plásticos como PETG y ABS con alta resistencia a desinfectantes químicos y desinfección fría hospitalaria. (No aptos para autoclave)."
       },
       "pillar2": {
         "title": "Precisión de Escaneo 3D",
-        "desc": "Digitalización óptica de alta resolución capaz de capturar tolerancias geométricas complejas de hasta 20 micras."
+        "desc": "Digitalización óptica de alta resolución (hasta 20 micras en el escaneo) para capturar geometrías complejas antes de modelar la pieza. La tolerancia final depende de la tecnología de impresión."
       },
       "pillar3": {
         "title": "Ingeniería de Plásticos",
@@ -220,6 +256,18 @@
       "placeholderInstitution": "Ej: Fundación Santa Fe de Bogotá",
       "placeholderType": "Ej: Ventilador de Gases UCI Dräger Savina 300",
       "placeholderMessage": "Describa el tamaño de la pieza, engranaje o perilla rota y si dispone del componente físico para escanear..."
+    },
+    "faq": {
+      "eyebrow": "─── Preguntas frecuentes",
+      "title": "Lo que preguntan los ingenieros biomédicos",
+      "q1": "¿Cuánto tarda la entrega de un repuesto?",
+      "a1": "Respondemos su solicitud en menos de 72 horas hábiles y entregamos el repuesto en 72 horas. Importar la pieza original suele tardar entre 8 y 12 semanas.",
+      "q2": "¿Necesito enviar la pieza rota?",
+      "a2": "Es lo ideal: escaneamos la pieza física para reconstruirla y corregir el desgaste. Si no la tiene, podemos partir de planos técnicos.",
+      "q3": "¿Las piezas soportan autoclave?",
+      "a3": "No. Trabajamos con PETG y ABS, que resisten desinfectantes químicos y la desinfección fría hospitalaria, pero no son aptos para autoclave.",
+      "q4": "¿Qué materiales utilizan?",
+      "a4": "Polímeros de grado técnico como PETG y ABS, y resinas para piezas que requieren mayor detalle."
     }
   },
   "Vet": {
@@ -266,7 +314,7 @@
       }
     },
     "extra": {
-      "eyebrow": "Animals",
+      "eyebrow": "División Veterinaria",
       "tag1": "Materiales Flexibles",
       "tag2": "TPU Confort",
       "tag3": "Acompañamiento Veterinario",
@@ -279,7 +327,7 @@
       "exoticTitle": "Exóticos",
       "exoticDesc": "Dispositivos de movilidad a consultar",
       "ctaTitle": "¿Tu mascota necesita movilidad?",
-      "ctaSubtitle": "Cuéntanos el caso de tu mascota. Respondemos en menos de 72 horas.",
+      "ctaSubtitle": "Cuéntanos el caso de tu mascota. Respondemos en menos de 72 horas hábiles.",
       "ctaButton": "Cotizar dispositivo veterinario →"
     }
   },
@@ -472,7 +520,7 @@
     "info": {
       "title": "Canales de Atención",
       "address": "Sede Principal: Carrera 16A # 78-75, Edificio Profesional Tempo, Chapinero, Bogotá, Colombia",
-      "email": "Correo Corporativo: novafortesas@gmail.com",
+      "email": "Correo Corporativo: contacto@novafortesas.com",
       "whatsapp": "Chatear por WhatsApp Corporativo"
     },
     "form": {
@@ -524,38 +572,61 @@
     "ctaWhatsapp": "Contactar por WhatsApp Directo",
     "ctaHome": "Volver al Inicio"
   },
+  "Forms": {
+    "sla": "Respuesta de un ingeniero en menos de 72 horas hábiles."
+  },
   "Metadata": {
     "home": {
-      "title": "Novaforte sas | Ingeniería Biomédica y 3D",
-      "description": "Empresa de ingeniería biomédica y manufactura aditiva local en Colombia. Soluciones de impresión 3D de alta precisión."
+      "title": "Prótesis y Repuestos Médicos 3D en Bogotá | Novaforte",
+      "description": "Fabricamos en Bogotá repuestos para equipos médicos descontinuados, prótesis y órtesis a medida y dispositivos veterinarios con impresión 3D. Respuesta en 72h hábiles."
     },
     "about": {
-      "title": "Sobre Nosotros | Novaforte sas",
-      "description": "Conoce al equipo de Novaforte sas, nuestra misión, visión e infraestructura para la manufactura digital y escaneo 3D en Bogotá."
+      "title": "Sobre Nosotros | Novaforte",
+      "description": "Conoce al equipo de Novaforte, nuestra misión, visión e infraestructura para la manufactura digital y escaneo 3D en Bogotá."
     },
     "contact": {
-      "title": "Contacto | Novaforte sas",
-      "description": "Ponte en contacto con Novaforte sas. Solicita cotizaciones para prótesis, órtesis, repuestos biomédicos o capacitación maker."
+      "title": "Contacto | Novaforte",
+      "description": "Ponte en contacto con Novaforte en Chapinero, Bogotá. Solicita cotizaciones para prótesis, órtesis, repuestos biomédicos o capacitación maker."
     },
     "humans": {
-      "title": "Medicina Humana - Prótesis y Órtesis | Novaforte sas",
-      "description": "Diseño y manufactura digital de prótesis y órtesis personalizadas con polímeros biocompatibles de alta resistencia en Colombia."
+      "title": "Prótesis y Órtesis 3D a Medida en Bogotá | Novaforte",
+      "description": "Diseño y manufactura digital de prótesis y órtesis personalizadas en polímeros biocompatibles de alta resistencia. Entrega en 5–10 días en Bogotá."
     },
     "vet": {
-      "title": "Medicina Veterinaria - Órtesis y Prótesis Animales | Novaforte sas",
-      "description": "Órtesis, prótesis y sillas de ruedas personalizadas para perros y gatos. Diseñadas para devolver la movilidad a tus mascotas."
+      "title": "Órtesis y Prótesis para Perros y Gatos | Novaforte",
+      "description": "Sillas de ruedas, férulas y dispositivos de movilidad impresos en 3D para mascotas, diseñados con acompañamiento veterinario en Bogotá."
     },
     "biomedica": {
-      "title": "Componentes - Ingeniería Inversa y Repuestos | Novaforte sas",
-      "description": "Reconstrucción 3D e ingeniería inversa de componentes e insumos críticos para equipos médicos descontinuados en Colombia."
+      "title": "Repuestos de Equipos Médicos Descontinuados | Novaforte",
+      "description": "Ingeniería inversa y reconstrucción 3D de repuestos para equipos médicos descontinuados en Bogotá. Entrega en 72 horas, sin esperar importación."
     },
     "academy": {
-      "title": "Academia - Capacitación Maker | Novaforte sas",
-      "description": "Capacitación docente y cursos de diseño 3D en Tinkercad y Fusion 360 para colegios en Colombia."
+      "title": "Cursos de Diseño e Impresión 3D para Colegios | Novaforte",
+      "description": "Programa maker por niveles para colegios en Colombia: capacitación docente y cursos de diseño 3D en Tinkercad, Onshape y Blender."
     },
     "portafolio": {
-      "title": "Portafolio - Casos de Éxito | Novaforte sas",
-      "description": "Explora nuestro catálogo de casos clínicos reales, componentes manufacturados y laboratorios maker implementados en Colombia."
+      "title": "Portafolio de Casos de Impresión 3D | Novaforte",
+      "description": "Explora casos clínicos reales, repuestos biomédicos fabricados y laboratorios maker implementados por Novaforte en Colombia."
+    },
+    "humansQuote": {
+      "title": "Cotizar Prótesis u Órtesis a Medida | Novaforte",
+      "description": "Envíe los requerimientos de su prótesis u órtesis y un especialista le responde en menos de 72 horas hábiles."
+    },
+    "biomedQuote": {
+      "title": "Cotizar Repuesto Médico Descontinuado | Novaforte",
+      "description": "Envíe el modelo del equipo y el estado de la pieza. Un ingeniero biomédico le responde en menos de 72 horas hábiles."
+    },
+    "vetQuote": {
+      "title": "Cotizar Órtesis o Prótesis Veterinaria | Novaforte",
+      "description": "Cuéntenos el caso de su mascota y le respondemos en menos de 72 horas hábiles con una propuesta a medida."
+    },
+    "academyContact": {
+      "title": "Solicitar Propuesta del Programa Maker | Novaforte",
+      "description": "Agende una presentación del programa maker en su colegio. Un mentor local le contacta en menos de 72 horas hábiles."
+    },
+    "gracias": {
+      "title": "Gracias | Novaforte",
+      "description": "Hemos recibido su solicitud."
     }
   }
 }

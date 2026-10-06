@@ -44,16 +44,34 @@ export default function BiomedicaPage() {
                 {t("hero.subtitle")}
               </p>
 
-              <div className="flex flex-wrap gap-4">
-                <Link href="/biomedica/cotizar"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-full shadow-lg hover:shadow-primary-600/30 transition-all duration-300 text-sm">
-                  {t("hero.ctaQuote")}
-                  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-                </Link>
-                <Link href="/portafolio"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 border border-gray-700 hover:border-primary-600 text-gray-300 hover:text-primary-400 font-semibold rounded-full transition-all duration-300 text-sm">
-                  {t("hero.ctaPortfolio")}
-                </Link>
+              {/* Anclaje psicológico de tiempo: Importación vs Fabricación local */}
+              <div className="grid grid-cols-2 gap-3 max-w-lg p-3 rounded-2xl bg-white/5 border border-white/10">
+                <div className="flex flex-col gap-0.5">
+                  <span className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold">{t("hero.anchorImportLabel")}</span>
+                  <span className="text-lg font-bold text-gray-400 line-through decoration-red-500/80 decoration-2">{t("hero.anchorImportValue")}</span>
+                </div>
+                <div className="flex flex-col gap-0.5 border-l border-white/10 pl-3">
+                  <span className="text-[11px] uppercase tracking-wider text-primary-400 font-bold">{t("hero.anchorLocalLabel")}</span>
+                  <span className="text-xl font-black text-white" style={{ fontFamily: "Outfit, sans-serif" }}>{t("hero.anchorLocalValue")}</span>
+                </div>
+              </div>
+
+              <div className="flex flex-col gap-2">
+                <div className="flex flex-wrap gap-4 items-center">
+                  <Link href="/biomedica/cotizar"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-full shadow-lg hover:shadow-primary-600/30 transition-all duration-300 text-sm">
+                    {t("hero.ctaQuote")}
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                  </Link>
+                  <Link href="/portafolio"
+                    className="inline-flex items-center gap-2 px-7 py-3.5 border border-gray-700 hover:border-primary-600 text-gray-300 hover:text-primary-400 font-semibold rounded-full transition-all duration-300 text-sm">
+                    {t("hero.ctaPortfolio")}
+                  </Link>
+                </div>
+                <p className="text-xs text-gray-400 flex items-center gap-1.5">
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-primary-400" aria-hidden="true" />
+                  {t("hero.microcopy")}
+                </p>
               </div>
             </div>
 
@@ -150,6 +168,64 @@ export default function BiomedicaPage() {
           />
         </div>
       </section>
+
+      {/* ══════════════════════════════════════
+          PREGUNTAS FRECUENTES (FAQ) + SCHEMA
+          ══════════════════════════════════════ */}
+      <section className="py-20 bg-white dark:bg-dark-900 border-t border-gray-100 dark:border-gray-800">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <p className="text-primary-600 text-xs font-bold tracking-widest uppercase mb-2">
+              {t("faq.eyebrow")}
+            </p>
+            <h2 className="text-3xl font-black text-dark-900 dark:text-white" style={{ fontFamily: "Outfit, sans-serif" }}>
+              {t("faq.title")}
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[1, 2, 3, 4].map((num) => (
+              <div key={num} className="p-6 rounded-2xl bg-[#f7f5f4] dark:bg-dark-800 border border-gray-200/60 dark:border-gray-700/60 flex flex-col gap-2">
+                <h3 className="text-base font-bold text-dark-900 dark:text-white leading-snug">
+                  {t(`faq.q${num}`)}
+                </h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {t(`faq.a${num}`)}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Link
+              href="/biomedica/cotizar"
+              className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary-600 hover:bg-primary-500 text-white font-semibold rounded-full shadow-lg transition-all duration-300 text-sm"
+            >
+              {t("hero.ctaQuote")}
+              <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* JSON-LD Structured Data: FAQPage */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [1, 2, 3, 4].map((num) => ({
+              "@type": "Question",
+              "name": t(`faq.q${num}`),
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": t(`faq.a${num}`),
+              },
+            })),
+          }).replace(/</g, "\\u003c"),
+        }}
+      />
 
     </div>
   );
