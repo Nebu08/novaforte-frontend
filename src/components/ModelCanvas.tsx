@@ -2,7 +2,7 @@
 
 import { Suspense, useMemo, useRef, useState } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
-import { OrbitControls, useGLTF, Environment, Center, Resize } from "@react-three/drei";
+import { OrbitControls, useGLTF, Center, Resize } from "@react-three/drei";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
 
 interface ModelCanvasProps {
@@ -115,11 +115,12 @@ export default function ModelCanvas({ src, initialRotation = [0, 0, 0] }: ModelC
         style={{ width: "100%", height: "100%" }}
         gl={{ antialias: true }}
       >
-        <ambientLight intensity={0.8} />
-        <directionalLight position={[10, 10, 10]} intensity={1.5} />
-        <directionalLight position={[-8, -8, -8]} intensity={0.6} color="#c5a059" />
-        <directionalLight position={[0, -10, 5]} intensity={0.4} />
-        <Environment preset="city" />
+        <ambientLight intensity={0.9} />
+        <hemisphereLight intensity={0.6} groundColor="#1c1917" />
+        <directionalLight position={[10, 10, 10]} intensity={1.6} />
+        <directionalLight position={[-8, -8, -8]} intensity={0.7} color="#c5a059" />
+        <directionalLight position={[0, -10, 5]} intensity={0.5} />
+        <pointLight position={[0, 6, 2]} intensity={0.8} />
 
         <Suspense fallback={null}>
           <ModelSelector
