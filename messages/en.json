@@ -48,6 +48,7 @@
       "subtitle": "Pick your division to request a quote. An engineer reviews your case and replies within 72 business hours.",
       "exploreLabel": "View division",
       "humans": {
+        "tag": "Clinical",
         "title": "Human Medicine (Prosthetics & Orthotics)",
         "headline": "Devices tailored to each patient",
         "desc": "Customized prosthetics and aesthetic orthotics in high-strength biocompatible polymers. Delivery in 5–10 days.",
@@ -56,6 +57,7 @@
         "specs": ["±0.1 mm precision", "PETG / PP / Nylon / Carbon", "5–10 day delivery"]
       },
       "biomedica": {
+        "tag": "Industrial",
         "title": "Components & Supplies",
         "headline": "Your medical equipment, back in service",
         "desc": "Reverse engineering and 3D reconstruction of gears and plastic parts resistant to chemicals and disinfection in medical devices. Delivery in 72 hours.",
@@ -64,6 +66,7 @@
         "specs": ["20 µm 3D scanning", "Disinfection-resistant PETG / ABS", "72 h delivery"]
       },
       "vet": {
+        "tag": "Veterinary",
         "title": "Veterinary Medicine",
         "headline": "Mobility for dogs and cats",
         "desc": "Digital design and custom fabrication of lightweight orthotics and functional prosthetics in comfortable and flexible materials.",
@@ -72,6 +75,7 @@
         "specs": ["Flexible TPU", "Custom harnesses", "With attending vet"]
       },
       "academy": {
+        "tag": "Education",
         "title": "Academy (Maker Training)",
         "headline": "Maker training for schools",
         "desc": "Sequential courses structured by levels in 3D design and printing (Tinkercad and Onshape) for schools in Colombia.",
@@ -95,6 +99,34 @@
         "title": "Operational Continuity",
         "desc": "We reply within 72 business hours and deliver biomedical spare parts in 72 hours. Idle equipment means ICU beds out of service; we shorten that wait."
       }
+    },
+    "process": {
+      "eyebrow": "─── Process",
+      "steps": {
+        "reception": {
+          "title": "Intake & Digitization",
+          "desc": "Intake of physical samples, 2D drawings or 3D CAD files. We assess technical and geometric feasibility right away."
+        },
+        "modeling": {
+          "title": "Modeling & Simulation",
+          "desc": "High-resolution 3D optical scanning or parametric digital reconstruction. We validate tolerances, wall thicknesses and virtual fit."
+        },
+        "manufacturing": {
+          "title": "Additive Manufacturing",
+          "desc": "High-precision 3D printing with biocompatible polymers, composite materials (carbon fiber) or engineering-grade filaments, depending on the application."
+        },
+        "delivery": {
+          "title": "Post-Processing & Delivery",
+          "desc": "Technical support removal, thermal/chemical curing and dimensional quality control. Final delivery in under 72 hours for urgent requests."
+        }
+      }
+    },
+    "finalCta": {
+      "eyebrow": "─── Next step",
+      "title": "Need a spare part, a device or a lab?",
+      "desc": "A biomedical engineer reviews your case and replies within 72 business hours. No middlemen. Direct support from Bogota.",
+      "ctaPrimary": "Write to Novaforte",
+      "ctaSecondary": "View success stories"
     }
   },
   "Humans": {

@@ -48,6 +48,7 @@
       "subtitle": "Elige tu división para cotizar. Un ingeniero revisa tu caso y te responde en menos de 72 horas hábiles.",
       "exploreLabel": "Ver la división",
       "humans": {
+        "tag": "Clínica",
         "title": "Medicina Humana (Prótesis & Órtesis)",
         "headline": "Dispositivos a la medida de cada paciente",
         "desc": "Prótesis personalizadas y órtesis estéticas en polímeros biocompatibles de alta resistencia mecánica. Entrega en 5–10 días.",
@@ -56,6 +57,7 @@
         "specs": ["±0.1 mm de precisión", "PETG / PP / Nylon / Carbono", "Entrega 5–10 días"]
       },
       "biomedica": {
+        "tag": "Industrial",
         "title": "Componentes e Insumos",
         "headline": "Tu equipo médico, de vuelta en operación",
         "desc": "Ingeniería inversa y reconstrucción 3D de engranajes y piezas plásticas resistentes a químicos y desinfección en equipos médicos. Entrega en 72 horas.",
@@ -64,6 +66,7 @@
         "specs": ["Escaneo 3D de 20 µm", "PETG / ABS resistentes a desinfección", "Entrega en 72 h"]
       },
       "vet": {
+        "tag": "Veterinaria",
         "title": "Medicina Veterinaria",
         "headline": "Movilidad para perros y gatos",
         "desc": "Diseño digital y manufactura a medida de órtesis ligeras y prótesis funcionales en materiales cómodos y flexibles.",
@@ -72,6 +75,7 @@
         "specs": ["TPU flexible", "Arneses a medida", "Con veterinario tratante"]
       },
       "academy": {
+        "tag": "Educación",
         "title": "Academia (Formación Maker)",
         "headline": "Formación maker para colegios",
         "desc": "Cursos secuenciales estructurados por niveles en diseño e impresión 3D (Tinkercad y Onshape) para colegios en Colombia.",
@@ -95,6 +99,34 @@
         "title": "Continuidad Operativa",
         "desc": "Respondemos en 72 horas hábiles y entregamos repuestos biomédicos en 72 horas. Un equipo detenido son camas UCI fuera de servicio; reducimos esa espera."
       }
+    },
+    "process": {
+      "eyebrow": "─── Proceso",
+      "steps": {
+        "reception": {
+          "title": "Recepción & Digitalización",
+          "desc": "Recepción de muestras físicas, planos bidimensionales o archivos CAD 3D. Analizamos la viabilidad técnica y geométrica de inmediato."
+        },
+        "modeling": {
+          "title": "Modelado y Simulación",
+          "desc": "Escaneo óptico tridimensional de alta resolución o reconstrucción paramétrica digital. Validamos tolerancias, espesores de pared y encaje virtual."
+        },
+        "manufacturing": {
+          "title": "Manufactura Aditiva",
+          "desc": "Impresión 3D de alta precisión utilizando polímeros biocompatibles, materiales compuestos (fibra de carbono) o filamentos técnicos según la aplicación."
+        },
+        "delivery": {
+          "title": "Post-Procesado & Entrega",
+          "desc": "Remoción técnica de soportes, curado térmico/químico y control de calidad dimensional. Entrega final en menos de 72 horas para requerimientos urgentes."
+        }
+      }
+    },
+    "finalCta": {
+      "eyebrow": "─── Siguiente paso",
+      "title": "¿Necesitas un repuesto, un dispositivo o un laboratorio?",
+      "desc": "Un ingeniero biomédico revisa tu caso y responde en menos de 72 horas hábiles. Sin intermediarios. Soporte directo desde Bogotá.",
+      "ctaPrimary": "Escribir a Novaforte",
+      "ctaSecondary": "Ver casos de éxito"
     }
   },
   "Humans": {

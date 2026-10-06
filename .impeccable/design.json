@@ -1,0 +1,634 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-06T04:07:15.489Z",
+  "title": "Design System: Novaforte S.A.S.",
+  "extensions": {
+    "colorMeta": {
+      "burdeos-firma": {
+        "role": "primary",
+        "displayName": "Burdeos Firma",
+        "canonical": "var(--color-primary-500)",
+        "tonalRamp": [
+          "#2a0308",
+          "#3d0a12",
+          "#540e18",
+          "#6b1220",
+          "#7e192a",
+          "#bc5b66",
+          "#e4aaaf",
+          "#f9eeef"
+        ]
+      },
+      "burdeos-prensa": {
+        "role": "primary",
+        "displayName": "Burdeos Prensa",
+        "canonical": "var(--color-primary-600)",
+        "tonalRamp": [
+          "#2a0308",
+          "#3d0a12",
+          "#540e18",
+          "#6b1220",
+          "#7e192a",
+          "#bc5b66",
+          "#e4aaaf",
+          "#f9eeef"
+        ]
+      },
+      "burdeos-forja": {
+        "role": "primary",
+        "displayName": "Burdeos Forja",
+        "canonical": "var(--color-primary-700)",
+        "tonalRamp": [
+          "#2a0308",
+          "#3d0a12",
+          "#540e18",
+          "#6b1220",
+          "#7e192a",
+          "#bc5b66",
+          "#e4aaaf",
+          "#f9eeef"
+        ]
+      },
+      "burdeos-profundo": {
+        "role": "primary",
+        "displayName": "Burdeos Profundo",
+        "canonical": "var(--color-primary-900)",
+        "tonalRamp": [
+          "#2a0308",
+          "#3d0a12",
+          "#540e18",
+          "#6b1220",
+          "#7e192a",
+          "#bc5b66",
+          "#e4aaaf",
+          "#f9eeef"
+        ]
+      },
+      "rosa-junta": {
+        "role": "primary",
+        "displayName": "Rosa Junta",
+        "canonical": "var(--color-primary-400)",
+        "tonalRamp": [
+          "#2a0308",
+          "#3d0a12",
+          "#540e18",
+          "#6b1220",
+          "#7e192a",
+          "#bc5b66",
+          "#e4aaaf",
+          "#f9eeef"
+        ]
+      },
+      "rosa-escoria": {
+        "role": "primary",
+        "displayName": "Rosa Escoria",
+        "canonical": "var(--color-primary-300)",
+        "tonalRamp": [
+          "#2a0308",
+          "#3d0a12",
+          "#540e18",
+          "#6b1220",
+          "#7e192a",
+          "#bc5b66",
+          "#e4aaaf",
+          "#f9eeef"
+        ]
+      },
+      "velo-burdeos": {
+        "role": "primary",
+        "displayName": "Velo Burdeos",
+        "canonical": "var(--color-primary-50)",
+        "tonalRamp": [
+          "#2a0308",
+          "#3d0a12",
+          "#540e18",
+          "#6b1220",
+          "#7e192a",
+          "#bc5b66",
+          "#e4aaaf",
+          "#f9eeef"
+        ]
+      },
+      "bruma-burdeos": {
+        "role": "primary",
+        "displayName": "Bruma Burdeos",
+        "canonical": "var(--color-primary-100)",
+        "tonalRamp": [
+          "#2a0308",
+          "#3d0a12",
+          "#540e18",
+          "#6b1220",
+          "#7e192a",
+          "#bc5b66",
+          "#e4aaaf",
+          "#f9eeef"
+        ]
+      },
+      "oro-champagne": {
+        "role": "secondary",
+        "displayName": "Oro Champagne",
+        "canonical": "var(--color-accent-500)",
+        "tonalRamp": [
+          "#8b6930",
+          "#a88444",
+          "#c5a059",
+          "#d4b878",
+          "#e4d0a0",
+          "#efe3c4",
+          "#f6efdc",
+          "#fbf8ef"
+        ]
+      },
+      "oro-pulido": {
+        "role": "secondary",
+        "displayName": "Oro Pulido",
+        "canonical": "var(--color-accent-400)",
+        "tonalRamp": [
+          "#8b6930",
+          "#a88444",
+          "#c5a059",
+          "#d4b878",
+          "#e4d0a0",
+          "#efe3c4",
+          "#f6efdc",
+          "#fbf8ef"
+        ]
+      },
+      "bronce-tornado": {
+        "role": "secondary",
+        "displayName": "Bronce Tornado",
+        "canonical": "var(--color-accent-600)",
+        "tonalRamp": [
+          "#8b6930",
+          "#a88444",
+          "#c5a059",
+          "#d4b878",
+          "#e4d0a0",
+          "#efe3c4",
+          "#f6efdc",
+          "#fbf8ef"
+        ]
+      },
+      "bronce-oscuro": {
+        "role": "secondary",
+        "displayName": "Bronce Oscuro",
+        "canonical": "var(--color-accent-700)",
+        "tonalRamp": [
+          "#8b6930",
+          "#a88444",
+          "#c5a059",
+          "#d4b878",
+          "#e4d0a0",
+          "#efe3c4",
+          "#f6efdc",
+          "#fbf8ef"
+        ]
+      },
+      "carbon-banco": {
+        "role": "neutral",
+        "displayName": "Carbón Banco",
+        "canonical": "var(--color-dark-900)",
+        "tonalRamp": [
+          "#0e0d0c",
+          "#1c1b1a",
+          "#3a3734",
+          "#524f4b",
+          "#8f8a86",
+          "#d1cecc",
+          "#e8e6e4",
+          "#f4f3f2"
+        ]
+      },
+      "carbon-panel": {
+        "role": "neutral",
+        "displayName": "Carbón Panel",
+        "canonical": "var(--color-dark-800)",
+        "tonalRamp": [
+          "#0e0d0c",
+          "#1c1b1a",
+          "#3a3734",
+          "#524f4b",
+          "#8f8a86",
+          "#d1cecc",
+          "#e8e6e4",
+          "#f4f3f2"
+        ]
+      },
+      "grafito": {
+        "role": "neutral",
+        "displayName": "Grafito",
+        "canonical": "var(--color-dark-700)",
+        "tonalRamp": [
+          "#0e0d0c",
+          "#1c1b1a",
+          "#3a3734",
+          "#524f4b",
+          "#8f8a86",
+          "#d1cecc",
+          "#e8e6e4",
+          "#f4f3f2"
+        ]
+      },
+      "grafito-claro": {
+        "role": "neutral",
+        "displayName": "Grafito Claro",
+        "canonical": "var(--color-dark-600)",
+        "tonalRamp": [
+          "#0e0d0c",
+          "#1c1b1a",
+          "#3a3734",
+          "#524f4b",
+          "#8f8a86",
+          "#d1cecc",
+          "#e8e6e4",
+          "#f4f3f2"
+        ]
+      },
+      "papel-taller": {
+        "role": "neutral",
+        "displayName": "Papel Taller",
+        "canonical": "var(--color-gray-50)",
+        "tonalRamp": [
+          "#1a1816",
+          "#2d2a28",
+          "#433f3c",
+          "#5e5855",
+          "#9e9894",
+          "#c4bfbc",
+          "#dedad8",
+          "#f7f5f4"
+        ]
+      },
+      "arena-guia": {
+        "role": "neutral",
+        "displayName": "Arena Guía",
+        "canonical": "var(--color-gray-100)",
+        "tonalRamp": [
+          "#1a1816",
+          "#2d2a28",
+          "#433f3c",
+          "#5e5855",
+          "#9e9894",
+          "#c4bfbc",
+          "#dedad8",
+          "#f7f5f4"
+        ]
+      },
+      "linea-cota": {
+        "role": "neutral",
+        "displayName": "Línea Cota",
+        "canonical": "var(--color-gray-200)",
+        "tonalRamp": [
+          "#1a1816",
+          "#2d2a28",
+          "#433f3c",
+          "#5e5855",
+          "#9e9894",
+          "#c4bfbc",
+          "#dedad8",
+          "#f7f5f4"
+        ]
+      },
+      "linea-control": {
+        "role": "neutral",
+        "displayName": "Línea Control",
+        "canonical": "var(--color-gray-300)",
+        "tonalRamp": [
+          "#1a1816",
+          "#2d2a28",
+          "#433f3c",
+          "#5e5855",
+          "#9e9894",
+          "#c4bfbc",
+          "#dedad8",
+          "#f7f5f4"
+        ]
+      },
+      "gris-polvo": {
+        "role": "neutral",
+        "displayName": "Gris Polvo",
+        "canonical": "var(--color-gray-400)",
+        "tonalRamp": [
+          "#1a1816",
+          "#2d2a28",
+          "#433f3c",
+          "#5e5855",
+          "#9e9894",
+          "#c4bfbc",
+          "#dedad8",
+          "#f7f5f4"
+        ]
+      },
+      "gris-viruta": {
+        "role": "neutral",
+        "displayName": "Gris Viruta",
+        "canonical": "var(--color-gray-500)",
+        "tonalRamp": [
+          "#1a1816",
+          "#2d2a28",
+          "#433f3c",
+          "#5e5855",
+          "#9e9894",
+          "#c4bfbc",
+          "#dedad8",
+          "#f7f5f4"
+        ]
+      },
+      "tinta-secundaria": {
+        "role": "neutral",
+        "displayName": "Tinta Secundaria",
+        "canonical": "var(--color-gray-600)",
+        "tonalRamp": [
+          "#1a1816",
+          "#2d2a28",
+          "#433f3c",
+          "#5e5855",
+          "#9e9894",
+          "#c4bfbc",
+          "#dedad8",
+          "#f7f5f4"
+        ]
+      },
+      "tinta-media": {
+        "role": "neutral",
+        "displayName": "Tinta Media",
+        "canonical": "var(--color-gray-700)",
+        "tonalRamp": [
+          "#1a1816",
+          "#2d2a28",
+          "#433f3c",
+          "#5e5855",
+          "#9e9894",
+          "#c4bfbc",
+          "#dedad8",
+          "#f7f5f4"
+        ]
+      },
+      "tinta-carbon": {
+        "role": "neutral",
+        "displayName": "Tinta Carbón",
+        "canonical": "var(--color-gray-900)",
+        "tonalRamp": [
+          "#1a1816",
+          "#2d2a28",
+          "#433f3c",
+          "#5e5855",
+          "#9e9894",
+          "#c4bfbc",
+          "#dedad8",
+          "#f7f5f4"
+        ]
+      },
+      "blanco": {
+        "role": "neutral",
+        "displayName": "Blanco",
+        "canonical": "#ffffff"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "H1 del hero, uno por página."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "H2 de sección y H3 de la división activa."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Títulos de tarjetas de proceso."
+      },
+      "metric": {
+        "displayName": "Metric",
+        "purpose": "Valores técnicos con cifras tabulares."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Párrafos de apoyo, máx. ~65ch."
+      },
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "Subtítulo del hero y descripción de división."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Rótulos de sección en mayúsculas espaciadas."
+      },
+      "label-fine": {
+        "displayName": "Label Fine",
+        "purpose": "Etiquetas de métricas y tags de pestañas."
+      }
+    },
+    "shadows": [
+      {
+        "name": "crisp",
+        "value": "0 1px 0 color-mix(in oklab, var(--color-dark-900) 4%, transparent), 0 1px 2px color-mix(in oklab, var(--color-dark-900) 10%, transparent)",
+        "purpose": "Apoyo mínimo de CTA en reposo y elementos seleccionados."
+      },
+      {
+        "name": "lift",
+        "value": "0 1px 2px color-mix(in oklab, var(--color-dark-900) 8%, transparent), 0 12px 24px -12px color-mix(in oklab, var(--color-dark-900) 28%, transparent)",
+        "purpose": "Elementos que flotan y hover de CTA."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out-precise",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Toda transición de estado de UI; sin rebote."
+      },
+      {
+        "name": "ease-in-out-precise",
+        "value": "cubic-bezier(0.77, 0, 0.175, 1)",
+        "purpose": "Movimiento en pantalla de un punto a otro."
+      },
+      {
+        "name": "duration-press",
+        "value": "160ms",
+        "purpose": "Presión de botones (scale 0.97)."
+      },
+      {
+        "name": "duration-state",
+        "value": "150ms",
+        "purpose": "Cambios de color y fondo en hover."
+      },
+      {
+        "name": "duration-indicator",
+        "value": "200ms",
+        "purpose": "Indicadores de pestaña, barras y flechas."
+      },
+      {
+        "name": "duration-enter",
+        "value": "200ms",
+        "purpose": "Entrada del menú móvil (@starting-style)."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal de cotización; plano sólido burdeos con flecha.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Cotizar mi caso <span class=\"ds-arrow\"><svg width=\"16\" height=\"16\" fill=\"none\" stroke=\"currentColor\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M17 8l4 4m0 0l-4 4m4-4H3\"/></svg></span></a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;gap:8px;height:52px;padding:0 28px;border-radius:9999px;background:var(--color-primary-500, #7e192a);color:#fff;font:600 14px/1 Inter,sans-serif;text-decoration:none;box-shadow:0 1px 0 rgba(14,13,12,.04), 0 1px 2px rgba(14,13,12,.10);transition:transform 160ms cubic-bezier(0.23, 1, 0.32, 1),background-color 160ms cubic-bezier(0.23, 1, 0.32, 1),box-shadow 160ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-btn-primary:hover{background:var(--color-primary-600, #6b1220);box-shadow:0 1px 2px rgba(14,13,12,.08), 0 12px 24px -12px rgba(14,13,12,.28)}.ds-btn-primary:active{transform:scale(.97)}.ds-btn-primary:focus-visible{outline:2px solid var(--color-primary-500, #7e192a);outline-offset:2px}.ds-btn-primary .ds-arrow{display:inline-flex;transition:transform 200ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-btn-primary:hover .ds-arrow{transform:translateX(2px)}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Acción alternativa con borde de 1px sobre papel.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Ver Portafolio de Trabajos</a>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;height:52px;padding:0 28px;border-radius:9999px;border:1px solid var(--color-gray-300, #c4bfbc);background:rgba(255,255,255,.7);color:var(--color-dark-800, #1c1b1a);font:600 14px/1 Inter,sans-serif;text-decoration:none;transition:transform 160ms cubic-bezier(0.23, 1, 0.32, 1),border-color 160ms cubic-bezier(0.23, 1, 0.32, 1),color 160ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-btn-secondary:hover{border-color:var(--color-dark-800, #1c1b1a);color:var(--color-dark-900, #0e0d0c)}.ds-btn-secondary:active{transform:scale(.97)}.ds-btn-secondary:focus-visible{outline:2px solid var(--color-primary-500, #7e192a);outline-offset:2px}"
+    },
+    {
+      "name": "Compact Button",
+      "kind": "button",
+      "refersTo": "button-compact",
+      "description": "CTA del header en mayúsculas.",
+      "html": "<a class=\"ds-btn-compact\" href=\"#\">Escríbenos</a>",
+      "css": ".ds-btn-compact{display:inline-flex;align-items:center;height:40px;padding:0 20px;border-radius:9999px;background:var(--color-primary-500, #7e192a);color:#fff;font:700 12px/1 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;box-shadow:0 1px 0 rgba(14,13,12,.04), 0 1px 2px rgba(14,13,12,.10);transition:transform 160ms cubic-bezier(0.23, 1, 0.32, 1),background-color 160ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-btn-compact:hover{background:var(--color-primary-600, #6b1220)}.ds-btn-compact:active{transform:scale(.97)}.ds-btn-compact:focus-visible{outline:2px solid var(--color-primary-500, #7e192a);outline-offset:2px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Enlaces de header con estado activo burdeos.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-nav-link is-active\" href=\"#\" aria-current=\"page\">Inicio</a><a class=\"ds-nav-link\" href=\"#\">Humana</a><a class=\"ds-nav-link\" href=\"#\">Biomédica</a><a class=\"ds-nav-link\" href=\"#\">Veterinaria</a></nav>",
+      "css": ".ds-nav{display:flex;gap:2px}.ds-nav-link{padding:8px 12px;border-radius:6px;font:600 14px/1 Inter,sans-serif;color:var(--color-gray-700, #433f3c);text-decoration:none;transition:background-color 150ms cubic-bezier(0.23, 1, 0.32, 1),color 150ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-nav-link:hover{background:var(--color-gray-100, #eeebea);color:var(--color-dark-900, #0e0d0c)}.ds-nav-link.is-active{background:var(--color-primary-50, #f9eeef);color:var(--color-primary-500, #7e192a)}.ds-nav-link:focus-visible{outline:2px solid var(--color-primary-500, #7e192a);outline-offset:2px}"
+    },
+    {
+      "name": "Spec Cell",
+      "kind": "chip",
+      "refersTo": "spec-cell",
+      "description": "Celda de ficha técnica con radio de 2px y cifras tabulares.",
+      "html": "<div class=\"ds-specs\"><span class=\"ds-spec\">±0.1 mm de precisión</span><span class=\"ds-spec\">PETG / PP / Nylon / Carbono</span><span class=\"ds-spec\">Entrega 5–10 días</span></div>",
+      "css": ".ds-specs{display:flex;flex-wrap:wrap;gap:8px}.ds-spec{display:inline-flex;align-items:center;height:32px;padding:0 12px;border-radius:2px;background:#fff;border:1px solid color-mix(in oklab, var(--color-primary-500, #7e192a) 35%, transparent);color:var(--color-primary-500, #7e192a);font:600 12.8px/1 Inter,sans-serif;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Metric Bar",
+      "kind": "custom",
+      "refersTo": "metric-cell",
+      "description": "Barra de instrumento: valores tabulares separados por divisores de 1px.",
+      "html": "<div class=\"ds-metrics\"><div class=\"ds-metric\"><span class=\"ds-metric-v\">±0.1mm</span><span class=\"ds-metric-l\">Tolerancia de impresión</span></div><div class=\"ds-metric\"><span class=\"ds-metric-v\">72 h</span><span class=\"ds-metric-l\">Respuesta hábil</span></div><div class=\"ds-metric\"><span class=\"ds-metric-v\">4</span><span class=\"ds-metric-l\">Sectores atendidos</span></div><div class=\"ds-metric\"><span class=\"ds-metric-v\">100%</span><span class=\"ds-metric-l\">Soporte local Colombia</span></div></div>",
+      "css": ".ds-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--color-gray-200, #dedad8);border-block:1px solid var(--color-gray-200, #dedad8)}.ds-metric{display:flex;flex-direction:column;gap:6px;padding:16px 12px 16px 16px;background:var(--color-gray-50, #f7f5f4)}.ds-metric:first-child{padding-left:0}.ds-metric-v{font:700 24px/1 Outfit,sans-serif;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--color-primary-500, #7e192a)}.ds-metric-l{font:600 10.4px/1.4 Inter,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--color-gray-600, #5e5855)}"
+    },
+    {
+      "name": "Division Tabs",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Selector de división con subrayado de 2px que se extiende desde el origen.",
+      "html": "<div class=\"ds-tabs\" role=\"tablist\"><button class=\"ds-tab is-active\" role=\"tab\" aria-selected=\"true\"><span class=\"ds-tab-tag\">Clínica</span><span class=\"ds-tab-t\">Medicina Humana</span></button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\"><span class=\"ds-tab-tag\">Industrial</span><span class=\"ds-tab-t\">Componentes e Insumos</span></button><button class=\"ds-tab\" role=\"tab\" aria-selected=\"false\"><span class=\"ds-tab-tag\">Veterinaria</span><span class=\"ds-tab-t\">Medicina Veterinaria</span></button></div>",
+      "css": ".ds-tabs{display:flex;border-bottom:1px solid var(--color-gray-200, #dedad8)}.ds-tab{position:relative;display:flex;flex-direction:column;gap:4px;padding:16px 24px;margin-bottom:-1px;background:none;border:0;text-align:left;cursor:pointer;color:var(--color-gray-600, #5e5855);transition:color 150ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-tab::after{content:\"\";position:absolute;inset:auto 0 0 0;height:2px;background:var(--color-primary-500, #7e192a);transform:scaleX(0);transform-origin:left;transition:transform 200ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-tab:hover,.ds-tab.is-active{color:var(--color-dark-900, #0e0d0c)}.ds-tab.is-active::after{transform:scaleX(1)}.ds-tab.is-active .ds-tab-tag{color:var(--color-primary-500, #7e192a)}.ds-tab:focus-visible{outline:2px solid var(--color-primary-500, #7e192a);outline-offset:2px;outline-offset:-2px}.ds-tab-tag{font:700 10.4px/1 Inter,sans-serif;letter-spacing:.14em;text-transform:uppercase}.ds-tab-t{font:600 14px/1.3 Inter,sans-serif;white-space:nowrap}"
+    },
+    {
+      "name": "Process Card",
+      "kind": "card",
+      "refersTo": "process-card",
+      "description": "Tarjeta de paso sobre carbón; borde de 1px y barra que se extiende al hover.",
+      "html": "<div class=\"ds-step\"><div class=\"ds-step-n\">01</div><h3 class=\"ds-step-t\">Recepción &amp; Digitalización</h3><p class=\"ds-step-d\">Recepción de muestras físicas, planos bidimensionales o archivos CAD 3D.</p><div class=\"ds-step-bar\"></div></div>",
+      "css": ".ds-step{max-width:280px;padding:24px;border-radius:12px;background:var(--color-dark-800, #1c1b1a);border:1px solid var(--color-dark-700, #3a3734);transition:border-color 200ms cubic-bezier(0.23, 1, 0.32, 1),transform 200ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-step:hover{border-color:var(--color-dark-600, #524f4b);transform:translateY(-2px)}.ds-step-n{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:6px;border:1px solid rgba(126,25,42,.4);background:rgba(126,25,42,.1);color:var(--color-primary-300, #d07f87);font:700 14px/1 Outfit,sans-serif;font-variant-numeric:tabular-nums}.ds-step-t{margin:24px 0 0;color:#fff;font:900 18px/1.25 Outfit,sans-serif}.ds-step-d{margin:8px 0 0;color:var(--color-gray-300, #c4bfbc);font:400 14px/1.6 Inter,sans-serif}.ds-step-bar{width:40px;height:2px;margin-top:24px;background:var(--color-primary-400, #bc5b66);transform-origin:left;transition:transform 200ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-step:hover .ds-step-bar{transform:scaleX(2)}"
+    },
+    {
+      "name": "3D Viewer Frame",
+      "kind": "custom",
+      "refersTo": "viewer-frame",
+      "description": "Marco HTML del visor 3D: banco de carbón con barra de lectura.",
+      "html": "<div class=\"ds-viewer\"><div class=\"ds-viewer-bar\"><span class=\"ds-viewer-name\">Modelo 3D · STL</span><span class=\"ds-viewer-live\"><i></i>Interactivo</span></div><div class=\"ds-viewer-stage\"></div></div>",
+      "css": ".ds-viewer{position:relative;overflow:hidden;border-radius:12px;background:var(--color-dark-900, #0e0d0c);border:1px solid var(--color-dark-700, #3a3734);box-shadow:0 1px 2px rgba(14,13,12,.08), 0 12px 24px -12px rgba(14,13,12,.28);transition:border-color 200ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-viewer:hover{border-color:var(--color-dark-600, #524f4b)}.ds-viewer-bar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 16px;background:rgba(14,13,12,.7);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}.ds-viewer-name{color:var(--color-gray-200, #dedad8);font:600 12px/1 ui-monospace,monospace}.ds-viewer-live{display:inline-flex;align-items:center;gap:6px;color:var(--color-gray-400, #9e9894);font:700 10px/1 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}.ds-viewer-live i{width:8px;height:8px;border-radius:50%;background:var(--color-primary-500, #7e192a)}.ds-viewer-stage{height:220px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "El Taller de Manufactura",
+    "overview": "La interfaz es el banco de trabajo, y la pieza fabricada es la protagonista. Cada pantalla se organiza como un taller ordenado: superficies de papel cálido donde se apoya el trabajo, líneas de cota de 1px que marcan dónde termina una pieza y empieza otra, y un burdeos profundo que funciona como la firma del ingeniero sobre el plano terminado. El objeto real, ya sea un modelo 3D en el visor, un caso clínico o una especificación de material, siempre pesa más que el contenedor que lo presenta.\n\nLa densidad es media y deliberada. Los textos respiran, pero los datos se agrupan con la disciplina de una ficha técnica: valores tabulares, etiquetas en versalitas espaciadas y celdas alineadas a una retícula de 48px que aparece, apenas visible, en el fondo del hero. El oro champagne es metal pulido: aparece poco y siempre en piezas pequeñas (trazos de icono, indicadores de estado) sobre fondos oscuros.\n\nEl movimiento es el de una máquina bien calibrada: respuesta inmediata, sin rebote, sin espectáculo. Un botón cede 3% al presionarse, una flecha avanza 2px y un indicador se extiende desde su origen. La precisión de ±0.1 mm que vende la empresa se traduce en la interfaz como exactitud de alineación, no como decoración \"tecnológica\".",
+    "keyCharacteristics": [
+      "Paleta cerrada: burdeos, oro champagne, gris carbón y gris cálido, sin tonos fríos ni azules.",
+      "Superficies planas en reposo, separadas por líneas de 1px; la sombra solo aparece en lo que flota.",
+      "Titulares en Outfit de peso máximo con tracking negativo; cuerpo en Inter.",
+      "Números tabulares en toda cifra técnica (±0.1mm, 72 h, 100%).",
+      "Movimiento breve (150–240ms) con curva de salida fuerte y sin rebote.",
+      "El visor 3D, oscuro como un banco de carbón, es la pieza central de cada división."
+    ],
+    "rules": [
+      {
+        "name": "The Closed Palette Rule",
+        "body": "Los únicos colores permitidos son los tokens de `@theme` en `src/app/globals.css`. Se pueden aplicar con opacidad o con `color-mix()` hacia transparente, pero no se puede introducir un tono nuevo, ni siquiera \"uno parecido\".",
+        "section": "colors"
+      },
+      {
+        "name": "The Two-Token Division Rule",
+        "body": "Cada división tiene un token de acento (trazos e iconos) y uno de tinta (texto y CTA con blanco). Cuando el acento no cumple 4.5:1, la tinta baja a un tono más oscuro de la misma familia; nunca se aclara el texto.",
+        "section": "colors"
+      },
+      {
+        "name": "The Gold Is Metal Rule",
+        "body": "El oro y el bronce cubren menos del 5% de cualquier pantalla y aparecen sobre burdeos o carbón, nunca como fondo de un área grande.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Measure Rule",
+        "body": "Toda cifra técnica (tolerancias, horas, porcentajes, índices 01–04) usa cifras tabulares (`tabular-nums`), para que las medidas se alineen como en una tabla de cotas.",
+        "section": "typography"
+      },
+      {
+        "name": "The Mono Is For Readouts Rule",
+        "body": "La monoespaciada solo se usa en lecturas de máquina, como el estado \"Disponible · Bogotá CO\" o la barra del visor 3D. No se usa como disfraz \"técnico\" en titulares ni en etiquetas.",
+        "section": "typography"
+      },
+      {
+        "name": "The Visible Grid Rule",
+        "body": "La retícula de 48px del hero es la única textura de fondo permitida. Se dibuja con líneas de 1px en Burdeos Firma al 4.5% de opacidad y nunca compite con el contenido.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat-By-Default Rule",
+        "body": "Las superficies son planas en reposo. Si una tarjeta no flota sobre otra capa ni responde a un estado, no lleva sombra: lleva un borde de 1px en Línea Cota.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Structural Layer Rule",
+        "body": "Cada contenedor usa una sola capa estructural: borde o sombra, nunca borde, sombra, fondo translúcido y blur a la vez.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Hairline Data Rule",
+        "body": "Lo que es dato lleva 2px de radio. Lo que se presiona es una píldora. Lo que contiene lleva 12px. Ninguna forma intermedia sin razón.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "Do usar exclusivamente tokens de `@theme`; para variaciones, aplicar opacidad o `color-mix(in oklab, <token> N%, transparent)`.",
+      "Do separar superficies con líneas de 1px en Línea Cota (#dedad8) antes de recurrir a una sombra.",
+      "Do usar `ease-out-precise` (`cubic-bezier(0.23, 1, 0.32, 1)`) con 150–240ms en toda transición de estado, y animar solo transform, opacity y color.",
+      "Do dar a todo control `focus-visible` con un contorno de 2px en Burdeos Firma y al menos 44px de área táctil en móvil.",
+      "Do usar Tinta Secundaria (#5e5855) o más oscuro para texto secundario sobre fondo claro.",
+      "Do mostrar cada cifra técnica con cifras tabulares."
+    ],
+    "donts": [
+      "Don't introducir colores fuera de `@theme`, ni los verdes, azules o grises fríos de Tailwind, ni hexadecimales escritos a mano.",
+      "Don't usar emojis como iconos; los iconos son SVG de trazo uniforme.",
+      "Don't usar `transition: all`, rebotes, `scale(0)` ni hovers que inflen el elemento (`hover:scale-105`).",
+      "Don't apilar borde, sombra, fondo translúcido y blur en el mismo contenedor.",
+      "Don't usar Gris Polvo ni Gris Viruta para texto sobre papel o blanco.",
+      "Don't usar degradados en botones; el CTA es un plano de color sólido."
+    ]
+  }
+}

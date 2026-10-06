@@ -9,6 +9,16 @@ interface HeaderProps {
   currentLocale: string;
 }
 
+// Ícono de globo (reemplaza emoji 🌐 — trazo 1.75 coherente con el sistema SVG)
+function GlobeIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <path strokeLinecap="round" d="M3 12h18M12 3c2.5 2.5 3.75 5.5 3.75 9S14.5 18.5 12 21c-2.5-2.5-3.75-5.5-3.75-9S9.5 5.5 12 3z" />
+    </svg>
+  );
+}
+
 export default function Header({ currentLocale }: HeaderProps) {
   const t = useTranslations("Header");
   const pathname = usePathname();
@@ -32,12 +42,12 @@ export default function Header({ currentLocale }: HeaderProps) {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200/70 dark:border-gray-800/80 bg-white/95 dark:bg-dark-900/95 backdrop-blur-md transition-colors duration-300 shadow-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/90 backdrop-blur-md">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-[80px] lg:h-[88px] flex items-center justify-between gap-4">
-        
+
         {/* Brand Logo — Agrandado con elegancia sin desordenar */}
-        <Link href="/" className="flex items-center focus:outline-none group flex-shrink-0">
-          <div className="relative overflow-hidden transition-opacity duration-200 group-hover:opacity-90 w-[200px] h-[45px] sm:w-[240px] sm:h-[54px] lg:w-[280px] lg:h-[62px] xl:w-[310px] xl:h-[68px]">
+        <Link href="/" className="flex items-center group flex-shrink-0 rounded-sm focus-ring">
+          <div className="relative overflow-hidden transition-opacity duration-150 ease-out-precise group-hover:opacity-85 w-[200px] h-[45px] sm:w-[240px] sm:h-[54px] lg:w-[280px] lg:h-[62px] xl:w-[310px] xl:h-[68px]">
             <Image
               src="/images/logo.svg"
               alt="Novaforte Biomedical Engineering"
@@ -50,17 +60,18 @@ export default function Header({ currentLocale }: HeaderProps) {
         </Link>
 
         {/* Desktop Navigation Links — 1 sola línea limpia, sin saltos de texto */}
-        <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+        <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-2 text-xs xl:text-sm font-semibold rounded-lg whitespace-nowrap transition-all duration-200 ${
+                aria-current={isActive ? "page" : undefined}
+                className={`px-3 py-2 text-xs xl:text-sm font-semibold rounded-md whitespace-nowrap transition-colors duration-150 ease-out-precise focus-ring ${
                   isActive
-                    ? "bg-primary-50 dark:bg-primary-950/40 text-primary-600 dark:text-primary-400 font-bold"
-                    : "text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-100/60 dark:hover:bg-dark-800/50"
+                    ? "bg-primary-50 text-primary-500"
+                    : "text-gray-700 hover:text-dark-900 hover:bg-gray-100"
                 }`}
               >
                 {link.label}
@@ -70,44 +81,47 @@ export default function Header({ currentLocale }: HeaderProps) {
         </nav>
 
         {/* Desktop Right Actions */}
-        <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
+        <div className="hidden lg:flex items-center gap-space-sm flex-shrink-0">
           {/* Language Selector Pill */}
           <button
             onClick={toggleLocale}
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold uppercase text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-700 rounded-full hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 shadow-2xs"
+            className="inline-flex items-center gap-1.5 h-9 px-3 text-xs font-bold uppercase text-gray-700 border border-gray-300 rounded-full hover:border-dark-800 hover:text-dark-900 btn-press focus-ring"
             aria-label={t("ariaLang")}
           >
-            <span className="text-sm">🌐</span>
+            <GlobeIcon className="h-4 w-4" />
             <span>{currentLocale}</span>
-            <span className="text-[10px] text-gray-400">▼</span>
+            <svg className="h-3 w-3 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M7 7h11l-3-3M17 17H6l3 3" />
+            </svg>
           </button>
 
           {/* CTA Contact Button */}
           <Link
             href="/contacto"
-            className="px-5 py-2 bg-primary-700 hover:bg-primary-600 text-white text-xs font-bold uppercase tracking-wider rounded-full transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 whitespace-nowrap"
+            className="inline-flex items-center h-10 px-5 bg-primary-500 hover:bg-primary-600 text-white text-xs font-bold uppercase tracking-[0.08em] rounded-full shadow-crisp hover:shadow-lift btn-press focus-ring whitespace-nowrap"
           >
             {t("cta")}
           </Link>
         </div>
 
         {/* Mobile Menu Trigger */}
-        <div className="flex items-center lg:hidden gap-2">
+        <div className="flex items-center lg:hidden gap-space-xs">
           {/* Language Toggle for Mobile */}
           <button
             onClick={toggleLocale}
-            className="flex items-center gap-1 px-2.5 py-1 text-xs font-bold uppercase text-gray-700 dark:text-gray-200 border border-gray-300 dark:border-gray-700 rounded-full"
+            className="inline-flex items-center gap-1.5 h-10 px-3 text-xs font-bold uppercase text-gray-700 border border-gray-300 rounded-full btn-press focus-ring"
             aria-label={t("ariaLang")}
           >
-            <span>🌐</span>
+            <GlobeIcon className="h-4 w-4" />
             <span>{currentLocale}</span>
           </button>
 
           {/* Menu Hamburger Button */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-800 rounded-lg transition-colors"
+            className="inline-flex items-center justify-center h-11 w-11 text-gray-700 hover:bg-gray-100 rounded-md btn-press focus-ring"
             aria-label={t("ariaMenu")}
+            aria-expanded={mobileMenuOpen}
           >
             <svg
               className="h-6 w-6"
@@ -137,8 +151,8 @@ export default function Header({ currentLocale }: HeaderProps) {
 
       {/* Mobile Navigation Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-dark-900 shadow-xl transition-all duration-300">
-          <nav className="flex flex-col p-4 gap-1.5">
+        <div className="lg:hidden border-t border-gray-200 bg-white shadow-lift menu-enter">
+          <nav className="flex flex-col p-4 gap-0.5">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
@@ -146,10 +160,11 @@ export default function Header({ currentLocale }: HeaderProps) {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`text-sm font-semibold py-2.5 px-3 rounded-lg transition-colors ${
+                  aria-current={isActive ? "page" : undefined}
+                  className={`flex items-center h-11 px-3 text-sm font-semibold rounded-md transition-colors duration-150 ease-out-precise focus-ring ${
                     isActive
-                      ? "bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 font-bold"
-                      : "text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-800"
+                      ? "bg-primary-50 text-primary-500"
+                      : "text-gray-800 hover:bg-gray-100"
                   }`}
                 >
                   {link.label}
@@ -159,7 +174,7 @@ export default function Header({ currentLocale }: HeaderProps) {
             <Link
               href="/contacto"
               onClick={() => setMobileMenuOpen(false)}
-              className="mt-2 w-full text-center py-2.5 bg-primary-700 hover:bg-primary-600 text-white font-bold text-xs uppercase tracking-wider rounded-full shadow-md transition-all"
+              className="mt-space-sm w-full inline-flex items-center justify-center h-12 bg-primary-500 hover:bg-primary-600 text-white font-bold text-xs uppercase tracking-[0.08em] rounded-full shadow-crisp btn-press focus-ring"
             >
               {t("cta")}
             </Link>
