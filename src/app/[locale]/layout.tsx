@@ -143,9 +143,7 @@ export default async function RootLayout({
         </NextIntlClientProvider>
 
         {/* Google Analytics 4 */}
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
-        )}
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-7VFHSSTYWH"} />
       </body>
     </html>
   );

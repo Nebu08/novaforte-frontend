@@ -47,8 +47,8 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com data:",
       // Imágenes: mismo origen + data URIs + HTTPS externo para imágenes remotas
       "img-src 'self' data: blob: https:",
-      // Conexiones de red: mismo origen + backend en Render
-      "connect-src 'self' https://novafortebackend.onrender.com https://www.novafortesas.com",
+      // Conexiones de red: mismo origen + backend en Render + Google Analytics 4
+      "connect-src 'self' https://novafortebackend.onrender.com https://www.novafortesas.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
       // Media: mismo origen
       "media-src 'self' blob:",
       // Workers para 3D viewer (three.js usa workers)
