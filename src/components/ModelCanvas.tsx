@@ -108,7 +108,7 @@ export default function ModelCanvas({ src, initialRotation = [0, 0, 0] }: ModelC
   };
 
   return (
-    <div className="relative w-full h-full">
+    <div className="@container relative w-full h-full">
       {/* 3D Canvas */}
       <Canvas
         camera={{ position: [0, 0, 3.5], fov: 45 }}
@@ -142,46 +142,46 @@ export default function ModelCanvas({ src, initialRotation = [0, 0, 0] }: ModelC
       </Canvas>
 
       {/* Single Unified Centered Floating Toolbar Overlay */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1 sm:gap-2 bg-black/85 backdrop-blur-md p-1.5 rounded-2xl border border-gray-800/80 shadow-2xl max-w-[95vw] pointer-events-auto">
-        <div className="hidden md:flex items-center px-2 border-r border-gray-800 text-[11px] text-gray-400 font-mono select-none">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1 sm:gap-2 bg-white/90 backdrop-blur-md p-1.5 rounded-full border border-gray-200 shadow-lift max-w-[calc(100%-1rem)] pointer-events-auto">
+        <div className="hidden @md:flex items-center whitespace-nowrap px-2 border-r border-gray-200 text-[11px] text-gray-600 font-mono select-none">
           🖱️ Arrastra
         </div>
 
         <button
           onClick={handleZoomIn}
           title="Acercar (Zoom +)"
-          className="h-8 w-8 rounded-xl bg-gray-800/80 hover:bg-primary-600 text-gray-200 hover:text-white flex items-center justify-center transition-all text-base font-bold select-none active:scale-95"
+          className="h-8 w-8 rounded-full bg-gray-100 hover:bg-primary-500 text-dark-800 hover:text-white flex items-center justify-center btn-press focus-ring text-base font-bold select-none active:scale-95"
         >
           +
         </button>
         <button
           onClick={handleZoomOut}
           title="Alejar (Zoom -)"
-          className="h-8 w-8 rounded-xl bg-gray-800/80 hover:bg-primary-600 text-gray-200 hover:text-white flex items-center justify-center transition-all text-base font-bold select-none active:scale-95"
+          className="h-8 w-8 rounded-full bg-gray-100 hover:bg-primary-500 text-dark-800 hover:text-white flex items-center justify-center btn-press focus-ring text-base font-bold select-none active:scale-95"
         >
           −
         </button>
         <button
           onClick={handleFlipAxis}
           title="Girar orientación de la pieza 90°"
-          className="h-8 w-8 rounded-xl bg-gray-800/80 hover:bg-primary-600 text-gray-200 hover:text-white flex items-center justify-center transition-all text-xs font-mono font-bold select-none active:scale-95"
+          className="h-8 w-8 rounded-full bg-gray-100 hover:bg-primary-500 text-dark-800 hover:text-white flex items-center justify-center btn-press focus-ring text-xs font-mono font-bold select-none active:scale-95"
         >
           📐
         </button>
         <button
           onClick={handleReset}
           title="Centrar / Restablecer vista inicial"
-          className="h-8 w-8 rounded-xl bg-gray-800/80 hover:bg-primary-600 text-gray-200 hover:text-white flex items-center justify-center transition-all text-xs font-mono font-bold select-none active:scale-95"
+          className="h-8 w-8 rounded-full bg-gray-100 hover:bg-primary-500 text-dark-800 hover:text-white flex items-center justify-center btn-press focus-ring text-xs font-mono font-bold select-none active:scale-95"
         >
           🎯
         </button>
         <button
           onClick={() => setAutoRotate(!autoRotate)}
           title={autoRotate ? "Pausar rotación" : "Iniciar rotación"}
-          className={`h-8 w-8 rounded-xl flex items-center justify-center transition-all text-xs select-none active:scale-95 ${
+          className={`h-8 w-8 rounded-full flex items-center justify-center btn-press focus-ring text-xs select-none ${
             autoRotate
-              ? "bg-primary-600 text-white"
-              : "bg-gray-800/80 hover:bg-gray-700 text-gray-400"
+              ? "bg-primary-500 text-white"
+              : "bg-gray-100 hover:bg-gray-200 text-dark-800"
           }`}
         >
           🔄

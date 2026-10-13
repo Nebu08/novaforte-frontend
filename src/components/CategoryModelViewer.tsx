@@ -51,7 +51,7 @@ export default function CategoryModelViewer({
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] gap-6 items-stretch">
         {/* Main 3D Canvas */}
-        <div className="relative group overflow-hidden rounded-xl border border-dark-700 bg-dark-900 shadow-lift transition-[border-color,box-shadow] duration-200 ease-out-precise hover:border-dark-600">
+        <div className="relative group overflow-hidden rounded-xl border border-gray-300 bg-gray-100 shadow-lift transition-[border-color,box-shadow] duration-200 ease-out-precise hover:border-gray-400">
           <ModelViewer3D
             src={activeModel?.file}
             rotation={activeModel?.rotation}

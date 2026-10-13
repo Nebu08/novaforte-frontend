@@ -45,18 +45,17 @@ export default function Header({ currentLocale }: HeaderProps) {
     <header className="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/90 backdrop-blur-md">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-[80px] lg:h-[88px] flex items-center justify-between gap-4">
 
-        {/* Brand Logo — Agrandado con elegancia sin desordenar */}
+        {/* Brand Logo — versión recortada al contenido (logo-header.svg, 1379×306)
+            para que el logo ocupe toda la altura disponible sin margen vacío */}
         <Link href="/" className="flex items-center group flex-shrink-0 rounded-sm focus-ring">
-          <div className="relative overflow-hidden transition-opacity duration-150 ease-out-precise group-hover:opacity-85 w-[200px] h-[45px] sm:w-[240px] sm:h-[54px] lg:w-[280px] lg:h-[62px] xl:w-[310px] xl:h-[68px]">
-            <Image
-              src="/images/logo.svg"
-              alt="Novaforte Biomedical Engineering"
-              fill
-              className="object-contain dark:invert"
-              style={{ objectPosition: "left center" }}
-              priority
-            />
-          </div>
+          <Image
+            src="/images/logo-header.svg"
+            alt="Novaforte Biomedical Engineering"
+            width={1379}
+            height={306}
+            className="w-auto h-11 sm:h-12 lg:h-[52px] xl:h-16 transition-opacity duration-150 ease-out-precise group-hover:opacity-85 dark:invert"
+            priority
+          />
         </Link>
 
         {/* Desktop Navigation Links — 1 sola línea limpia, sin saltos de texto */}

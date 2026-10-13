@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-06T04:07:15.489Z",
+  "generatedAt": "2026-10-13T20:01:53.063Z",
   "title": "Design System: Novaforte S.A.S.",
   "extensions": {
     "colorMeta": {
@@ -551,9 +551,9 @@
       "name": "3D Viewer Frame",
       "kind": "custom",
       "refersTo": "viewer-frame",
-      "description": "Marco HTML del visor 3D: banco de carbón con barra de lectura.",
+      "description": "Marco HTML del visor 3D: mesa de inspección clara, legible a pleno sol.",
       "html": "<div class=\"ds-viewer\"><div class=\"ds-viewer-bar\"><span class=\"ds-viewer-name\">Modelo 3D · STL</span><span class=\"ds-viewer-live\"><i></i>Interactivo</span></div><div class=\"ds-viewer-stage\"></div></div>",
-      "css": ".ds-viewer{position:relative;overflow:hidden;border-radius:12px;background:var(--color-dark-900, #0e0d0c);border:1px solid var(--color-dark-700, #3a3734);box-shadow:0 1px 2px rgba(14,13,12,.08), 0 12px 24px -12px rgba(14,13,12,.28);transition:border-color 200ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-viewer:hover{border-color:var(--color-dark-600, #524f4b)}.ds-viewer-bar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 16px;background:rgba(14,13,12,.7);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.1)}.ds-viewer-name{color:var(--color-gray-200, #dedad8);font:600 12px/1 ui-monospace,monospace}.ds-viewer-live{display:inline-flex;align-items:center;gap:6px;color:var(--color-gray-400, #9e9894);font:700 10px/1 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}.ds-viewer-live i{width:8px;height:8px;border-radius:50%;background:var(--color-primary-500, #7e192a)}.ds-viewer-stage{height:220px}"
+      "css": ".ds-viewer{position:relative;overflow:hidden;border-radius:12px;background:radial-gradient(ellipse at 50% 42%, var(--color-gray-100, #eeebea) 0%, var(--color-gray-200, #dedad8) 100%);border:1px solid var(--color-gray-300, #c4bfbc);box-shadow:0 1px 2px rgba(14,13,12,.08), 0 12px 24px -12px rgba(14,13,12,.28);transition:border-color 200ms cubic-bezier(0.23, 1, 0.32, 1)}.ds-viewer:hover{border-color:var(--color-gray-400, #9e9894)}.ds-viewer-bar{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 16px;background:rgba(255,255,255,.8);backdrop-filter:blur(12px);border-bottom:1px solid var(--color-gray-200, #dedad8)}.ds-viewer-name{color:var(--color-dark-800, #1c1b1a);font:600 12px/1 ui-monospace,monospace}.ds-viewer-live{display:inline-flex;align-items:center;gap:6px;color:var(--color-gray-600, #5e5855);font:700 10px/1 ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase}.ds-viewer-live i{width:8px;height:8px;border-radius:50%;background:var(--color-primary-500, #7e192a)}.ds-viewer-stage{height:220px}"
     }
   ],
   "narrative": {
@@ -562,10 +562,10 @@
     "keyCharacteristics": [
       "Paleta cerrada: burdeos, oro champagne, gris carbón y gris cálido, sin tonos fríos ni azules.",
       "Superficies planas en reposo, separadas por líneas de 1px; la sombra solo aparece en lo que flota.",
-      "Titulares en Outfit de peso máximo con tracking negativo; cuerpo en Inter.",
+      "Titulares en Outfit de peso máximo con tracking negativo; cuerpo en IBM Plex Sans.",
       "Números tabulares en toda cifra técnica (±0.1mm, 72 h, 100%).",
       "Movimiento breve (150–240ms) con curva de salida fuerte y sin rebote.",
-      "El visor 3D, oscuro como un banco de carbón, es la pieza central de cada división."
+      "El visor 3D, sobre un gris claro de mesa de inspección legible a pleno sol, es la pieza central de cada división."
     ],
     "rules": [
       {

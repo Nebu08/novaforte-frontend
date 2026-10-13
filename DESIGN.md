@@ -54,23 +54,23 @@ typography:
     letterSpacing: "-0.02em"
     fontFeature: "tnum"
   body:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "IBM Plex Sans, sans-serif"
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.625
   body-lead:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "IBM Plex Sans, sans-serif"
     fontSize: "1.125rem"
     fontWeight: 400
     lineHeight: 1.625
   label:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "IBM Plex Sans, sans-serif"
     fontSize: "0.75rem"
     fontWeight: 700
     lineHeight: 1.4
     letterSpacing: "0.18em"
   label-fine:
-    fontFamily: "Inter, sans-serif"
+    fontFamily: "IBM Plex Sans, sans-serif"
     fontSize: "0.65rem"
     fontWeight: 600
     lineHeight: 1.4
@@ -140,7 +140,7 @@ components:
     rounded: "{rounded.xl}"
     padding: "24px"
   viewer-frame:
-    backgroundColor: "{colors.carbon-banco}"
+    backgroundColor: "{colors.arena-guia}"
     rounded: "{rounded.xl}"
 ---
 
@@ -159,10 +159,10 @@ El movimiento es el de una máquina bien calibrada: respuesta inmediata, sin reb
 **Key Characteristics:**
 - Paleta cerrada: burdeos, oro champagne, gris carbón y gris cálido, sin tonos fríos ni azules.
 - Superficies planas en reposo, separadas por líneas de 1px; la sombra solo aparece en lo que flota.
-- Titulares en Outfit de peso máximo con tracking negativo; cuerpo en Inter.
+- Titulares en Outfit de peso máximo con tracking negativo; cuerpo en IBM Plex Sans.
 - Números tabulares en toda cifra técnica (±0.1mm, 72 h, 100%).
 - Movimiento breve (150–240ms) con curva de salida fuerte y sin rebote.
-- El visor 3D, oscuro como un banco de carbón, es la pieza central de cada división.
+- El visor 3D, sobre un gris claro de mesa de inspección legible a pleno sol, es la pieza central de cada división.
 
 ## Colors
 
@@ -184,7 +184,7 @@ Una paleta de taller: papel cálido para trabajar, carbón para las mesas oscura
 - **Bronce Oscuro** (#8b6930): el texto y el fondo de CTA de la división Academia (5.05:1 con blanco).
 
 ### Neutral
-- **Carbón Banco** (#0e0d0c): el fondo de la sección de proceso y del visor 3D. Es la mesa oscura del taller.
+- **Carbón Banco** (#0e0d0c): el fondo de la sección de proceso. Es la mesa oscura del taller.
 - **Carbón Panel** (#1c1b1a): las tarjetas sobre fondo carbón y el texto de los botones secundarios.
 - **Grafito** (#3a3734): bordes de tarjetas sobre carbón y el color de la división Biomédica (acento, texto y CTA).
 - **Grafito Claro** (#524f4b): el borde hover de las tarjetas oscuras.
@@ -207,9 +207,9 @@ Una paleta de taller: papel cálido para trabajar, carbón para las mesas oscura
 ## Typography
 
 **Display Font:** Outfit (con sans-serif)
-**Body Font:** Inter (con sans-serif)
+**Body Font:** IBM Plex Sans (con system-ui, sans-serif)
 
-**Character:** Outfit en peso 900 da titulares compactos y geométricos, como letras grabadas en una placa de máquina. Inter aporta una lectura neutra y técnica para descripciones, formularios y etiquetas.
+**Character:** Outfit en peso 900 da titulares compactos y geométricos, como letras grabadas en una placa de máquina. IBM Plex Sans, nacida como tipografía de ingeniería, aporta una lectura precisa y técnica para descripciones, formularios y etiquetas.
 
 ### Hierarchy
 - **Display** (900, clamp(2.4rem → 4rem), 1.04): el H1 del hero, uno por página. Tracking -0.025em y `text-wrap: balance`.
@@ -262,7 +262,7 @@ Los divisores son siempre de 1px. Los indicadores de estado (subrayado de pesta�
 ### Buttons
 Precisos y sobrios: responden de inmediato, sin rebote ni brillo.
 - **Shape:** píldora completa (9999px).
-- **Primary:** fondo Burdeos Firma y texto blanco en Inter 600 a 14px. Mide 52px de alto con 28px de padding horizontal y lleva una flecha de 16px a la derecha. En reposo tiene la sombra Crisp.
+- **Primary:** fondo Burdeos Firma y texto blanco en IBM Plex Sans 600 a 14px. Mide 52px de alto con 28px de padding horizontal y lleva una flecha de 16px a la derecha. En reposo tiene la sombra Crisp.
 - **Hover / Focus:** al hover el fondo pasa a Burdeos Prensa, la sombra sube a Lift y la flecha avanza 2px (200ms). Al presionar, la escala baja a 0.97 (160ms, `cubic-bezier(0.23, 1, 0.32, 1)`). El foco es un contorno de 2px en Burdeos Firma con 2px de separación.
 - **Secondary:** fondo blanco al 70%, borde de 1px en Línea Control y texto Carbón Panel, con la misma altura y forma. Al hover el borde y el texto pasan a carbón.
 - **Compact (header):** 40px de alto, 20px de padding y texto en mayúsculas a 12px con 0.08em de tracking.
@@ -270,16 +270,21 @@ Precisos y sobrios: responden de inmediato, sin rebote ni brillo.
 - **Text link:** 44px de alto. Es Tinta Media en reposo y Burdeos Firma al hover, con subrayado a 4px de distancia.
 
 ### Chips (celdas de especificación)
-- **Style:** fondo blanco y radio de 2px, con 32px de alto y 12px de padding. Texto en Inter 600 a 12.8px con cifras tabulares, en el color de tinta de la división. El borde es de 1px, con el acento de la división al 35%.
+- **Style:** fondo blanco y radio de 2px, con 32px de alto y 12px de padding. Texto en IBM Plex Sans 600 a 12.8px con cifras tabulares, en el color de tinta de la división. El borde es de 1px, con el acento de la división al 35%.
 - **State:** son estáticas e informativas, sin hover ni selección.
 
 ### Cards / Containers
 - **Process card:** esquinas de 12px, fondo Carbón Panel, borde de 1px en Grafito y 24px de padding interno. Al hover el borde pasa a Grafito Claro, la tarjeta sube 2px y la barra inferior de 2px se duplica de ancho por escala desde la izquierda (200ms).
 - **Metric bar:** una cuadrícula de celdas Papel Taller separadas por divisores de 1px en Línea Cota (gap de 1px sobre fondo Línea Cota) y cerrada arriba y abajo por líneas de 1px.
-- **Brand card:** esquinas de 12px, degradado de 135° de Burdeos Firma a Burdeos Profundo, contorno interno blanco al 10% y sombra Lift.
+- **Brand card:** esquinas de 12px, degradado de 135° de Burdeos Firma a Burdeos Profundo, contorno interno blanco al 10% y sombra Lift. Su emblema es el corazón-circuito del logo oficial (`public/images/novaforte-heart.png`, silueta extraída de `logo.svg`), de 112px de alto y pintado en Oro Champagne mediante `mask-image`. No se reemplaza por un corazón genérico.
+
+### Logo
+- **Header:** usa `public/images/logo-header.svg`, el mismo `logo.svg` con el `viewBox` recortado al contenido (proporción 1379×306). Mide 44px de alto en móvil, 48px desde 640px, 52px desde 1024px y 64px desde 1280px; el ancho es automático.
+- **Favicon:** `src/app/icon.svg` es un cuadro Burdeos Firma de esquinas redondeadas con el corazón-circuito del logo en Oro Champagne. Las líneas de la silueta están engrosadas para que se lean a 16–32px.
+- **Regla:** no se usa `logo.svg` sin recortar en espacios estrechos, porque su lienzo de 1440×810 deja el logo con un tercio del tamaño disponible.
 
 ### Navigation
-- **Desktop:** Inter 600 a 12px (14px desde 1280px), píldoras de 6px de radio con padding de 8×12px y texto Tinta Media. El hover usa fondo Arena Guía y texto carbón. El enlace activo usa fondo Velo Burdeos, texto Burdeos Firma y `aria-current="page"`.
+- **Desktop:** IBM Plex Sans 600 a 12px (14px desde 1280px), píldoras de 6px de radio con padding de 8×12px y texto Tinta Media. El hover usa fondo Arena Guía y texto carbón. El enlace activo usa fondo Velo Burdeos, texto Burdeos Firma y `aria-current="page"`.
 - **Header:** sticky, con fondo blanco al 90% y desenfoque de fondo (backdrop blur), y una sola línea inferior de 1px.
 - **Móvil:** un botón de menú de 44px, con `aria-expanded`. El panel entra en 200ms (opacidad y −4px) y sus enlaces miden 44px de alto. El CTA completo va al final.
 
@@ -287,7 +292,9 @@ Precisos y sobrios: responden de inmediato, sin rebote ni brillo.
 Pestañas e índice técnico. En móvil, las cuatro divisiones forman una cuadrícula de 2×2 con divisores de 1px y esquinas exteriores de 8px. Desde 640px son una fila con un subrayado de 2px del acento de la división, que se extiende desde la izquierda en 200ms. En desktop, el panel suma un índice lateral: una línea vertical de 1px donde la división activa se marca con una barra de 2px que crece desde arriba, más un icono de 32px que se rellena con el acento de la división.
 
 ### 3D Viewer Frame (Signature Component)
-El banco del taller. Es un contenedor de esquinas de 12px con fondo Carbón Banco, borde de 1px en Grafito y sombra Lift. Arriba lleva una barra de lectura translúcida (carbón al 70% con desenfoque y línea inferior blanca al 10%) con el nombre del modelo en monoespaciada y un indicador "Interactivo". A su lado, el selector de piezas usa tarjetas de 8px: la seleccionada lleva borde Burdeos Firma, fondo Velo Burdeos y sombra Crisp; al presionar baja a escala 0.98. La lógica WebGL interna no forma parte del sistema visual.
+La mesa de inspección. Es un contenedor de esquinas de 12px con borde de 1px en Línea Control y sombra Lift. El fondo es un degradado radial de Arena Guía (centro) a Línea Cota (bordes). Se eligió claro para que el modelo siga legible bajo el sol en celulares, y con viñeta para que las piezas plateadas (casi blancas) se separen del fondo mientras las burdeos y negras contrastan con fuerza. Arriba lleva una barra de lectura blanca al 80% con desenfoque y línea inferior en Línea Cota, con el nombre del modelo en monoespaciada (texto Carbón Panel) y el indicador "Interactivo". La barra de controles flotante es una píldora blanca al 90% con borde de 1px y sombra Lift, y sus botones son círculos Arena Guía que pasan a Burdeos Firma al hover. Cuando el visor mide menos de 28rem, la barra oculta la pista "Arrastra" (consulta de contenedor) para no desbordarse. El selector de piezas usa tarjetas de 8px: la seleccionada lleva borde Burdeos Firma, fondo Velo Burdeos y sombra Crisp; al presionar baja a escala 0.98. La lógica WebGL interna (luces, materiales, cámara) no forma parte del sistema visual.
+
+**The Sunlight Rule.** El visor nunca usa fondo oscuro ni blanco puro: el oscuro se pierde con el reflejo del sol y el blanco absorbe las piezas plateadas.
 
 ## Do's and Don'ts
 

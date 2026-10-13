@@ -213,30 +213,20 @@ export default function Home() {
 
                   {/* Contenido */}
                   <div className="relative flex flex-col gap-6">
-                    {/* Ícono corazón-circuito SVG */}
-                    <svg
-                      viewBox="0 0 80 80"
-                      className="h-20 w-20 text-accent-500"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1.5"
-                    >
-                      {/* Corazón simplificado */}
-                      <path
-                        d="M40 65 C20 50 10 38 10 28 C10 18 18 12 28 14 C33 15 37 18 40 22 C43 18 47 15 52 14 C62 12 70 18 70 28 C70 38 60 50 40 65Z"
-                        strokeLinejoin="round"
-                      />
-                      {/* Trazas de circuito */}
-                      <line x1="10" y1="28" x2="2" y2="28" />
-                      <line x1="2" y1="28" x2="2" y2="20" />
-                      <circle cx="2" cy="20" r="2" fill="currentColor" stroke="none" />
-                      <line x1="70" y1="28" x2="78" y2="28" />
-                      <line x1="78" y1="28" x2="78" y2="36" />
-                      <circle cx="78" cy="36" r="2" fill="currentColor" stroke="none" />
-                      <line x1="40" y1="65" x2="40" y2="76" />
-                      <line x1="40" y1="76" x2="52" y2="76" />
-                      <circle cx="52" cy="76" r="2" fill="currentColor" stroke="none" />
-                    </svg>
+                    {/* Corazón-circuito del logo Novaforte (silueta extraída de logo.svg),
+                        pintado con el token oro vía mask-image */}
+                    <span
+                      aria-hidden="true"
+                      className="block self-start h-28 aspect-[231/211] bg-accent-500"
+                      style={{
+                        maskImage: "url(/images/novaforte-heart.png)",
+                        WebkitMaskImage: "url(/images/novaforte-heart.png)",
+                        maskSize: "contain",
+                        WebkitMaskSize: "contain",
+                        maskRepeat: "no-repeat",
+                        WebkitMaskRepeat: "no-repeat",
+                      }}
+                    />
 
                     <div>
                       <p className="text-accent-400 text-text-2xs font-bold tracking-[0.18em] uppercase mb-space-xs">

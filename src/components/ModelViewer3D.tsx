@@ -42,7 +42,7 @@ class ModelErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryStat
 
 function ModelPlaceholder({ label }: { label: string }) {
   return (
-    <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-dark-900/80">
+    <div className="w-full h-full flex flex-col items-center justify-center gap-3 bg-gray-100">
       <svg className="h-12 w-12 text-primary-700 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
       </svg>
@@ -58,7 +58,7 @@ interface ModelViewerProps {
   label?: string;
   /** Height of the viewer container */
   height?: number;
-  /** Background color */
+  /** Background (color o gradiente CSS) */
   bgColor?: string;
   /** Optional initial rotation [X, Y, Z] in radians */
   rotation?: [number, number, number];
@@ -68,7 +68,9 @@ export default function ModelViewer3D({
   src,
   label = "Modelo 3D",
   height = 420,
-  bgColor = "#0e0d0c",
+  // Fondo claro con viñeta: legible a pleno sol y con contraste para piezas
+  // oscuras (burdeos, negro) y plateadas. Solo tokens de @theme.
+  bgColor = "radial-gradient(ellipse at 50% 42%, var(--color-gray-100) 0%, var(--color-gray-200) 100%)",
   rotation = [0, 0, 0],
 }: ModelViewerProps) {
   const renderFallback = (
@@ -83,9 +85,9 @@ export default function ModelViewer3D({
         <line x1="10" y1="60" x2="70" y2="60" strokeDasharray="4,3" />
       </svg>
       <div className="text-center px-4">
-        <p className="text-gray-400 text-sm font-semibold mb-1">Visor 3D Listo</p>
+        <p className="text-dark-800 text-sm font-semibold mb-1">Visor 3D Listo</p>
         <p className="text-gray-600 text-xs font-mono max-w-[240px] leading-relaxed">
-          Sube tus archivos .stl/.glb a <code className="text-primary-300 bg-primary-900/60 px-1 rounded-hairline">public/models/</code>
+          Sube tus archivos .stl/.glb a <code className="text-primary-600 bg-primary-50 px-1 rounded-hairline">public/models/</code>
         </p>
       </div>
     </div>
@@ -97,12 +99,12 @@ export default function ModelViewer3D({
       style={{ height, background: bgColor }}
     >
       {/* Header bar — Sin superposiciones, con truncado dinámico */}
-      <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-4 py-2.5 bg-dark-900/70 backdrop-blur-md border-b border-white/10 gap-2">
+      <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-between px-4 py-2.5 bg-white/80 backdrop-blur-md border-b border-gray-200 gap-2">
         <div className="flex items-center gap-2 min-w-0 max-w-[70%]">
-          <svg className="h-4 w-4 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="h-4 w-4 text-primary-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
           </svg>
-          <span className="text-xs font-mono font-semibold text-gray-200 truncate" title={label}>
+          <span className="text-xs font-mono font-semibold text-dark-800 truncate" title={label}>
             {label}
           </span>
         </div>
@@ -111,7 +113,7 @@ export default function ModelViewer3D({
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-400 opacity-75" />
             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary-500" />
           </span>
-          <span className="text-[10px] text-gray-400 font-mono font-bold tracking-wider uppercase">INTERACTIVO</span>
+          <span className="text-[10px] text-gray-600 font-mono font-bold tracking-wider uppercase">INTERACTIVO</span>
         </div>
       </div>
 
