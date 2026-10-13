@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;700&family=Outfit:wght@600;700;900&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:not(*));
@@ -22,6 +22,7 @@
    * ================================================ */
   --font-sans: 'IBM Plex Sans', system-ui, sans-serif;
   --font-display: 'Outfit', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
   /* Body sizes */
   --text-text-3xs: 0.65rem;
