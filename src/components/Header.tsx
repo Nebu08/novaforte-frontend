@@ -67,7 +67,7 @@ export default function Header({ currentLocale }: HeaderProps) {
                 key={link.href}
                 href={link.href}
                 aria-current={isActive ? "page" : undefined}
-                className={`px-3 py-2 text-xs xl:text-sm font-semibold rounded-md whitespace-nowrap transition-colors duration-150 ease-out-precise focus-ring ${
+                className={`px-2 xl:px-3 py-2 text-xs xl:text-sm font-semibold rounded-md whitespace-nowrap transition-colors duration-150 ease-out-precise focus-ring ${
                   isActive
                     ? "bg-primary-50 text-primary-500"
                     : "text-gray-700 hover:text-dark-900 hover:bg-gray-100"
@@ -94,10 +94,11 @@ export default function Header({ currentLocale }: HeaderProps) {
             </svg>
           </button>
 
-          {/* CTA Contact Button */}
+          {/* CTA Contact Button — desde xl; entre 1024 y 1279px no cabe junto
+              al menú y el enlace "Contacto" cumple la misma función */}
           <Link
             href="/contacto"
-            className="inline-flex items-center h-10 px-5 bg-primary-500 hover:bg-primary-600 text-white text-xs font-bold uppercase tracking-[0.08em] rounded-full shadow-crisp hover:shadow-lift btn-press focus-ring whitespace-nowrap"
+            className="hidden xl:inline-flex items-center h-10 px-5 bg-primary-500 hover:bg-primary-600 text-white text-xs font-bold uppercase tracking-[0.08em] rounded-full shadow-crisp hover:shadow-lift btn-press focus-ring whitespace-nowrap"
           >
             {t("cta")}
           </Link>

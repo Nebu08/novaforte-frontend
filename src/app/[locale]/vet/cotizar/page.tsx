@@ -236,6 +236,8 @@ export default function VetCotizarPage() {
                   <option value="wheelchair" className="dark:bg-dark-800">{locale === "es" ? "Silla de Ruedas Adaptativa" : "Adaptive Wheelchair"}</option>
                   <option value="orthosis" className="dark:bg-dark-800">{locale === "es" ? "Órtesis de Codo / Férula de Soporte" : "Elbow Orthosis / Support Splint"}</option>
                   <option value="prosthesis" className="dark:bg-dark-800">{locale === "es" ? "Prótesis de Extremidad" : "Prosthetic Limb"}</option>
+                  <option value="guide" className="dark:bg-dark-800">{locale === "es" ? "Guía Quirúrgica Autoclavable" : "Autoclavable Surgical Guide"}</option>
+                  <option value="model" className="dark:bg-dark-800">{locale === "es" ? "Modelo Anatómico (Presentación u Operable)" : "Anatomical Model (Presentation or Operable)"}</option>
                   <option value="other" className="dark:bg-dark-800">{locale === "es" ? "Otro requerimiento" : "Other requirement"}</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
