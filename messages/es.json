@@ -305,7 +305,7 @@
   "Vet": {
     "hero": {
       "title": "Órtesis y Prótesis 3D para Devolver la Movilidad Animal",
-      "subtitle": "Diseño personalizado de órtesis ligeras, resistentes y adaptables para perros y gatos en Colombia. Manufactura digital a la medida del cuerpo de tu mascota.",
+      "subtitle": "Órtesis, prótesis y sillas de ruedas a la medida, y guías quirúrgicas autoclavables planeadas desde la tomografía de tu paciente.",
       "ctaQuote": "Cotizar Dispositivo Veterinario",
       "ctaPortfolio": "Ver Casos Veterinarios"
     },
@@ -325,6 +325,50 @@
         "desc": "Cada dispositivo es supervisado y validado por un veterinario especialista de nuestro equipo para asegurar una correcta adaptación anatómica."
       }
     },
+    "surgical": {
+      "eyebrow": "Planificación quirúrgica",
+      "title": "Ensaya la cirugía antes de entrar al quirófano",
+      "subtitle": "Para correcciones de deformidades angulares. Tomamos los archivos DICOM de la tomografía, reconstruimos el hueso en 3D y planeamos la corrección en software. Simulamos la cirugía completa antes de fabricar, para verificar que la guía encaje y la corrección funcione.",
+      "stepsTitle": "Cómo funciona",
+      "steps": {
+        "s1": {
+          "title": "Nos envías la tomografía",
+          "desc": "Los archivos DICOM del TAC de tu paciente."
+        },
+        "s2": {
+          "title": "Reconstruimos el hueso",
+          "desc": "Obtenemos el modelo 3D de la anatomía real del paciente."
+        },
+        "s3": {
+          "title": "Planeamos y simulamos",
+          "desc": "Definimos los cortes y la corrección, y simulamos la operación en software antes de fabricar."
+        },
+        "s4": {
+          "title": "Fabricamos y enviamos",
+          "desc": "Guías y modelos listos en máximo 5 días, según el tamaño del modelo y la complejidad de la corrección."
+        }
+      },
+      "products": {
+        "guide": {
+          "title": "Guía quirúrgica autoclavable",
+          "desc": "Impresa en resina autoclavable: la esterilizas junto con tu instrumental y entra al campo quirúrgico. Cada guía sale de un plan simulado sobre el hueso de tu paciente. Con cada guía enviamos 2 guías de prueba en resina estándar para que ensayes el corte sobre el modelo operable.",
+          "specs": ["Resina autoclavable", "Plan simulado en software", "+2 guías de prueba"]
+        },
+        "operable": {
+          "title": "Modelo anatómico operable",
+          "desc": "Imita la textura del hueso: lo puedes cortar y perforar como en la cirugía real. Te da la dimensión exacta de la anatomía de tu paciente, y con las guías de prueba encima te sirve para entrenar el procedimiento.",
+          "specs": ["Textura similar al hueso", "Se puede cortar y perforar", "Tamaño real del paciente"]
+        },
+        "presentation": {
+          "title": "Modelo anatómico de presentación",
+          "desc": "Impreso en resina 3D de alto detalle para estudiar la lesión en la mano y explicarle el caso al propietario o a tu equipo.",
+          "specs": ["Resina de alto detalle", "Estudio y presentación"]
+        }
+      },
+      "kit": "Pídelos por separado o como kit: el modelo de presentación para estudiar el caso, el operable para ensayar con las guías de prueba y la guía autoclavable para el quirófano.",
+      "cta": "Cotizar planificación quirúrgica",
+      "ctaMicro": "Un ingeniero revisa el caso y te responde en menos de 72 horas hábiles."
+    },
     "form": {
       "title": "Cotizar Órtesis o Prótesis Veterinaria",
       "subtitle": "Indíquenos los datos de su mascota y la extremidad afectada para diseñar un dispositivo a medida.",
@@ -342,6 +386,8 @@
         "wheelchair": "Silla de Ruedas Adaptativa",
         "orthosis": "Órtesis de Codo / Férula de Soporte",
         "prosthesis": "Prótesis de Extremidad",
+        "guide": "Guía Quirúrgica Autoclavable",
+        "model": "Modelo Anatómico (Presentación u Operable)",
         "other": "Otro requerimiento"
       }
     },
@@ -625,8 +671,8 @@
       "description": "Diseño y manufactura digital de prótesis y órtesis personalizadas en polímeros biocompatibles de alta resistencia. Entrega en 5–10 días en Bogotá."
     },
     "vet": {
-      "title": "Órtesis y Prótesis para Perros y Gatos | Novaforte",
-      "description": "Sillas de ruedas, férulas y dispositivos de movilidad impresos en 3D para mascotas, diseñados con acompañamiento veterinario en Bogotá."
+      "title": "Órtesis, Prótesis y Guías Quirúrgicas Veterinarias | Novaforte",
+      "description": "Órtesis, prótesis y sillas de ruedas impresas en 3D para mascotas, y guías quirúrgicas autoclavables planeadas desde el TAC. Hechas en Bogotá."
     },
     "biomedica": {
       "title": "Repuestos de Equipos Médicos Descontinuados | Novaforte",

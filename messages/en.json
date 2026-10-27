@@ -305,7 +305,7 @@
   "Vet": {
     "hero": {
       "title": "3D Orthotics & Prosthetics to Restore Animal Mobility",
-      "subtitle": "Personalized design of lightweight, durable, and adaptable orthotics for dogs and cats in Colombia. Digital fabrication tailored to your pet's body.",
+      "subtitle": "Custom orthoses, prostheses and wheelchairs, plus autoclavable surgical guides planned from your patient's CT scan.",
       "ctaQuote": "Quote Veterinary Device",
       "ctaPortfolio": "View Vet Cases"
     },
@@ -325,6 +325,50 @@
         "desc": "Each device is supervised and validated by a specialist veterinarian on our team to ensure proper anatomical adaptation."
       }
     },
+    "surgical": {
+      "eyebrow": "Surgical planning",
+      "title": "Rehearse the surgery before you scrub in",
+      "subtitle": "For angular limb deformity corrections. We take the DICOM files from the CT scan, rebuild the bone in 3D and plan the correction in software. We simulate the full surgery before manufacturing to verify that the guide fits and the correction works.",
+      "stepsTitle": "How it works",
+      "steps": {
+        "s1": {
+          "title": "Send us the CT scan",
+          "desc": "The DICOM files from your patient's CT."
+        },
+        "s2": {
+          "title": "We rebuild the bone",
+          "desc": "We obtain a 3D model of your patient's actual anatomy."
+        },
+        "s3": {
+          "title": "We plan and simulate",
+          "desc": "We define the cuts and the correction, and simulate the procedure in software before manufacturing."
+        },
+        "s4": {
+          "title": "We manufacture and ship",
+          "desc": "Guides and models ready in 5 days at most, depending on model size and correction complexity."
+        }
+      },
+      "products": {
+        "guide": {
+          "title": "Autoclavable surgical guide",
+          "desc": "Printed in autoclavable resin: sterilize it with your instruments and take it into the surgical field. Every guide comes from a plan simulated on your patient's bone. Each guide ships with 2 trial guides in standard resin so you can rehearse the cut on the operable model.",
+          "specs": ["Autoclavable resin", "Software-simulated plan", "+2 trial guides"]
+        },
+        "operable": {
+          "title": "Operable anatomical model",
+          "desc": "It mimics the texture of bone, so you can cut and drill it as in the real surgery. It gives you the exact dimensions of your patient's anatomy, and with the trial guides on top it lets you train the procedure.",
+          "specs": ["Bone-like texture", "Can be cut and drilled", "Patient's actual size"]
+        },
+        "presentation": {
+          "title": "Presentation anatomical model",
+          "desc": "Printed in high-detail 3D resin so you can study the lesion in your hands and explain the case to the owner or your team.",
+          "specs": ["High-detail resin", "Study and presentation"]
+        }
+      },
+      "kit": "Order them separately or as a kit: the presentation model to study the case, the operable model to rehearse with the trial guides, and the autoclavable guide for the operating room.",
+      "cta": "Quote surgical planning",
+      "ctaMicro": "An engineer reviews the case and replies within 72 business hours."
+    },
     "form": {
       "title": "Quote Veterinary Orthotic or Prosthetic",
       "subtitle": "Provide your pet's details and the affected limb to design a custom-made device.",
@@ -342,6 +386,8 @@
         "wheelchair": "Adaptive Wheelchair",
         "orthosis": "Elbow Orthosis / Support Splint",
         "prosthesis": "Prosthetic Limb",
+        "guide": "Autoclavable Surgical Guide",
+        "model": "Anatomical Model (Presentation or Operable)",
         "other": "Other requirement"
       }
     },
@@ -625,8 +671,8 @@
       "description": "Digital design and manufacturing of personalized prostheses and orthoses in high-strength biocompatible polymers. Delivery in 5–10 days in Bogota."
     },
     "vet": {
-      "title": "Orthotics & Prosthetics for Dogs and Cats | Novaforte",
-      "description": "3D-printed wheelchairs, splints and mobility devices for pets, designed with veterinary guidance in Bogota."
+      "title": "Veterinary Orthotics, Prosthetics & Surgical Guides | Novaforte",
+      "description": "3D-printed orthoses, prostheses and wheelchairs for pets, plus autoclavable surgical guides planned from the CT scan. Made in Bogota."
     },
     "biomedica": {
       "title": "Discontinued Medical Equipment Spare Parts | Novaforte",

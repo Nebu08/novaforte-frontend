@@ -148,6 +148,104 @@ export default function VetPage() {
       </section>
 
       {/* ══════════════════════════════════════
+          PLANIFICACIÓN QUIRÚRGICA — Guías autoclavables + modelos anatómicos
+          Textos en Vet.surgical (messages/*.json)
+          ══════════════════════════════════════ */}
+      <section id="planificacion-quirurgica" className="scroll-mt-24 py-space-3xl lg:py-24 bg-gray-50 border-t border-gray-200">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+          {/* Encabezado */}
+          <div className="max-w-3xl">
+            <p className="text-text-2xs font-bold tracking-[0.18em] uppercase text-primary-700 mb-space-sm">
+              ─── {t("surgical.eyebrow")}
+            </p>
+            <h2 className="font-display text-heading-sm lg:text-heading-lg font-black tracking-[-0.02em] text-balance text-dark-900 leading-tight">
+              {t("surgical.title")}
+            </h2>
+            <p className="mt-space-sm text-gray-600 text-lg leading-relaxed text-pretty">
+              {t("surgical.subtitle")}
+            </p>
+          </div>
+
+          {/* Cómo funciona — 4 pasos con divisores de 1px */}
+          <h3 className="sr-only">{t("surgical.stepsTitle")}</h3>
+          <ol className="mt-space-2xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 border-y border-gray-200">
+            {(["s1", "s2", "s3", "s4"] as const).map((key, i) => (
+              <li key={key} className="flex flex-col gap-space-xs bg-gray-50 py-space-lg sm:px-space-lg max-lg:sm:odd:pl-0 lg:first:pl-0">
+                <span className="font-display text-text-sm font-bold tracking-[0.18em] tabular-nums text-primary-700">
+                  0{i + 1}
+                </span>
+                <span className="font-display text-lg font-black leading-tight text-dark-900">
+                  {t(`surgical.steps.${key}.title`)}
+                </span>
+                <span className="text-sm text-gray-600 leading-relaxed">
+                  {t(`surgical.steps.${key}.desc`)}
+                </span>
+              </li>
+            ))}
+          </ol>
+
+          {/* Productos — la guía autoclavable lleva el peso visual */}
+          <div className="mt-space-2xl grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+            {(["guide", "operable", "presentation"] as const).map((key) => {
+              const featured = key === "guide";
+              const specs = t.raw(`surgical.products.${key}.specs`) as string[];
+              return (
+                <article
+                  key={key}
+                  className={`flex flex-col gap-space-md rounded-xl border p-space-lg ${
+                    featured
+                      ? "bg-dark-900 border-dark-700 text-white shadow-lift"
+                      : "bg-white border-gray-200 text-dark-900"
+                  }`}
+                >
+                  <h3 className="font-display text-xl font-black leading-tight tracking-[-0.01em]">
+                    {t(`surgical.products.${key}.title`)}
+                  </h3>
+                  <p className={`text-sm leading-relaxed ${featured ? "text-gray-300" : "text-gray-600"}`}>
+                    {t(`surgical.products.${key}.desc`)}
+                  </p>
+                  <div className="mt-auto flex flex-wrap gap-space-xs pt-space-xs">
+                    {specs.map((spec) => (
+                      <span
+                        key={spec}
+                        className={`inline-flex items-center h-8 px-space-sm text-text-xs font-semibold tabular-nums rounded-hairline border ${
+                          featured
+                            ? "border-primary-400/50 text-primary-300"
+                            : "bg-white border-primary-400/40 text-primary-700"
+                        }`}
+                      >
+                        {spec}
+                      </span>
+                    ))}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+
+          {/* Kit + CTA */}
+          <div className="mt-space-2xl grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-space-lg items-center border-t border-gray-200 pt-space-xl">
+            <p className="text-base text-gray-700 leading-relaxed max-w-2xl text-pretty">
+              {t("surgical.kit")}
+            </p>
+            <div className="flex flex-col gap-space-xs lg:items-end">
+              <Link
+                href="/vet/cotizar"
+                className="group inline-flex items-center justify-center gap-space-xs h-[52px] px-7 bg-primary-700 hover:bg-primary-800 text-white text-sm font-semibold rounded-full shadow-crisp hover:shadow-lift btn-press focus-ring"
+              >
+                {t("surgical.cta")}
+                <svg className="h-4 w-4 transition-transform duration-200 ease-out-precise group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <p className="text-text-2xs text-gray-600">{t("surgical.ctaMicro")}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════
           CASOS DE ÉXITO VETERINARIA — Carrusel con flechas
           ══════════════════════════════════════ */}
       <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">

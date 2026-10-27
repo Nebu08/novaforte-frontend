@@ -47,8 +47,8 @@ export default async function VetLayout({
     },
     description:
       locale === "es"
-        ? "Diseño y fabricación de órtesis, prótesis y sillas de ruedas 3D a medida para perros y gatos con acompañamiento veterinario."
-        : "Design and fabrication of custom 3D orthoses, prostheses and wheelchairs for pets under veterinary guidance.",
+        ? "Diseño y fabricación de órtesis, prótesis y sillas de ruedas 3D a medida para perros y gatos, y guías quirúrgicas autoclavables planeadas desde la tomografía del paciente."
+        : "Design and fabrication of custom 3D orthoses, prostheses and wheelchairs for pets, plus autoclavable surgical guides planned from the patient's CT scan.",
   };
 
   return (

@@ -75,6 +75,12 @@ typography:
     fontWeight: 600
     lineHeight: 1.4
     letterSpacing: "0.08em"
+  mono:
+    fontFamily: "IBM Plex Mono, monospace"
+    fontSize: "0.75rem"
+    fontWeight: 500
+    lineHeight: 1.4
+    letterSpacing: "0.08em"
 rounded:
   hairline: "2px"
   sm: "4px"
@@ -208,8 +214,9 @@ Una paleta de taller: papel cálido para trabajar, carbón para las mesas oscura
 
 **Display Font:** Outfit (con sans-serif)
 **Body Font:** IBM Plex Sans (con system-ui, sans-serif)
+**Mono Font:** IBM Plex Mono (con ui-monospace, monospace)
 
-**Character:** Outfit en peso 900 da titulares compactos y geométricos, como letras grabadas en una placa de máquina. IBM Plex Sans, nacida como tipografía de ingeniería, aporta una lectura precisa y técnica para descripciones, formularios y etiquetas.
+**Character:** Outfit en peso 900 da titulares compactos y geométricos, como letras grabadas en una placa de máquina. IBM Plex Sans, nacida como tipografía de ingeniería, aporta una lectura precisa y técnica para descripciones, formularios y etiquetas. IBM Plex Mono, de la misma familia, se reserva para especificaciones, cifras y etiquetas técnicas.
 
 ### Hierarchy
 - **Display** (900, clamp(2.4rem → 4rem), 1.04): el H1 del hero, uno por página. Tracking -0.025em y `text-wrap: balance`.
