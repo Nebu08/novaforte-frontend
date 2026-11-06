@@ -486,10 +486,18 @@ export const MODELS_3D: Model3D[] = [
   },
   {
     id: 13,
-    nameEs: "Guía Quirúrgica Radio-Ulnar — Lola Piña",
-    nameEn: "Radioulnar Surgical Guide — Lola Piña",
+    nameEs: "Guía Quirúrgica Radio-Ulnar 1 — Lola Piña",
+    nameEn: "Radioulnar Surgical Guide 1 — Lola Piña",
     file: "/models/vet/GuiaQRP1LP.glb",
     thumbnail: "/images/models/guia-lola-thumb.jpg",
+    category: "vet",
+  },
+  {
+    id: 14,
+    nameEs: "Guía Quirúrgica Radio-Ulnar 2 — Lola Piña",
+    nameEn: "Radioulnar Surgical Guide 2 — Lola Piña",
+    file: "/models/vet/GuiaQRP2LP.glb",
+    thumbnail: "/images/models/guia-lola-2-thumb.jpg",
     category: "vet",
   },
   {
