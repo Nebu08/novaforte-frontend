@@ -105,6 +105,19 @@ export const MAP_CONFIG = {
 // ============================================================
 export type CaseCategory = "humans" | "biomedica" | "vet" | "academy";
 
+/** Foto o video de una galería antes/después — ej: { type: "video", src: "/images/portafolio/vet/video/koda.mp4", poster: "...jpg" } */
+export interface CaseMedia {
+  type: "image" | "video";
+  /** Ruta desde /public */
+  src: string;
+  /** Solo videos: cuadro que se muestra mientras carga */
+  poster?: string;
+  /** Etiqueta corta sobre la foto — ej: "Antes" / "Before" */
+  labelEs: string;
+  labelEn: string;
+  altText: string;
+}
+
 export interface PortfolioCase {
   id: number;
   category: CaseCategory;
@@ -124,6 +137,8 @@ export interface PortfolioCase {
   /** Ficha técnica resumida */
   specEs: string;
   specEn: string;
+  /** Opcional: galería antes/después (2 o 3 fotos o videos). Si existe, reemplaza a `image` */
+  media?: CaseMedia[];
 }
 
 export const PORTFOLIO_CASES: PortfolioCase[] = [
@@ -201,6 +216,85 @@ export const PORTFOLIO_CASES: PortfolioCase[] = [
     year: 2023,
     specEs: "Material: PETG / ABS · Resistencia a Desinfectantes · Tolerancia ±0.1mm",
     specEn: "Material: PETG / ABS · Disinfectant Resistant · Tolerance ±0.1mm",
+  },
+  {
+    id: 12,
+    category: "vet",
+    titleEs: "Lola Piña volvió a correr",
+    titleEn: "Lola Piña is running again",
+    descriptionEs: "Lola Piña, una teckel, tenía una desviación angular radio-ulnar en la pata delantera izquierda. Planeamos la corrección desde su tomografía y fabricamos las guías quirúrgicas. La cirugía la realizó el Dr. Leonel Cardona y su equipo de SURGYPET.",
+    descriptionEn: "Lola Piña, a dachshund, had an angular radioulnar deformity in her left foreleg. We planned the correction from her CT scan and manufactured the surgical guides. The surgery was performed by Dr. Leonel Cardona and his team at SURGYPET.",
+    image: "/images/portafolio/vet/lola-pina-antes.jpg",
+    altText: "Lola Piña, teckel con guías quirúrgicas impresas en 3D — Novaforte",
+    tagEs: "Desviación Angular Radio-Ulnar",
+    tagEn: "Angular Radioulnar Deformity",
+    year: 2026,
+    specEs: "Guías quirúrgicas · Planeación desde el TAC",
+    specEn: "Surgical guides · CT-based planning",
+    media: [
+      {
+        type: "image",
+        src: "/images/portafolio/vet/lola-pina-antes.jpg",
+        labelEs: "Antes",
+        labelEn: "Before",
+        altText: "Pata delantera izquierda de Lola Piña antes de la cirugía, junto al modelo 3D de su hueso",
+      },
+      {
+        type: "image",
+        src: "/images/portafolio/vet/lola-pina-despues.jpg",
+        labelEs: "Después de la cirugía",
+        labelEn: "After surgery",
+        altText: "Pata de Lola Piña corregida al terminar la cirugía",
+      },
+      {
+        type: "video",
+        src: "/images/portafolio/vet/video/lola-pina-corriendo.mp4",
+        poster: "/images/portafolio/vet/video/lola-pina-corriendo.jpg",
+        labelEs: "Ahora",
+        labelEn: "Now",
+        altText: "Lola Piña corriendo por un pasillo después de su recuperación",
+      },
+    ],
+  },
+  {
+    id: 13,
+    category: "vet",
+    titleEs: "Koda volvió a caminar",
+    titleEn: "Koda is walking again",
+    descriptionEs: "Koda quedó con parálisis en las patas traseras por una lesión en la columna, tras un accidente con otro perro. Le diseñamos y fabricamos una silla de ruedas a la medida de su cuerpo.",
+    descriptionEn: "Koda's hind legs were paralyzed after a spinal injury caused by an accident with another dog. We designed and built a wheelchair fitted to her body.",
+    image: "/images/portafolio/vet/koda-silla.jpg",
+    altText: "Koda con su silla de ruedas impresa en 3D — Novaforte",
+    tagEs: "Parálisis del Tren Posterior",
+    tagEn: "Hind Limb Paralysis",
+    year: 2026,
+    specEs: "Silla de ruedas a la medida · Diseño 3D",
+    specEn: "Custom-fitted wheelchair · 3D design",
+    media: [
+      {
+        type: "video",
+        src: "/images/portafolio/vet/video/koda-sin-silla.mp4",
+        poster: "/images/portafolio/vet/video/koda-sin-silla.jpg",
+        labelEs: "Antes",
+        labelEn: "Before",
+        altText: "Koda arrastrando las patas traseras antes de tener su silla",
+      },
+      {
+        type: "video",
+        src: "/images/portafolio/vet/video/koda-con-silla.mp4",
+        poster: "/images/portafolio/vet/video/koda-con-silla.jpg",
+        labelEs: "Ahora",
+        labelEn: "Now",
+        altText: "Koda caminando por la calle con su silla de ruedas",
+      },
+      {
+        type: "image",
+        src: "/images/portafolio/vet/koda-silla.jpg",
+        labelEs: "Su silla",
+        labelEn: "Her wheelchair",
+        altText: "Koda de pie en el pasto con su silla de ruedas",
+      },
+    ],
   },
   {
     id: 6,
@@ -328,10 +422,10 @@ export const MODELS_3D: Model3D[] = [
   },
   {
     id: 2,
-    nameEs: "Prótesis de Carpo Anatómica",
-    nameEn: "Anatomical Carpal Prosthesis",
-    file: "/models/humans/Carpo.glb",
-    thumbnail: "/images/models/carpo-thumb.jpg",
+    nameEs: "Socket Transtibial",
+    nameEn: "Transtibial Socket",
+    file: "/models/humans/Socket_Transtibial.stl",
+    thumbnail: "/images/models/socket-transtibial-thumb.jpg",
     category: "humans",
   },
   {
@@ -388,6 +482,14 @@ export const MODELS_3D: Model3D[] = [
     nameEn: "Koda Mobility Cart Prosthesis",
     file: "/models/vet/Koda_Carrito.stl",
     thumbnail: "/images/models/kodacarrito-thumb.jpg",
+    category: "vet",
+  },
+  {
+    id: 13,
+    nameEs: "Guía Quirúrgica Radio-Ulnar — Lola Piña",
+    nameEn: "Radioulnar Surgical Guide — Lola Piña",
+    file: "/models/vet/GuiaQRP1LP.glb",
+    thumbnail: "/images/models/guia-lola-thumb.jpg",
     category: "vet",
   },
   {

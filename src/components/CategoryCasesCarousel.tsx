@@ -1,9 +1,81 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocale } from "next-intl";
 import Image from "next/image";
-import { PORTFOLIO_CASES, type CaseCategory } from "@/lib/site-config";
+import { PORTFOLIO_CASES, type CaseCategory, type CaseMedia } from "@/lib/site-config";
+
+// Video de caso: se reproduce en silencio y en bucle solo mientras está a la vista
+// (los slides ocultos del carrusel quedan fuera y se pausan). Con movimiento
+// reducido no arranca solo: muestra los controles nativos.
+function CaseVideo({ media }: { media: CaseMedia }) {
+  const ref = useRef<HTMLVideoElement>(null);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const video = ref.current;
+    if (!video) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setReducedMotion(reduce);
+    if (reduce) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) video.play().catch(() => {});
+        else video.pause();
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <video
+      ref={ref}
+      src={media.src}
+      poster={media.poster}
+      muted
+      loop
+      playsInline
+      preload="none"
+      controls={reducedMotion}
+      aria-label={media.altText}
+      className="absolute inset-0 h-full w-full object-cover"
+    />
+  );
+}
+
+function CaseGallery({ media, locale }: { media: CaseMedia[]; locale: string }) {
+  return (
+    <div
+      className={`flex gap-3 overflow-x-auto snap-x snap-mandatory sm:grid sm:overflow-visible ${
+        media.length >= 3 ? "sm:grid-cols-3" : "sm:grid-cols-2"
+      }`}
+    >
+      {media.map((item) => (
+        <figure
+          key={item.src}
+          className="relative aspect-[4/5] w-[72%] shrink-0 snap-start overflow-hidden rounded-xl bg-gray-100 dark:bg-dark-900 sm:w-auto"
+        >
+          {item.type === "video" ? (
+            <CaseVideo media={item} />
+          ) : (
+            <Image
+              src={item.src}
+              alt={item.altText}
+              fill
+              sizes="(min-width: 1024px) 22vw, (min-width: 640px) 30vw, 72vw"
+              className="object-cover"
+            />
+          )}
+          <figcaption className="absolute bottom-2 left-2 rounded-md bg-black/65 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+            {locale === "es" ? item.labelEs : item.labelEn}
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+  );
+}
 
 interface CategoryCasesCarouselProps {
   category: CaseCategory;
@@ -99,6 +171,47 @@ export default function CategoryCasesCarousel({
             const desc = locale === "es" ? caso.descriptionEs : caso.descriptionEn;
             const tag = locale === "es" ? caso.tagEs : caso.tagEn;
             const spec = locale === "es" ? caso.specEs : caso.specEn;
+
+            // Caso con galería antes/después: fotos/videos a lo ancho, ficha al lado en desktop
+            if (caso.media && caso.media.length > 0) {
+              return (
+                <div key={caso.id} className="w-full flex-shrink-0 px-1">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 bg-white dark:bg-dark-800 border border-gray-200 dark:border-gray-700/60 rounded-2xl overflow-hidden shadow-md p-6">
+                    <div className="lg:col-span-2 min-w-0">
+                      <CaseGallery media={caso.media} locale={locale} />
+                    </div>
+
+                    <div className="flex flex-col justify-between gap-4">
+                      <div>
+                        <div className="flex flex-wrap items-center gap-2 mb-4">
+                          <span
+                            className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-white rounded-md"
+                            style={{ backgroundColor: accentColor }}
+                          >
+                            {tag}
+                          </span>
+                          <span className="px-2.5 py-1 text-[11px] font-semibold bg-gray-100 dark:bg-dark-900 text-gray-600 dark:text-gray-300 rounded-md">
+                            {caso.year}
+                          </span>
+                        </div>
+                        <h4 className="text-xl font-bold text-dark-900 dark:text-white mb-2" style={{ fontFamily: "Outfit, sans-serif" }}>
+                          {caseTitle}
+                        </h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                          {desc}
+                        </p>
+                      </div>
+
+                      <div className="pt-4 border-t border-gray-100 dark:border-gray-700/60">
+                        <span className="text-xs font-mono font-semibold text-gray-500 dark:text-gray-400">
+                          {spec}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              );
+            }
 
             return (
               <div key={caso.id} className="w-full flex-shrink-0 px-1">
