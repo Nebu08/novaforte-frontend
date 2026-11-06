@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
 import CategoryModelViewer from "@/components/CategoryModelViewer";
 import CategoryCasesCarousel from "@/components/CategoryCasesCarousel";
+import { PORTFOLIO_CASES } from "@/lib/site-config";
 
 const WORKFLOW_ICONS = ["📦", "🔬", "⚙️", "📋"];
 
@@ -159,15 +160,17 @@ export default function BiomedicaPage() {
       {/* ══════════════════════════════════════
           CASOS DE ÉXITO BIOMÉDICA — Carrusel con flechas
           ══════════════════════════════════════ */}
-      <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <CategoryCasesCarousel
-            category="biomedica"
-            title="Casos y Repuestos Biomédicos"
-            subtitle="Ingeniería inversa, componentes y partes para equipos médicos en Colombia"
-          />
-        </div>
-      </section>
+      {PORTFOLIO_CASES.some((c) => c.category === "biomedica") && (
+        <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <CategoryCasesCarousel
+              category="biomedica"
+              title="Casos y Repuestos Biomédicos"
+              subtitle="Ingeniería inversa, componentes y partes para equipos médicos en Colombia"
+            />
+          </div>
+        </section>
+      )}
 
       {/* ══════════════════════════════════════
           PREGUNTAS FRECUENTES (FAQ) + SCHEMA

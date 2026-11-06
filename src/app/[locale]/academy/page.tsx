@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/navigation";
 import Image from "next/image";
-import { PAST_COURSES } from "@/lib/site-config";
+import { PAST_COURSES, PORTFOLIO_CASES } from "@/lib/site-config";
 import CategoryModelViewer from "@/components/CategoryModelViewer";
 import CategoryCasesCarousel from "@/components/CategoryCasesCarousel";
 
@@ -677,15 +677,17 @@ export default function AcademyPage() {
       {/* ══════════════════════════════════════════
           CASOS DE ÉXITO ACADEMY — Carrusel con flechas
           ══════════════════════════════════════════ */}
-      <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <CategoryCasesCarousel
-            category="academy"
-            title="Casos de Éxito en Colegios e Instituciones"
-            subtitle="Proyectos estudiantiles y emprendimientos Maker desarrollados con el programa Novaforte Academy"
-          />
-        </div>
-      </section>
+      {PORTFOLIO_CASES.some((c) => c.category === "academy") && (
+        <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <CategoryCasesCarousel
+              category="academy"
+              title="Casos de Éxito en Colegios e Instituciones"
+              subtitle="Proyectos estudiantiles y emprendimientos Maker desarrollados con el programa Novaforte Academy"
+            />
+          </div>
+        </section>
+      )}
 
       {/* ══════════════════════════════════════════
           CTA Final — Colegio

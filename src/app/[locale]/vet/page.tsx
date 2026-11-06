@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/navigation";
 import CategoryModelViewer from "@/components/CategoryModelViewer";
 import CategoryCasesCarousel from "@/components/CategoryCasesCarousel";
+import { PORTFOLIO_CASES } from "@/lib/site-config";
 
 export default function VetPage() {
   const t = useTranslations("Vet");
@@ -248,15 +249,17 @@ export default function VetPage() {
       {/* ══════════════════════════════════════
           CASOS DE ÉXITO VETERINARIA — Carrusel con flechas
           ══════════════════════════════════════ */}
-      <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <CategoryCasesCarousel
-            category="vet"
-            title="Casos y Prótesis Veterinarias"
-            subtitle="Órtesis y prótesis personalizadas desarrolladas con acompañamiento veterinario en Colombia"
-          />
-        </div>
-      </section>
+      {PORTFOLIO_CASES.some((c) => c.category === "vet") && (
+        <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <CategoryCasesCarousel
+              category="vet"
+              title="Casos y Prótesis Veterinarias"
+              subtitle="Órtesis y prótesis personalizadas desarrolladas con acompañamiento veterinario en Colombia"
+            />
+          </div>
+        </section>
+      )}
 
       {/* ══════════════════════════════════════
           CTA Final

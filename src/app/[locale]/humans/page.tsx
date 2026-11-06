@@ -6,6 +6,7 @@ import { Link } from "@/navigation";
 import DownloadModal from "@/components/DownloadModal";
 import CategoryModelViewer from "@/components/CategoryModelViewer";
 import CategoryCasesCarousel from "@/components/CategoryCasesCarousel";
+import { PORTFOLIO_CASES } from "@/lib/site-config";
 
 // SPECS shifted to local component state to support next-intl dynamic translations
 
@@ -146,15 +147,17 @@ export default function HumansPage() {
       {/* ══════════════════════════════════════════════════════
           CASOS DE ÉXITO HUMANS — Carrusel de navegación con flechas
           ══════════════════════════════════════════════════════ */}
-      <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <CategoryCasesCarousel
-            category="humans"
-            title="Casos Clínicos y Proyectos Humans"
-            subtitle="Órtesis, prótesis y dispositivos biomecánicos entregados a pacientes en Colombia"
-          />
-        </div>
-      </section>
+      {PORTFOLIO_CASES.some((c) => c.category === "humans") && (
+        <section className="py-16 bg-[#f7f5f4] dark:bg-dark-950 border-t border-gray-200/50 dark:border-gray-800">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <CategoryCasesCarousel
+              category="humans"
+              title="Casos Clínicos y Proyectos Humans"
+              subtitle="Órtesis, prótesis y dispositivos biomecánicos entregados a pacientes en Colombia"
+            />
+          </div>
+        </section>
+      )}
 
       <DownloadModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
     </div>
