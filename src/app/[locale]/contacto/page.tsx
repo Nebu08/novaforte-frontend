@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { submitLead } from "@/lib/leads";
+import { PrivacyConsent, SubmitError } from "@/components/LeadFormParts";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "@/navigation";
 import { COMPANY_INFO, MAP_CONFIG } from "@/lib/site-config";
@@ -21,6 +23,8 @@ export default function ContactoPage() {
   const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
   const [touched, setTouched] = useState<{ [key: string]: boolean }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleBlur = (field: string, value: string) => {
     setTouched((prev) => ({ ...prev, [field]: true }));
@@ -38,9 +42,11 @@ export default function ContactoPage() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError("");
 
     // Validate fields
     const newErrors: { [key: string]: boolean } = {
+      privacy: !privacyAccepted,
       name: !name.trim(),
       email: !email.trim() || !/\S+@\S+\.\S+/.test(email),
       phone: !phone.trim() || phone.trim().length < 7,
@@ -65,28 +71,18 @@ export default function ContactoPage() {
     }
 
     try {
-      const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || "https://novaforte-backend-1.onrender.com";
-      const res = await fetch(`${apiBase}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          phone,
-          subject,
-          message,
-        }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Failed to submit contact request");
-      }
+      await submitLead({
+        name,
+        email,
+        phone,
+        subject,
+        message,
+        privacyAccepted,
+      }, locale);
 
       router.push("/gracias");
     } catch (err) {
-      console.error("Error submitting contact request:", err);
+      setSubmitError(err instanceof Error ? err.message : "");
     } finally {
       setIsSubmitting(false);
     }
@@ -291,11 +287,15 @@ export default function ContactoPage() {
                 
                 {/* Nombre Completo */}
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center justify-between">
+                  <label htmlFor="c-name" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center justify-between">
                     <span>{t("form.fieldName")}</span>
                     <span className="text-red-500 font-bold">*</span>
                   </label>
                   <input
+                    id="c-name"
+                    name="name"
+                    autoComplete="name"
+                    aria-invalid={errors.name || undefined}
                     type="text"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
@@ -319,11 +319,15 @@ export default function ContactoPage() {
                   
                   {/* Correo Electrónico */}
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center justify-between">
+                    <label htmlFor="c-email" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center justify-between">
                       <span>{t("form.fieldEmail")}</span>
                       <span className="text-red-500 font-bold">*</span>
                     </label>
                     <input
+                      id="c-email"
+                      name="email"
+                      autoComplete="email"
+                      aria-invalid={errors.email || undefined}
                       type="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
@@ -344,11 +348,15 @@ export default function ContactoPage() {
 
                   {/* Número de Contacto */}
                   <div className="flex flex-col gap-1.5">
-                    <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center justify-between">
+                    <label htmlFor="c-phone" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center justify-between">
                       <span>{t("form.fieldPhone")}</span>
                       <span className="text-red-500 font-bold">*</span>
                     </label>
                     <input
+                      id="c-phone"
+                      name="phone"
+                      autoComplete="tel"
+                      aria-invalid={errors.phone || undefined}
                       type="tel"
                       value={phone}
                       onChange={(e) => setPhone(e.target.value)}
@@ -371,12 +379,15 @@ export default function ContactoPage() {
 
                 {/* Asunto de la Consulta */}
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center justify-between">
+                  <label htmlFor="c-subject" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center justify-between">
                     <span>{t("form.fieldSubject")}</span>
                     <span className="text-red-500 font-bold">*</span>
                   </label>
                   <div className="relative">
                     <select
+                      id="c-subject"
+                      name="subject"
+                      aria-invalid={errors.subject || undefined}
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
                       onBlur={(e) => handleBlur("subject", e.target.value)}
@@ -408,11 +419,14 @@ export default function ContactoPage() {
 
                 {/* Mensaje / Descripción */}
                 <div className="flex flex-col gap-1.5">
-                  <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center justify-between">
+                  <label htmlFor="c-message" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex items-center justify-between">
                     <span>{t("form.fieldMessage")}</span>
                     <span className="text-red-500 font-bold">*</span>
                   </label>
                   <textarea
+                    id="c-message"
+                    name="message"
+                    aria-invalid={errors.message || undefined}
                     rows={5}
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
@@ -432,6 +446,13 @@ export default function ContactoPage() {
                 </div>
 
                 {/* Botón de Envío Premium */}
+                <PrivacyConsent
+                  id="c-privacy"
+                  checked={privacyAccepted}
+                  onChange={(v) => { setPrivacyAccepted(v); if (v) setErrors((p) => ({ ...p, privacy: false })); }}
+                  showError={!!errors.privacy}
+                />
+                <SubmitError message={submitError} />
                 <button
                   type="submit"
                   disabled={isSubmitting}

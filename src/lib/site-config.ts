@@ -30,7 +30,7 @@ export const COMPANY_INFO = {
   whatsapp: "573238698295",          // ← Formato: 57 + número sin espacios ni guiones
   whatsappMessage: "¡Hola! Me interesan los servicios de Novaforte y quisiera saber los pasos para realizar una cotización o agendar una cita.",
   email: "contacto@novafortesas.com",
-  website: "https://novafortesas.com", // ← Dominio de producción (sitemap, canonical, hreflang, schema)
+  website: "https://www.novafortesas.com", // ← Dominio de producción (sitemap, canonical, hreflang, schema)
   nit: "900.000.000-0",             // ← Editar con el NIT real
 };
 

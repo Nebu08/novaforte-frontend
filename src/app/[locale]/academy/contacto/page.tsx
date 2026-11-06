@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { submitLead } from "@/lib/leads";
+import { PrivacyConsent, SubmitError } from "@/components/LeadFormParts";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, Link } from "@/navigation";
 
@@ -20,6 +22,8 @@ export default function AcademyContactoPage() {
   const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
   const [touched, setTouched] = useState<{ [key: string]: boolean }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleBlur = (field: string, value: string) => {
     setTouched((prev) => ({ ...prev, [field]: true }));
@@ -37,9 +41,11 @@ export default function AcademyContactoPage() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError("");
 
     // Validate fields (5 fields maximum)
     const newErrors: { [key: string]: boolean } = {
+      privacy: !privacyAccepted,
       name: !name.trim(),
       email: !email.trim() || !/\S+@\S+\.\S+/.test(email),
       institution: !institution.trim(),
@@ -64,28 +70,18 @@ export default function AcademyContactoPage() {
     }
 
     try {
-      const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || "https://novaforte-backend-1.onrender.com";
-      const res = await fetch(`${apiBase}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          institution,
-          role,
-          students,
-        }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Failed to submit registration");
-      }
+      await submitLead({
+        name,
+        email,
+        institution,
+        role,
+        students,
+        privacyAccepted,
+      }, locale);
 
       router.push("/gracias");
     } catch (err) {
-      console.error("Error submitting quote request:", err);
+      setSubmitError(err instanceof Error ? err.message : "");
     } finally {
       setIsSubmitting(false);
     }
@@ -138,11 +134,15 @@ export default function AcademyContactoPage() {
             
             {/* Nombre del Coordinador */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="a-name" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldName")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <input
+                id="a-name"
+                name="name"
+                autoComplete="name"
+                aria-invalid={errors.name || undefined}
                 type="text"
                 aria-required="true"
                 value={name}
@@ -164,11 +164,15 @@ export default function AcademyContactoPage() {
 
             {/* Email */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="a-email" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldEmail")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <input
+                id="a-email"
+                name="email"
+                autoComplete="email"
+                aria-invalid={errors.email || undefined}
                 type="email"
                 aria-required="true"
                 value={email}
@@ -190,11 +194,15 @@ export default function AcademyContactoPage() {
 
             {/* Institución Educativa */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="a-institution" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldInstitution")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <input
+                id="a-institution"
+                name="institution"
+                autoComplete="organization"
+                aria-invalid={errors.institution || undefined}
                 type="text"
                 aria-required="true"
                 value={institution}
@@ -216,12 +224,16 @@ export default function AcademyContactoPage() {
 
             {/* Cargo en la Institución */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="a-role" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldRole")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <div className="relative">
                 <select
+                  id="a-role"
+                  name="role"
+                  autoComplete="organization-title"
+                  aria-invalid={errors.role || undefined}
                   aria-required="true"
                   value={role}
                   onChange={(e) => setRole(e.target.value)}
@@ -253,12 +265,15 @@ export default function AcademyContactoPage() {
 
             {/* Número de estudiantes (Rango) */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="a-students" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldStudents")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <div className="relative">
                 <select
+                  id="a-students"
+                  name="students"
+                  aria-invalid={errors.students || undefined}
                   aria-required="true"
                   value={students}
                   onChange={(e) => setStudents(e.target.value)}
@@ -288,6 +303,13 @@ export default function AcademyContactoPage() {
             </div>
 
             {/* Submit */}
+            <PrivacyConsent
+              id="a-privacy"
+              checked={privacyAccepted}
+              onChange={(v) => { setPrivacyAccepted(v); if (v) setErrors((p) => ({ ...p, privacy: false })); }}
+              showError={!!errors.privacy}
+            />
+            <SubmitError message={submitError} />
             <button
               type="submit"
               disabled={isSubmitting}

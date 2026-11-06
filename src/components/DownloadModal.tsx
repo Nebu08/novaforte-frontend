@@ -1,7 +1,9 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import { useTranslations } from "next-intl";
+import { submitLead } from "@/lib/leads";
+import { PrivacyConsent, SubmitError } from "@/components/LeadFormParts";
+import { useTranslations, useLocale } from "next-intl";
 import { useRouter } from "@/navigation";
 
 interface DownloadModalProps {
@@ -11,6 +13,7 @@ interface DownloadModalProps {
 
 export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
   const t = useTranslations("Humans.modal");
+  const locale = useLocale();
   const router = useRouter();
   
   // Form states
@@ -24,15 +27,19 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
   // Validation error states
   const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   if (!isOpen) return null;
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError("");
 
     // Validate only 3 required fields
     const newErrors: { [key: string]: boolean } = {
+      privacy: !privacyAccepted,
       name: !name.trim(),
       email: !email.trim() || !/\S+@\S+\.\S+/.test(email),
       institution: !institution.trim(),
@@ -48,24 +55,14 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
     }
 
     try {
-      const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || "https://novaforte-backend-1.onrender.com";
-      const res = await fetch(`${apiBase}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          institution,
-          role: role.trim() || undefined,
-          phone: phone.trim() || undefined,
-        }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Failed to register lead");
-      }
+      await submitLead({
+        name,
+        email,
+        institution,
+        role: role.trim() || undefined,
+        phone: phone.trim() || undefined,
+        privacyAccepted,
+      }, locale);
 
       // Trigger physical download of PDF
       const link = document.createElement("a");
@@ -79,7 +76,7 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
       onClose();
       router.push("/gracias");
     } catch (err) {
-      console.error("Error submitting lead:", err);
+      setSubmitError(err instanceof Error ? err.message : "");
     } finally {
       setIsSubmitting(false);
     }
@@ -114,10 +111,14 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
 
           {/* Field 1: Name */}
           <div className="flex flex-col gap-1">
-            <label className="text-xs font-semibold text-dark-800 dark:text-gray-300">
+            <label htmlFor="dm-name" className="text-xs font-semibold text-dark-800 dark:text-gray-300">
               {t("fieldName")} <span className="text-red-500">*</span>
             </label>
             <input
+              id="dm-name"
+              name="name"
+              autoComplete="name"
+              aria-invalid={errors.name || undefined}
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
@@ -130,10 +131,14 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
 
           {/* Field 2: Email */}
           <div className="flex flex-col gap-1">
-            <label className="text-xs font-semibold text-dark-800 dark:text-gray-300">
+            <label htmlFor="dm-email" className="text-xs font-semibold text-dark-800 dark:text-gray-300">
               {t("fieldEmail")} <span className="text-red-500">*</span>
             </label>
             <input
+              id="dm-email"
+              name="email"
+              autoComplete="email"
+              aria-invalid={errors.email || undefined}
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -146,10 +151,14 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
 
           {/* Field 3: Institution */}
           <div className="flex flex-col gap-1">
-            <label className="text-xs font-semibold text-dark-800 dark:text-gray-300">
+            <label htmlFor="dm-institution" className="text-xs font-semibold text-dark-800 dark:text-gray-300">
               {t("fieldInstitution")} <span className="text-red-500">*</span>
             </label>
             <input
+              id="dm-institution"
+              name="institution"
+              autoComplete="organization"
+              aria-invalid={errors.institution || undefined}
               type="text"
               value={institution}
               onChange={(e) => setInstitution(e.target.value)}
@@ -173,10 +182,14 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
             <div className="flex flex-col gap-4 pt-2 border-t border-gray-100 dark:border-gray-800">
               {/* Field 4: Role (Optional) */}
               <div className="flex flex-col gap-1">
-                <label className="text-xs font-semibold text-dark-800 dark:text-gray-300">
+                <label htmlFor="dm-role" className="text-xs font-semibold text-dark-800 dark:text-gray-300">
                   {t("fieldRole")} <span className="text-gray-400 font-normal">{t("optional")}</span>
                 </label>
                 <input
+                  id="dm-role"
+                  name="role"
+                  autoComplete="organization-title"
+                  aria-invalid={errors.role || undefined}
                   type="text"
                   value={role}
                   onChange={(e) => setRole(e.target.value)}
@@ -187,10 +200,14 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
 
               {/* Field 5: Phone (Optional) */}
               <div className="flex flex-col gap-1">
-                <label className="text-xs font-semibold text-dark-800 dark:text-gray-300">
+                <label htmlFor="dm-phone" className="text-xs font-semibold text-dark-800 dark:text-gray-300">
                   {t("fieldPhone")} <span className="text-gray-400 font-normal">{t("optional")}</span>
                 </label>
                 <input
+                  id="dm-phone"
+                  name="phone"
+                  autoComplete="tel"
+                  aria-invalid={errors.phone || undefined}
                   type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
@@ -203,6 +220,13 @@ export default function DownloadModal({ isOpen, onClose }: DownloadModalProps) {
 
           {/* Submit Button */}
           <div className="pt-2 flex flex-col gap-2">
+            <PrivacyConsent
+              id="dm-privacy"
+              checked={privacyAccepted}
+              onChange={(v) => { setPrivacyAccepted(v); if (v) setErrors((p) => ({ ...p, privacy: false })); }}
+              showError={!!errors.privacy}
+            />
+            <SubmitError message={submitError} />
             <button
               type="submit"
               disabled={isSubmitting}

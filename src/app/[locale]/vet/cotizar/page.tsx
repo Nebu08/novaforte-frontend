@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { submitLead } from "@/lib/leads";
+import { PrivacyConsent, SubmitError } from "@/components/LeadFormParts";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, Link } from "@/navigation";
 
@@ -20,6 +22,8 @@ export default function VetCotizarPage() {
   const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
   const [touched, setTouched] = useState<{ [key: string]: boolean }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleBlur = (field: string, value: string) => {
     setTouched((prev) => ({ ...prev, [field]: true }));
@@ -37,9 +41,11 @@ export default function VetCotizarPage() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError("");
 
     // Validate fields (5 fields maximum)
     const newErrors: { [key: string]: boolean } = {
+      privacy: !privacyAccepted,
       name: !name.trim(),
       email: !email.trim() || !/\S+@\S+\.\S+/.test(email),
       petDetails: !petDetails.trim(),
@@ -64,28 +70,18 @@ export default function VetCotizarPage() {
     }
 
     try {
-      const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || "https://novaforte-backend-1.onrender.com";
-      const res = await fetch(`${apiBase}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          petDetails,
-          deviceType,
-          message,
-        }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Failed to submit quote request");
-      }
+      await submitLead({
+        name,
+        email,
+        petDetails,
+        deviceType,
+        message,
+        privacyAccepted,
+      }, locale);
 
       router.push("/gracias");
     } catch (err) {
-      console.error("Error submitting quote request:", err);
+      setSubmitError(err instanceof Error ? err.message : "");
     } finally {
       setIsSubmitting(false);
     }
@@ -138,11 +134,15 @@ export default function VetCotizarPage() {
             
             {/* Propietario / Veterinario */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="v-name" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldName")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <input
+                id="v-name"
+                name="name"
+                autoComplete="name"
+                aria-invalid={errors.name || undefined}
                 type="text"
                 aria-required="true"
                 value={name}
@@ -164,11 +164,15 @@ export default function VetCotizarPage() {
 
             {/* Email */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="v-email" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldEmail")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <input
+                id="v-email"
+                name="email"
+                autoComplete="email"
+                aria-invalid={errors.email || undefined}
                 type="email"
                 aria-required="true"
                 value={email}
@@ -190,11 +194,14 @@ export default function VetCotizarPage() {
 
             {/* Especie / Raza de Mascota */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="v-petDetails" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldInstitution")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <input
+                id="v-petDetails"
+                name="petDetails"
+                aria-invalid={errors.petDetails || undefined}
                 type="text"
                 aria-required="true"
                 value={petDetails}
@@ -216,12 +223,15 @@ export default function VetCotizarPage() {
 
             {/* Tipo de Dispositivo Solicitado */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="v-deviceType" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldType")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <div className="relative">
                 <select
+                  id="v-deviceType"
+                  name="deviceType"
+                  aria-invalid={errors.deviceType || undefined}
                   aria-required="true"
                   value={deviceType}
                   onChange={(e) => setDeviceType(e.target.value)}
@@ -255,11 +265,14 @@ export default function VetCotizarPage() {
 
             {/* Mensaje / Comentarios de Movilidad */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="v-message" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldMessage")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <textarea
+                id="v-message"
+                name="message"
+                aria-invalid={errors.message || undefined}
                 aria-required="true"
                 rows={4}
                 value={message}
@@ -280,6 +293,13 @@ export default function VetCotizarPage() {
             </div>
 
             {/* Submit */}
+            <PrivacyConsent
+              id="v-privacy"
+              checked={privacyAccepted}
+              onChange={(v) => { setPrivacyAccepted(v); if (v) setErrors((p) => ({ ...p, privacy: false })); }}
+              showError={!!errors.privacy}
+            />
+            <SubmitError message={submitError} />
             <button
               type="submit"
               disabled={isSubmitting}

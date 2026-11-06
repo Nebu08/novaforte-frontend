@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import { submitLead } from "@/lib/leads";
+import { PrivacyConsent, SubmitError } from "@/components/LeadFormParts";
 import { useTranslations, useLocale } from "next-intl";
 import { useRouter, Link } from "@/navigation";
 
@@ -12,6 +14,7 @@ export default function HumansCotizarPage() {
   // Form states
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [institution, setInstitution] = useState("");
   const [deviceType, setDeviceType] = useState("");
   const [message, setMessage] = useState("");
@@ -20,6 +23,8 @@ export default function HumansCotizarPage() {
   const [errors, setErrors] = useState<{ [key: string]: boolean }>({});
   const [touched, setTouched] = useState<{ [key: string]: boolean }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const handleBlur = (field: string, value: string) => {
     setTouched((prev) => ({ ...prev, [field]: true }));
@@ -27,6 +32,7 @@ export default function HumansCotizarPage() {
     
     if (field === "name") isError = !value.trim();
     if (field === "email") isError = !value.trim() || !/\S+@\S+\.\S+/.test(value);
+    if (field === "phone") isError = value.replace(/D/g, "").length < 7;
     if (field === "institution") isError = !value.trim();
     if (field === "deviceType") isError = !value;
     if (field === "message") isError = !value.trim() || value.trim().length < 10;
@@ -37,11 +43,14 @@ export default function HumansCotizarPage() {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError("");
 
     // Validate fields (5 fields maximum)
     const newErrors: { [key: string]: boolean } = {
+      privacy: !privacyAccepted,
       name: !name.trim(),
       email: !email.trim() || !/\S+@\S+\.\S+/.test(email),
+      phone: phone.replace(/D/g, "").length < 7,
       institution: !institution.trim(),
       deviceType: !deviceType,
       message: !message.trim() || message.trim().length < 10
@@ -51,6 +60,7 @@ export default function HumansCotizarPage() {
     setTouched({
       name: true,
       email: true,
+      phone: true,
       institution: true,
       deviceType: true,
       message: true
@@ -64,28 +74,19 @@ export default function HumansCotizarPage() {
     }
 
     try {
-      const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL || "https://novaforte-backend-1.onrender.com";
-      const res = await fetch(`${apiBase}/api/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          email,
-          institution,
-          deviceType,
-          message,
-        }),
-      });
-
-      if (!res.ok) {
-        throw new Error("Failed to submit quote request");
-      }
+      await submitLead({
+        name,
+        email,
+        phone,
+        institution,
+        deviceType,
+        message,
+        privacyAccepted,
+      }, locale);
 
       router.push("/gracias");
     } catch (err) {
-      console.error("Error submitting quote request:", err);
+      setSubmitError(err instanceof Error ? err.message : "");
     } finally {
       setIsSubmitting(false);
     }
@@ -138,11 +139,15 @@ export default function HumansCotizarPage() {
             
             {/* Especialista Name */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="h-name" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldName")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <input
+                id="h-name"
+                name="name"
+                autoComplete="name"
+                aria-invalid={errors.name || undefined}
                 type="text"
                 aria-required="true"
                 value={name}
@@ -164,11 +169,15 @@ export default function HumansCotizarPage() {
 
             {/* Email */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="h-email" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldEmail")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <input
+                id="h-email"
+                name="email"
+                autoComplete="email"
+                aria-invalid={errors.email || undefined}
                 type="email"
                 aria-required="true"
                 value={email}
@@ -188,13 +197,48 @@ export default function HumansCotizarPage() {
               )}
             </div>
 
+            {/* Teléfono / WhatsApp */}
+            <div className="flex flex-col gap-1.5">
+              <label htmlFor="h-phone" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+                <span>{locale === "es" ? "Teléfono o WhatsApp" : "Phone or WhatsApp"}</span>
+                <span className="text-red-500 font-bold" aria-hidden="true">*</span>
+              </label>
+              <input
+                id="h-phone"
+                name="phone"
+                autoComplete="tel"
+                aria-invalid={errors.phone || undefined}
+                type="tel"
+                inputMode="tel"
+                aria-required="true"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                onBlur={(e) => handleBlur("phone", e.target.value)}
+                placeholder="+57 300 000 0000"
+                className={`w-full px-4 py-3 bg-gray-50 dark:bg-dark-900/40 border rounded-xl text-sm transition-all duration-300 text-dark-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:bg-white dark:focus:bg-dark-900 focus:ring-4 ${
+                  touched.phone && errors.phone
+                    ? "border-red-500/50 focus:border-red-500 focus:ring-red-500/10"
+                    : "border-gray-200 dark:border-gray-700/60 focus:border-primary-500 focus:ring-primary-500/10"
+                }`}
+              />
+              {touched.phone && errors.phone && (
+                <span className="text-[11px] font-semibold text-red-500 mt-1 flex items-center gap-1">
+                  ⚠️ {locale === "es" ? "Escribe un teléfono válido para contactarte." : "Please enter a valid phone number."}
+                </span>
+              )}
+            </div>
+
             {/* Clínica o Institución */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="h-institution" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldInstitution")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <input
+                id="h-institution"
+                name="institution"
+                autoComplete="organization"
+                aria-invalid={errors.institution || undefined}
                 type="text"
                 aria-required="true"
                 value={institution}
@@ -216,12 +260,15 @@ export default function HumansCotizarPage() {
 
             {/* Tipo de Dispositivo Clínico */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="h-deviceType" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldType")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <div className="relative">
                 <select
+                  id="h-deviceType"
+                  name="deviceType"
+                  aria-invalid={errors.deviceType || undefined}
                   aria-required="true"
                   value={deviceType}
                   onChange={(e) => setDeviceType(e.target.value)}
@@ -254,11 +301,14 @@ export default function HumansCotizarPage() {
 
             {/* Mensaje / Tolerancia */}
             <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
+              <label htmlFor="h-message" className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider flex justify-between">
                 <span>{t("fieldMessage")}</span>
                 <span className="text-red-500 font-bold" aria-hidden="true">*</span>
               </label>
               <textarea
+                id="h-message"
+                name="message"
+                aria-invalid={errors.message || undefined}
                 aria-required="true"
                 rows={4}
                 value={message}
@@ -279,6 +329,13 @@ export default function HumansCotizarPage() {
             </div>
 
             {/* Submit */}
+            <PrivacyConsent
+              id="h-privacy"
+              checked={privacyAccepted}
+              onChange={(v) => { setPrivacyAccepted(v); if (v) setErrors((p) => ({ ...p, privacy: false })); }}
+              showError={!!errors.privacy}
+            />
+            <SubmitError message={submitError} />
             <button
               type="submit"
               disabled={isSubmitting}

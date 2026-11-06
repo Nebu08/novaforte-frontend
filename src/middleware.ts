@@ -11,7 +11,10 @@ export default createMiddleware({
   localePrefix: "always",
   
   // Desactivar detección automática para respetar siempre la URL explícita
-  localeDetection: false
+  localeDetection: false,
+
+  // El idioma siempre va en la URL, así que la cookie NEXT_LOCALE no aporta nada: se desactiva.
+  localeCookie: false
 });
 
 export const config = {

@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { COMPANY_INFO, SOCIAL_LINKS, MAP_CONFIG } from "@/lib/site-config";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Script from "next/script";
+import CookieConsent from "@/components/CookieConsent";
+import { CONSENT_DEFAULT_SCRIPT } from "@/lib/consent";
 import "../globals.css";
 
 export async function generateMetadata({
@@ -140,9 +143,15 @@ export default async function RootLayout({
 
           {/* Botón flotante directo a WhatsApp */}
           <FloatingWhatsApp />
+
+          {/* Aviso de cookies de analítica (Ley 1581 de 2012) */}
+          <CookieConsent />
         </NextIntlClientProvider>
 
-        {/* Google Analytics 4 */}
+        {/* Google Analytics 4: arranca con el consentimiento negado; CookieConsent lo actualiza */}
+        <Script id="ga-consent-default" strategy="beforeInteractive">
+          {CONSENT_DEFAULT_SCRIPT}
+        </Script>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-7VFHSSTYWH"} />
       </body>
     </html>

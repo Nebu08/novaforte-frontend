@@ -1,6 +1,7 @@
 import { Link } from "@/navigation";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { CookiePreferencesButton } from "@/components/CookieConsent";
 
 const FOOTER_LINK =
   "w-fit py-1 rounded-sm hover:text-primary-500 transition-colors duration-150 ease-out-precise focus-ring";
@@ -92,12 +93,13 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-space-md sm:px-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-text-xs text-gray-600">
           <p>{t("rights")}</p>
           <div className="flex items-center gap-space-md">
-            <a
-              href="#"
+            <Link
+              href="/privacidad"
               className="rounded-sm text-gray-600 hover:text-primary-500 transition-colors duration-150 ease-out-precise focus-ring"
             >
               {t("legal")}
-            </a>
+            </Link>
+            <CookiePreferencesButton label={t("cookies")} />
           </div>
         </div>
       </div>

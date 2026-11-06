@@ -14,6 +14,7 @@ const PATHS = [
   { path: "/portafolio", changeFrequency: "weekly" as const, priority: 0.8 },
   { path: "/nosotros", changeFrequency: "monthly" as const, priority: 0.6 },
   { path: "/contacto", changeFrequency: "monthly" as const, priority: 0.7 },
+  { path: "/privacidad", changeFrequency: "yearly" as const, priority: 0.3 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
