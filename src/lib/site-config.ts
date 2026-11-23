@@ -68,7 +68,7 @@ export const WHATSAPP_MESSAGES: Record<WhatsAppContext, { es: string; en: string
 // ← Dejar vacío ("") para ocultar el ícono en el footer
 // ============================================================
 export const SOCIAL_LINKS = {
-  instagram: "https://www.instagram.com/novaforte.sas",  // ← Editar
+  instagram: "https://www.instagram.com/novafortesas",  // ← Editar
   linkedin: "https://www.linkedin.com/company/novaforte", // ← Editar
   youtube: "",    // Dejar vacío si no tienen canal
   facebook: "",    // Dejar vacío si no tienen página

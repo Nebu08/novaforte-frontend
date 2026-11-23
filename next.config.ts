@@ -3,6 +3,12 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();
 
+// Chat de Nova (Chatwoot): su origen se agrega a la CSP solo si está configurado
+const CHATWOOT_ORIGIN = process.env.NEXT_PUBLIC_CHATWOOT_URL
+  ? new URL(process.env.NEXT_PUBLIC_CHATWOOT_URL).origin
+  : "";
+const CHATWOOT_WS = CHATWOOT_ORIGIN.replace(/^http/, "ws");
+
 // ============================================================
 //  Security Headers — aplicados a todas las rutas
 //  Puntos: 2 (HTTPS/HSTS), 7 (nada en frontend), 10 (CSP), 8 (debug off)
@@ -40,21 +46,21 @@ const securityHeaders = [
     value: [
       "default-src 'self'",
       // Scripts: solo mismo origen + inline necesario para Next.js
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com",
+      `script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com ${CHATWOOT_ORIGIN}`.trim(),
       // Estilos: mismo origen + inline (Next.js lo requiere)
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       // Fuentes
       "font-src 'self' https://fonts.gstatic.com data:",
       // Imágenes: mismo origen + data URIs + HTTPS externo para imágenes remotas
-      "img-src 'self' data: blob: https:",
-      // Conexiones de red: mismo origen + backend en Render + Google Analytics 4
-      "connect-src 'self' https://novafortebackend.onrender.com https://www.novafortesas.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com",
+      `img-src 'self' data: blob: https: ${CHATWOOT_ORIGIN}`.trim(),
+      // Conexiones de red: mismo origen + backend en Render + Google Analytics 4 + chat de Nova
+      `connect-src 'self' https://novafortebackend.onrender.com https://www.novafortesas.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com ${CHATWOOT_ORIGIN} ${CHATWOOT_WS}`.trim(),
       // Media: mismo origen
       "media-src 'self' blob:",
       // Workers para 3D viewer (three.js usa workers)
       "worker-src 'self' blob:",
-      // Frames: ninguno permitido
-      "frame-src 'none'",
+      // Frames: solo el chat de Nova (si está configurado)
+      CHATWOOT_ORIGIN ? `frame-src ${CHATWOOT_ORIGIN}` : "frame-src 'none'",
       // Objects: ninguno
       "object-src 'none'",
       // Base URI: solo mismo origen

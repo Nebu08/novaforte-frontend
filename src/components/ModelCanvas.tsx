@@ -4,6 +4,7 @@ import { Suspense, useMemo, useRef, useState } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { OrbitControls, useGLTF, Center, Resize } from "@react-three/drei";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader.js";
+import type { OrbitControls as OrbitControlsImpl } from "three-stdlib";
 
 interface ModelCanvasProps {
   src: string;
@@ -73,7 +74,7 @@ function ModelSelector({
 }
 
 export default function ModelCanvas({ src, initialRotation = [0, 0, 0] }: ModelCanvasProps) {
-  const controlsRef = useRef<any>(null);
+  const controlsRef = useRef<OrbitControlsImpl>(null);
   const [autoRotate, setAutoRotate] = useState<boolean>(true);
   const [interactiveRotation, setInteractiveRotation] = useState<[number, number, number]>([0, 0, 0]);
 

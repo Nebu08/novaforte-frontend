@@ -44,6 +44,8 @@ export default function ErrorBoundary({ error, reset }: ErrorProps) {
           >
             Reintentar / Reload
           </button>
+          {/* Recarga completa a propósito: tras un error se descarta el estado del cliente */}
+          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
           <a
             href="/"
             className="flex-1 py-3 px-6 border border-gray-300 dark:border-gray-700 text-dark-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-dark-800/50 font-semibold rounded-xl transition-all duration-300 text-sm text-center"

@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import NovaChat from "@/components/NovaChat";
 import { COMPANY_INFO, SOCIAL_LINKS, MAP_CONFIG } from "@/lib/site-config";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "../globals.css";
@@ -140,6 +141,9 @@ export default async function RootLayout({
 
           {/* Botón flotante directo a WhatsApp */}
           <FloatingWhatsApp />
+
+          {/* Chat de Nova: recepción de leads (Chatwoot + n8n) */}
+          <NovaChat />
         </NextIntlClientProvider>
 
         {/* Google Analytics 4 */}
