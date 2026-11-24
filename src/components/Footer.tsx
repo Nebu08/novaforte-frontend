@@ -92,12 +92,12 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-space-md sm:px-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-sm text-text-xs text-gray-600">
           <p>{t("rights")}</p>
           <div className="flex items-center gap-space-md">
-            <a
-              href="#"
+            <Link
+              href="/privacidad"
               className="rounded-sm text-gray-600 hover:text-primary-500 transition-colors duration-150 ease-out-precise focus-ring"
             >
               {t("legal")}
-            </a>
+            </Link>
           </div>
         </div>
       </div>
